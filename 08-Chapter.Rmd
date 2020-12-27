@@ -1,0 +1,200 @@
+---
+title: "08-Chapter"
+author: "Maria Gallegos"
+date: "7/13/2020"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+# Gene discovery using pathogenic sequence variants
+
+A **Sequence variant**^[Everyone's genome contains millions of sequence variants (small differences in sequence), that make each person unique. Most variants have unknown effects. Some contribute to differences between humans like eye color and blood type while a small number cause disease. Common variants are often described as single-nucleotide polymorphisms (SNPs) while rare variants that lead to disease are sometimes called mutations. That said, it does not make sense to use the word “mutant” when humans are discussed. This word is typically reserved for genetic model systems or laboratory animals that are known to be inbred] that leads to disease (or any measurable change in an organism's phenotype) provides evidence for the existence of a gene. When a sequence variant is mapped to the genome, the location of the gene is also discovered. 
+
+To follow along with the text and to answer "Test Your Understanding" questions, you will be using the ["Sequence Variants"](https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%204%3A%20Mutational%20Analysis){target="_blank"} session for this chapter. 
+
+## One Gene: Two Definitions
+A gene can be defined as a segment of DNA that is transcribed. To prove a gene exists using this definition, one can search for physical evidence: the gene product itself. In chapters four and five, we looked at RNA as physical evidence. A gene is also defined as “a *functional* unit of inheritance”. To prove a gene exists using this definition one can look for a phenotypic change that is passed from one generation to the next. Heritable phenotypic changes are caused by sequence variants that fall *within genes*.  Thus, a sequence variant that causes a phenotypic change can be used as physical evidence, pinpointing the location of a gene. 
+
+That said, *every* gene cannot be identified in this way even if a DNA variant renders a gene inactive. Why? Some genes when inactive do not produce a measurable phenotypic change. Why you ask? Perhaps you don't know where to look or what to measure. Or there might be more than one gene with the same function (genetic redundancy^[In engineering the word redundancy is used to describe the inclusion of extra components which are not strictly necessary to functioning, but are there in case of failure of other components. In genetics, genetic redundancy is a term used to describe situations where a given biochemical function is encoded by two or more genes that perform the same function. In these cases, mutations (or defects) in one of these genes will have a smaller effect on the fitness of the organism than expected from the genes' known function. Paraphrased from Wikipedia]) and thus inactivating one gene may not lead to a phenotypic change because another similar gene is still functional. 
+
+## Understanding DNA variants
+Open the ["Sequence Variants"](https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%204%3A%20Mutational%20Analysis){target="_blank"} session to view DNA variants that map to BBS1. Each variant is colored according to its known clinical significance: red for pathogenic, green for benign and gray for uncertain significance. Each mutation is also coded according to type (i.e. substitution or InDel). See (Figure \@ref(fig:MutationCodes)) for a list of DNA variant codes you are likely to encounter. 
+
+<br>
+```{r MutationCodes, out.width='100%', fig.align='center', fig.cap = "The most common DNA varient abbreviations you are likely to see."}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/MutationCodesTable.png')
+```
+<br>
+
+The evidence track we are using to view these sequence variants is called "Clinvar Short Variants < 50 bp". It can be found in the "Phenotype and Literature" section within the list of evidence tracks below the browser window. I have it set to "pack". What is Clinvar? [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/){target="_blank"} is a freely accessible, public archive that reports the relationship between sequence variants in humans (DNA substitutions or indels^[An small insertion or deletion mutation]) and phenotypes (benign or pathogenic). ClinVar contains submissions by clinicians *and* research scientists about patients or human research subjects concerning the clinical significance of sequence variants. Some are described as pathogenic (cause disease) while others are described as benign. It’s important to keep in mind that not all submissions have been verified. In other words, some data displayed in this evidence track may be inaccurate. In any case, information about short variants (< 50 bp) identified in human genes has been uploaded from the Clinvar archive into the UCSC genome browser.  
+
+Now zoom into *coding* exon 1 then click on any variant. This will take you to a new page that describes the sequence variant in more detail including how the impact the sequence variant has on the nucleotide sequence (Nucleotide HGVS), the protein sequence (Protein HGVS). It may also describe any phenotype associated with the sequence variant and its clinical significance (if any). 
+
+<br>
+```{r TtoC, out.width='100%', fig.align='center', fig.cap = "Two variants that are described in detail in the text."}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/TtoCvariant.png')
+```
+<br>
+
+Now click on the the green T>C variant highlighted on the left in Figure \@ref(fig:TtoC). Notice that the “Nucleotide HGVS” is **NM_024649.5:c.24T>C** (confirm for yourself so you know where you should be looking). This means that at **position 24** of the BBS1 mRNA sequence described in [**NM_024649.5**](https://www.ncbi.nlm.nih.gov/nuccore/NM_024649.5?report=GenBank){target="_blank"}^[An accession number is provided because, as you know, some genes produce multiple unique mRNAs and so the position of a given nucleotide is *isoform dependent* and must be stated explicitly. In this example, you will find a T at position 24 of the sequence provided in the accession code. See for yourself! A link to the sequence was provided in the main text], the thymine (T) is changed to cytosine (C). This is a DNA substitution. Also, the “Protein HGVS” is **NP_078925.3:p.Asp8=**. This means that at **position 8** of the BBS1 protein sequence described in [NP_078925.3](https://www.ncbi.nlm.nih.gov/protein/NP_078925.3){target="_blank"}^[Again, an accession number ID is provided because some genes produce multiple unique mRNAs and thus multiple protein isoforms. So the position of a given amino acid is *isoform dependent* and must be stated explicitly. In this example, you will find a D at position 8 of the sequence provided in the accession code. Again, a link to the sequence is provided in the main text], the Asparagine (Asp, D) still codes for asparagine (=). This is a **silent** mutation (indicated with "="). You can confirm this by looking at the mutation in context. The **reference** codon^[The reference codon is most easily defined as the "wildtype" version of the codon found (as is) in the genome browser. That said, it does not make sense to use the word “wildtype” when humans are discussed (for the same reason it does not make sense to use the word mutant). Moreover, the genome sequence uploaded to the UCSC genome browser was derived from multiple people. The word "wildtype" is typically only used to describe genetic model systems that are known to be inbred.] for Asparagine (Asp, D) at this position is G-A-T (Figure \@ref(fig:TtoC)). In the variant, the codon changes to G-A-C (this is a T>C substitution). If you consult the genetic code (Chapter 3, Figure \@ref(fig:geneticcode)) you will see that both codons code for Asparagine, Asp, D. This is also consistent with the fact that this variant is shaded green (benign). (Figure \@ref(fig:HGVScodes), includes a list of HGVS codes that describe the various impacts a mutation can have on the DNA and the protein. And click [here](http://www2.csudh.edu/nsturm/CHEMXL153/DNAMutationRepair.htm){target="_blank"} for a reminder of how to classify DNA mutations in general. 
+
+<br>
+```{r HGVScodes, out.width='100%', fig.align='center', fig.cap = "For examples of DNA variants and their assocated Nucleotide and Protein HGVS codes."}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/HGVStable.png')
+```
+<br>
+
+Sometimes the Protein HGVS row is blank. This is often the case for splice site mutations as it is near impossible to predict what impact this type of mutation will have on the protein sequence. Will the intron remain in the mature mRNA? Will the an exon be skipped during splicing? Moreover, the position of the mutation is difficult to describe using the NM_ code as by definition mRNAs lack introns! The following is an example of a Nucleotide HGVS description for a splice site mutation:  NM_024649.5:c.47+2T>C. In this example, position 47 is the last nucleotide of exon 1. Thus the mutation is found at 47+2 position (2nd nucleotide in the intron). In other words, the highly conserved T in the G-**T** of the 5’ SS of intron 1 is mutated to a C. 
+
+Importantly, you can search for a specific variant in the UCSC genome browser using “Nucleotide HGVS” info (i.e. NM_024649.5:c.24T>C), or the “Protein HGVS” (i.e. NP_078925.3:p.Asp8=) or the “ClinVar Variation Report” (i.e. NM_024649.5(BBS1):c.24T>C (p.Asp8=)). This knowledge will come in handy when you test your understanding!
+
+### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSe4661QFvixviLrC9nB5QxVFjC19_k_mI_aMwXnhcu0bFhP4Q/viewform?usp=sf_link){target="_blank"}
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
+</style>
+<div class = "blue">
+
+To answer the following "Test Your Understanding" questions, use the ["Sequence Variants"](https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%204%3A%20Mutational%20Analysis){target="_blank"} session. You may also need to consult Figure \@ref(fig:aminoacids) below to remember how amino acids are grouped according to the functional properties associated with their side chains (hydrophobic, polar uncharged etc). 
+<br>
+Consider the coding variant	**NM_024649.5:c.235G>T** to answer the following questions:
+
+- *Copy and paste Nucleotide HGVS description from above into the Genome Browser window. What type of sequence variant is this (i.e. transition, transversion or indel)?*
+<br>
+- *What is the sequence of the reference codon impacted by the G>T mutation?*
+<br>
+- *What amino acid does the reference codon code for?*
+<br>
+- *What does the reference codon become in the 	NM_024649.5:c.235G>T variant?*
+<br>
+- *What amino acid does the variant codon code for (if any)?*
+<br>
+- *What type of protein variant is this?*
+<br>
+</div>
+
+<br>
+```{r aminoacids, out.width='75%', fig.align='center', fig.cap = "Amino acid side chains can be grouped according to chemical properties. This image illustrates one way amino acids can be grouped. Image credit: [Dan Cojocari](https://commons.wikimedia.org/w/index.php?curid=9179304)."}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/aminoacidgroups.png')
+```
+<br>
+
+
+
+### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSeFPVWrhrsiNtMIHhQF2eNraOkg3sjLqcY-q8y9FtL7H_N5eA/viewform?usp=sf_link){target="_blank"}
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
+</style>
+<div class = "blue">
+
+To answer the following "Test Your Understanding" questions, use the ["Sequence Variants"](https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%204%3A%20Mutational%20Analysis){target="_blank"} session.
+<br>
+<br>
+Now consider the coding variant **NM_024649.5:c.41C>G** to answer the following questions: 
+
+- *Copy and paste Nucleotide HGVS description from above into the Genome Browser window. What type of sequence variant is this (i.e. transition, transversion or indel)?*
+<br>
+- *What is the sequence of the reference codon impacted by the C>T mutation?*
+<br>
+- *What amino acid does the reference codon code for?*
+<br>
+- *What does the reference codon become with the NM_024649.5:c.41C>G variant?*
+<br>
+- *What amino acid does the variant codon code for (if any)?*
+<br>
+- *What type of protein variant is this?*
+
+Now consider the coding variant **NM_024649.5:c.240C>T** to answer the following questions: 
+
+- *Copy and paste Nucleotide HGVS description from above into the Genome Browser window. What type of sequence variant is this (i.e. transition, transversion or indel)?*
+<br>
+- *What is the sequence of the reference codon impacted by the C>T mutation?*
+<br>
+- *What amino acid does the reference codon code for?*
+<br>
+- *What does the reference codon become with the NM_024649.5:c.240C>T variant?*
+<br>
+- *What amino acid does the variant codon code for (if any)?*
+<br>
+- *What type of protein variant is this?*
+
+General Questions about mutations. 
+
+- *What type of sequence variants lead to a frameshift mutation (transition, transversion, indel)?*
+<br>
+- *By definition, where must frameshift mutations be located (i.e. exons, introns, 5' UTR, 3' UTR, promoter)?*
+<br>
+- *By definition, where must splice site mutations be located (i.e. exons, introns, 5' UTR, 3' UTR, promoter)?*
+<br>
+- *By definition, where must nonsense mutations be located (i.e. exons, introns, 5' UTR, 3' UTR, promoter)?*
+<br>
+
+Step back and look at a larger region surrounding BBS1. Specifically, click on the link for ["Sequence Variants"](https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%204%3A%20Mutational%20Analysis){target="_blank"} session then zoom out 10X. This region now includes neighboring genes including MRPL11, DPP3, BBS1, ZDHHC24, ACTN3 and CTSF. 
+
+- *Copy and paste a nucleotide HGVS code for any frameshift mutation that maps to BBS1*
+<br>
+- *Pathogenic sequence variants map to two genes in this region. Choose the two among MRPL11, DPP3, BBS1, ZDHHC24, ACTN3 and CTSF?*
+<br>
+</div>
+
+## [For Discussion](https://docs.google.com/forms/d/e/1FAIpQLSda-6Xh3SbF8zzKhoQVZ6biWLkzigculLabj8y3Jg1I4Yc5KA/viewform?usp=sf_link){target="_blank"}
+
+1. Some genes don’t have any variants associated with them. Why do you think this is? More than one answer is possible.
+2. Find the sequence variant that maps to the gene, CCS (Nucleotide HGVS: NM_005125.2:c.487C>T). It suggests that it might lead to neurodegeneration but it is rated as "uncertain significance". How likely do you think it is that this is a pathogenic allele. Use any tool (including Google searches, your knowledge of genetics and reasoning abilities) to argue one way or the other (there are no right answers). 
+
+## [Homework](https://drive.google.com/file/d/11T71xL2ylto_hP32Uo560bUnb0kbLp61/view?usp=sharing){target="_blank"}
+
+
+© 2019, Maria Gallegos. All rights reserved.
+
+<style>
+p.caption {
+  font-size: 0.8em;
+  margin-right: 2%;
+  margin-left: 2%;
+  line-height: 1.2em;
+  text-align: left;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<style>
+.zoomDiv {
+  opacity: 0;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 50;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 50px #888888;
+  max-height:100%; 
+  overflow: scroll;
+}
+
+.zoomImg {
+  width: 100%;
+}
+</style>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').prepend("<div class=\"zoomDiv\"><img src=\"\" class=\"zoomImg\"></div>");
+    // onClick function for all plots (img's)
+    $('img:not(.zoomImg)').click(function() {
+      $('.zoomImg').attr('src', $(this).attr('src'));
+      $('.zoomDiv').css({opacity: '1', width: '100%'});
+    });
+    // onClick function for zoomImg
+    $('img.zoomImg').click(function() {
+      $('.zoomDiv').css({opacity: '0', width: '0%'});
+    });
+  });
+</script>
+
+

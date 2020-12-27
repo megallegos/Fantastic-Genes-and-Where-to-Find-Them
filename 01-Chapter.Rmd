@@ -1,0 +1,125 @@
+---
+title: "01-Chapter"
+author: "Maria Gallegos"
+date: "5/27/2020"
+output:
+  html_document: default
+  pdf_document: default
+---
+# An Introduction to Genes and Genomes
+
+## What is a gene? 
+
+A **gene** is a segment of DNA that directs the production of a functional product. A significant number of eukaroytic genes are protein coding. Each protein-coding gene is used as a template to create an **RNA transcript** through a process called **transcription**. The RNA transcript is then processed into a messenger RNA (mRNA). The most notable change that occurs during RNA processing is that intron sequences are removed from the RNA transcript leaving behind exons. This processed mRNA is then exported from the nucleus and used as a template to make a protein in a process called **translation** (Figure \@ref(fig:geneexpression)). Proteins do most of the work necessary to maintain cell structure, function and behavior.
+<br><br>
+```{r geneexpression, out.width='75%', fig.align='center', fig.cap = "An overview of Gene Expression. A small segment of DNA (light grey) containing a single gene (orange) is shown. The RNA transcript is highlighted in green (exons) and dark gray (introns)."}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/gene.png')
+```
+<br>
+
+Importantly, the size of a gene is usually defined by where transcription begins and ends. In fact, the site of **transcription initiation** and **transcription termination** define both the gene size (in the genome) and the RNA transcript size (but not the mRNA size which is typically shorter). 
+
+## What is a genome? 
+These 24,000 protein coding genes are distributed linearly along chromosomes^[a [chromosome](https://www.nature.com/scitable/definition/chromosome-chromosomes-eukaryotic-chromosome-eucariotic-chromosome-procariotic-6/){target="_blank"} is a single, long molecule of DNA] (Figure \@ref(fig:genomesegment)). 
+
+<br>
+```{r genomesegment, out.width='100%', fig.align='center', fig.cap = "This schematic represents a hypothetical segment of a chromosome with orange rectangles representing genes distributed linearly along the DNA segment shown."}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/partofgenome.png')
+```
+<br>
+
+One complete set of genes/chromosomes inherited from a single parent makes up what we call the genome (sometimes called the "haploid genome")^[While "haploid genome" is more precise, "haploid" is often omitted and simply assumed]. The haploid genome consists of 23 chromosomes in XX females and 24 in XY males. Each chromosome varies in length. For example, chromosome one is the longest. It is a double helix of 248,956,422 base pairs (bp) and is 82.7 mm in length ^[To calculate the length of each chromosome you multiple the length of the chromosome in base pairs (bp) by the length (in mm) of each bp (0.000000332).] (Figure \@ref(fig:genome)). 
+
+<br>
+```{r genome, out.width='90%', fig.align='center', fig.cap = "Actual length of the human genome when scale bar equals one centimeter."}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/humangenome.png')
+```
+<br>
+
+In diploid organisms like humans, somatic cells (i.e. skin, neurons etc) harbor *two* complete sets of chromosomes. Thus, in total, there is just over two meters of DNA crammed into each somatic nucleus! The diameter of a mammalian nucleus is 6 microns or 0.006 of a millimeter (on average). How does all this DNA fit? First, the *diameter* of a DNA double helix is tiny (only 2 angstroms) but also each chromosome is carefully packaged by proteins in a systematic and sterotypical manner (Figure \@ref(fig:chromatin)). 
+
+<br>
+```{r chromatin, out.width='90%', fig.align='center', fig.cap = "This image is modified from Uhler and Shivashankar, 2017. It shows the various levels of chromosome packing found in nuclei during interphase of the cell cycle. The first level of packing requires an octamer of histone proteins that assemble into a ball-like structure called a *nucleosome*. Naked DNA wraps around these octamers forming 'beads on a string'. Additional levels of packing into chromatin fibers and topological associated domains requires additional proteins. Individual chromosomes (23 pairs in humans) are then carefully orgnanized within the cell nucleus in a cell type-dependent manner."}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/interphasechromatin.png')
+```
+<br>
+
+### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSe8eECUs8Zwm1bFPFWeCK5DKgM4zM0zaRyZNIYWvjbwk1XFAA/viewform?usp=sf_link){target="_blank"}
+<style>
+div.blue { background-color:#e6f0ff}
+</style>
+<div class = "blue">
+
+- *Which happens first (RNA processing, transcription or translation - written in alphabetical order)?*
+<br>
+- *Where does RNA processing occur?*
+<br>
+- *Where does transcription occur?*
+<br>
+- *Where does translation occur?*
+<br>
+- *TRUE or FALSE. If I told you the size of a mature mRNA transcript you would know the size of the gene in the genome?*
+<br>
+- *Chromosome 1 is the longest chromosome at 82.7 mm. How long is it in inches (round to the first decimal place)?*
+<br>
+- *The longest chromosome in C. elegans is chromosome V. It is 20,924,180 bp. How long is it in mm (round to the nearest whole mm)?*
+<br>
+- *In humans, there is just over two meters of DNA crammed into each somatic nucleus. What can you find around your house that is about two meters in length?*
+<br>
+- *Fill in the blank. The first level of chromosomal packing requires an octamer of histone proteins that assemble into a ball-like structure called a _______*
+<br>
+- *TRUE or FALSE. Each chromosome occupies its own 3-dimensional space within the nucleus. Chromosomes are NOT mixed together like a bowl of spaghetti.*
+<br>
+</div>
+
+© 2019, Maria Gallegos. All rights reserved.
+
+<style>
+p.caption {
+  font-size: 0.8em;
+  margin-right: 2%;
+  margin-left: 2%;
+  line-height: 1.2em;
+  text-align: left;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<style>
+.zoomDiv {
+  opacity: 0;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 50;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 50px #888888;
+  max-height:100%; 
+  overflow: scroll;
+}
+
+.zoomImg {
+  width: 100%;
+}
+</style>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').prepend("<div class=\"zoomDiv\"><img src=\"\" class=\"zoomImg\"></div>");
+    // onClick function for all plots (img's)
+    $('img:not(.zoomImg)').click(function() {
+      $('.zoomImg').attr('src', $(this).attr('src'));
+      $('.zoomDiv').css({opacity: '1', width: '95%'});
+    });
+    // onClick function for zoomImg
+    $('img.zoomImg').click(function() {
+      $('.zoomDiv').css({opacity: '0', width: '0%'});
+    });
+  });
+</script>

@@ -1,0 +1,512 @@
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/browsergateway.png')
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/browsergateway.png')
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/browsergateway.png')
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/browsergateway.png')
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/ACE2gene.png')
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/BBS1gene.png')
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/BBS1genesimple.png')
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/BBS1genesimple.png')
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/ACE2gene.png')
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/BBS1gene.png')
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/dragnselect.png')
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/bookdownshortcuts.png')
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/GeneInformationPage.png')
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/histogram.png')
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/intronlogo.png')
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/aminoacidcodes.png')
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/aminoacidgroups.png')
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/BCL2.png')
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/topstrandexon1.png')
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/DNA.png')
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/DNA.png')
+library(ggplot2)
+#using ggplot, this code specifies source data, X and Y axes
+p <- ggplot(data=R_Assessment_2020,aes (x=PLO5, y=Average_SCORE))
+library(readxl)
+R_Assessment_2020 <- read_excel("~/Documents/Dossier/BiologyAssessment/Assessment_Masters/MS_2019_2020/R_Assessment_2020.xlsx")
+View(R_Assessment_2020)
+p + geom_boxplot (lwd=3, outlier.shape = NA, fill = "gray90", color = "gray90", width = .7) +
+#Choose the Y axis scale
+scale_y_continuous(limits=c(0.0,5.0)) +
+theme_minimal() +
+#got rid of the legend, got rid of the vertical lines, got rid of X axis title, rotated the X axis text to a 60
+#Changed Y axis title
+theme(element_line(size = 2), axis.title.y = element_text(size = 32),axis.title.x = element_blank(), legend.position=0, panel.grid.major.x=element_blank(), axis.text.y = element_text(size = 32), axis.text.x = element_text(angle = 60, hjust = 1, size = 24)) +
+#code needed to add the black line at the median
+stat_summary(geom = "crossbar", width=0.68, fatten=5, color="black", fun.data = function(x){ return(c(y=mean(x), ymin=mean(x), ymax=mean(x))) }) +
+#code needed to add the individual data points. Width describes the amount of space the points will occupy.
+geom_jitter(width = 0.25, size = 4, height =0) +
+#code needed to order the data as desired. Replace text in the order desired.
+scale_x_discrete(limits=c(
+"PLO5"
+)) +
+#code needed to change the Y-axis label
+labs(y="Average Score")
+View(R_Assessment_2020)
+p + geom_boxplot (lwd=3, outlier.shape = NA, fill = "gray90", color = "gray90", width = .7) +
+#Choose the Y axis scale
+scale_y_continuous(limits=c(0.0,5.0)) +
+theme_minimal() +
+#got rid of the legend, got rid of the vertical lines, got rid of X axis title, rotated the X axis text to a 60
+#Changed Y axis title
+theme(element_line(size = 2), axis.title.y = element_text(size = 32),axis.title.x = element_blank(), legend.position=0, panel.grid.major.x=element_blank(), axis.text.y = element_text(size = 32), axis.text.x = element_text(angle = 60, hjust = 1, size = 24)) +
+#code needed to add the black line at the median
+stat_summary(geom = "crossbar", width=0.68, fatten=5, color="black", fun.data = function(x){ return(c(y=mean(x), ymin=mean(x), ymax=mean(x))) }) +
+#code needed to add the individual data points. Width describes the amount of space the points will occupy.
+geom_jitter(width = 0.25, size = 4, height =0) +
+#code needed to order the data as desired. Replace text in the order desired.
+scale_x_discrete(limits=c(
+"PLO5"
+)) +
+#code needed to change the Y-axis label
+labs(y="Average Score")
+tiff('plot.tiff', units="in", width=5, height=20, res=300)
+#using ggplot, this code specifies source data, X and Y axes
+p <- ggplot(data=R_Assessment_2018B,aes (x=PLO5, y=Average_SCORE))
+tiff('plot.tiff', units="in", width=5, height=20, res=300)
+#using ggplot, this code specifies source data, X and Y axes
+p <- ggplot(data=R_Assessment_2020,aes (x=PLO5, y=Average_SCORE))
+p + geom_boxplot (lwd=3, outlier.shape = NA, fill = "gray90", color = "gray90", width = .7) +
+#Choose the Y axis scale
+scale_y_continuous(limits=c(0.0,5.0)) +
+theme_minimal() +
+#got rid of the legend, got rid of the vertical lines, got rid of X axis title, rotated the X axis text to a 60
+#Changed Y axis title
+theme(element_line(size = 2), axis.title.y = element_text(size = 32),axis.title.x = element_blank(), legend.position=0, panel.grid.major.x=element_blank(), axis.text.y = element_text(size = 32), axis.text.x = element_text(angle = 60, hjust = 1, size = 24)) +
+#code needed to add the black line at the median
+stat_summary(geom = "crossbar", width=0.68, fatten=5, color="black", fun.data = function(x){ return(c(y=mean(x), ymin=mean(x), ymax=mean(x))) }) +
+#code needed to add the individual data points. Width describes the amount of space the points will occupy.
+geom_jitter(width = 0.25, size = 4, height =0) +
+#code needed to order the data as desired. Replace text in the order desired.
+scale_x_discrete(limits=c(
+"PLO5"
+)) +
+#code needed to change the Y-axis label
+labs(y="Average Score")
+dev.off()
+tiff('plot.tiff', units="in", width=5, height=20, res=300)
+#using ggplot, this code specifies source data, X and Y axes
+p <- ggplot(data=R_Assessment_2020,aes (x=PLO1, y=Average_SCORE))
+p + geom_boxplot (lwd=3, outlier.shape = NA, fill = "gray90", color = "gray90", width = .7) +
+#Choose the Y axis scale
+scale_y_continuous(limits=c(0.0,5.0)) +
+theme_minimal() +
+#got rid of the legend, got rid of the vertical lines, got rid of X axis title, rotated the X axis text to a 60
+#Changed Y axis title
+theme(element_line(size = 2), axis.title.y = element_text(size = 32),axis.title.x = element_blank(), legend.position=0, panel.grid.major.x=element_blank(), axis.text.y = element_text(size = 32), axis.text.x = element_text(angle = 60, hjust = 1, size = 24)) +
+#code needed to add the black line at the median
+stat_summary(geom = "crossbar", width=0.68, fatten=5, color="black", fun.data = function(x){ return(c(y=mean(x), ymin=mean(x), ymax=mean(x))) }) +
+#code needed to add the individual data points. Width describes the amount of space the points will occupy.
+geom_jitter(width = 0.25, size = 4, height =0) +
+#code needed to order the data as desired. Replace text in the order desired.
+scale_x_discrete(limits=c(
+"PLO1"
+)) +
+#code needed to change the Y-axis label
+labs(y="Average Score")
+View(R_Assessment_2020)
+tiff('plot.tiff', units="in", width=5, height=20, res=300)
+#using ggplot, this code specifies source data, X and Y axes
+p <- ggplot(data=R_Assessment_2020,aes (x=PLO2, y=Average_SCORE))
+p + geom_boxplot (lwd=3, outlier.shape = NA, fill = "gray90", color = "gray90", width = .7) +
+#Choose the Y axis scale
+scale_y_continuous(limits=c(0.0,5.0)) +
+theme_minimal() +
+#got rid of the legend, got rid of the vertical lines, got rid of X axis title, rotated the X axis text to a 60
+#Changed Y axis title
+theme(element_line(size = 2), axis.title.y = element_text(size = 32),axis.title.x = element_blank(), legend.position=0, panel.grid.major.x=element_blank(), axis.text.y = element_text(size = 32), axis.text.x = element_text(angle = 60, hjust = 1, size = 24)) +
+#code needed to add the black line at the median
+stat_summary(geom = "crossbar", width=0.68, fatten=5, color="black", fun.data = function(x){ return(c(y=mean(x), ymin=mean(x), ymax=mean(x))) }) +
+#code needed to add the individual data points. Width describes the amount of space the points will occupy.
+geom_jitter(width = 0.25, size = 4, height =0) +
+#code needed to order the data as desired. Replace text in the order desired.
+scale_x_discrete(limits=c(
+"PLO2"
+)) +
+#code needed to change the Y-axis label
+labs(y="Average Score")
+tiff('plot.tiff', units="in", width=5, height=20, res=300)
+tiff('plot.tiff', units="in", width=5, height=20, res=300)
+#using ggplot, this code specifies source data, X and Y axes
+p <- ggplot(data=R_Assessment_2020,aes (x=PLO2, y=Average_SCORE))
+p + geom_boxplot (lwd=3, outlier.shape = NA, fill = "gray90", color = "gray90", width = .7) +
+#Choose the Y axis scale
+scale_y_continuous(limits=c(0.0,5.0)) +
+theme_minimal() +
+#got rid of the legend, got rid of the vertical lines, got rid of X axis title, rotated the X axis text to a 60
+#Changed Y axis title
+theme(element_line(size = 2), axis.title.y = element_text(size = 32),axis.title.x = element_blank(), legend.position=0, panel.grid.major.x=element_blank(), axis.text.y = element_text(size = 32), axis.text.x = element_text(angle = 60, hjust = 1, size = 24)) +
+#code needed to add the black line at the median
+stat_summary(geom = "crossbar", width=0.68, fatten=5, color="black", fun.data = function(x){ return(c(y=mean(x), ymin=mean(x), ymax=mean(x))) }) +
+#code needed to add the individual data points. Width describes the amount of space the points will occupy.
+geom_jitter(width = 0.25, size = 4, height =0) +
+#code needed to order the data as desired. Replace text in the order desired.
+scale_x_discrete(limits=c(
+"PLO2"
+)) +
+#code needed to change the Y-axis label
+labs(y="Average Score")
+dev.off()
+tiff('plot.tiff', units="in", width=5, height=20, res=300)
+#using ggplot, this code specifies source data, X and Y axes
+p <- ggplot(data=R_Assessment_2020,aes (x=PLO3, y=Average_SCORE))
+p + geom_boxplot (lwd=3, outlier.shape = NA, fill = "gray90", color = "gray90", width = .7) +
+#Choose the Y axis scale
+scale_y_continuous(limits=c(0.0,5.0)) +
+theme_minimal() +
+#got rid of the legend, got rid of the vertical lines, got rid of X axis title, rotated the X axis text to a 60
+#Changed Y axis title
+theme(element_line(size = 2), axis.title.y = element_text(size = 32),axis.title.x = element_blank(), legend.position=0, panel.grid.major.x=element_blank(), axis.text.y = element_text(size = 32), axis.text.x = element_text(angle = 60, hjust = 1, size = 24)) +
+#code needed to add the black line at the median
+stat_summary(geom = "crossbar", width=0.68, fatten=5, color="black", fun.data = function(x){ return(c(y=mean(x), ymin=mean(x), ymax=mean(x))) }) +
+#code needed to add the individual data points. Width describes the amount of space the points will occupy.
+geom_jitter(width = 0.25, size = 4, height =0) +
+#code needed to order the data as desired. Replace text in the order desired.
+scale_x_discrete(limits=c(
+"PLO3"
+)) +
+#code needed to change the Y-axis label
+labs(y="Average Score")
+dev.off()
+tiff('plot.tiff', units="in", width=5, height=20, res=300)
+#using ggplot, this code specifies source data, X and Y axes
+p <- ggplot(data=R_Assessment_2020,aes (x=PLO4, y=Average_SCORE))
+p + geom_boxplot (lwd=3, outlier.shape = NA, fill = "gray90", color = "gray90", width = .7) +
+#Choose the Y axis scale
+scale_y_continuous(limits=c(0.0,5.0)) +
+theme_minimal() +
+#got rid of the legend, got rid of the vertical lines, got rid of X axis title, rotated the X axis text to a 60
+#Changed Y axis title
+theme(element_line(size = 2), axis.title.y = element_text(size = 32),axis.title.x = element_blank(), legend.position=0, panel.grid.major.x=element_blank(), axis.text.y = element_text(size = 32), axis.text.x = element_text(angle = 60, hjust = 1, size = 24)) +
+#code needed to add the black line at the median
+stat_summary(geom = "crossbar", width=0.68, fatten=5, color="black", fun.data = function(x){ return(c(y=mean(x), ymin=mean(x), ymax=mean(x))) }) +
+#code needed to add the individual data points. Width describes the amount of space the points will occupy.
+geom_jitter(width = 0.25, size = 4, height =0) +
+#code needed to order the data as desired. Replace text in the order desired.
+scale_x_discrete(limits=c(
+"PLO4"
+)) +
+#code needed to change the Y-axis label
+labs(y="Average Score")
+dev.off()
+p + geom_boxplot (lwd=3, outlier.shape = NA, fill = "gray90", color = "gray90", width = .7) +
+#Choose the Y axis scale
+scale_y_continuous(limits=c(0.0,5.0)) +
+theme_minimal() +
+#got rid of the legend, got rid of the vertical lines, got rid of X axis title, rotated the X axis text to a 60
+#Changed Y axis title
+theme(element_line(size = 2), axis.title.y = element_text(size = 32),axis.title.x = element_blank(), legend.position=0, panel.grid.major.x=element_blank(), axis.text.y = element_text(size = 32), axis.text.x = element_text(angle = 60, hjust = 1, size = 24)) +
+#code needed to add the black line at the median
+stat_summary(geom = "crossbar", width=0.68, fatten=5, color="black", fun.data = function(x){ return(c(y=mean(x), ymin=mean(x), ymax=mean(x))) }) +
+#code needed to add the individual data points. Width describes the amount of space the points will occupy.
+geom_jitter(width = 0.25, size = 4, height =0) +
+#code needed to order the data as desired. Replace text in the order desired.
+scale_x_discrete(limits=c(
+"PLO5"
+)) +
+#code needed to change the Y-axis label
+labs(y="Average Score")
+dev.off()
+tiff('plot.tiff', units="in", width=20, height=20, res=300)
+#using ggplot, this code specifies source data, X and Y axes
+p <- ggplot(data=R_Assessment_2017,aes (x=Student_Code, y=Average_SCORE))
+tiff('plot.tiff', units="in", width=20, height=20, res=300)
+#using ggplot, this code specifies source data, X and Y axes
+p <- ggplot(data=R_Assessment_2020,aes (x=Student_Code, y=Average_SCORE))
+p + geom_boxplot (lwd=3, outlier.shape = NA, fill = "gray90", color = "gray90", width = .7) +
+#Choose the Y axis scale
+scale_y_continuous(limits=c(0,5.0)) +
+theme_minimal() +
+#got rid of the legend, got rid of the vertical lines, got rid of X axis title, rotated the X axis text to a 60
+#Changed Y axis title
+theme(element_line(size = 2), axis.title.y = element_text(size = 32),axis.title.x = element_blank(), legend.position=0, panel.grid.major.x=element_blank(), axis.text.y = element_text(size = 32), axis.text.x = element_text(angle = 60, hjust = 1, size = 24)) +
+#code needed to add the black line at the median
+stat_summary(geom = "crossbar", width=0.68, fatten=5, color="black", fun.data = function(x){ return(c(y=mean(x), ymin=mean(x), ymax=mean(x))) }) +
+#code needed to add the individual data points. Width describes the amount of space the points will occupy.
+geom_jitter(width = 0.25, size = 4, height =0) +
+#code needed to order the data as desired. Replace text in the order desired.
+scale_x_discrete(limits=c(
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7"
+)) +
+#code needed to change the Y-axis label
+labs(y="Average Score")
+dev.off()
+tiff('plot.tiff', units="in", width=5, height=20, res=300)
+#using ggplot, this code specifies source data, X and Y axes
+p <- ggplot(data=R_Assessment_2020,aes (x=RUBRIC_CATEGORY, y=Average_SCORE))
+p + geom_boxplot (lwd=3, outlier.shape = NA, fill = "gray90", color = "gray90", width = .7) +
+#Choose the Y axis scale
+scale_y_continuous(limits=c(0.0,5.0)) +
+theme_minimal() +
+#got rid of the legend, got rid of the vertical lines, got rid of X axis title, rotated the X axis text to a 60
+#Changed Y axis title
+theme(element_line(size = 2), axis.title.y = element_text(size = 32),axis.title.x = element_blank(), legend.position=0, panel.grid.major.x=element_blank(), axis.text.y = element_text(size = 32), axis.text.x = element_text(angle = 60, hjust = 1, size = 24)) +
+#code needed to add the black line at the median
+stat_summary(geom = "crossbar", width=0.68, fatten=5, color="black", fun.data = function(x){ return(c(y=mean(x), ymin=mean(x), ymax=mean(x))) }) +
+#code needed to add the individual data points. Width describes the amount of space the points will occupy.
+geom_jitter(width = 0.25, size = 4, height =0) +
+#code needed to order the data as desired. Replace text in the order desired.
+scale_x_discrete(limits=c(
+"Organization",
+"Language",
+"Delivery",
+"Supporting Material",
+"Central Message",
+"Hypothesis/Question",
+"Background Knowledge",
+"Design Process",
+"Analysis",
+"Conclusion",
+"Caveats"
+)) +
+#code needed to change the Y-axis label
+labs(y="Average Score")
+dev.off()
+tiff('plot.tiff', units="in", width=5, height=20, res=300)
+#using ggplot, this code specifies source data, X and Y axes
+p <- ggplot(data=R_Assessment_2020,aes (x=RUBRIC_CATEGORY, y=Average_SCORE))
+p + geom_boxplot (lwd=3, outlier.shape = NA, fill = "gray90", color = "gray90", width = .7) +
+#Choose the Y axis scale
+scale_y_continuous(limits=c(0.0,5.0)) +
+theme_minimal() +
+#got rid of the legend, got rid of the vertical lines, got rid of X axis title, rotated the X axis text to a 60
+#Changed Y axis title
+theme(element_line(size = 2), axis.title.y = element_text(size = 32),axis.title.x = element_blank(), legend.position=0, panel.grid.major.x=element_blank(), axis.text.y = element_text(size = 32), axis.text.x = element_text(angle = 60, hjust = 1, size = 24)) +
+#code needed to add the black line at the median
+stat_summary(geom = "crossbar", width=0.68, fatten=5, color="black", fun.data = function(x){ return(c(y=mean(x), ymin=mean(x), ymax=mean(x))) }) +
+#code needed to add the individual data points. Width describes the amount of space the points will occupy.
+geom_jitter(width = 0.5, size = 4, height =0) +
+#code needed to order the data as desired. Replace text in the order desired.
+scale_x_discrete(limits=c(
+"Organization",
+"Language",
+"Delivery",
+"Supporting Material",
+"Central Message",
+"Hypothesis/Question",
+"Background Knowledge",
+"Design Process",
+"Analysis",
+"Conclusion",
+"Caveats"
+)) +
+#code needed to change the Y-axis label
+labs(y="Average Score")
+dev.off()
+tiff('plot.tiff', units="in", width=5, height=20, res=300)
+#using ggplot, this code specifies source data, X and Y axes
+p <- ggplot(data=R_Assessment_2020,aes (x=RUBRIC_CATEGORY, y=Average_SCORE))
+p + geom_boxplot (lwd=3, outlier.shape = NA, fill = "gray90", color = "gray90", width = .7) +
+#Choose the Y axis scale
+scale_y_continuous(limits=c(0.0,5.0)) +
+theme_minimal() +
+#got rid of the legend, got rid of the vertical lines, got rid of X axis title, rotated the X axis text to a 60
+#Changed Y axis title
+theme(element_line(size = 2), axis.title.y = element_text(size = 32),axis.title.x = element_blank(), legend.position=0, panel.grid.major.x=element_blank(), axis.text.y = element_text(size = 32), axis.text.x = element_text(angle = 60, hjust = 1, size = 24)) +
+#code needed to add the black line at the median
+stat_summary(geom = "crossbar", width=0.68, fatten=5, color="black", fun.data = function(x){ return(c(y=mean(x), ymin=mean(x), ymax=mean(x))) }) +
+#code needed to add the individual data points. Width describes the amount of space the points will occupy.
+geom_jitter(width = 0.5, size = 10, height =0) +
+#code needed to order the data as desired. Replace text in the order desired.
+scale_x_discrete(limits=c(
+"Organization",
+"Language",
+"Delivery",
+"Supporting Material",
+"Central Message",
+"Hypothesis/Question",
+"Background Knowledge",
+"Design Process",
+"Analysis",
+"Conclusion",
+"Caveats"
+)) +
+#code needed to change the Y-axis label
+labs(y="Average Score")
+dev.off()
+tiff('plot.tiff', units="in", width=5, height=20, res=300)
+#using ggplot, this code specifies source data, X and Y axes
+p <- ggplot(data=R_Assessment_2020,aes (x=RUBRIC_CATEGORY, y=Average_SCORE))
+p + geom_boxplot (lwd=3, outlier.shape = NA, fill = "gray90", color = "gray90", width = .7) +
+#Choose the Y axis scale
+scale_y_continuous(limits=c(0.0,5.0)) +
+theme_minimal() +
+#got rid of the legend, got rid of the vertical lines, got rid of X axis title, rotated the X axis text to a 60
+#Changed Y axis title
+theme(element_line(size = 2), axis.title.y = element_text(size = 32),axis.title.x = element_blank(), legend.position=0, panel.grid.major.x=element_blank(), axis.text.y = element_text(size = 32), axis.text.x = element_text(angle = 60, hjust = 1, size = 24)) +
+#code needed to add the black line at the median
+stat_summary(geom = "crossbar", width=0.68, fatten=5, color="black", fun.data = function(x){ return(c(y=mean(x), ymin=mean(x), ymax=mean(x))) }) +
+#code needed to add the individual data points. Width describes the amount of space the points will occupy.
+geom_jitter(width = 2, size = 4, height =0) +
+#code needed to order the data as desired. Replace text in the order desired.
+scale_x_discrete(limits=c(
+"Organization",
+"Language",
+"Delivery",
+"Supporting Material",
+"Central Message",
+"Hypothesis/Question",
+"Background Knowledge",
+"Design Process",
+"Analysis",
+"Conclusion",
+"Caveats"
+)) +
+#code needed to change the Y-axis label
+labs(y="Average Score")
+dev.off()
+tiff('plot.tiff', units="in", width=15, height=20, res=300)
+#using ggplot, this code specifies source data, X and Y axes
+p <- ggplot(data=R_Assessment_2020,aes (x=RUBRIC_CATEGORY, y=Average_SCORE))
+p + geom_boxplot (lwd=3, outlier.shape = NA, fill = "gray90", color = "gray90", width = .7) +
+#Choose the Y axis scale
+scale_y_continuous(limits=c(0.0,5.0)) +
+theme_minimal() +
+#got rid of the legend, got rid of the vertical lines, got rid of X axis title, rotated the X axis text to a 60
+#Changed Y axis title
+theme(element_line(size = 2), axis.title.y = element_text(size = 32),axis.title.x = element_blank(), legend.position=0, panel.grid.major.x=element_blank(), axis.text.y = element_text(size = 32), axis.text.x = element_text(angle = 60, hjust = 1, size = 24)) +
+#code needed to add the black line at the median
+stat_summary(geom = "crossbar", width=0.68, fatten=5, color="black", fun.data = function(x){ return(c(y=mean(x), ymin=mean(x), ymax=mean(x))) }) +
+#code needed to add the individual data points. Width describes the amount of space the points will occupy.
+geom_jitter(width = 0.25, size = 4, height =0) +
+#code needed to order the data as desired. Replace text in the order desired.
+scale_x_discrete(limits=c(
+"Organization",
+"Language",
+"Delivery",
+"Supporting Material",
+"Central Message",
+"Hypothesis/Question",
+"Background Knowledge",
+"Design Process",
+"Analysis",
+"Conclusion",
+"Caveats"
+)) +
+#code needed to change the Y-axis label
+labs(y="Average Score")
+dev.off()
+#change the width if you plan to have more data points
+tiff('plot.tiff', units="in", width=20, height=20, res=300)
+#using ggplot, this code specifies source data, X and Y axes
+p <- ggplot(data=R_Assessment_2020,aes (x=RUBRIC_CATEGORY, y=Average_SCORE))
+p + geom_boxplot (lwd=3, outlier.shape = NA, fill = "gray90", color = "gray90", width = .7) +
+#Choose the Y axis scale
+scale_y_continuous(limits=c(0.0,5.0)) +
+theme_minimal() +
+#got rid of the legend, got rid of the vertical lines, got rid of X axis title, rotated the X axis text to a 60
+#Changed Y axis title
+theme(element_line(size = 2), axis.title.y = element_text(size = 32),axis.title.x = element_blank(), legend.position=0, panel.grid.major.x=element_blank(), axis.text.y = element_text(size = 32), axis.text.x = element_text(angle = 60, hjust = 1, size = 24)) +
+#code needed to add the black line at the median
+stat_summary(geom = "crossbar", width=0.68, fatten=5, color="black", fun.data = function(x){ return(c(y=mean(x), ymin=mean(x), ymax=mean(x))) }) +
+#code needed to add the individual data points. Width describes the amount of space the points will occupy.
+geom_jitter(width = 0.25, size = 4, height =0) +
+#code needed to order the data as desired. Replace text in the order desired.
+scale_x_discrete(limits=c(
+"Organization",
+"Language",
+"Delivery",
+"Supporting Material",
+"Central Message",
+"Hypothesis/Question",
+"Background Knowledge",
+"Design Process",
+"Analysis",
+"Conclusion",
+"Caveats"
+)) +
+#code needed to change the Y-axis label
+labs(y="Average Score")
+dev.off()
+#change the width if you plan to have more data points
+tiff('plot.tiff', units="in", width=20, height=20, res=300)
+#using ggplot, this code specifies source data, X and Y axes
+p <- ggplot(data=R_Assessment_2020,aes (x=Student_Code, y=Average_SCORE))
+p + geom_boxplot (lwd=3, outlier.shape = NA, fill = "gray90", color = "gray90", width = .7) +
+#Choose the Y axis scale
+scale_y_continuous(limits=c(0.0,5.0)) +
+theme_minimal() +
+#got rid of the legend, got rid of the vertical lines, got rid of X axis title, rotated the X axis text to a 60
+#Changed Y axis title
+theme(element_line(size = 2), axis.title.y = element_text(size = 32),axis.title.x = element_blank(), legend.position=0, panel.grid.major.x=element_blank(), axis.text.y = element_text(size = 32), axis.text.x = element_text(angle = 60, hjust = 1, size = 24)) +
+#code needed to add the black line at the median
+stat_summary(geom = "crossbar", width=0.68, fatten=5, color="black", fun.data = function(x){ return(c(y=mean(x), ymin=mean(x), ymax=mean(x))) }) +
+#code needed to add the individual data points. Width describes the amount of space the points will occupy.
+geom_jitter(width = 0.25, size = 4, height =0) +
+#code needed to order the data as desired. Replace text in the order desired.
+scale_x_discrete(limits=c(
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7"
+)) +
+#code needed to change the Y-axis label
+labs(y="Average Score")
+dev.off()
+library(readxl)
+R_Assessment_2020 <- read_excel("~/Documents/Dossier/BiologyAssessment/Assessment_Masters/MS_2016_2017/R_Assessment_2020.xlsx")
+View(R_Assessment_2020)
+#change the width if you plan to have more data points
+tiff('plot.tiff', units="in", width=20, height=20, res=300)
+#using ggplot, this code specifies source data, X and Y axes
+p <- ggplot(data=R_Assessment_2020,aes (x=Student_Code, y=Average_SCORE))
+p + geom_boxplot (lwd=3, outlier.shape = NA, fill = "gray90", color = "gray90", width = .7) +
+#Choose the Y axis scale
+scale_y_continuous(limits=c(0.0,5.0)) +
+theme_minimal() +
+#got rid of the legend, got rid of the vertical lines, got rid of X axis title, rotated the X axis text to a 60
+#Changed Y axis title
+theme(element_line(size = 2), axis.title.y = element_text(size = 32),axis.title.x = element_blank(), legend.position=0, panel.grid.major.x=element_blank(), axis.text.y = element_text(size = 32), axis.text.x = element_text(angle = 60, hjust = 1, size = 24)) +
+#code needed to add the black line at the median
+stat_summary(geom = "crossbar", width=0.68, fatten=5, color="black", fun.data = function(x){ return(c(y=mean(x), ymin=mean(x), ymax=mean(x))) }) +
+#code needed to add the individual data points. Width describes the amount of space the points will occupy.
+geom_jitter(width = 0.25, size = 4, height =0) +
+#code needed to order the data as desired. Replace text in the order desired.
+scale_x_discrete(limits=c(
+"one",
+"two",
+"three",
+"four",
+"five",
+"six",
+"seven"
+)) +
+#code needed to change the Y-axis label
+labs(y="Average Score")
+dev.off()
+install.packages("rmarkdown")
+install.packages("ggplot2")
+remove.packages("rmarkdown")
+install.packages("digest")

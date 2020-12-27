@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>8 Gene discovery using pathogenic sequence variants | Fantastic Genes and Where to Find Them</title>
+  <meta name="description" content="8 Gene discovery using pathogenic sequence variants | Fantastic Genes and Where to Find Them" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="8 Gene discovery using pathogenic sequence variants | Fantastic Genes and Where to Find Them" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="8 Gene discovery using pathogenic sequence variants | Fantastic Genes and Where to Find Them" />
+  
+  
+  
+
+<meta name="author" content="Maria Gallegos" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="rna-motifs-for-rna-processing-and-translation.html"/>
+<link rel="next" href="orthology-and-disease-models.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#overview"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-manual-efficiently"><i class="fa fa-check"></i>How to use this manual efficiently</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#before-you-get-started"><i class="fa fa-check"></i>Before you get started</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="an-introduction-to-genes-and-genomes.html"><a href="an-introduction-to-genes-and-genomes.html"><i class="fa fa-check"></i><b>1</b> An Introduction to Genes and Genomes</a><ul>
+<li class="chapter" data-level="1.1" data-path="an-introduction-to-genes-and-genomes.html"><a href="an-introduction-to-genes-and-genomes.html#what-is-a-gene"><i class="fa fa-check"></i><b>1.1</b> What is a gene?</a></li>
+<li class="chapter" data-level="1.2" data-path="an-introduction-to-genes-and-genomes.html"><a href="an-introduction-to-genes-and-genomes.html#what-is-a-genome"><i class="fa fa-check"></i><b>1.2</b> What is a genome?</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="an-introduction-to-genes-and-genomes.html"><a href="an-introduction-to-genes-and-genomes.html#test-your-understanding"><i class="fa fa-check"></i><b>1.2.1</b> <span>Test Your Understanding</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="an-introduction-to-the-ucsc-genome-browser.html"><a href="an-introduction-to-the-ucsc-genome-browser.html"><i class="fa fa-check"></i><b>2</b> An Introduction to the UCSC Genome Browser</a><ul>
+<li class="chapter" data-level="2.1" data-path="an-introduction-to-the-ucsc-genome-browser.html"><a href="an-introduction-to-the-ucsc-genome-browser.html#how-to-configure-the-genome-browser"><i class="fa fa-check"></i><b>2.1</b> How to Configure the Genome Browser</a></li>
+<li class="chapter" data-level="2.2" data-path="an-introduction-to-the-ucsc-genome-browser.html"><a href="an-introduction-to-the-ucsc-genome-browser.html#creating-a-named-session"><i class="fa fa-check"></i><b>2.2</b> Creating a Named Session</a></li>
+<li class="chapter" data-level="2.3" data-path="an-introduction-to-the-ucsc-genome-browser.html"><a href="an-introduction-to-the-ucsc-genome-browser.html#navigating-around-in-the-genome-browser"><i class="fa fa-check"></i><b>2.3</b> Navigating Around in the Genome Browser</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="an-introduction-to-the-ucsc-genome-browser.html"><a href="an-introduction-to-the-ucsc-genome-browser.html#test-your-understanding-1"><i class="fa fa-check"></i><b>2.3.1</b> <span>Test Your Understanding</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="an-introduction-to-gene-structure.html"><a href="an-introduction-to-gene-structure.html"><i class="fa fa-check"></i><b>3</b> <em>An Introduction to Gene Structure</em></a><ul>
+<li class="chapter" data-level="3.1" data-path="an-introduction-to-gene-structure.html"><a href="an-introduction-to-gene-structure.html#exons-and-introns"><i class="fa fa-check"></i><b>3.1</b> Exons and Introns</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="an-introduction-to-gene-structure.html"><a href="an-introduction-to-gene-structure.html#test-your-understanding-2"><i class="fa fa-check"></i><b>3.1.1</b> <span>Test your understanding</span></a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="an-introduction-to-gene-structure.html"><a href="an-introduction-to-gene-structure.html#one-gene-many-splice-variants"><i class="fa fa-check"></i><b>3.2</b> One gene, many splice variants</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="an-introduction-to-gene-structure.html"><a href="an-introduction-to-gene-structure.html#test-your-understanding-3"><i class="fa fa-check"></i><b>3.2.1</b> <span>Test Your Understanding</span></a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="an-introduction-to-gene-structure.html"><a href="an-introduction-to-gene-structure.html#coding-and-noncoding-exons"><i class="fa fa-check"></i><b>3.3</b> Coding and Noncoding Exons</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="an-introduction-to-gene-structure.html"><a href="an-introduction-to-gene-structure.html#test-your-understanding-4"><i class="fa fa-check"></i><b>3.3.1</b> <span>Test your understanding</span></a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="an-introduction-to-gene-structure.html"><a href="an-introduction-to-gene-structure.html#coding-exons-determine-protein-sequence"><i class="fa fa-check"></i><b>3.4</b> Coding Exons Determine Protein Sequence</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="an-introduction-to-gene-structure.html"><a href="an-introduction-to-gene-structure.html#test-your-understanding-5"><i class="fa fa-check"></i><b>3.4.1</b> <span>Test your understanding</span></a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="an-introduction-to-gene-structure.html"><a href="an-introduction-to-gene-structure.html#top-strand-and-bottom-strand-genes"><i class="fa fa-check"></i><b>3.5</b> Top strand and bottom strand genes</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="an-introduction-to-gene-structure.html"><a href="an-introduction-to-gene-structure.html#test-your-understanding-6"><i class="fa fa-check"></i><b>3.5.1</b> <span>Test your understanding</span></a></li>
+<li class="chapter" data-level="3.5.2" data-path="an-introduction-to-gene-structure.html"><a href="an-introduction-to-gene-structure.html#test-your-understanding-7"><i class="fa fa-check"></i><b>3.5.2</b> <span>Test your understanding</span></a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="an-introduction-to-gene-structure.html"><a href="an-introduction-to-gene-structure.html#reading-frames"><i class="fa fa-check"></i><b>3.6</b> Reading Frames</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="an-introduction-to-gene-structure.html"><a href="an-introduction-to-gene-structure.html#test-your-understanding-8"><i class="fa fa-check"></i><b>3.6.1</b> <span>Test your understanding</span></a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="an-introduction-to-gene-structure.html"><a href="an-introduction-to-gene-structure.html#how-to-view-and-retrieve-gene-product-sequences"><i class="fa fa-check"></i><b>3.7</b> How to View and Retrieve Gene Product Sequences</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="an-introduction-to-gene-structure.html"><a href="an-introduction-to-gene-structure.html#test-your-understanding-9"><i class="fa fa-check"></i><b>3.7.1</b> <span>Test Your Understanding</span></a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="an-introduction-to-gene-structure.html"><a href="an-introduction-to-gene-structure.html#for-discussion"><i class="fa fa-check"></i><b>3.8</b> <span>For Discussion</span></a></li>
+<li class="chapter" data-level="3.9" data-path="an-introduction-to-gene-structure.html"><a href="an-introduction-to-gene-structure.html#addendum"><i class="fa fa-check"></i><b>3.9</b> Addendum</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="gene-discovery-with-rna-seq.html"><a href="gene-discovery-with-rna-seq.html"><i class="fa fa-check"></i><b>4</b> Gene Discovery with <em>RNA-seq</em></a><ul>
+<li class="chapter" data-level="4.1" data-path="gene-discovery-with-rna-seq.html"><a href="gene-discovery-with-rna-seq.html#gene-expression-reviewed"><i class="fa fa-check"></i><b>4.1</b> Gene expression Reviewed</a></li>
+<li class="chapter" data-level="4.2" data-path="gene-discovery-with-rna-seq.html"><a href="gene-discovery-with-rna-seq.html#rna-seq"><i class="fa fa-check"></i><b>4.2</b> RNA-seq</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="gene-discovery-with-rna-seq.html"><a href="gene-discovery-with-rna-seq.html#test-your-understanding-10"><i class="fa fa-check"></i><b>4.2.1</b> <span>Test Your Understanding</span></a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="gene-discovery-with-rna-seq.html"><a href="gene-discovery-with-rna-seq.html#understanding-the-encode-rna-seq-evidence-track"><i class="fa fa-check"></i><b>4.3</b> Understanding the Encode RNA-seq Evidence Track</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="gene-discovery-with-rna-seq.html"><a href="gene-discovery-with-rna-seq.html#test-your-understanding-11"><i class="fa fa-check"></i><b>4.3.1</b> <span>Test Your Understanding</span></a></li>
+<li class="chapter" data-level="4.3.2" data-path="gene-discovery-with-rna-seq.html"><a href="gene-discovery-with-rna-seq.html#test-your-understanding-12"><i class="fa fa-check"></i><b>4.3.2</b> <span>Test Your Understanding</span></a></li>
+<li class="chapter" data-level="4.3.3" data-path="gene-discovery-with-rna-seq.html"><a href="gene-discovery-with-rna-seq.html#for-discussion-1"><i class="fa fa-check"></i><b>4.3.3</b> <span>For Discussion</span></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="gene-discovery-with-rna-seq.html"><a href="gene-discovery-with-rna-seq.html#take-home-messages"><i class="fa fa-check"></i><b>4.4</b> Take Home Messages</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="gene-discovery-with-tss-seq.html"><a href="gene-discovery-with-tss-seq.html"><i class="fa fa-check"></i><b>5</b> <em>Gene Discovery with TSS-seq</em></a><ul>
+<li class="chapter" data-level="5.1" data-path="gene-discovery-with-tss-seq.html"><a href="gene-discovery-with-tss-seq.html#how-tss-seq-is-done."><i class="fa fa-check"></i><b>5.1</b> How TSS-seq is done.</a></li>
+<li class="chapter" data-level="5.2" data-path="gene-discovery-with-tss-seq.html"><a href="gene-discovery-with-tss-seq.html#why-tss-seq-is-useful"><i class="fa fa-check"></i><b>5.2</b> Why TSS-seq is useful</a></li>
+<li class="chapter" data-level="5.3" data-path="gene-discovery-with-tss-seq.html"><a href="gene-discovery-with-tss-seq.html#understanding-the-tss-seq-evidence-track"><i class="fa fa-check"></i><b>5.3</b> Understanding the TSS-seq Evidence Track</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="gene-discovery-with-tss-seq.html"><a href="gene-discovery-with-tss-seq.html#test-your-understanding-13"><i class="fa fa-check"></i><b>5.3.1</b> <span>Test Your Understanding</span></a></li>
+<li class="chapter" data-level="5.3.2" data-path="gene-discovery-with-tss-seq.html"><a href="gene-discovery-with-tss-seq.html#test-your-understanding-14"><i class="fa fa-check"></i><b>5.3.2</b> <span>Test Your Understanding</span></a></li>
+<li class="chapter" data-level="5.3.3" data-path="gene-discovery-with-tss-seq.html"><a href="gene-discovery-with-tss-seq.html#for-discussion-2"><i class="fa fa-check"></i><b>5.3.3</b> <span>For Discussion</span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="gene-discovery-with-tss-seq.html"><a href="gene-discovery-with-tss-seq.html#take-home-messages-1"><i class="fa fa-check"></i><b>5.4</b> Take Home Messages</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="dna-motifs-for-transcription-initiation.html"><a href="dna-motifs-for-transcription-initiation.html"><i class="fa fa-check"></i><b>6</b> <em>DNA motifs for transcription initiation</em></a><ul>
+<li class="chapter" data-level="6.1" data-path="dna-motifs-for-transcription-initiation.html"><a href="dna-motifs-for-transcription-initiation.html#the-core-promoter"><i class="fa fa-check"></i><b>6.1</b> The Core Promoter</a></li>
+<li class="chapter" data-level="6.2" data-path="dna-motifs-for-transcription-initiation.html"><a href="dna-motifs-for-transcription-initiation.html#what-is-a-consensus-sequence"><i class="fa fa-check"></i><b>6.2</b> What is a Consensus Sequence?</a></li>
+<li class="chapter" data-level="6.3" data-path="dna-motifs-for-transcription-initiation.html"><a href="dna-motifs-for-transcription-initiation.html#searching-for-a-consensus-sequence"><i class="fa fa-check"></i><b>6.3</b> Searching for a consensus sequence</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="dna-motifs-for-transcription-initiation.html"><a href="dna-motifs-for-transcription-initiation.html#test-your-understanding-15"><i class="fa fa-check"></i><b>6.3.1</b> <span>Test your understanding</span></a></li>
+<li class="chapter" data-level="6.3.2" data-path="dna-motifs-for-transcription-initiation.html"><a href="dna-motifs-for-transcription-initiation.html#test-your-understanding-16"><i class="fa fa-check"></i><b>6.3.2</b> <span>Test your understanding</span></a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="dna-motifs-for-transcription-initiation.html"><a href="dna-motifs-for-transcription-initiation.html#sequence-logos"><i class="fa fa-check"></i><b>6.4</b> Sequence Logos</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="dna-motifs-for-transcription-initiation.html"><a href="dna-motifs-for-transcription-initiation.html#test-your-understanding-17"><i class="fa fa-check"></i><b>6.4.1</b> <span>Test Your Understanding</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="rna-motifs-for-rna-processing-and-translation.html"><a href="rna-motifs-for-rna-processing-and-translation.html"><i class="fa fa-check"></i><b>7</b> <em>RNA motifs for RNA processing and translation</em></a><ul>
+<li class="chapter" data-level="7.1" data-path="rna-motifs-for-rna-processing-and-translation.html"><a href="rna-motifs-for-rna-processing-and-translation.html#the-addition-of-a-5-guanosine-cap"><i class="fa fa-check"></i><b>7.1</b> The Addition of a 5’ guanosine cap</a></li>
+<li class="chapter" data-level="7.2" data-path="rna-motifs-for-rna-processing-and-translation.html"><a href="rna-motifs-for-rna-processing-and-translation.html#splicing"><i class="fa fa-check"></i><b>7.2</b> Splicing</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="rna-motifs-for-rna-processing-and-translation.html"><a href="rna-motifs-for-rna-processing-and-translation.html#test-your-understanding-18"><i class="fa fa-check"></i><b>7.2.1</b> <span>Test Your Understanding</span></a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="rna-motifs-for-rna-processing-and-translation.html"><a href="rna-motifs-for-rna-processing-and-translation.html#intron-position---anything-is-possible"><i class="fa fa-check"></i><b>7.3</b> Intron position - Anything is possible</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="rna-motifs-for-rna-processing-and-translation.html"><a href="rna-motifs-for-rna-processing-and-translation.html#test-your-understanding-19"><i class="fa fa-check"></i><b>7.3.1</b> <span>Test Your Understanding</span></a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="rna-motifs-for-rna-processing-and-translation.html"><a href="rna-motifs-for-rna-processing-and-translation.html#cleavage-and-polyadenylation"><i class="fa fa-check"></i><b>7.4</b> Cleavage and Polyadenylation</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="rna-motifs-for-rna-processing-and-translation.html"><a href="rna-motifs-for-rna-processing-and-translation.html#test-your-understanding-20"><i class="fa fa-check"></i><b>7.4.1</b> <span>Test Your Understanding</span></a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="rna-motifs-for-rna-processing-and-translation.html"><a href="rna-motifs-for-rna-processing-and-translation.html#translation-initiation"><i class="fa fa-check"></i><b>7.5</b> Translation Initiation</a><ul>
+<li class="chapter" data-level="7.5.1" data-path="rna-motifs-for-rna-processing-and-translation.html"><a href="rna-motifs-for-rna-processing-and-translation.html#test-your-understanding-21"><i class="fa fa-check"></i><b>7.5.1</b> <span>Test Your Understanding</span></a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="rna-motifs-for-rna-processing-and-translation.html"><a href="rna-motifs-for-rna-processing-and-translation.html#uorfs"><i class="fa fa-check"></i><b>7.6</b> uORFs</a></li>
+<li class="chapter" data-level="7.7" data-path="rna-motifs-for-rna-processing-and-translation.html"><a href="rna-motifs-for-rna-processing-and-translation.html#recognizing-uorfs"><i class="fa fa-check"></i><b>7.7</b> Recognizing uORFs</a><ul>
+<li class="chapter" data-level="7.7.1" data-path="rna-motifs-for-rna-processing-and-translation.html"><a href="rna-motifs-for-rna-processing-and-translation.html#test-your-understanding-22"><i class="fa fa-check"></i><b>7.7.1</b> <span>Test Your Understanding</span></a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="rna-motifs-for-rna-processing-and-translation.html"><a href="rna-motifs-for-rna-processing-and-translation.html#for-discussion-3"><i class="fa fa-check"></i><b>7.8</b> <span>For Discussion</span></a></li>
+<li class="chapter" data-level="7.9" data-path="rna-motifs-for-rna-processing-and-translation.html"><a href="rna-motifs-for-rna-processing-and-translation.html#homework"><i class="fa fa-check"></i><b>7.9</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="gene-discovery-using-pathogenic-sequence-variants.html"><a href="gene-discovery-using-pathogenic-sequence-variants.html"><i class="fa fa-check"></i><b>8</b> Gene discovery using pathogenic sequence variants</a><ul>
+<li class="chapter" data-level="8.1" data-path="gene-discovery-using-pathogenic-sequence-variants.html"><a href="gene-discovery-using-pathogenic-sequence-variants.html#one-gene-two-definitions"><i class="fa fa-check"></i><b>8.1</b> One Gene: Two Definitions</a></li>
+<li class="chapter" data-level="8.2" data-path="gene-discovery-using-pathogenic-sequence-variants.html"><a href="gene-discovery-using-pathogenic-sequence-variants.html#understanding-dna-variants"><i class="fa fa-check"></i><b>8.2</b> Understanding DNA variants</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="gene-discovery-using-pathogenic-sequence-variants.html"><a href="gene-discovery-using-pathogenic-sequence-variants.html#test-your-understanding-23"><i class="fa fa-check"></i><b>8.2.1</b> <span>Test Your Understanding</span></a></li>
+<li class="chapter" data-level="8.2.2" data-path="gene-discovery-using-pathogenic-sequence-variants.html"><a href="gene-discovery-using-pathogenic-sequence-variants.html#test-your-understanding-24"><i class="fa fa-check"></i><b>8.2.2</b> <span>Test Your Understanding</span></a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="gene-discovery-using-pathogenic-sequence-variants.html"><a href="gene-discovery-using-pathogenic-sequence-variants.html#for-discussion-4"><i class="fa fa-check"></i><b>8.3</b> <span>For Discussion</span></a></li>
+<li class="chapter" data-level="8.4" data-path="gene-discovery-using-pathogenic-sequence-variants.html"><a href="gene-discovery-using-pathogenic-sequence-variants.html#homework-1"><i class="fa fa-check"></i><b>8.4</b> <span>Homework</span></a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="orthology-and-disease-models.html"><a href="orthology-and-disease-models.html"><i class="fa fa-check"></i><b>9</b> <em>Orthology and Disease Models</em></a><ul>
+<li class="chapter" data-level="9.1" data-path="orthology-and-disease-models.html"><a href="orthology-and-disease-models.html#performing-a-reciprocal-best-hit-analysis"><i class="fa fa-check"></i><b>9.1</b> Performing a Reciprocal Best Hit Analysis</a></li>
+<li class="chapter" data-level="9.2" data-path="orthology-and-disease-models.html"><a href="orthology-and-disease-models.html#rbh-analyis-of-human-bbs1-first-blastp."><i class="fa fa-check"></i><b>9.2</b> RBH analyis of human BBS1: First BLASTP.</a></li>
+<li class="chapter" data-level="9.3" data-path="orthology-and-disease-models.html"><a href="orthology-and-disease-models.html#understanding-a-pairwise-alignment"><i class="fa fa-check"></i><b>9.3</b> Understanding a Pairwise Alignment</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="orthology-and-disease-models.html"><a href="orthology-and-disease-models.html#test-your-understanding-25"><i class="fa fa-check"></i><b>9.3.1</b> <span>Test Your Understanding</span></a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="orthology-and-disease-models.html"><a href="orthology-and-disease-models.html#rbh-analyis-of-human-bbs1-reciprocal-blastp."><i class="fa fa-check"></i><b>9.4</b> RBH analyis of human BBS1: Reciprocal BLASTP.</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="orthology-and-disease-models.html"><a href="orthology-and-disease-models.html#test-your-understanding-26"><i class="fa fa-check"></i><b>9.4.1</b> <span>Test Your Understanding</span></a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="orthology-and-disease-models.html"><a href="orthology-and-disease-models.html#understanding-your-rbh-analysis"><i class="fa fa-check"></i><b>9.5</b> Understanding your RBH analysis</a><ul>
+<li class="chapter" data-level="9.5.1" data-path="orthology-and-disease-models.html"><a href="orthology-and-disease-models.html#test-your-understanding-27"><i class="fa fa-check"></i><b>9.5.1</b> <span>Test Your Understanding</span></a></li>
+</ul></li>
+<li class="chapter" data-level="9.6" data-path="orthology-and-disease-models.html"><a href="orthology-and-disease-models.html#homework-2"><i class="fa fa-check"></i><b>9.6</b> <span>Homework</span></a></li>
+<li class="chapter" data-level="9.7" data-path="orthology-and-disease-models.html"><a href="orthology-and-disease-models.html#independent-project"><i class="fa fa-check"></i><b>9.7</b> <span>Independent Project</span></a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fantastic Genes and Where to Find Them</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="gene-discovery-using-pathogenic-sequence-variants" class="section level1">
+<h1><span class="header-section-number">8</span> Gene discovery using pathogenic sequence variants</h1>
+<p>A <strong>Sequence variant</strong><a href="#fn57" class="footnote-ref" id="fnref57"><sup>57</sup></a> that leads to disease (or any measurable change in an organism’s phenotype) provides evidence for the existence of a gene. When a sequence variant is mapped to the genome, the location of the gene is also discovered.</p>
+<p>To follow along with the text and to answer “Test Your Understanding” questions, you will be using the <a href="https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%204%3A%20Mutational%20Analysis" target="_blank">“Sequence Variants”</a> session for this chapter.</p>
+<div id="one-gene-two-definitions" class="section level2">
+<h2><span class="header-section-number">8.1</span> One Gene: Two Definitions</h2>
+<p>A gene can be defined as a segment of DNA that produces a gene product. To prove a gene exists using this definition, one can search for physical evidence: the gene product itself. In chapters four and five, we looked at RNA as physical evidence. A gene is also defined as “a <em>functional</em> unit of inheritance”. To prove a gene exists using this definition one can look for a phenotypic change that is passed from one generation to the next. Heritable phenotypic changes are caused by sequence variants that fall <em>within genes</em>. Thus, a sequence variant that causes a phenotypic change can be used as physical evidence, pinpointing the location of a gene.</p>
+<p>That said, <em>every</em> gene cannot be identified in this way even if a DNA variant renders a gene inactive. Why? Some genes when inactive do not produce a measurable phenotypic change. Why you ask? Perhaps you don’t know where to look or what to measure. Or there might be more than one gene with the same function (genetic redundancy<a href="#fn58" class="footnote-ref" id="fnref58"><sup>58</sup></a>) and thus inactivating one gene may not lead to a phenotypic change because another similar gene is still functional.</p>
+</div>
+<div id="understanding-dna-variants" class="section level2">
+<h2><span class="header-section-number">8.2</span> Understanding DNA variants</h2>
+<p>Open the <a href="https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%204%3A%20Mutational%20Analysis" target="_blank">“Sequence Variants”</a> session to view DNA variants that map to BBS1. Each variant is colored according to its known clinical significance: red for pathogenic, green for benign and gray for uncertain significance. Each mutation is also coded according to type (i.e. substitution or InDel). See (Figure <a href="gene-discovery-using-pathogenic-sequence-variants.html#fig:MutationCodes">8.1</a>) for a list of DNA variant codes you are likely to encounter.</p>
+<br>
+<div class="figure" style="text-align: center"><span id="fig:MutationCodes"></span>
+<img src="static/images/MutationCodesTable.png" alt="The most common DNA varient abbreviations you are likely to see." width="100%" />
+<p class="caption">
+Figure 8.1: The most common DNA varient abbreviations you are likely to see.
+</p>
+</div>
+<p><br></p>
+<p>The evidence track we are using to view these sequence variants is called “Clinvar Short Variants &lt; 50 bp”. It can be found in the “Phenotype and Literature” section within the list of evidence tracks below the browser window. I have it set to “pack”. What is Clinvar? <a href="https://www.ncbi.nlm.nih.gov/clinvar/" target="_blank">ClinVar</a> is a freely accessible, public archive that reports the relationship between sequence variants in humans (DNA substitutions or indels<a href="#fn59" class="footnote-ref" id="fnref59"><sup>59</sup></a>) and phenotypes (benign or pathogenic). ClinVar contains submissions by clinicians <em>and</em> research scientists about patients or human research subjects concerning the clinical significance of sequence variants. Some are described as pathogenic (cause disease) while others are described as benign. It’s important to keep in mind that not all submissions have been verified. In other words, some data displayed in this evidence track may be inaccurate. In any case, information about short variants (&lt; 50 bp) identified in human genes has been uploaded from the Clinvar archive into the UCSC genome browser.</p>
+<p>Now zoom into <em>coding</em> exon 1 then click on any variant. This will take you to a new page that describes the sequence variant in more detail including how the impact the sequence variant has on the nucleotide sequence (Nucleotide HGVS), the protein sequence (Protein HGVS). It may also describe any phenotype associated with the sequence variant and its clinical significance (if any).</p>
+<br>
+<div class="figure" style="text-align: center"><span id="fig:TtoC"></span>
+<img src="static/images/TtoCvariant.png" alt="Two variants that are described in detail in the text." width="100%" />
+<p class="caption">
+Figure 8.2: Two variants that are described in detail in the text.
+</p>
+</div>
+<p><br></p>
+<p>Now click on the the green T&gt;C variant highlighted on the left in Figure <a href="gene-discovery-using-pathogenic-sequence-variants.html#fig:TtoC">8.2</a>. Notice that the “Nucleotide HGVS” is <strong>NM_024649.5:c.24T&gt;C</strong> (confirm for yourself so you know where you should be looking). This means that at <strong>position 24</strong> of the BBS1 mRNA sequence described in <a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_024649.5?report=GenBank" target="_blank"><strong>NM_024649.5</strong></a><a href="#fn60" class="footnote-ref" id="fnref60"><sup>60</sup></a>, the thymine (T) is changed to cytosine (C). This is a DNA substitution. Also, the “Protein HGVS” is <strong>NP_078925.3:p.Asp8=</strong>. This means that at <strong>position 8</strong> of the BBS1 protein sequence described in <a href="https://www.ncbi.nlm.nih.gov/protein/NP_078925.3" target="_blank">NP_078925.3</a><a href="#fn61" class="footnote-ref" id="fnref61"><sup>61</sup></a>, the Asparagine (Asp, D) still codes for asparagine (=). This is a <strong>silent</strong> mutation (indicated with “=”). You can confirm this by looking at the mutation in context. The <strong>reference</strong> codon<a href="#fn62" class="footnote-ref" id="fnref62"><sup>62</sup></a> for Asparagine (Asp, D) at this position is G-A-T (Figure <a href="gene-discovery-using-pathogenic-sequence-variants.html#fig:TtoC">8.2</a>). In the variant, the codon changes to G-A-C (this is a T&gt;C substitution). If you consult the genetic code (Chapter 3, Figure <a href="an-introduction-to-gene-structure.html#fig:geneticcode">3.8</a>) you will see that both codons code for Asparagine, Asp, D. This is also consistent with the fact that this variant is shaded green (benign). (Figure <a href="gene-discovery-using-pathogenic-sequence-variants.html#fig:HGVScodes">8.3</a>, includes a list of HGVS codes that describe the various impacts a mutation can have on the DNA and the protein. And click <a href="http://www2.csudh.edu/nsturm/CHEMXL153/DNAMutationRepair.htm" target="_blank">here</a> for a reminder of how to classify DNA mutations in general.</p>
+<br>
+<div class="figure" style="text-align: center"><span id="fig:HGVScodes"></span>
+<img src="static/images/HGVStable.png" alt="For examples of DNA variants and their assocated Nucleotide and Protein HGVS codes." width="100%" />
+<p class="caption">
+Figure 8.3: For examples of DNA variants and their assocated Nucleotide and Protein HGVS codes.
+</p>
+</div>
+<p><br></p>
+<p>Sometimes the Protein HGVS row is blank. This is often the case for splice site mutations as it is near impossible to predict what impact this type of mutation will have on the protein sequence. Will the intron remain in the mature mRNA? Will the an exon be skipped during splicing? Moreover, the position of the mutation is difficult to describe using the NM_ code as by definition mRNAs lack introns! The following is an example of a Nucleotide HGVS description for a splice site mutation: NM_024649.5:c.47+2T&gt;C. In this example, position 47 is the last nucleotide of exon 1. Thus the mutation is found at 47+2 position (2nd nucleotide in the intron). In other words, the highly conserved T in the G-<strong>T</strong> of the 5’ SS of intron 1 is mutated to a C.</p>
+<p>Importantly, you can search for a specific variant in the UCSC genome browser using “Nucleotide HGVS” info (i.e. NM_024649.5:c.24T&gt;C), or the “Protein HGVS” (i.e. NP_078925.3:p.Asp8=) or the “ClinVar Variation Report” (i.e. NM_024649.5(BBS1):c.24T&gt;C (p.Asp8=)). This knowledge will come in handy when you test your understanding!</p>
+<div id="test-your-understanding-23" class="section level3">
+<h3><span class="header-section-number">8.2.1</span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4661QFvixviLrC9nB5QxVFjC19_k_mI_aMwXnhcu0bFhP4Q/viewform?usp=sf_link" target="_blank">Test Your Understanding</a></h3>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
+</style>
+<div class="blue">
+<p>To answer the following “Test Your Understanding” questions, use the <a href="https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%204%3A%20Mutational%20Analysis" target="_blank">“Sequence Variants”</a> session. You may also need to consult Figure <a href="gene-discovery-using-pathogenic-sequence-variants.html#fig:aminoacids">8.4</a> below to remember how amino acids are grouped according to the functional properties associated with their side chains (hydrophobic, polar uncharged etc).
+<br>
+Consider the coding variant <strong>NM_024649.5:c.235G&gt;T</strong> to answer the following questions:</p>
+<ul>
+<li><em>Copy and paste Nucleotide HGVS description from above into the Genome Browser window. What type of sequence variant is this (i.e. transition, transversion or indel)?</em>
+<br></li>
+<li><em>What is the sequence of the reference codon impacted by the G&gt;T mutation?</em>
+<br></li>
+<li><em>What amino acid does the reference codon code for?</em>
+<br></li>
+<li><em>What does the reference codon become in the NM_024649.5:c.235G&gt;T variant?</em>
+<br></li>
+<li><em>What amino acid does the variant codon code for (if any)?</em>
+<br></li>
+<li><em>What type of protein variant is this?</em>
+<br></li>
+</ul>
+</div>
+<br>
+<div class="figure" style="text-align: center"><span id="fig:aminoacids"></span>
+<img src="static/images/aminoacidgroups.png" alt="Amino acid side chains can be grouped according to chemical properties. This image illustrates one way amino acids can be grouped. Image credit: [Dan Cojocari](https://commons.wikimedia.org/w/index.php?curid=9179304)." width="75%" />
+<p class="caption">
+Figure 8.4: Amino acid side chains can be grouped according to chemical properties. This image illustrates one way amino acids can be grouped. Image credit: <a href="https://commons.wikimedia.org/w/index.php?curid=9179304">Dan Cojocari</a>.
+</p>
+</div>
+<p><br></p>
+</div>
+<div id="test-your-understanding-24" class="section level3">
+<h3><span class="header-section-number">8.2.2</span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSeFPVWrhrsiNtMIHhQF2eNraOkg3sjLqcY-q8y9FtL7H_N5eA/viewform?usp=sf_link" target="_blank">Test Your Understanding</a></h3>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
+</style>
+<div class="blue">
+<p>To answer the following “Test Your Understanding” questions, use the <a href="https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%204%3A%20Mutational%20Analysis" target="_blank">“Sequence Variants”</a> session.
+<br>
+<br>
+Now consider the coding variant <strong>NM_024649.5:c.41C&gt;G</strong> to answer the following questions:</p>
+<ul>
+<li><em>Copy and paste Nucleotide HGVS description from above into the Genome Browser window. What type of sequence variant is this (i.e. transition, transversion or indel)?</em>
+<br></li>
+<li><em>What is the sequence of the reference codon impacted by the C&gt;T mutation?</em>
+<br></li>
+<li><em>What amino acid does the reference codon code for?</em>
+<br></li>
+<li><em>What does the reference codon become with the NM_024649.5:c.41C&gt;G variant?</em>
+<br></li>
+<li><em>What amino acid does the variant codon code for (if any)?</em>
+<br></li>
+<li><em>What type of protein variant is this?</em></li>
+</ul>
+<p>Now consider the coding variant <strong>NM_024649.5:c.240C&gt;T</strong> to answer the following questions:</p>
+<ul>
+<li><em>Copy and paste Nucleotide HGVS description from above into the Genome Browser window. What type of sequence variant is this (i.e. transition, transversion or indel)?</em>
+<br></li>
+<li><em>What is the sequence of the reference codon impacted by the C&gt;T mutation?</em>
+<br></li>
+<li><em>What amino acid does the reference codon code for?</em>
+<br></li>
+<li><em>What does the reference codon become with the NM_024649.5:c.240C&gt;T variant?</em>
+<br></li>
+<li><em>What amino acid does the variant codon code for (if any)?</em>
+<br></li>
+<li><em>What type of protein variant is this?</em></li>
+</ul>
+<p>General Questions about mutations.</p>
+<ul>
+<li><em>What type of sequence variants lead to a frameshift mutation (transition, transversion, indel)?</em>
+<br></li>
+<li><em>By definition, where must frameshift mutations be located (i.e. exons, introns, 5’ UTR, 3’ UTR, promoter)?</em>
+<br></li>
+<li><em>By definition, where must splice site mutations be located (i.e. exons, introns, 5’ UTR, 3’ UTR, promoter)?</em>
+<br></li>
+<li><em>By definition, where must nonsense mutations be located (i.e. exons, introns, 5’ UTR, 3’ UTR, promoter)?</em>
+<br></li>
+</ul>
+<p>Step back and look at a larger region surrounding BBS1. Specifically, click on the link for <a href="https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%204%3A%20Mutational%20Analysis" target="_blank">“Sequence Variants”</a> session then zoom out 10X. This region now includes neighboring genes including MRPL11, DPP3, BBS1, ZDHHC24, ACTN3 and CTSF.</p>
+<ul>
+<li><em>Copy and paste a nucleotide HGVS code for any frameshift mutation that maps to BBS1</em>
+<br></li>
+<li><em>Pathogenic sequence variants map to two genes in this region. Choose the two among MRPL11, DPP3, BBS1, ZDHHC24, ACTN3 and CTSF?</em>
+<br></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="for-discussion-4" class="section level2">
+<h2><span class="header-section-number">8.3</span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSda-6Xh3SbF8zzKhoQVZ6biWLkzigculLabj8y3Jg1I4Yc5KA/viewform?usp=sf_link" target="_blank">For Discussion</a></h2>
+<ol style="list-style-type: decimal">
+<li>Some genes don’t have any variants associated with them. Why do you think this is? More than one answer is possible.</li>
+<li>Find the sequence variant that maps to the gene, CCS (Nucleotide HGVS: NM_005125.2:c.487C&gt;T). It suggests that it might lead to neurodegeneration but it is rated as “uncertain significance”. How likely do you think it is that this is a pathogenic allele. Use any tool (including Google searches, your knowledge of genetics and reasoning abilities) to argue one way or the other (there are no right answers).</li>
+</ol>
+</div>
+<div id="homework-1" class="section level2">
+<h2><span class="header-section-number">8.4</span> <a href="https://drive.google.com/file/d/11T71xL2ylto_hP32Uo560bUnb0kbLp61/view?usp=sharing" target="_blank">Homework</a></h2>
+<p>© 2019, Maria Gallegos. All rights reserved.</p>
+<style>
+p.caption {
+  font-size: 0.8em;
+  margin-right: 2%;
+  margin-left: 2%;
+  line-height: 1.2em;
+  text-align: left;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+.zoomDiv {
+  opacity: 0;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 50;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 50px #888888;
+  max-height:100%; 
+  overflow: scroll;
+}
+
+.zoomImg {
+  width: 100%;
+}
+</style>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').prepend("<div class=\"zoomDiv\"><img src=\"\" class=\"zoomImg\"></div>");
+    // onClick function for all plots (img's)
+    $('img:not(.zoomImg)').click(function() {
+      $('.zoomImg').attr('src', $(this).attr('src'));
+      $('.zoomDiv').css({opacity: '1', width: '100%'});
+    });
+    // onClick function for zoomImg
+    $('img.zoomImg').click(function() {
+      $('.zoomDiv').css({opacity: '0', width: '0%'});
+    });
+  });
+</script>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="57">
+<li id="fn57"><p>Everyone’s genome contains millions of sequence variants (small differences in sequence), that make each person unique. Most variants have unknown effects. Some contribute to differences between humans like eye color and blood type while a small number cause disease. Common variants are often described as single-nucleotide polymorphisms (SNPs) while rare variants that lead to disease are sometimes called mutations. That said, it does not make sense to use the word “mutant” when humans are discussed. This word is typically reserved for genetic model systems or laboratory animals that are known to be inbred<a href="gene-discovery-using-pathogenic-sequence-variants.html#fnref57" class="footnote-back">↩︎</a></p></li>
+<li id="fn58"><p>In engineering the word redundancy is used to describe the inclusion of extra components which are not strictly necessary to functioning, but are there in case of failure of other components. In genetics, genetic redundancy is a term used to describe situations where a given biochemical function is encoded by two or more genes that perform the same function. In these cases, mutations (or defects) in one of these genes will have a smaller effect on the fitness of the organism than expected from the genes’ known function. Paraphrased from Wikipedia<a href="gene-discovery-using-pathogenic-sequence-variants.html#fnref58" class="footnote-back">↩︎</a></p></li>
+<li id="fn59"><p>An small insertion or deletion mutation<a href="gene-discovery-using-pathogenic-sequence-variants.html#fnref59" class="footnote-back">↩︎</a></p></li>
+<li id="fn60"><p>An accession number is provided because, as you know, some genes produce multiple unique mRNAs and so the position of a given nucleotide is <em>isoform dependent</em> and must be stated explicitly. In this example, you will find a T at position 24 of the sequence provided in the accession code. See for yourself! A link to the sequence was provided in the main text<a href="gene-discovery-using-pathogenic-sequence-variants.html#fnref60" class="footnote-back">↩︎</a></p></li>
+<li id="fn61"><p>Again, an accession number ID is provided because some genes produce multiple unique mRNAs and thus multiple protein isoforms. So the position of a given amino acid is <em>isoform dependent</em> and must be stated explicitly. In this example, you will find a D at position 8 of the sequence provided in the accession code. Again, a link to the sequence is provided in the main text<a href="gene-discovery-using-pathogenic-sequence-variants.html#fnref61" class="footnote-back">↩︎</a></p></li>
+<li id="fn62"><p>The reference codon is most easily defined as the “wildtype” version of the codon found (as is) in the genome browser. That said, it does not make sense to use the word “wildtype” when humans are discussed (for the same reason it does not make sense to use the word mutant). Moreover, the genome sequence uploaded to the UCSC genome browser was derived from multiple people. The word “wildtype” is typically only used to describe genetic model systems that are known to be inbred.<a href="gene-discovery-using-pathogenic-sequence-variants.html#fnref62" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="rna-motifs-for-rna-processing-and-translation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="orthology-and-disease-models.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
