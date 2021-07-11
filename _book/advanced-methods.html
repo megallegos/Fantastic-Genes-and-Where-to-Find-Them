@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Fantastic Genes and Where to Find Them</title>
-  <meta name="description" content="Fantastic Genes and Where to Find Them" />
+  <title>9 Advanced Methods | 09-Chapter</title>
+  <meta name="description" content="9 Advanced Methods | 09-Chapter" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Fantastic Genes and Where to Find Them" />
+  <meta property="og:title" content="9 Advanced Methods | 09-Chapter" />
   <meta property="og:type" content="book" />
   
   
@@ -16,12 +16,12 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Fantastic Genes and Where to Find Them" />
+  <meta name="twitter:title" content="9 Advanced Methods | 09-Chapter" />
   
   
   
 
-<meta name="author" content="Maria Gallegos, Cal State University East Bay" />
+<meta name="author" content="Maria Gallegos" />
 
 
 
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="orthology-and-disease-models.html"/>
 
-<link rel="next" href="overview.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -230,7 +230,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fantastic Genes and Where to Find Them</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">09-Chapter</a>
           </h1>
         </div>
 
@@ -238,24 +238,193 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Fantastic Genes and Where to Find Them</h1>
-<p class="author"><em>Maria Gallegos, Cal State University East Bay</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>Most recent update: 2021-07-11</em></p>
+<div id="advanced-methods" class="section level1" number="9">
+<h1><span class="header-section-number">9</span> Advanced Methods</h1>
+<p>Before you get started in this chapter, you should create an account at the UCSC Genome Browser web site. Creating an account at the UCSC Genome Browser site is useful for a variety of reasons. For example, having an account will enable you to save your favorite settings into a named session, and then return to the named session later regardless of which computer you use. You can also share named sessions with other users (something I will do for you throughout the semester).</p>
+<p>To create an account, go to the <a href="https://genome.ucsc.edu/" target="_blank">UCSC Genome Browser</a>. In the toolbar at the top of the page hover over “My Data” then choose “My Sessions” from the pulldown menu. At the top of the page click “Create an Account”. Complete the form then click “Sign Up”. You are done!</p>
+<div id="how-to-configure-the-genome-browser" class="section level2" number="9.1">
+<h2><span class="header-section-number">9.1</span> How to Configure the Genome Browser</h2>
+<br>
+<div class="figure" style="text-align: center"><span id="fig:gateway"></span>
+<img src="static/images/browsergateway.png" alt="A) This is the UCSC Genome Browser Homepage. Click on *Genome Browser* (red arrow) to get to the Browser Gateway Page. B) This is the Browser Gateway Page. Choose the *Feb. 2009* Human assembly (red arrow) then click *Go*." width="50%" />
+<p class="caption">
+Figure 9.1: A) This is the UCSC Genome Browser Homepage. Click on <em>Genome Browser</em> (red arrow) to get to the Browser Gateway Page. B) This is the Browser Gateway Page. Choose the <em>Feb. 2009</em> Human assembly (red arrow) then click <em>Go</em>.
+</p>
 </div>
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<p><img src="static/images/DNA.png" width="100%" style="display: block; margin: auto;" /></p>
-<p>First, I would like to acknowledge the Genome Education Partnership (<a href="http://gep.wustl.edu/curriculum/introducing_genes" target="_blank">GEP</a>) for inspiration. They created a resource for learning about Eukaryotic gene structure using the UCSC Genome Browser (Laakso et al. 2017). Their focus is on the <em>Drosophila</em> genome. My focus is on <em>humans</em>. My hope is that skills learned within these pages and the saved sessions I created (and will continue to curate) can be used as a springboard for continued exploration of the human genome.</p>
+<p><br></p>
+<p>To begin from scratch, go to the <a href="https://genome.ucsc.edu/" target="_blank">UCSC Genome Browser</a>. At the home page, click on “Genome Browser” under “Our Tools” (Figure <a href="advanced-methods.html#fig:gateway">9.1</a> A). Within the Genome Browser Gateway page, hover your mouse over “Genome Browser” in the tool bar (Figure <a href="advanced-methods.html#fig:gateway">9.1</a> B, purple arrow) and click on “Reset All User Settings”. Then click on the pull down menu under Human Assembly<a href="#fn72" class="footnote-ref" id="fnref72"><sup>72</sup></a> and choose “Feb. 2009 (GRCh37/hg19)” (Figure <a href="advanced-methods.html#fig:gateway">9.1</a> B, red arrow). Now click “Go” to be taken to the Human Genome Browser window.</p>
+<p>Since you did not search for a specific gene, you have been taken to a default position within the genome, specifically, a small region on the <strong>short arm</strong> of the X chromosome where a gene called ACE2 resides (Figure <a href="advanced-methods.html#fig:ACE2">9.2</a> A and B). Why here? This paragraph was written in 2020 when ACE2 became <em>infamous</em>. Google “ACE2” and “coronavirus” to see why!</p>
+<br>
+<div class="figure" style="text-align: center"><span id="fig:ACE2"></span>
+<img src="static/images/ACE2gene.png" alt="The UCSC Genome Browser window focused on a small region of the X chromosome (A) on a gene called ACE2 (B). To hop to BBS1, use the search window (C) then click *Go* (D). See text for important details." width="100%" />
+<p class="caption">
+Figure 9.2: The UCSC Genome Browser window focused on a small region of the X chromosome (A) on a gene called ACE2 (B). To hop to BBS1, use the search window (C) then click <em>Go</em> (D). See text for important details.
+</p>
+</div>
+<p><br></p>
+<p>To hop to where BBS1 resides, type BBS1 into the search window (Figure <a href="advanced-methods.html#fig:ACE2">9.2</a> C). <strong>As you type, a popup menu will appear with a short list of related genes</strong>. Choose BBS1 then click “GO” (Figure <a href="advanced-methods.html#fig:ACE2">9.2</a> D). If you <em>do not</em> choose a gene from this list, you will be transported to a new page with a long list of related genes grouped according to sequence database (there are many). It might be easiest to go back and try again. Alternatively, scroll down until you find the “NCBI RefSeq” database<a href="#fn73" class="footnote-ref" id="fnref73"><sup>73</sup></a> then click on the link for BBS1.</p>
+<p>Your browser window should now jump to chromosome 11 (Figure <a href="advanced-methods.html#fig:BBS1">9.3</a> A). The default genome browser window will now display a variety of so-called “evidence tracks”. These are graphical representations of genome features or experimental data related to the region displayed. Nearly all evidence tracks include a centrally located title heading (Figure <a href="advanced-methods.html#fig:BBS1">9.3</a> B) and all include a gray rectangle positioned on the left (Figure <a href="advanced-methods.html#fig:BBS1">9.3</a> C). Three evidence tracks are highlighted in total. The one at the top is the <strong>Base Position</strong> track (Figure <a href="advanced-methods.html#fig:BBS1">9.3</a> D). This is the only evidence track that <em>does not have a track title</em>. This track displays the genome sequence itself. That said, you will only be able to see individual nucleotides when you zoom in close enough. Two <strong>Gene Prediction</strong> tracks are also highlighted. One is the “UCSC Genes” track (Figure <a href="advanced-methods.html#fig:BBS1">9.3</a> E). Another is the “NCBI Refseq genes” track (Figure <a href="advanced-methods.html#fig:BBS1">9.3</a> C). Notice the gene name is displayed on the left side of each schematic.</p>
+<br>
+<div class="figure" style="text-align: center"><span id="fig:BBS1"></span>
+<img src="static/images/BBS1gene.png" alt="The browser window now focused on a small region of chromosome 11 (A) where BBS1 resides (C and E). Each evidence track includes a track title (B) and is demarcated by a gray rectangle (D, E and C). To hide all tracks click *hide all* (F) and click *refresh* (H). To open the NCBI Refseq track change the pulldown menu from *hide* to *pack* (G)." width="100%" />
+<p class="caption">
+Figure 9.3: The browser window now focused on a small region of chromosome 11 (A) where BBS1 resides (C and E). Each evidence track includes a track title (B) and is demarcated by a gray rectangle (D, E and C). To hide all tracks click <em>hide all</em> (F) and click <em>refresh</em> (H). To open the NCBI Refseq track change the pulldown menu from <em>hide</em> to <em>pack</em> (G).
+</p>
+</div>
+<p><br></p>
+<p>Each gray rectangle corresponding to an evidence track is clickable. Clicking on a gray rectangle will take you to a track settings page for that particular evidence track. Try it. Then click the back button to get back. Right clicking on a gray rectangle on the other hand will open up a small window for <em>quick</em> formatting. For example, you can hide any evidence track that you don’t need in this way. To hide all evidence tracks at once, scroll down to below the browser window and click “hide all” (Figure <a href="advanced-methods.html#fig:BBS1">9.3</a> F). Everything but the Base Position track will disappear. Now scroll down to view the most commonly used evidence tracks below the browser window to confirm. All but the “Base Position” track found within the “Mapping and Sequencing” section should be set to hide. <strong>Now change the “NCBI Refseq” evidence track (found within the “Genes and Gene Predictions” section) to “pack”</strong> (Figure <a href="advanced-methods.html#fig:BBS1">9.3</a> G) <strong>and click “refresh”</strong> (Figure <a href="advanced-methods.html#fig:BBS1">9.3</a> H). You should now see only two gray rectangles on the left. The base position track on top and the “NCBI refseq genes” Gene Prediction track is below (Figure <a href="advanced-methods.html#fig:BBS1simple">9.4</a>).</p>
+<br>
+<div class="figure" style="text-align: center"><span id="fig:BBS1simple"></span>
+<img src="static/images/BBS1genesimple.png" alt="This is what the *BBS1 Gene Structure* named session should look like. One example of an exon and intron are highlighted. The asterix points on the right highlights the open triangles extending from ZDHHC24 indicating that this gene extends further to the right. (A) highlights the navigational toolbar and (B) highights the schematic of the chromosome where BBS1 resides. One exon (green bracket) and one intron (red bracket) are also shown." width="100%" />
+<p class="caption">
+Figure 9.4: This is what the <em>BBS1 Gene Structure</em> named session should look like. One example of an exon and intron are highlighted. The asterix points on the right highlights the open triangles extending from ZDHHC24 indicating that this gene extends further to the right. (A) highlights the navigational toolbar and (B) highights the schematic of the chromosome where BBS1 resides. One exon (green bracket) and one intron (red bracket) are also shown.
+</p>
+</div>
+<p><br></p>
+<p>Again, the “NCBI Refseq genes” evidence track includes a graphical representation of the BBS1 gene<a href="#fn74" class="footnote-ref" id="fnref74"><sup>74</sup></a>. This gene schematic displays the position of BBS1 exons and introns (see red and green brackets in Figure <a href="advanced-methods.html#fig:BBS1simple">9.4</a>). You may also notice that a second gene (ZDHHC24) partly overlaps BBS1. The open arrowheads at the far right of the graphical representation for ZDHHC24 (red asterisk, Figure <a href="advanced-methods.html#fig:BBS1simple">9.4</a>) indicates that this gene extends farther to the right.</p>
+</div>
+<div id="creating-a-named-session" class="section level2" number="9.2">
+<h2><span class="header-section-number">9.2</span> Creating a Named Session</h2>
+<p>Compare what you configured to my named session, <a href="https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201" target="_blank">BBS1 gene structure</a>. If they are identical, congratulations. If not, try again but don’t stress too much. You can always use my link to get to a correctly formatted page. You are now ready to create your own named session based on the browser window you created (or mine). First, make sure your browser window looks the way you want it to. Next, make sure you are logged into your account. Hover your mouse over “My Data” then click on “My Sessions”. Scroll down to the section entitled, “Save Settings”. Within the window under “Save current settings as named session”, input a reasonable name for this session (i.e. “Gene and Base Prediction Tracks only”). Then hit submit. Now anytime you want to sit down at a computer (anywhere, any computer) to view BBS1 with only the base position and gene prediction tracks open, you simply need to log into your UCSC Genome Browser account, go into “My Sessions” and click on your named session. You won’t need to rely on this manual for links. <strong>You can also use this named session as a springboard to view any other gene by using the search window.</strong></p>
 <p>© 2019, Maria Gallegos. All rights reserved.</p>
+<style>
+p.caption {
+  font-size: 0.8em;
+  margin-right: 2%;
+  margin-left: 2%;
+  line-height: 1.2em;
+  text-align: left;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+.zoomDiv {
+  opacity: 0;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 50;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 50px #888888;
+  max-height:100%; 
+  overflow: scroll;
+}
+
+.zoomImg {
+  width: 100%;
+}
+</style>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').prepend("<div class=\"zoomDiv\"><img src=\"\" class=\"zoomImg\"></div>");
+    // onClick function for all plots (img's)
+    $('img:not(.zoomImg)').click(function() {
+      $('.zoomImg').attr('src', $(this).attr('src'));
+      $('.zoomDiv').css({opacity: '1', width: '95%'});
+    });
+    // onClick function for zoomImg
+    $('img.zoomImg').click(function() {
+      $('.zoomDiv').css({opacity: '0', width: '0%'});
+    });
+  });
+</script>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footnotes">
+<hr />
+<ol start="72">
+<li id="fn72"><p>A Genome Assembly is a whole genome sequence produced after chromosomes have been fragmented, sequenced, and the resulting sequences have been put back together (assembled). Each time the genome is sequenced, errors are corrected then uploaded as a new genome assembly. The Feb. 2009 is still the most popular assembly to date with the most useful evidence tracks.<a href="advanced-methods.html#fnref72" class="footnote-back">↩︎</a></p></li>
+<li id="fn73"><p>The “NCBI RefSeq” database is the one we will be using.<a href="advanced-methods.html#fnref73" class="footnote-back">↩︎</a></p></li>
+<li id="fn74"><p>Gene: Genome browsers provide a precise position for each gene, in reality, we don’t really know where a gene truly begins or ends (there is sequence both upstream and downstream of the RNA transcript that is important for regulating gene expression). That said, we can experimentally determine the transcribed region of a gene. Thus, it makes most sense to equate the transcribed region of a gene to the gene itself even though we know more sequence is required for the gene to be transcribed properly.<a href="advanced-methods.html#fnref74" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="orthology-and-disease-models.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="overview.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

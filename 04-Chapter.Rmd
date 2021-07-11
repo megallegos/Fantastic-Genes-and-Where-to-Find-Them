@@ -1,170 +1,184 @@
 ---
 title: "04-Chapter"
 author: "Maria Gallegos"
-date: "6/4/2020"
 output:
   html_document: default
   pdf_document: default
 ---
-# Gene Discovery with *RNA-seq*
+# *Gene Discovery with TSS-seq*
 
-In this chapter, you will learn how RNA sequencing can be used to determine where genes are located in the genome. To follow along with the text and to answer the "Test Your Understanding" questions, start with the ["RNA-seq" session](https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%202%20RNA%2Dseq){target="_blank"} at the UCSC Genome Browser. You can also use this link as a starting point to view RNA-seq data for any gene of interest.
+TSS stands for Transcriptional Start Site, also known as the +1 position of transcription^[The +1 position marks the position of the first *templated* nucleotide of the transcript. You may already know that a 5' cap is added to the mRNA. As a result, the +1 position of transcription becomes the second nucleotide of the mRNA.]. In this module, you will learn how RNA sequencing near transcriptional start sites (TSS-seq) is done, how the sequence data is displayed in the UCSC Genome Browser and how this data can be used to surmise where the *beginning* of genes are located in the genome. You will also see how TSS-seq together with RNA-seq (Chapter 4) provides a more complete picture of where individual genes are located. To follow along with the text and to answer "Test Your Understanding" questions, begin with the ["TSS-seq"](https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%202%20TSS%2Dseq){target="_blank"} session at the UCSC Genome Browser.
 
-## Gene expression Reviewed
-For a cell to utilize a gene it must be *expressed*. When it is expressed, it is either transcribed to produce a functional RNA (i.e. tRNA) or transcribed *and* translated to produce a functional polypeptide (i.e. actin). In both cases, the first step in producing a gene product is *ALWAYS* transcription. It logically follows that if you extract RNA from a cell, sequence it then find the regions in the genome with matching sequence, you have discovered regions of the genome that have been transcribed. Regions of the genome that are transcriptionally active pinpoint the position of genes. The most important take home message for this chapter: ***RNA sequence provides important physical evidence to identify and locate genes in the genome***.
+## How TSS-seq is done. 
 
-## RNA-seq
-RNA sequencing allows one to determine which segments of the genome are transcriptionally active and thus serves as evidence for the existence of genes. The basic steps involved in RNA sequencing are outlined in Figure \@ref(fig:rnaseq) with the focus on a single gene. In brief, mRNA is extracted from cells, fragmented into pieces then converted into double-stranded DNA (Figure \@ref(fig:rnaseq), see *in vitro*). These short DNA fragments are then sequenced and computationally aligned to the genome sequence. Notice that the sequence reads only align to the exon portions of this gene in the genome. This is because mRNA was sequenced. mRNA typically contain intron sequences (see *in vivo*^[“in vivo” is a Latin phrase biologists use to describe a process taking place inside a living organism (online dictionary)]). Conversion of mRNA to DNA *typically* occurs after splicing is complete although sometimes intron fragments are sequenced.  
+How might one identify the transcriptional start sites of most genes in the genome without prior knowledge of where those start sites are located? Recall that mRNA has *two* unique features: 1) a 5’ cap and 2) a 3' poly A tail. While both can be exploited to purify mRNA away from all other RNA types, the 5’ cap can be used specifically to pinpoint the transcriptional start site (TSS) as it is only added to the *beginning* of a message (mRNA) By sequencing only that portion of the mRNA that is next to the 5' cap you can identify the TSS! Dubbed TSS-seq, these sequence reads are then aligned to a reference genome as is done for RNA-seq. 
+
+The steps necessary to prepare mRNA for TSS-seq are outlined in Figure \@ref(fig:TSSseqsteps). First, poly-A containing RNA (mRNA) is extracted from an organism, tissue or cell of interest as described previously (Figure \@ref(fig:rnaextraction)). Due to the fragility of RNA in general, RNA extractions typically include full length mRNA (with a 5’ cap) and partially degraded mRNA (with a 5' phosphate instead). You do not want to sequence the 5' ends of partially degraded mRNA as these molecules do not pinpoint the location of the TSS but instead map to the interior of a gene. 
 
 <br>
-```{r rnaseq, out.width='100%', fig.align='center', fig.cap = "Source: [Wikipedia](https://en.wikipedia.org/wiki/RNA-Seq)"}
+```{r TSSseqsteps, out.width='75%', fig.align='center', fig.cap = "TSSseq protocol. A) All mRNA possessing a poly A tail is separted from total RNA. The resulting sample contains both full length mRNA with a 5' cap and partially degraded mRNA with a 5' phosphate (P-). B) An enzyme that removes 5' phosphates is added. See the P change to OH. C) An enzyme is added that removes the 5' cap structure. See the black circle change to a P. D) RNA ligase attaches an RNA oligo (green rectangle) to all RNAs that had a 5' phosphate in C). E) The addition of reverse transcriptase and random oligos produce cDNA fragments. Those cDNA fragments that once had a 5' cap all have the same sequence at their 3' ends."}
 knitr::opts_chunk$set(echo = FALSE)
-knitr::include_graphics('static/images/rnaseqoutline.png')
+knitr::include_graphics('static/images/TSSseqmethod.png')
 ```
 <br>
 
-Again, when mRNA is specifically collected for RNA-seq, this technique specifically identifies *protein coding genes*. It also identifies exon-intron boundaries since introns are absent in mRNA and thus not sequenced^[That said, it is impossible to remove *all* pre-mRNA and so introns are occasionally sequenced as you will see when you examine the RNA seq data]. To enrich for mRNA, one can exploit one of two features unique to mRNA: All mRNAs possess a 5’ cap structure and a 3' poly A tail (a string of adenines). 
+How can one distinguish full length mRNA from partially degraded fragments? Scientists have devised a clever method:  First, they add an enzyme that removes 5’ phosphates from *all* partially degraded RNA molecules in the tube. Full-length, capped mRNAs do not possess a 5’ phosphate and are thus impervious to^[not affected by] this step. Next, they add an enzyme that removes the 5’ cap from full length mRNAs. Now the full-length mRNAs that were once capped possess a 5’ phosphate instead^[At this point, full length mRNA possess a 5' phosphate while partially degraded mRNA posses a 5' hydroxyl - so they are still different and distringuishable]! Next, RNA ligase^[**RNA ligase** is similar to DNA ligase in that both require a 5’ phosphate and a 3’ hydroxyl to form a phosphodiester bond between two nucleic acid chains. The main difference: RNA ligase links two RNA chains together while DNA ligase links two DNA chains together] is used to attach a single-stranded **RNA** oligo^[Short single-stranded RNA chain] to the 5’ end of only those RNAs that have 5’ phosphates. Finally, *all* the RNA in the tube is converted into cDNA using a reverse transcriptase and random primer (as described previously). Importantly, only those  cDNAs that once had a 5' cap are tagged with the specific primer sequence at their 3' end (NOTE: Do you understand why this primer sequence is now at the 3' end of the DNA?). This 3' sequence tag can now be exploited for sequencing as the sequencing reaction is primed with a DNA oligo that base pairs^[The phrase "base pairs" here is used as a verb to mean "hybridizes to" or "anneals to"] to the sequence tag. The short sequence reads that are collected (about 35 bp in length) are then computationally aligned to the genome and counted as described previously (chapter 4). 
 
-Figure \@ref(fig:rnaextraction) demonstrates how the poly A tail can be used to purify mRNA from total RNA^[**Total RNA** includes all the RNA molecule types that are found in cells. Total RNA includes mRNA (the only RNA type that is loaded into ribosomes and translated to make protein) and a wide variety of functional RNAs (i.e. tRNA, rRNA, miRNA, piRNA, piwiRNA, 22G and 26G RNA).] for RNA-seq and other applications. In brief, mRNA (black) is separated from all other types of RNA (all other colors) through the use of oligo dT-magnetic beads. Oligo is short for oligonucleotide, a short strand of single stranded DNA. Oligo dT is a single-stranded oligo that consists only of thymines. As a result, only RNA molecules with poly A tails will bind (or hybridize) to the magnetic bead-linked oligo dT through base pairing. 
+## Why TSS-seq is useful
 
-<br>
-```{r rnaextraction, out.width='100%', fig.align='center', fig.cap = "A common mRNA extraction method involves the use of magnetic beads attached to oligo dT. The oligo dT binds the poly A tail present on mRNA. The magnet captures the mRNA while the other types of RNA are removed during a washing step."}
-knitr::opts_chunk$set(echo = FALSE)
-knitr::include_graphics('static/images/mrnaextraction.png')
-```
-<br>
-
-The magnet holds on to the beads that are bound to mRNA (NOTE: Each bead actually has thousands of oligos attached and thus binds thousands of mRNA in the sample). All other RNAs can now be washed away. Then to separate the poly A+ mRNA from the oligo dT magnetic beads, gentle heat is applied. Once the mRNA has been collected, it can be broken into fragments in a variety of ways. In one methods, a light treatment with an enzyme called RNAse III is used. RNase III cleaves at random to break phosphodiester bonds in RNA chains. 
-
-Next the RNA fragments are converted into DNA. But how? Most DNA polymerases are so-called *DNA-dependent, DNA polymerases* and by definition cannot use RNA as a template for DNA synthesis. Luckily, retroviruses encode a unique type of DNA polymerase known as reverse transcriptase, which is an *RNA-dependent DNA polymerase*! Like most DNA polymerases, however, reverse transcriptase can only add new nucleotides to the 3’ end of a pre-existing chain. Thus, a primer is needed. There are two options: 1) the use of so-called random primers ^[random primers are a mixture of oligonucleotides representing all possible sequence for a given size (i.e. hexamers are common). Random Primers can be used to prime cDNA synthesis (modified from Bioline).] which will anneal at 'random' along the fragmented RNA molecules to prime DNA synthesis or 2) the use of a sequence specific primer that has been designed to anneal to an RNA oligo that had been ligated to the 3’ end of all the fragmented RNAs. 
-Whichever method is used to prime DNA synthesis, the resulting DNA produced is called complementary DNA or cDNA (it is complementary to the template RNA). The millions of unique cDNA molecules converted from RNA fragments are then sequenced using a high throughput sequencing method (i.e. Illumina or Ion Torrent). All the millions of short “sequence reads” obtained are then computationally aligned (Figure \@ref(fig:rnaseq), *in silico*^[***in silico*** is an expression meaning "performed on computer or via computer simulation" in reference to biological experiments]) to a reference genome assembly. In Figure \@ref(fig:alignmentread), you can get a sense for what it means to align sequence reads to a reference genome^[A reference genome (also known as a reference assembly) is a digital nucleic acid sequence database, assembled by scientists as a representative example of the set of genes in one idealized individual organism of a species (wikipedia definition).]. So long as a sequence read is long enough you can align it to a *single* region of the genome with confidence. 
+As we just saw, RNA-Seq data can identify segments of the genome that are transcribed *and* remain in mRNA (introns are transcribed but removed from mRNA). In other words, this type of data is excellent for identifying the position of **exons**. Often, RNA-seq data will also reveal how exons are linked together (with split alignments). That said, it is not always sufficient for gene identification purposes. To identify an individual transcription unit (a single gene) with more confidence, it is better to know the position of the exons *and* the TSS. To see this for yourself, review RNAseq data corresponding to a small region of the genome (Figure \@ref(fig:RNAseqdataonly)). The NCBI Refseq gene prediction track is hidden on purpose. As you can see, the histogram and sequence read alignments including the split alignments are displayed. How many genes do you think are in this region? What is your rationale? 
 
 <br>
-```{r alignmentread, out.width='100%', fig.align='center', fig.cap = "Reads = Sequence reads. They are typically short. These sequence reads align (match) the short segment of genome shown below. Compare the sequences that are placed directly above one another."}
-knitr::opts_chunk$set(echo = FALSE)
-knitr::include_graphics('static/images/readalignment.png')
-```
-<br>
-
-In summary, RNAseq provides *unbiased*, experimental evidence that a given segment of a genome is transcriptionally “active” and thus harbors a gene. Why do I say “unbiased”? No prior knowledge about the gene sequence or location of the gene in the genome is necessary for a gene to be identified. Moreover, RNAseq can reveal *how* transcriptionally active a gene is in a given RNA sample by keeping track of the *number of reads* that map to a specific site in the genome. Genes that are highly transcribed are expected to produce on average more sequence reads than a gene that transcribed to lower levels. That said, the absence of sequence reads for a given segment of genomic DNA does NOT indicate the absence of a gene in that region of the genome. After all, muscle tissue is not expected to express the same set of genes as brain tissue. That said, more and more genes will be identified by RNA-seq as more and more RNA-seq experiments are performed using RNA extracted from different types of samples (and different environmental conditions). 
-
-**The take home messages**: RNAseq is a misnomer, RNA is **NOT** sequenced directly. Only DNA that is made using RNA as a template is sequenced! 
-
-### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSewKpJdsq0wm_uRGAblrKawwG5mvWVZieFe2sh1cH8FHjEpOg/viewform?usp=sf_link){target="_blank"}
-<style>
-div.blue {background-color:#e6f0ff}
-</style>
-<div class = "blue">
-
-- *RNA-sequencing involves the sequencing of which molecule (DNA, RNA or protein)?* 
-<br>
-- **True or False**: *In order to purify mRNA for RNA-seq (not tRNA, rRNA etc) you can use magnetic beads covered in random primers.* 
-<br>
-- **True or False**: *In order to purify mRNA for RNA-seq (not tRNA, rRNA etc) you can use magnetic beads covered in oligo dT primers.* 
-<br>
-- *What type of polymerase is Reverse Transcriptase?* 
-<br>
-- *What purpose does RNAse III serve in the RNA-sequencing method?* 
-<br>
-- *In general, where can RNAseq reads map (given high levels of gene expression)?* 
-</div>
-
-## Understanding the Encode RNA-seq Evidence Track 
-The UCSC Genome Browser contains numerous evidence tracks containing RNA-seq data from a variety of labs and institutes. Again, these tracks are useful for visualizing regions of the genome that are transcriptionally active. We will focus on one evidence track entitled, “Encode RNA-seq…” that maps RNA sequencing data from the ENCODE project. The overall goal of the ENCODE project is to identify and characterize transcribed regions of the human genome. I like this evidence track because it lets you see the alignment of individual sequence reads to the reference genome. 
-
-To load the Encode RNA-seq evidence track focused on BBS1, click on the ["RNA-seq" session link](https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%202%20RNA%2Dseq){target="_blank"}. Your evidence track display window will look like Figure \@ref(fig:seqreads (excluding my annotations in red). Scroll down to the “Expression” category to see that the “Encode RNA-seq…” evidence track is now set for “show”. Also, notice we are viewing the 2009 Genome Assembly. This is because the “Encode RNA-seq…” evidence track is only available for this genome assembly and not the newer 2013 genome assembly. Why? Evidence tracks are curated by real people (groups of scientists). When scientists change jobs or move to new projects they may not always be available to update an evidence track so that it can be used with more recent genome assemblies.
-
-<br>
-```{r seqreads, out.width='100%', fig.align='center', fig.cap = "The Encode evidence track here shows high throughput sequencing of RNA samples from the K562 immortal cell line. The Alignment view on top shows where the sequence reads align to the genome including alignments that map to a single exon and *split alignments* that are interrupted by an intron. Sequences determined to be transcribed on the positive strand are shown in blue. Sequences determined to be transcribed on the negative strand are shown in red. Click on the image to enlarge."}
-knitr::opts_chunk$set(echo = FALSE)
-knitr::include_graphics('static/images/sequencereads.png')
-```
-<br>
-
-The RNA-seq data displayed in Figure \@ref(fig:seqreads) corresponds to an RNAseq experiment performed at the Genome Institute of Singapore in 2009. In this experiment, RNA was extracted from K562 cells, an immortal cell line that was established in 1970 from fluid that built up around the lungs of a 53-year-old woman with chronic myelogenous leukemia. The extracted RNA was purified over a column containing oligo dT magnetic beads aimed at enriching for polyA+ RNA (mRNA) and removing contaminants (e.g. rRNA, tRNA, DNA, protein etc.). The mRNA was then fragmented into small, random-sized pieces then converted into cDNA by reverse transcriptase. This cDNA library^[**Library**: There are many types of libraries in molecular biology including cDNA and genomic libraries. A cDNA library is a complex mixture of cDNA representing all the genes that were transcriptionally active at the time of RNA collection. A genomic library is a complex mixture of genomic DNA fragments that in sum include all the genomic DNA for a given species. The DNA fragments are stored in DNA vectors such that each vector contains a unique insert of DNA.] were amplified by PCR^[the Polymerase Chain Reaction or PCR is a powerful molecular technique designed to make multiple copies of any DNA sequence below a certain size] then sequenced. Short, 35 bp sequence reads were collected and computationally aligned to the genome assembly. How did I know all this? Right click on the gray rectangle at the far left of the Encode RNA-seq evidence track to view its “Track Settings” page. Scroll down to read the “Methods” then when you are done click on the K562 link to learn more about the cell line used in the study. The UCSC Genome Browser is rich with information worth exploring. If you ever get lost down a rabbit hole simply click the the ["RNA-seq" session link](https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%202%20RNA%2Dseq){target="_blank"} to get back to the beginning. 
-
-The RNA-seq data is displayed in the UCSC Genome Browser in two ways: as individual sequence read alignments and as a histogram. In the top half of the evidence track, the sequence read alignments are displayed in blue or red. The tiny blue horizontal lines represent reads that align and match the top strand (these sequence reads align to BBS1, a top strand gene), while the tiny, red lines represent sequence reads that align and match the bottom strand (these sequence reads align to the position of bottom strand genes). Notice that some sequence read alignments are interrupted by a very thin, horizontal line. These are called "split alignments".
-
-Split alignment sequence reads are less intuitive. Recall that this RNA-seq experiement involved the sequencing of fragmented mRNA (not tRNA, rRNA, pre-mRNA etc.). Since mRNAs lack introns and the RNA fragmentation process is random, a single sequence reads can align to **two** adjacent exons in the genome. To indicate that a single sequence read aligns to two adjacent exons, they are connected by a thin line. These types of sequence reads are particularly useful because they provide information about the position of exon-intron junctions. Review Figure \@ref(fig:splitalign) to view an example of a split alignment spanning a particularly short intron found in a gene called PLXNA3. In this figure I provide the actual sequence of a sequence read and a pairwise alignment to the genome. You can see this type of information for yourself by clicking on any individual sequence read. This action takes you to the sequence read information page.  
-
-<br>
-```{r splitalign, out.width='100%', fig.align='center', fig.cap = "The top panel contains the sequence data for a single sequence read (read ID: 222_675_1710). The middle panel displays the alignment between this sequence read and the reference genome. Regions identical in sequence are boxed and connected by lines. Notice that the alignment is *split*. **This is because the sequence read does NOT align to one single contiguous stretch of genomic DNA**. The bottom panel is a display of all the sequence read alignments that map to a small region of PLXNA3 including 222_675_1710 outlined in red. In this region, I count 6 split alignments that span intron 24 of PLXNA3. Click image to enlarge."}
-knitr::opts_chunk$set(echo = FALSE)
-knitr::include_graphics('static/images/splitalignment.png')
-```
-<br>
-
-The bottom section of the Encode RNA-seq window shows the sequence read data as a **histogram** (Figure \@ref(fig:seqreads)). As in all histograms, the Y-axis represents frequency (in this specific case, it represents the number of “reads” counted or “read counts”) and the X-axis represents chromosomal position (in bp). In general, the histogram graphically describes how many sequence reads are found to align to a given nucleotide position in the genome. The taller the peak, the more “reads” that are counted for that particular nucleotide. You should know our evidence track is configured so that the histogram data for the bottom strand is hidden *and* the maximum number of reads found in the window is shown on the Y axis. To better understand how to read the RNA-seq histogram data, zoom into exon 4 of BBS1. Your view should look like Figure \@ref(fig:histogramannotated). At this level of resolution, you can better count individual sequence reads. Notice the maximum number of reads in the Y-axis has changed to 11 (used to be 58). Also, notice that the number of reads for any given nucleotide position along exon four varies depending on the number of read counts for that nucleotide.    
-
-<br>
-```{r histogramannotated, out.width='100%', fig.align='center', fig.cap = "A close up view of exon 4 of BBS1. Notice the Y axis for the histogram indicates that the maximum number of sequence reads that map to this region is 11. The height for any given region of the histogram is determined by the number of reads counted. On the left, I highlight a region of exon 4 that has 5 total reads. On the right I highlight a region of exon 4 that has 2 total reads. Click image to enlarge."}
+```{r RNAseqdataonly, out.width='100%', fig.align='center', fig.cap = "RNAseq data corresponding to a small region in the genome with the base position and gene prediction tracks hidden. Guess how many genes you think map to this region of the human genome."}
 knitr::opts_chunk$set(echo = FALSE)
 knitr::include_graphics('static/images/histogram.png')
 ```
 <br>
 
-### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLScSof7sO3S_09-Ulow0qixD-qie0n7pTp2NdDonfaV8waKO-A/viewform?usp=sf_link){target="_blank"}
+In Figure \@ref(fig:RNAseqdataonly), there are two main groups of split alignments. It would be reasonable to guess that there are two genes in this region. To see the true number of genes click [here](https://genome.ucsc.edu/s/megallegos/DPP3){target="_blank"}. This link takes you to the same genome region as in Figure \@ref(fig:RNAseqdataonly) but with the gene prediction and base position tracks visible. If you guessed wrong, do you see why you were misled? 
 
-The following questions correspond to the RNAseq data collected from K562 cells – start with the ["RNA-seq" session link](https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%202%20RNA%2Dseq){target="_blank"}. Submit your answers online but also write them down so that you can compare them to your answers in the next set of questions below. 
-<br><br>
+
+## Understanding the TSS-seq Evidence Track 
+The UCSC Genome Browser contains numerous evidence tracks displaying TSS-seq data. We will focus on one that was generated by the FANTOM5 Consortium of labs in Japan (FANTOM stands for Functional Annotation of the Mammalian Genome). Click the link to learn more about [FANTOM5](http://fantom.gsc.riken.jp/){target="_blank"}. FANTOM5 is a custom evidence track that I added by clicking on “Add Custom Tracks” then searching for "FANTOM5". To view this evidence track click the link for the [TSS-seq](https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%202%20TSS%2Dseq){target="_blank"} session. You can also use this link as a starting point for questions related to TSS-seq data for any gene.  
+
+Your genome browser should now display the “Max Counts of CAGE^[CAGE is short for "**C**ap **A**nalysis **G**ene **E**xpression"] reads” evidence track for BBS1. This evidence track displays TSS-seq data in histogram form only (Figure \@ref(fig:TSSseqforBBS1)). The track settings are configured such that that the Y-axis is set at 350 read counts. This can be changed at the track settings page for this evidence track. Setting the Y-axis at 350 is sufficient for most genes. For some highly expressed genes it is better to set the Y-axis to "". Go to the track settings page. Scan down until you see "Data view scaling:". Change the pulldown menu from "use vertical viewing range setting" to "autoscale to data view". Then click submit. If you do this for BBS1, the Y-axis should end at 69.0667. Before you move on, change the Y-axis back to "use vertical viewing range setting". 
+
+<br>
+```{r TSSseqforBBS1, out.width='100%', fig.align='center', fig.cap = "TSSseq data for BBS1."}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/TSSseqBBS1.png')
+```
+<br>
+
+Zoom out 10X. The genome browser window is now focused on a larger portion of the genome surrounding BBS1 (Figure \@ref(fig:TSSseqfor10X)). Notice that there are both red peaks and blue peaks. There are also tall peaks and tiny peaks.
+
+Recall that genes can be found on the top strand or the bottom strand as RNA polymerase can use either strand as template for transcription. If RNA polymerase uses the bottom strand as template then it moves from left to right (5' to 3') and produces an mRNA that *matches* the top strand sequence and is complementary to the bottom strand. If RNA polymerase uses the top strand as template then it moves from right to left (also 5' to 3' relative to the bottom strand) and produces an mRNA that matches the *bottom strand* sequence. Histrogram peaks displayed in **red** represent the TSS of top strand genes. Histogram peaks displayed in **blue** represent the TSS of bottom strand genes. 
+
+The taller a histrogram peak at a given location, the more sequence reads that map to that region. The more read counts, the more reliable the data and the more likely the data represents a true TSS. In fact, the tiny peaks observed in Figure \@ref(fig:TSSseqfor10X) (find each red asterix) likely reflect background noise^[Molecular biology is messy. Each enzymatic step listed in Figure \@ref(fig:TSSseqsteps) is not likely to achieve 100% success. For example, partial mRNAs that fail to have their 5' phosphates removed can be sequenced along side all the true full-length mRNAs.] and may not represent the position of a TSS at all. That said, the *absence* of a peak at a location where one was predicted to exist does not mean that the gene prediction is incorrect. This might be an instance where a gene was not expressed in the tissue sample that was used to generate the TSS-seq data.  There is a common saying, "Absence of evidence is not evidence of absence". 
+
+<br>
+```{r TSSseqfor10X, out.width='100%', fig.align='center', fig.cap = "TSSseq data of a larger region surrounding BBS1. Each asterix (my annotation) highlights sequence reads that are not likely to represent true transcriptional start sites."}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/TSSseq10X.png')
+```
+<br>
+
+Now zoom in to the TSS for BBS1 (Figure \@ref(fig:TSSclose)). You can see that the majority of experimentally defined TSSs are located at the predicted transcriptional start site. This is not always the case. Also, notice that there are a range of TSSs for BBS1. This is normal. 
+
+<br>
+```{r TSSclose, out.width='100%', fig.align='center', fig.cap = "A close up view of the TSS-seq histogram data surrounding the predicted **transcriptional** start site for BBS1 (as defined by the NCBI refseq evidence track). The **translational** start site of BBS1 is shown in green."}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/TSSBBS1close.png')
+```
+<br>
+
+If you zoom in even farther you can determine the *exact* nucleotide position of the TSS used most often in BBS1. **The first templated ribonucleotide of BBS1 is the "G" at position 66,278,106 on chromosome 11** (Figure \@ref(fig:TSScloser)). To see how the nucleotide position is aligned to the nucleotide and the TSS-seq histogram data in the UCSC genome browser window, see the same image but annotated (Figure \@ref(fig:TSScloserwithannotation)). 
+
+<br>
+```{r TSScloser, out.width='100%', fig.align='center', fig.cap = "An even closer view of the TSS-seq histogram data surrounding the predicted transcriptional start site for BBS1. At this zoom level, the genome sequence *and* individual nucleotide positions are notable"}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/TSSBBS1closer.png')
+```
+<br>
+```{r TSScloserwithannotation, out.width='100%', fig.align='center', fig.cap = "An annotated version of the same view of BBS1 as above."}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/TSSBBS1closerannotated.png')
+```
+<br>
+
+Again, this is a great example of an evidence track that provides unbiased experimental evidence for the existence of a gene. It provides the position of all transcriptional start sites (TSS) within the genome. Each TSS identified by TSS-seq was not predicted to exist but was experimentally determined without prior knowledge (no bias).
+
+That said, TSSseq data is not sufficient to determine the number of individual genes in a given region of the genome. For example, review the histrogram data in (Figure \@ref(fig:TSSdataalone)) and try to predict the number of genes in this region. Again, I have omitted the gene prediction track. Moreover, there are individual genes that utilize alternative transcription initiation sites (Review chapter 3, "One gene, many splice variants")!
+
+<br>
+```{r TSSdataalone, out.width='100%', fig.align='center', fig.cap = "This is an image of the TSSseq evidence track for a small region of the human genome. All other tracks have been hidden. Count the number of transcription starts sites then guess how many genes you think these TSS peaks correspond to."}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/TSSdataonly.png')
+```
+<br>
+
+Only when a sufficient amount of RNAseq data **combined with** TSSseq data is available can one determine the number of genes in a given genomic region with confidence. Click [here](https://genome.ucsc.edu/s/megallegos/TSSproblem2){target="_blank"} to review the gene prediction track and RNAseq data for the genomic region shown in Figure \@ref(fig:TSSdataalone) to see how the RNAseq data combined with the TSS seq data provides a more complete picture of the true number of genes present.  How does this differ from what you thought? Do you see why you were misled? 
+
+### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSdoZhdWlHjqL4CDLwYROE0EiyIVDlYp0qbOYrwDt0HGiG7Dcg/viewform?usp=sf_link){target="_blank"}
 <style>
 div.blue {background-color:#e6f0ff}
 </style>
 <div class = "blue">
 
-- *How many sequence reads map to exon 6 of BBS1*
+**The first three questions require the TSS-seq data displayed in the figure below.**
 <br>
-- *How many split alignment reads connect exons 16 and 17 of BBS1?*
+```{r TSSdataalone2, out.width='100%', fig.align='center'}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/TSSdataonlyTYU.png')
+```
+
+- *How many prominent transcription start sites (>50 Max Count Reads) can be found in the genome region displayed above?* 
 <br>
-- *Search for the neighboring gene, ZDHHC24 (zoom out or search by name). Are there a significant number of sequence reads that align to ZDHHC24 (more than say 1-2)? NOTE: Before you answer, think about how you would recognize them given this is a negative strand gene.*
+- *Among the TSS peaks displayed in the figure above, how many use the top strand as a template for transcription?* 
 <br>
-- *Search for the neighboring gene, ACTN3 (zoom out or search by name). Are there a significant number of sequence reads that align to ACTN3 (more than say 1-2)?*
+- *Among the TSS peaks displayed in the figure above, how many involve RNA polymerase traveling from left to right?* 
+<br>
+
+**Search for a gene called, DPF2. Then zoom into the region where transcription initiation occurs MOST prominently**.
+<br>
+
+- *Where is this experimentally defined TSS peak relative to the predicted TSS for DPF2? To find the experimentally defined TSS, look at the TSS-seq data. By predicted TSS, look at the NCBI Refseq gene prediction track^[NOTE: The UCSC gene prediction track may also open. This is a bug. If the added clutter is distracting, right click on its corresponding gray rectangle and choose "hide".].*
+<br>
+- *Now determine the exact nucleotide position where transcription initiation occurs most often for DPF2 (enter a specific number).*
+<br>
+- *Now determine the first templated nucleotide (G A U or C) for DPF2. Choose the one that is observed most often.* 
+<br>
 </div>
-<br>
 
-You have been evaluating RNAseq data collected from K562 cells. Let’s look at a different RNAseq experiment. **To switch data sets**, click on the gray rectangle (at left) corresponding to the “Encode RNA-seq” evidence track to view the track settings page. Within track settings, unclick the K562 data set and click on the **H1-hESC** data set. To see what type of cells these are, click on the “H1-hESC” link. Copy (control C) the information in the description column.  Now hit “Submit” to go back to the browser display window. 
 
-### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSf4fcc57bfhUFKRBDyqeUTgSEvr4B9TKqiK8-EKO1P3AWJAgA/viewform?usp=sf_link){target="_blank"}
-The following questions are about the RNAseq data collected from H1-hESC cells. Submit your answers online but also write them down and compare these answers to the ones you completed above. 
-<br><br>
+### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSewgrAT0bWLa87TPlI-dcFIbXBKRn0yrZw9ELWU6JgWWg9V_g/viewform?usp=sf_link){target="_blank"}
 <style>
 div.blue {background-color:#e6f0ff}
 </style>
 <div class = "blue">
+**Search for a gene called, ANO9 then zoom into the region where transcription initiation occurs MOST prominently**.
+<br>
 
-- *What kind of cells are h1-hESC (Copy and paste your answer from the web to avoid typos)?*
+- *Where is this experimentally defined TSS peak relative to the predicted TSS for ANO9? To find the experimentally defined TSS, look at the TSS-seq data. By predicted TSS, look at the NCBI Refseq gene prediction track^[NOTE: The UCSC gene prediction track may also open. This is a bug. If the added clutter is distracting, right click on its corresponding gray rectangle and choose "hide".].*
 <br>
-- *How many sequence reads map to exon 6 of BBS1*
+- *Now determine the exact nucleotide position where transcription initiation occurs most often for ANO9 (enter a specific number).*
 <br>
-- *How many split alignment reads connect exons 16 and 17 of BBS1?*
+- *Now determine the templated nucleotide (G A U or C) for ANO9 that occurs most often.* 
 <br>
-- *Zoom out 10X to find the downstream gene, ZDHHC24. Are there any sequence reads aligning to ZDHHC24?*
+
+**Search for a gene called, ZDHHC24 then zoom into the region where transcription initiation occurs MOST prominently**
 <br>
-- *Find another downstream gene, ACTN3. Are there any sequence reads aligning to ACTN3?*
+
+- *Where is this experimentally defined TSS peak relative to the predicted TSS for ZDHHC24? To find the experimentally defined TSS, look at the TSS-seq data. By predicted TSS, look at the NCBI Refseq gene prediction track^[NOTE: The UCSC gene prediction track may also open. This is a bug. If the added clutter is distracting, right click on its corresponding gray rectangle and choose "hide".].*
 <br>
-- *How does the RNAseq data compare between the two cell types (K562 cells vs h1-hESC)?*
+- *Now determine the exact nucleotide position where transcription initiation occurs most often for ZDHHC24 (enter a specific number).*
+<br>
+- *Now determine the templated nucleotide (G A U or C) for ZDHHC24 that occurs most often.* 
+<br>
 </div>
-<br>
 
-### [For Discussion](https://docs.google.com/forms/d/e/1FAIpQLSfvvzUFBLKvVkvlxCiw_rfX5ykAsYTjVueqoJR14zbL4wplJg/viewform?usp=sf_link){target="_blank"}
+### [For Discussion](https://docs.google.com/forms/d/e/1FAIpQLSeR06s09E1L8aZKmYzKyJwuSNjVxeYzn7mpXPM555K0qOM9Xw/viewform?usp=sf_link){target="_blank"} 
 
-1. When BBS1 is transcribed, full length mRNA molecules are produced (from exon 1 to 17). And so one might expect that the number of sequence reads that map to different parts of the gene would be produced at a more or less equal number. They are not. For example, compare the number of sequence reads that align to exon 5 to the number of sequence reads that align to exon 6. Alternatively, compare the number of *split alignments* that link exons 1 to 2 to the number of split alignments that link exons 11 to 12. Why do you think the number of sequence reads and/or split alignments varies along the length of a single gene? 
+1. What surprised you the most as you reviewed the TSS-seq data (there are no correct answers)? 
 <br>
-2. What about differences between data sets? Why do you think there was such a profound difference between the RNA-seq data collected from H1-hESC cells compared to K562 cells? 
+2. Explain in your own words, why I say that RNA-seq and TSS-seq are **unbiased** molecular techniques that can be used to pinpoint the position of genes. 
 <br>
-3. Finally, compare the exon-intron junctions in the gene prediction track (NCBI Refseq genes) to all the split alignments found experimentally (by RNA sequencing of K562 cells or H1-esc). There is at least one *unexpected* split alignment read in BBS1 that suggests that there may be an alternative splice form not predicted by the NCBI Refseq gene prediction track. Do you see the same *unexpected* split alignment read in the H1-ESC data set? Describe the alternative splice form as precise as possible. Do you think this alternatively splice form is real or an artifact of the RNA-seq method? Look at each unexpected split alignment read sequence before you answer.
+3. Explain in your own words, why TSS-seq data alone can be misleading when attempting to identify genes in a given region of the genome. 
+<br>
+4. Explain in your own words, why RNA-seq data alone can be misleading when attempting to identify genes in a given region of the genome. 
 <br>
 
 ## Take Home Messages
 
-- RNA-seq data shows which parts of the genome are transcriptionally active (and how active!). 
+- TSS-seq data is similar to RNA-seq data but with TSS-seq only the mRNA segment closest to the 5’ cap is sequenced.
 <br>
-- Because mostly mRNA is “sequenced” (at least that is the goal), RNA-seq reads mostly map to exonic regions (only pre-mRNA has introns).
+- Thus, TSS-seq data identifies transcription start sites (TSS). 
 <br>
-- Due to gene density in some parts of the genome and because mammlian introns can be long, RNA-seq data alone is not always able to define where a transcript begins and ends.  
+- Finally, TSS-seq data combined with RNA-seq data is able to identify each transcription unit with more confidence. 
 <br>
 
 © 2019, Maria Gallegos. All rights reserved.
+
 
 <style>
 p.caption {
@@ -203,7 +217,7 @@ p.caption {
     // onClick function for all plots (img's)
     $('img:not(.zoomImg)').click(function() {
       $('.zoomImg').attr('src', $(this).attr('src'));
-      $('.zoomDiv').css({opacity: '1', width: '95%'});
+      $('.zoomDiv').css({opacity: '1', width: '100%'});
     });
     // onClick function for zoomImg
     $('img.zoomImg').click(function() {

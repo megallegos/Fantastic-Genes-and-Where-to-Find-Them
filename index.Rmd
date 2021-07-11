@@ -1,59 +1,50 @@
 ---
 title: "Fantastic Genes and Where to Find Them"
-author: "Maria Gallegos, Cal State University East Bay, maria.gallegos@csueastbay.edu"
+author: "Maria Gallegos, Cal State University East Bay"
+date: "Most recent update: `r Sys.Date()`"
 site: bookdown::bookdown_site
-documentclass: book
 output:
-  bookdown::pdf_book: default
   bookdown::gitbook: default
+  bookdown::pdf_book: default
+documentclass: book
 ---
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
-
+  
 # Preface {-}
 ```{r legoDNA, out.width='100%', fig.align='center'}
 knitr::opts_chunk$set(echo = FALSE)
 knitr::include_graphics('static/images/DNA.png')
 ```
 
-First, I want to acknowledge the Genome Education Partnership ([GEP](http://gep.wustl.edu/curriculum/introducing_genes){target="_blank"}) for inspiration. They created a resource for learning about Eukaryotic gene structure using the UCSC Genome Browser. Their focus is on the *Drosophila* genome. My focus is on the *human* genome. My hope is that the skills learned within these pages and the saved sessions I have created (and will continue to curate) can be used as a springboard for continued exploration of the human genome.  
-
-<br>
-<br>
+First, I would like to acknowledge the Genome Education Partnership ([GEP](http://gep.wustl.edu/curriculum/introducing_genes){target="_blank"}) for inspiration. They created a resource for learning about Eukaryotic gene structure using the UCSC Genome Browser (Laakso et al. 2017). Their focus is on the *Drosophila* genome. My focus is on *humans*. My hope is that skills learned within these pages and the saved sessions I created (and will continue to curate) can be used as a springboard for continued exploration of the human genome.
 
 © 2019, Maria Gallegos. All rights reserved.
 
-## Overview {-}
+# Overview {-}
 
-Throughout the semester, you will use a web-based visualization tool called a Genome Browser to explore gene structure and function in humans. We will focus on the human gene, BBS1. BBS1 has been implicated in Bardet Biedl Syndrome, a pleiotropic^[pleiotropy is a condition in which a single gene influences more than one trait (Snustad).] disease with a variety of symptoms including blindness, obesity, polydactyly, cognitive impairment, renal abnormalities, infertility and anosmia. In addition to learning how to navigate through the genome browser, you will also learn how to 
+Throughout the semester, you will use a web-based visualization tool called a Genome Browser to explore gene structure and function in humans. We will focus on the human gene, BBS1. Mutations in BBS1 have been implicated in Bardet Biedl Syndrome, a pleiotropic^[pleiotropy is a condition in which a single gene influences more than one trait (Snustad).] disease with a variety of symptoms including blindness, obesity, polydactyly, cognitive impairment, renal abnormalities, infertility and anosmia. In addition to learning how to navigate through the genome browser, you will also learn how to 
 
-1.	Use the Genome Browser to examine gene structure within a genome (Chapter 3)
-2.	Use the Genome Browser to analyze RNA evidence pinpointing the location of genes (Chapters 4 and 5). 
-3.	Identify DNA and RNA sequence motifs critical for gene expression (Chapters 6 and 7). 
-4.	Identify and assess pathogenic and benign mutations (Chapter 8). 
-5.	Analyze sequence conservation between human genes and genes in simpler model organisms (Chapter 9). 
+1.	Evaluate gene structure within a genome (Chapter 2)
+2.	Use RNA evidence to pinpoint the position of genes (Chapters 3 and 4). 
+3.	Identify DNA and RNA sequence motifs critical for gene expression (Chapters 5 and 6). 
+4.	Identify and assess pathogenic and benign mutations (Chapter 7). 
+5.	Analyze gene sequence conservation between humans simpler model organisms (Chapter 8). 
 
-## How to use this manual efficiently {-}
+# How to use this manual {-}
 
-This manual can be viewed on a computer, tablet or phone. That said, navigating through the UCSC genome browser is much easier on a laptop or desktop computer. Moreover, the instructions I provide assume you are using one of the two. When on a computer, the table of contents (side bar) can be toggled in and out by typing "s". And the arrow keys can be used to move to later or earlier chapters. 
+This manual can be viewed on a computer, tablet or phone. That said, navigating through the UCSC genome browser requires a laptop or desktop computer. The instructions I provide assume you are using one of the two. When on a computer, the table of contents (side bar) can be toggled in and out by typing "s". The arrow keys can be used to move to later or earlier chapters. 
 
-All figures can be enlarged by clicking on an image of interest. To reduce the image back to its original size and continue reading, click on the enlarged image again. 
+All figures can be enlarged by clicking on an image of interest. To reduce the image back to its original size and continue reading, click on the image again. 
 
-Throughout this tutorial, you will come across footnotes. When you click on the link to a footnote, you will be taken to the end of the chapter to read it. To continue reading, click the return arrow at the end of the footnote. It is a good idea to read the footnotes and figure legends! These are provided to clear up confusion. They might also provide clues to answering "Test Your Understanding" questions (see below). 
+Throughout this tutorial, you will come across footnotes. When you click on the link to a footnote, you will be taken to the end of the chapter. To continue reading where you left off, click the return arrow at the end of the footnote. It is a good idea to read the footnotes and figure legends! These are provided to clear up confusion and provide definitions. They might also provide clues for answering "Test Your Understanding" questions (see below). 
 
-"Test your understanding" (TYU) and "For Discussion" headings are all clickable and take  you to the corresponding "Google quiz" in a new tab. That said, **you need to be logged into your horizon email account in order to access them**. Also, you will NOT receive response receipts.  You can answer each quiz multiple times and after you submit you can check your accuracy. You will NOT receive an email confirmation with your answers to the questions. So long as you don't snap your computer shut before the form has been submitted, I will receive it. Your goal is to eventually figure out how to get the right answer. TYU questions are designed to see if you understand how to navigate through the genome AND if you understand what you are seeing. It is best to get the answers correct before moving on. I will be available during activity section to answer any questions you might have. 
+"Test your understanding" (TYU) and "For Discussion" headings are clickable and take  you to the corresponding "Google quiz" in a new tab. That said, **you need to be logged into your horizon email account in order to access them**. 
 
-Finally, it is best to read this manual with a pen and notebook in hand for taking notes AND for recording your answers to TYU and "For Discussion" questions. If on the off chance your Google Quiz submission fails, you have your answers written down for an easy re-submission. 
+After you submit you can check your accuracy. It is best to get the answers correct before moving on. TYU questions are designed to assess if you understand how to navigate through the genome AND understand what you are seeing. With this in mind, **you can answer each quiz multiple times**. I will be available during the activity section to answer any questions you might have. Keep in mind, you will NOT receive an email confirmation with your answers to the questions. If you want a record of your answers, you should write them down. In fact, it is best to read this manual with a pen and notebook in hand for taking notes AND for recording your answers to TYU and "For Discussion" questions. If on the off chance your Google Quiz submission fails, you have your answers written down for an easy re-submission.
 
-Also, if you spot any errors or typos. Please let me know via Slack. Thanks!
-
-## Before you get started {-}
-
-Before you get started, you should create an account at the UCSC Genome Browser web site. Creating an account at the UCSC Genome Browser site is useful for a variety of reasons. For example, having an account will enable you to save your favorite settings into a named session, and then return to the named session later regardless of which computer you use. You can also share named sessions with other users (something I will do for you throughout the semester). 
-
-To create an account, go to the [UCSC Genome Browser](https://genome.ucsc.edu/){target="_blank"}. In the toolbar at the top of the page hover over “My Data” then choose “My Sessions” from the pulldown menu. At the top of the page click “Create an Account”. Complete the form then click “Sign Up”. You are done! 
+If you spot errors or typos, please let me know. Thanks!
 
 <style>
 p.caption {
