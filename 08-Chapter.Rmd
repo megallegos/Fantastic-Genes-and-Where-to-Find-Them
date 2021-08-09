@@ -1,12 +1,4 @@
----
-title: "08-Chapter"
-author: "Maria Gallegos"
-output:
-  html_document: default
-  pdf_document: default
----
-
-# *Orthology and Disease Models*
+# *Finding Genes with Orthology* {#chapter8}
 
 Genetic model organisms like yeast, worms, flies, fish and mice play a critical role in the advancement of biomedical research (Figure \@ref(fig:modelorganisms)). Each offers unique advantages and all allow the opportunity to investigate gene function and model human disease in an organism that is amenable to genetic, molecular and biochemical studies. Moreover, research in model organisms is cheaper, faster and more ethical than research on humans! A list of  advantages and disadvantages for each of the most common species studied today are shown in Figure \@ref(fig:modelsystems). 
 

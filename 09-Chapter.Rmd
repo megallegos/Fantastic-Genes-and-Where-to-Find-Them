@@ -1,18 +1,12 @@
----
-title: "09-Chapter"
-author: "Maria Gallegos"
-output:
-  html_document: default
-  pdf_document: default
----
+# Advanced Methods {#chapter9}
 
-# Advanced Methods
+## Create an Account at the UCSC Genome Browser
 
-Before you get started in this chapter, you should create an account at the UCSC Genome Browser web site. Creating an account at the UCSC Genome Browser site is useful for a variety of reasons. For example, having an account will enable you to save your favorite settings into a named session, and then return to the named session later regardless of which computer you use. You can also share named sessions with other users (something I will do for you throughout the semester). 
+Creating an account at the UCSC Genome Browser site is useful for a variety of reasons. For example, having an account will enable you to save your favorite settings into a named session, and then return to the named session later regardless of which computer you use. You can also share named sessions with other users (something I will do for you throughout the semester). 
 
 To create an account, go to the [UCSC Genome Browser](https://genome.ucsc.edu/){target="_blank"}. In the toolbar at the top of the page hover over “My Data” then choose “My Sessions” from the pulldown menu. At the top of the page click “Create an Account”. Complete the form then click “Sign Up”. You are done! 
 
-## How to Configure the Genome Browser
+## How to Configure the Genome Browser from Scratch
 
 <br>
 ```{r gateway, out.width='50%', fig.align='center', fig.cap = "A) This is the UCSC Genome Browser Homepage. Click on *Genome Browser* (red arrow) to get to the Browser Gateway Page. B) This is the Browser Gateway Page. Choose the *Feb. 2009* Human assembly (red arrow) then click *Go*."}

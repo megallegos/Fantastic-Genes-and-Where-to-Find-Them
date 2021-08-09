@@ -1,14 +1,5 @@
----
-title: "03-Chapter"
-author: "Maria Gallegos"
-output:
-  html_document: default
-  pdf_document: default
----
-
-# Gene Discovery with *RNA-seq*
-
-In this chapter, you will learn how RNA sequencing can be used to determine where genes are located in the genome. To follow along with the text and to answer the "Test Your Understanding" questions, start with the ["RNA-seq" session](https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%202%20RNA%2Dseq){target="_blank"} at the UCSC Genome Browser. You can also use this link as a starting point to view RNA-seq data for any gene of interest.
+# Finding Genes with *RNA-seq* {#chapter3}
+In this chapter, you will learn how RNA sequencing can be used to determine where genes are located in the genome. To follow along with the text and to answer the "Test Your Understanding" questions, start with the ["RNA-seq"](https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%202%20RNA%2Dseq){target="_blank"} session link. You can also use this link as a starting point to view RNA-seq data for any gene of interest by typing the name of your gene of interest in the search window.
 
 ## Gene expression Reviewed
 For a cell to utilize a gene it must be *expressed*. When it is expressed, it is either transcribed to produce a functional RNA (i.e. tRNA) or transcribed *and* translated to produce a functional polypeptide (i.e. actin). In both cases, the first step in producing a gene product is *ALWAYS* transcription. It logically follows that if you extract RNA from a cell, sequence it then find the regions in the genome with matching sequence, you have discovered regions of the genome that have been transcribed. Regions of the genome that are transcriptionally active pinpoint the position of genes. The most important take home message for this chapter: ***RNA sequence provides important physical evidence to identify and locate genes in the genome***.

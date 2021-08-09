@@ -1,0 +1,5 @@
+book_filename: "Where-are-genes"
+language:
+  ui:
+delete_merged_file: true
+rmd_files: ["index.Rmd", "01-Chapter.Rmd", "02-Chapter.Rmd", "03-Chapter.Rmd", "04-Chapter.Rmd", "05-Chapter.Rmd", "06-Chapter.Rmd", "07-Chapter.Rmd", "08-Chapter.Rmd", "09-Chapter.Rmd",]

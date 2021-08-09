@@ -1,14 +1,6 @@
----
-title: "02-Chapter"
-author: "Maria Gallegos"
-output:
-  html_document: default
-  pdf_document: default
----
-
-# *Understanding Gene Structure*
-To follow along with the text and to answer the "Test Your Understanding" questions use the ["BBS1 gene structure" session](https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201
-){target="_blank"} at the UCSC Genome Browser.
+# Understanding Gene Structure {#chapter2}
+To follow along with the text and to answer the "Test Your Understanding" questions click the ["BBS1 gene structure"](https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201
+){target="_blank"} session link. You can also use this link as a starting point to view gene structure for any gene of interest by typing the name of your gene of interest in the search window.
 
 ## Exons and Introns
 During gene expression, one continuous strand of genomic DNA is used as a template to produce a single-stranded RNA transcript. This process is called **transcription**. This RNA transcript is nearly an identical copy of of the nontemplate strand of genomic DNA^[Two differences: RNA has an extra hydroxyl group attached to the ribose and uracil bases replace thymine bases].  In eukaryotes, internal segments of the RNA transcript are often removed. These internal segments are called **introns** (or **int**ervening **r**egi**ons**). The segments of RNA that remain are *welded* back together (in order) and are called **exons** (or **ex**pressed regi**ons**). To view the exon/intron organization of the BBS1 RNA transcript, click on my named session entitled, [BBS1 gene structure](https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201){target="_blank"} and review the schematic within the NCBI RefSeq Gene Prediction Evidence Track. The BBS1 transcript consists of "boxes" connected by lines (Figure \@ref(fig:BBS1transcript)). The boxes are exons (two examples are highlighted with a red asterix). The lines are introns (one example is highlighted with a purple asterix). Now, hover your mouse over various parts of the schematic (at the UCSC genome browser page). If you hover long enough a popup window will appear indicating which intron or exon you are pointing to! 

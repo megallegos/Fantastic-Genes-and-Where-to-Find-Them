@@ -1,21 +1,13 @@
----
-title: "06-Chapter"
-author: "Maria Gallegos"
-output:
-  pdf_document: default
-  html_document: default
----
-# *RNA motifs for processing and translation*
-
-An RNA transcript cannot be **translated** as is. It must first be modified to produce a mature messenger RNA (mRNA). This modification process is called **pre-mRNA processing** and includes:
+# *RNA motifs for processing and translation* {#chapter6}
+An RNA transcript cannot be **translated** as is. It must be modified first to produce a messenger RNA (mRNA). This modification process is called **pre-mRNA processing** and includes:
 
 1.	The addition of a 5’ methyl guanosine cap (**5’ cap**).
 2.	The removal of introns (**splicing**).
 3.	**RNA cleavage** (to terminate transcription) and 
 4.	The addition of a **poly(A) tail**.
 
-In fact, pol II transcription and RNA processing are closely coordinated with mRNA transport out of the nucleus. This ensures that only fully processed mRNAs make it to the cytoplasm for translation. In this chapter, we will learn about RNA sequence motifs that are required for pre-mRNA processing (in the nucleus) *and* translation (in the cytoplasm). Again we will focus on BBS1 as our model gene to answer the question: Does BBS1 have all the sequence elements required for these processes. Let’s see. To follow along with the text and to answer "Test Your Understanding" questions, start with the ["Gene structure"](https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201
-){target="_blank"} session. 
+In fact, pol II transcription and RNA processing are closely coordinated with mRNA transport out of the nucleus. This ensures that only fully processed mRNAs make it to the cytoplasm for translation. In this chapter, you will learn about RNA sequence motifs that are required for pre-mRNA processing (in the nucleus) *and* translation (in the cytoplasm). Again we will focus on BBS1 as our model gene to answer the question: Does BBS1 have all the sequence elements required for these processes. Let’s see. To follow along with the text and to answer "Test Your Understanding" questions, you can use the ["Gene Structure"](https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201
+){target="_blank"} session link. 
 
 
 ## The Addition of a 5' guanosine cap
@@ -121,7 +113,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
 <br>
 </div>
 <br>
-In general, a codon can be split by an intron at any position: the +1 position, the +2 position or between codons. In Chapter 3, you learned that exons within a single gene can jump from one reading frame to another. The act of splicing brings these exons back into a *single* reading frame. *Thus, it is critical that splicing is accurate*. One mistake and the reading frame of an mRNA will get out of whack. The protein sequence will change and will most likely be shorter than normal. This explains why splice site mutations are often pathogenic in human disease genes. 86
+In general, a codon can be split by an intron at any position: the +1 position, the +2 position or between codons. In [Chapter 2](#chapter2), you also learned that exons within a single gene can jump from one reading frame to another. The act of splicing brings these exons back into a *single* reading frame. *Thus, it is critical that splicing is accurate*. One mistake and the reading frame of an mRNA will get out of whack. The protein sequence will change and will most likely be shorter than normal. This explains why splice site mutations are often pathogenic in human disease genes. 86
 
 ## Cleavage and Polyadenylation
 Termination of transcription involves two coupled reactions: 1) **RNA cleavage** to release the RNA transcript from the RNA polymerase machinery and 2) **addition of a poly(A) tail**^[polyadenylation] to the 3' end of the newly released message. Proper cleavage creates a transcript of the correct length. Addition of the poly A tail helps transport the mRNA out to the cytoplasm and improves stability and translation efficiency. 

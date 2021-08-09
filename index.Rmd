@@ -3,11 +3,16 @@ title: "Fantastic Genes and Where to Find Them"
 author: "Maria Gallegos, Cal State University East Bay"
 date: "Most recent update: `r Sys.Date()`"
 site: bookdown::bookdown_site
-output:
-  bookdown::gitbook: default
-  bookdown::pdf_book: default
+output: bookdown::gitbook
 documentclass: book
 ---
+```{r eval=FALSE}
+install.packages("bookdown")
+# or the development version
+# devtools::install_github("rstudio/bookdown")
+```
+
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
@@ -18,7 +23,7 @@ knitr::opts_chunk$set(echo = FALSE)
 knitr::include_graphics('static/images/DNA.png')
 ```
 
-First, I would like to acknowledge the Genome Education Partnership ([GEP](http://gep.wustl.edu/curriculum/introducing_genes){target="_blank"}) for inspiration. They created a resource for learning about Eukaryotic gene structure using the UCSC Genome Browser (Laakso et al. 2017). Their focus is on the *Drosophila* genome. My focus is on *humans*. My hope is that skills learned within these pages and the saved sessions I created (and will continue to curate) can be used as a springboard for continued exploration of the human genome.
+First, I would like to acknowledge the Genome Education Partnership ([GEP](http://gep.wustl.edu/curriculum/introducing_genes){target="_blank"}) for inspiration. They created a resource for learning about Eukaryotic gene structure using the UCSC Genome Browser (Laakso et al. 2017). Their focus is on the *Drosophila* genome. My focus is on *humans*. This manual has been written for a undergraduate course entitled Principle of Genetic analysis (BIOL 310) at Cal State University, East Bay but can be used by anyone wanting to learn more about gene structure and function. My hope is that skills learned within these pages and the saved sessions I created (and will continue to curate) can be used as a springboard for continued exploration of the human genome.
 
 © 2019, Maria Gallegos. All rights reserved.
 
@@ -26,17 +31,17 @@ First, I would like to acknowledge the Genome Education Partnership ([GEP](http:
 
 Throughout the semester, you will use a web-based visualization tool called a Genome Browser to explore gene structure and function in humans. We will focus on the human gene, BBS1. Mutations in BBS1 have been implicated in Bardet Biedl Syndrome, a pleiotropic^[pleiotropy is a condition in which a single gene influences more than one trait (Snustad).] disease with a variety of symptoms including blindness, obesity, polydactyly, cognitive impairment, renal abnormalities, infertility and anosmia. In addition to learning how to navigate through the genome browser, you will also learn how to 
 
-1.	Evaluate gene structure within a genome (Chapter 2)
-2.	Use RNA evidence to pinpoint the position of genes (Chapters 3 and 4). 
-3.	Identify DNA and RNA sequence motifs critical for gene expression (Chapters 5 and 6). 
-4.	Identify and assess pathogenic and benign mutations (Chapter 7). 
-5.	Analyze gene sequence conservation between humans simpler model organisms (Chapter 8). 
+1.	Evaluate gene structure within a genome (chapter [2](#chapter2)).
+2.	Use RNA evidence to pinpoint the position of genes (chapters [3](#chapter3) and [4](#chapter4)). 
+3.	Identify DNA and RNA sequence motifs critical for gene expression (chapters [5](#chapter5) and [6](#chapter6)). 
+4.	Identify and assess pathogenic and benign mutations (chapter [7](#chapter7)). 
+5.	Analyze gene sequence conservation between humans simpler model organisms (chapter [8](#chapter8)). 
 
 # How to use this manual {-}
 
-This manual can be viewed on a computer, tablet or phone. That said, navigating through the UCSC genome browser requires a laptop or desktop computer. The instructions I provide assume you are using one of the two. When on a computer, the table of contents (side bar) can be toggled in and out by typing "s". The arrow keys can be used to move to later or earlier chapters. 
+This manual can be viewed on a computer, tablet or phone using the UCSC genome browser *requires* a laptop or desktop computer. The instructions I provide assume you are using one of the two. When on a computer, the table of contents (side bar) can be toggled in and out by typing "s". The arrow keys can be used to move to later or earlier chapters. 
 
-All figures can be enlarged by clicking on an image of interest. To reduce the image back to its original size and continue reading, click on the image again. 
+Figures can be enlarged by clicking on an image of interest. Use your track pad to zoom in further. Then to reduce the image back to its original size and continue reading, click on the image again. 
 
 Throughout this tutorial, you will come across footnotes. When you click on the link to a footnote, you will be taken to the end of the chapter. To continue reading where you left off, click the return arrow at the end of the footnote. It is a good idea to read the footnotes and figure legends! These are provided to clear up confusion and provide definitions. They might also provide clues for answering "Test Your Understanding" questions (see below). 
 
