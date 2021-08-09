@@ -46,3 +46,7 @@ po/*~
 
 # ignore the output file
 _book/
+
+.DS_Store
+
+.Rhistory*
