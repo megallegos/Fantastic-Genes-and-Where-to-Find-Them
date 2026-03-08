@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Finding Genes with TSS-seq | Fantastic Genes and Where to Find Them</title>
+  <meta name="description" content="4 Finding Genes with TSS-seq | Fantastic Genes and Where to Find Them" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Finding Genes with TSS-seq | Fantastic Genes and Where to Find Them" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Finding Genes with TSS-seq | Fantastic Genes and Where to Find Them" />
+  
+  
+  
+
+<meta name="author" content="Maria Gallegos, Cal State University, East Bay" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="chapter3.html"/>
+<link rel="next" href="chapter5.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Where are Genes?</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="how-to-use-this-manual.html"><a href="how-to-use-this-manual.html"><i class="fa fa-check"></i>How to use this manual</a></li>
+<li class="chapter" data-level="1" data-path="genes-genomes-and-genome-browsers.html"><a href="genes-genomes-and-genome-browsers.html"><i class="fa fa-check"></i><b>1</b> Genes, Genomes and Genome Browsers</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="genes-genomes-and-genome-browsers.html"><a href="genes-genomes-and-genome-browsers.html#what-is-a-gene"><i class="fa fa-check"></i><b>1.1</b> What is a gene?</a></li>
+<li class="chapter" data-level="1.2" data-path="genes-genomes-and-genome-browsers.html"><a href="genes-genomes-and-genome-browsers.html#what-is-a-genome"><i class="fa fa-check"></i><b>1.2</b> What is a genome?</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="genes-genomes-and-genome-browsers.html"><a href="genes-genomes-and-genome-browsers.html#test-your-understanding"><i class="fa fa-check"></i><b>1.2.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="genes-genomes-and-genome-browsers.html"><a href="genes-genomes-and-genome-browsers.html#what-is-a-genome-browser"><i class="fa fa-check"></i><b>1.3</b> What is a Genome Browser?</a></li>
+<li class="chapter" data-level="1.4" data-path="genes-genomes-and-genome-browsers.html"><a href="genes-genomes-and-genome-browsers.html#navigating-the-ucsc-genome-browser"><i class="fa fa-check"></i><b>1.4</b> Navigating the UCSC Genome Browser</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="genes-genomes-and-genome-browsers.html"><a href="genes-genomes-and-genome-browsers.html#test-your-understanding-1"><i class="fa fa-check"></i><b>1.4.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="genes-genomes-and-genome-browsers.html"><a href="genes-genomes-and-genome-browsers.html#addendum"><i class="fa fa-check"></i><b>1.5</b> Addendum</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="chapter2.html"><a href="chapter2.html"><i class="fa fa-check"></i><b>2</b> Understanding Gene Structure</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="chapter2.html"><a href="chapter2.html#exons-and-introns"><i class="fa fa-check"></i><b>2.1</b> Exons and Introns</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="chapter2.html"><a href="chapter2.html#test-your-understanding-2"><i class="fa fa-check"></i><b>2.1.1</b> Test your understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="chapter2.html"><a href="chapter2.html#coding-and-noncoding-exons"><i class="fa fa-check"></i><b>2.2</b> Coding and Noncoding Exons</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="chapter2.html"><a href="chapter2.html#test-your-understanding-3"><i class="fa fa-check"></i><b>2.2.1</b> Test your understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="chapter2.html"><a href="chapter2.html#coding-exons-determine-protein-sequence"><i class="fa fa-check"></i><b>2.3</b> Coding Exons Determine Protein Sequence</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="chapter2.html"><a href="chapter2.html#test-your-understanding-4"><i class="fa fa-check"></i><b>2.3.1</b> Test your understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="chapter2.html"><a href="chapter2.html#one-gene-many-splice-variants"><i class="fa fa-check"></i><b>2.4</b> One gene, many splice variants</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="chapter2.html"><a href="chapter2.html#test-your-understanding-5"><i class="fa fa-check"></i><b>2.4.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="chapter2.html"><a href="chapter2.html#top-strand-and-bottom-strand-genes"><i class="fa fa-check"></i><b>2.5</b> Top strand and bottom strand genes</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="chapter2.html"><a href="chapter2.html#test-your-understanding-6"><i class="fa fa-check"></i><b>2.5.1</b> Test your understanding</a></li>
+<li class="chapter" data-level="2.5.2" data-path="chapter2.html"><a href="chapter2.html#test-your-understanding-7"><i class="fa fa-check"></i><b>2.5.2</b> Test your understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="chapter2.html"><a href="chapter2.html#reading-frames"><i class="fa fa-check"></i><b>2.6</b> Reading Frames</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="chapter2.html"><a href="chapter2.html#test-your-understanding-8"><i class="fa fa-check"></i><b>2.6.1</b> Test your understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="chapter2.html"><a href="chapter2.html#to-learn-more-about-your-gene-of-interest."><i class="fa fa-check"></i><b>2.7</b> To learn more about your gene of interest.</a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="chapter2.html"><a href="chapter2.html#test-your-understanding-9"><i class="fa fa-check"></i><b>2.7.1</b> Test Your Understanding</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="chapter3.html"><a href="chapter3.html"><i class="fa fa-check"></i><b>3</b> Finding Genes with <em>RNA-seq</em></a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="chapter3.html"><a href="chapter3.html#gene-expression-reviewed"><i class="fa fa-check"></i><b>3.1</b> Gene expression Reviewed</a></li>
+<li class="chapter" data-level="3.2" data-path="chapter3.html"><a href="chapter3.html#rna-seq"><i class="fa fa-check"></i><b>3.2</b> RNA-seq</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="chapter3.html"><a href="chapter3.html#test-your-understanding-10"><i class="fa fa-check"></i><b>3.2.1</b> Test your understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="chapter3.html"><a href="chapter3.html#understanding-the-encode-rna-seq-evidence-track"><i class="fa fa-check"></i><b>3.3</b> Understanding the Encode RNA-seq Evidence Track</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="chapter3.html"><a href="chapter3.html#test-your-understanding-11"><i class="fa fa-check"></i><b>3.3.1</b> Test your understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="chapter3.html"><a href="chapter3.html#switching-data-sets"><i class="fa fa-check"></i><b>3.4</b> Switching Data Sets</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="chapter3.html"><a href="chapter3.html#test-your-understanding-12"><i class="fa fa-check"></i><b>3.4.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="chapter3.html"><a href="chapter3.html#take-home-messages"><i class="fa fa-check"></i><b>3.5</b> Take Home Messages</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="chapter4.html"><a href="chapter4.html"><i class="fa fa-check"></i><b>4</b> <em>Finding Genes with TSS-seq</em></a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="chapter4.html"><a href="chapter4.html#what-is-tss-seq"><i class="fa fa-check"></i><b>4.1</b> What is TSS-seq?</a></li>
+<li class="chapter" data-level="4.2" data-path="chapter4.html"><a href="chapter4.html#why-is-tss-seq-useful"><i class="fa fa-check"></i><b>4.2</b> Why is TSS-seq useful?</a></li>
+<li class="chapter" data-level="4.3" data-path="chapter4.html"><a href="chapter4.html#how-is-tss-seq-data-visualized"><i class="fa fa-check"></i><b>4.3</b> How is TSS-seq Data Visualized?</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="chapter4.html"><a href="chapter4.html#test-your-understanding-13"><i class="fa fa-check"></i><b>4.3.1</b> Test Your Understanding</a></li>
+<li class="chapter" data-level="4.3.2" data-path="chapter4.html"><a href="chapter4.html#for-discussion"><i class="fa fa-check"></i><b>4.3.2</b> For Discussion</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="chapter4.html"><a href="chapter4.html#take-home-messages-1"><i class="fa fa-check"></i><b>4.4</b> Take Home Messages</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="chapter5.html"><a href="chapter5.html"><i class="fa fa-check"></i><b>5</b> <em>DNA motifs for transcription initiation</em></a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="chapter5.html"><a href="chapter5.html#the-core-promoter"><i class="fa fa-check"></i><b>5.1</b> The Core Promoter</a></li>
+<li class="chapter" data-level="5.2" data-path="chapter5.html"><a href="chapter5.html#consensus-sequences"><i class="fa fa-check"></i><b>5.2</b> Consensus Sequences</a></li>
+<li class="chapter" data-level="5.3" data-path="chapter5.html"><a href="chapter5.html#searching-for-a-consensus-sequence"><i class="fa fa-check"></i><b>5.3</b> Searching for a consensus sequence</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="chapter5.html"><a href="chapter5.html#test-your-understanding-14"><i class="fa fa-check"></i><b>5.3.1</b> Test your understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="chapter5.html"><a href="chapter5.html#sequence-logos"><i class="fa fa-check"></i><b>5.4</b> Sequence Logos</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="chapter5.html"><a href="chapter5.html#test-your-understanding-15"><i class="fa fa-check"></i><b>5.4.1</b> Test Your Understanding</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="chapter6.html"><a href="chapter6.html"><i class="fa fa-check"></i><b>6</b> <em>RNA motifs for processing and translation</em></a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="chapter6.html"><a href="chapter6.html#the-addition-of-a-5-guanosine-cap"><i class="fa fa-check"></i><b>6.1</b> The Addition of a 5’ guanosine cap</a></li>
+<li class="chapter" data-level="6.2" data-path="chapter6.html"><a href="chapter6.html#splicing"><i class="fa fa-check"></i><b>6.2</b> Splicing</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="chapter6.html"><a href="chapter6.html#test-your-understanding-16"><i class="fa fa-check"></i><b>6.2.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="chapter6.html"><a href="chapter6.html#cleavage-and-polyadenylation"><i class="fa fa-check"></i><b>6.3</b> Cleavage and Polyadenylation</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="chapter6.html"><a href="chapter6.html#test-your-understanding-17"><i class="fa fa-check"></i><b>6.3.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="chapter6.html"><a href="chapter6.html#translation-initiation"><i class="fa fa-check"></i><b>6.4</b> Translation Initiation</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="chapter6.html"><a href="chapter6.html#test-your-understanding-18"><i class="fa fa-check"></i><b>6.4.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="chapter6.html"><a href="chapter6.html#uorfs"><i class="fa fa-check"></i><b>6.5</b> uORFs</a></li>
+<li class="chapter" data-level="6.6" data-path="chapter6.html"><a href="chapter6.html#recognizing-uorfs"><i class="fa fa-check"></i><b>6.6</b> Recognizing uORFs</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="chapter6.html"><a href="chapter6.html#test-your-understanding-19"><i class="fa fa-check"></i><b>6.6.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="6.7" data-path="chapter6.html"><a href="chapter6.html#homework"><i class="fa fa-check"></i><b>6.7</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="chapter7.html"><a href="chapter7.html"><i class="fa fa-check"></i><b>7</b> Important Genes Identified by DNA Variant</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="chapter7.html"><a href="chapter7.html#understanding-how-dna-variants-are-displayed"><i class="fa fa-check"></i><b>7.1</b> Understanding how DNA variants are displayed</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="chapter7.html"><a href="chapter7.html#test-your-understanding-20"><i class="fa fa-check"></i><b>7.1.1</b> Test Your Understanding</a></li>
+<li class="chapter" data-level="7.1.2" data-path="chapter7.html"><a href="chapter7.html#for-discussion-1"><i class="fa fa-check"></i><b>7.1.2</b> For Discussion</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="chapter7.html"><a href="chapter7.html#homework---optional---for-extra-credit"><i class="fa fa-check"></i><b>7.2</b> Homework - Optional - For Extra Credit</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="chapter8.html"><a href="chapter8.html"><i class="fa fa-check"></i><b>8</b> <em>Finding Genes with Orthology</em></a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="chapter8.html"><a href="chapter8.html#modelling-human-disease"><i class="fa fa-check"></i><b>8.1</b> Modelling Human Disease</a></li>
+<li class="chapter" data-level="8.2" data-path="chapter8.html"><a href="chapter8.html#reciprocal-best-hit-analysis"><i class="fa fa-check"></i><b>8.2</b> Reciprocal Best Hit Analysis</a></li>
+<li class="chapter" data-level="8.3" data-path="chapter8.html"><a href="chapter8.html#first-blastp"><i class="fa fa-check"></i><b>8.3</b> First BLASTP</a></li>
+<li class="chapter" data-level="8.4" data-path="chapter8.html"><a href="chapter8.html#understanding-a-pairwise-alignment"><i class="fa fa-check"></i><b>8.4</b> Understanding a Pairwise Alignment</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="chapter8.html"><a href="chapter8.html#test-your-understanding-21"><i class="fa fa-check"></i><b>8.4.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="chapter8.html"><a href="chapter8.html#reciprocal-blastp"><i class="fa fa-check"></i><b>8.5</b> Reciprocal BLASTP</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="chapter8.html"><a href="chapter8.html#test-your-understanding-22"><i class="fa fa-check"></i><b>8.5.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="chapter8.html"><a href="chapter8.html#understanding-your-rbh-analysis"><i class="fa fa-check"></i><b>8.6</b> Understanding your RBH analysis</a>
+<ul>
+<li class="chapter" data-level="8.6.1" data-path="chapter8.html"><a href="chapter8.html#test-your-understanding-23"><i class="fa fa-check"></i><b>8.6.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="chapter8.html"><a href="chapter8.html#mapping-patient-alleles-to-a-pairwise-alignment"><i class="fa fa-check"></i><b>8.7</b> Mapping patient alleles to a pairwise alignment</a>
+<ul>
+<li class="chapter" data-level="8.7.1" data-path="chapter8.html"><a href="chapter8.html#homework-1"><i class="fa fa-check"></i><b>8.7.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.8" data-path="chapter8.html"><a href="chapter8.html#independent-project"><i class="fa fa-check"></i><b>8.8</b> Independent Project</a></li>
+<li class="chapter" data-level="8.9" data-path="chapter8.html"><a href="chapter8.html#lab-practical-practice"><i class="fa fa-check"></i><b>8.9</b> Lab Practical Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="chapter9.html"><a href="chapter9.html"><i class="fa fa-check"></i><b>9</b> Advanced Methods</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="chapter9.html"><a href="chapter9.html#create-an-account-at-the-ucsc-genome-browser"><i class="fa fa-check"></i><b>9.1</b> Create an Account at the UCSC Genome Browser</a></li>
+<li class="chapter" data-level="9.2" data-path="chapter9.html"><a href="chapter9.html#how-to-configure-the-genome-browser-from-scratch"><i class="fa fa-check"></i><b>9.2</b> How to Configure the Genome Browser from Scratch</a></li>
+<li class="chapter" data-level="9.3" data-path="chapter9.html"><a href="chapter9.html#creating-a-named-session"><i class="fa fa-check"></i><b>9.3</b> Creating a Named Session</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fantastic Genes and Where to Find Them</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="chapter4" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> <em>Finding Genes with TSS-seq</em><a href="chapter4.html#chapter4" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The transcriptional start site or TSS marks the position of the first (+1) <em>templated</em> nucleotide of a given transcript. In this chapter, you will learn how TSS sequencing can be used to locate transcriptional start sites! To follow along with the text and to answer the “Test Your Understanding” questions, start with the <a href="https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%202%20TSS%2Dseq" target="_blank">“TSS-seq”</a> session link. You can also use this link as a starting point to view TSS-seq data for any gene of interest.</p>
+<div id="what-is-tss-seq" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> What is TSS-seq?<a href="chapter4.html#what-is-tss-seq" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Recall that RNAseq involves the sequencing of DNA fragments derived from <em>all</em> the mRNA present in a sample at the time of mRNA extraction. In this way, RNAseq attempts to identify all exons. TSS-seq is a special type of RNA sequencing that involves sequencing DNA that is ONLY derived from the 5’ end of all the mRNA present in a sample at the time of mRNA extraction. How can RNA sequencing be modified so that the only fragments sequenced come from the 5’ end of the mRNA? Recall that mRNA has a 5’ cap structure. The 5’ cap is exploited in TSS-seq to pinpoint the transcriptional start site (TSS) as it is added to the <em>beginning</em> of a pre-mRNA during transcription. By sequencing only the portion of mRNA that is next to the 5’ cap one can identify the TSS!</p>
+<p>The steps necessary to prepare mRNA for TSS-seq are outlined in Figure <a href="chapter4.html#fig:TSSseqsteps">4.1</a>. First, poly-A containing RNA (mRNA) is extracted from as described previously (Figure <a href="chapter3.html#fig:rnaextraction">3.2</a>). Due to the fragility of RNA, however, RNA extractions typically includes full length mRNA (with a 5’ cap) and partially degraded mRNA (with a 5’ phosphate instead). How can one distinguish full length mRNA from partially degraded fragments? Scientists have devised a clever method.</p>
+<br>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:TSSseqsteps"></span>
+<img src="static/images/TSSseqmethod.png" alt="TSSseq protocol. A) All mRNA possessing a poly A tail is separted from total RNA. The resulting sample contains both full length mRNA with a 5' cap and partially degraded mRNA with a 5' phosphate (P-). B) An enzyme that removes 5' phosphates is added. See the P change to OH. C) An enzyme is added that removes the 5' cap structure. See the black circle change to a P. D) RNA ligase attaches an RNA oligo (green rectangle) to all RNAs that had a 5' phosphate in C). E) The addition of reverse transcriptase and random oligos produce cDNA fragments. Those cDNA fragments that once had a 5' cap all have the same sequence at their 3' ends." width="75%" />
+<p class="caption">
+Figure 4.1: TSSseq protocol. A) All mRNA possessing a poly A tail is separted from total RNA. The resulting sample contains both full length mRNA with a 5’ cap and partially degraded mRNA with a 5’ phosphate (P-). B) An enzyme that removes 5’ phosphates is added. See the P change to OH. C) An enzyme is added that removes the 5’ cap structure. See the black circle change to a P. D) RNA ligase attaches an RNA oligo (green rectangle) to all RNAs that had a 5’ phosphate in C). E) The addition of reverse transcriptase and random oligos produce cDNA fragments. Those cDNA fragments that once had a 5’ cap all have the same sequence at their 3’ ends.
+</p>
+</div>
+<p><br></p>
+<p>First, an enzyme that removes 5’ phosphates from <em>all</em> partially degraded RNA molecules is added to the tube. Full-length, capped mRNAs do not possess a 5’ phosphate and are thus not affected by this enzyme. Second, an enzyme that removes the 5’ cap from full length mRNAs is added next. Now, full-length mRNAs that were once capped possess a 5’ phosphate while partially degraded mRNAs do not! Third, an RNA oligo<a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a> and RNA ligase<a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a>. As a result, the single-stranded <strong>RNA</strong> oligo is ligated to the 5’ end of only those RNAs that have 5’ phosphates. Finally, reverse transcriptase and random primers are added. As a result, <em>all</em> the RNA in the tube is used as template to synthesize cDNA (complementary DNA). Importantly, only those cDNAs that once had a 5’ cap are tagged with a known sequence at their 3’ ends. This sequence tag can now be exploited for sequencing as the sequencing reaction is primed with a DNA oligo that hybridizes to the sequence tag. The short sequence reads that are collected are then computationally aligned to the genome.</p>
+</div>
+<div id="why-is-tss-seq-useful" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Why is TSS-seq useful?<a href="chapter4.html#why-is-tss-seq-useful" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>As we just saw, RNA-Seq data can identify exons, segments of the genome that are transcribed <em>and</em> remain in mRNA (introns are transcribed but removed from mRNA). Often, RNA-seq data will also reveal how exons are linked together (with split alignments). That said, it is not always sufficient for gene identification purposes. To identify an individual transcription unit (a single gene) with more confidence, it is better to know the position of the exons <em>and</em> the TSS. To see this for yourself, review RNAseq data corresponding to a small region of the genome (Figure <a href="chapter4.html#fig:RNAseqdataonly">4.2</a>). The NCBI Refseq gene prediction track is hidden on purpose. As you can see, the histogram and sequence read alignments including the split alignments are displayed. How many genes do you think are in this region? What is your rationale?</p>
+<br>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:RNAseqdataonly"></span>
+<img src="static/images/histogram.png" alt="RNAseq data corresponding to a small region in the genome with the base position and gene prediction tracks hidden. Guess how many genes you think map to this region of the human genome. Continue reading below to discover the answer." width="100%" />
+<p class="caption">
+Figure 4.2: RNAseq data corresponding to a small region in the genome with the base position and gene prediction tracks hidden. Guess how many genes you think map to this region of the human genome. Continue reading below to discover the answer.
+</p>
+</div>
+<p><br></p>
+<p>In Figure <a href="chapter4.html#fig:RNAseqdataonly">4.2</a>, there are two main groups of split alignments. It would be reasonable to guess that there are two genes in this region. To see the true number of genes click <a href="https://genome.ucsc.edu/s/megallegos/DPP3" target="_blank">here</a>. This link takes you to the same genome region as in Figure <a href="chapter4.html#fig:RNAseqdataonly">4.2</a> but with the gene prediction and base position tracks visible. If you guessed wrong, do you see why you were misled?</p>
+</div>
+<div id="how-is-tss-seq-data-visualized" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> How is TSS-seq Data Visualized?<a href="chapter4.html#how-is-tss-seq-data-visualized" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The UCSC Genome Browser contains numerous evidence tracks displaying TSS-seq data. We will focus on one that was generated by the FANTOM5 Consortium of labs in Japan (FANTOM stands for Functional Annotation of the Mammalian Genome). Click the link to learn more about <a href="http://fantom.gsc.riken.jp/" target="_blank">FANTOM5</a>. To view this evidence track click the <a href="https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%202%20TSS%2Dseq" target="_blank">TSS-seq</a> session link.</p>
+<p>Your genome browser should now display the “Max Counts of CAGE<a href="#fn29" class="footnote-ref" id="fnref29"><sup>29</sup></a> reads” evidence track for BBS1. This evidence track displays TSS-seq data in histogram form only (Figure <a href="chapter4.html#fig:TSSseqforBBS1">4.3</a>). The track settings are configured so that the Y-axis maximum is set to an absolute value of 350 read counts. Setting the Y-axis maximum to 350 is sufficient for most genes. For <em>highly</em> expressed genes it is better to set the Y-axis to “auto-scale to data view”. Specifically, go to the track settings page. Scan down until you see “Data view scaling:”. Change the pulldown menu from “use vertical viewing range setting” to “auto-scale to data view”. Then click submit. If you do this for BBS1, the Y-axis should be considerably less. Before you move on, change the Y-axis back to “use vertical viewing range setting”. If you forget, you may notice that TSSseq data is noisy. Single sequence reads that map to random positions in the genome are plentifal and can be ignored.</p>
+<br>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:TSSseqforBBS1"></span>
+<img src="static/images/TSSseqBBS1.png" alt="TSSseq data for BBS1." width="100%" />
+<p class="caption">
+Figure 4.3: TSSseq data for BBS1.
+</p>
+</div>
+<p><br></p>
+<p>Zoom out 10X. The genome browser window is now focused on a larger portion of the genome surrounding BBS1 (Figure <a href="chapter4.html#fig:TSSseqfor10X">4.4</a>). Notice that there are both red peaks and blue peaks. There are also tall peaks and tiny peaks.</p>
+<p>Recall that genes can be found on the top strand or the bottom strand as RNA polymerase can use either strand as template for transcription. If RNA polymerase uses the bottom strand as template then it moves from left to right (5’ to 3’) and produces an mRNA that <em>matches</em> the top strand sequence and is complementary to the bottom strand (the top strand is the informational strand). If RNA polymerase uses the top strand as template then it moves from right to left (also 5’ to 3’ relative to the bottom strand) and produces an mRNA that matches the <em>bottom strand</em> sequence (the bottom strand is the informational strand). Histrogram peaks displayed in <strong>red</strong> represent TSSes for top strand genes. Histogram peaks displayed in <strong>blue</strong> represent TSSes for bottom strand genes.</p>
+<p>The taller a histrogram peak at a given location, the more sequence reads that start at that spot. The more read counts, the more reliable the data and the more likely the data represents a true TSS. In fact, the tiny peaks observed in Figure <a href="chapter4.html#fig:TSSseqfor10X">4.4</a> (find each red asterix) may reflect background noise<a href="#fn30" class="footnote-ref" id="fnref30"><sup>30</sup></a> and may not represent a true TSS. Moreover, the <em>absence</em> of a peak at a location where one is predicted to exist does not mean that the gene prediction is incorrect. This might be an instance where the gene was not expressed in the tissue sample that was used to generate the TSS-seq data. There is a common saying, <strong>“Absence of evidence is not evidence of absence”</strong>.</p>
+<br>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:TSSseqfor10X"></span>
+<img src="static/images/TSSseq10X.png" alt="TSSseq data of a larger region surrounding BBS1. Each asterix (my annotation) highlights sequence reads that are not likely to represent true transcriptional start sites." width="100%" />
+<p class="caption">
+Figure 4.4: TSSseq data of a larger region surrounding BBS1. Each asterix (my annotation) highlights sequence reads that are not likely to represent true transcriptional start sites.
+</p>
+</div>
+<p><br></p>
+<p>Now zoom in to the TSS for BBS1 (Figure <a href="chapter4.html#fig:TSSclose">4.5</a>). You can see that the position in the genome where the majority of <em>experimentally</em> defined TSSs are located is at the <em>predicted</em> transcriptional start site. This is not always the case. Also, notice that the transcriptional start sites for BBS1 are spread out to some degree. This is normal.</p>
+<br>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:TSSclose"></span>
+<img src="static/images/TSSBBS1close.png" alt="A close up view of the TSS-seq histogram data surrounding the predicted **transcriptional** start site for BBS1 (as defined by the NCBI refseq evidence track). The **translational** start site of BBS1 is shown in green." width="100%" />
+<p class="caption">
+Figure 4.5: A close up view of the TSS-seq histogram data surrounding the predicted <strong>transcriptional</strong> start site for BBS1 (as defined by the NCBI refseq evidence track). The <strong>translational</strong> start site of BBS1 is shown in green.
+</p>
+</div>
+<p><br></p>
+<p>Again, this is a great example of an evidence track that provides unbiased experimental evidence for the existence of a gene. It provides the position of all transcriptional start sites (TSS) within the genome. Each TSS identified by TSS-seq was not predicted to exist but was experimentally determined without prior knowledge (no bias).</p>
+That said, TSSseq data is not always sufficient to determine the number of individual genes in a given region of the genome. For example, review the TSS-seq histogram data in (Figure <a href="chapter4.html#fig:TSSdataalone">4.6</a>) and try to predict the number of genes in this region. I have omitted the gene prediction track to illustrate a point.
+<br>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:TSSdataalone"></span>
+<img src="static/images/TSSdataonly.png" alt="This is an image of the TSSseq evidence track for a small region of the human genome. All other tracks have been hidden. Count the number of transcription starts sites then guess how many genes you think these TSS peaks correspond to." width="100%" />
+<p class="caption">
+Figure 4.6: This is an image of the TSSseq evidence track for a small region of the human genome. All other tracks have been hidden. Count the number of transcription starts sites then guess how many genes you think these TSS peaks correspond to.
+</p>
+</div>
+<p><br></p>
+<p>Now click <a href="https://genome.ucsc.edu/s/megallegos/TSSproblem2" target="_blank">here</a> to see how many genes there really are in the genomic region shown in Figure <a href="chapter4.html#fig:TSSdataalone">4.6</a>. How does this differ from what you thought? Do you see why you were misled? Notice that the link has been configured to include the gene prediction track along with the RNA-seq and TSS-seq data tracks. Do you see how the RNA-seq data combined with the TSS-seq data provides a more complete picture of the true number of genes present? After all, there are genes that utilize alternative transcription <em>initiation</em> sites (Review (<a href="chapter2.html#chapter2">Chapter 2</a>), “One gene, many splice variants”)!</p>
+<div id="test-your-understanding-13" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdoZhdWlHjqL4CDLwYROE0EiyIVDlYp0qbOYrwDt0HGiG7Dcg/viewform?usp=sf_link" target="_blank">Test Your Understanding</a><a href="chapter4.html#test-your-understanding-13" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<style>
+div.blue {background-color:#e6f0ff}
+</style>
+<div class="blue">
+<p><strong>Some of the TYU questions will require the TSS-seq data displayed in the figure below (the gene prediction track is hidden).</strong> To enlarge click on the image.
+<br>
+<img src="static/images/TSSdataonlyTYU.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>Click on the link above to see the questions.
+<br></p>
+</div>
+</div>
+<div id="for-discussion" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSeR06s09E1L8aZKmYzKyJwuSNjVxeYzn7mpXPM555K0qOM9Xw/viewform?usp=sf_link" target="_blank">For Discussion</a><a href="chapter4.html#for-discussion" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Click link to see the discussion questions.
+<br></p>
+</div>
+</div>
+<div id="take-home-messages-1" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Take Home Messages<a href="chapter4.html#take-home-messages-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>TSS-seq data is similar to RNA-seq data but with TSS-seq only the mRNA segment closest to the 5’ cap is sequenced.
+<br></li>
+<li>Whereas TSS-seq data identifies transcription start sites (TSS) of expressed genes, RNA-seq identifies exons.
+<br></li>
+<li>Finally, TSS-seq data combined with RNA-seq data is able to identify each transcription unit with more confidence.
+<br></li>
+</ul>
+<p>© 2026, Maria Gallegos. All rights reserved.</p>
+<style>
+p.caption {
+  font-size: 0.8em;
+  margin-right: 2%;
+  margin-left: 2%;
+  line-height: 1.2em;
+  text-align: left;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+.zoomDiv {
+  opacity: 0;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 50;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 50px #888888;
+  max-height:100%; 
+  overflow: scroll;
+}
+
+.zoomImg {
+  width: 100%;
+}
+</style>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').prepend("<div class=\"zoomDiv\"><img src=\"\" class=\"zoomImg\"></div>");
+    // onClick function for all plots (img's)
+    $('img:not(.zoomImg)').click(function() {
+      $('.zoomImg').attr('src', $(this).attr('src'));
+      $('.zoomDiv').css({opacity: '1', width: '100%'});
+    });
+    // onClick function for zoomImg
+    $('img.zoomImg').click(function() {
+      $('.zoomDiv').css({opacity: '0', width: '0%'});
+    });
+  });
+</script>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="27">
+<li id="fn27"><p>Short single-stranded RNA chain<a href="chapter4.html#fnref27" class="footnote-back">↩︎</a></p></li>
+<li id="fn28"><p><strong>RNA ligase</strong> is similar to DNA ligase in that both require a 5’ phosphate and a 3’ hydroxyl to form a phosphodiester bond between two nucleic acid chains. The main difference: RNA ligase links two RNA chains together while DNA ligase links two DNA chains together<a href="chapter4.html#fnref28" class="footnote-back">↩︎</a></p></li>
+<li id="fn29"><p>CAGE is short for ”<strong>C</strong>ap <strong>A</strong>nalysis <strong>G</strong>ene <strong>E</strong>xpression”<a href="chapter4.html#fnref29" class="footnote-back">↩︎</a></p></li>
+<li id="fn30"><p>Molecular biology is messy. Each enzymatic step listed in Figure <a href="chapter4.html#fig:TSSseqsteps">4.1</a> is not likely to achieve 100% success. For example, partial mRNAs that fail to have their 5’ phosphates removed can be sequenced along side all the true full-length mRNAs.<a href="chapter4.html#fnref30" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="chapter3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chapter5.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/rstudio/bookdown-demo/edit/master/04-Chapter.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["Where-are-genes.pdf", "Where-are-genes.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

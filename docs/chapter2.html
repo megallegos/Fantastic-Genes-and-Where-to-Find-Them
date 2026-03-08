@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Understanding Gene Structure | Fantastic Genes and Where to Find Them</title>
+  <meta name="description" content="2 Understanding Gene Structure | Fantastic Genes and Where to Find Them" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Understanding Gene Structure | Fantastic Genes and Where to Find Them" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Understanding Gene Structure | Fantastic Genes and Where to Find Them" />
+  
+  
+  
+
+<meta name="author" content="Maria Gallegos, Cal State University, East Bay" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="genes-genomes-and-genome-browsers.html"/>
+<link rel="next" href="chapter3.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Where are Genes?</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="how-to-use-this-manual.html"><a href="how-to-use-this-manual.html"><i class="fa fa-check"></i>How to use this manual</a></li>
+<li class="chapter" data-level="1" data-path="genes-genomes-and-genome-browsers.html"><a href="genes-genomes-and-genome-browsers.html"><i class="fa fa-check"></i><b>1</b> Genes, Genomes and Genome Browsers</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="genes-genomes-and-genome-browsers.html"><a href="genes-genomes-and-genome-browsers.html#what-is-a-gene"><i class="fa fa-check"></i><b>1.1</b> What is a gene?</a></li>
+<li class="chapter" data-level="1.2" data-path="genes-genomes-and-genome-browsers.html"><a href="genes-genomes-and-genome-browsers.html#what-is-a-genome"><i class="fa fa-check"></i><b>1.2</b> What is a genome?</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="genes-genomes-and-genome-browsers.html"><a href="genes-genomes-and-genome-browsers.html#test-your-understanding"><i class="fa fa-check"></i><b>1.2.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="genes-genomes-and-genome-browsers.html"><a href="genes-genomes-and-genome-browsers.html#what-is-a-genome-browser"><i class="fa fa-check"></i><b>1.3</b> What is a Genome Browser?</a></li>
+<li class="chapter" data-level="1.4" data-path="genes-genomes-and-genome-browsers.html"><a href="genes-genomes-and-genome-browsers.html#navigating-the-ucsc-genome-browser"><i class="fa fa-check"></i><b>1.4</b> Navigating the UCSC Genome Browser</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="genes-genomes-and-genome-browsers.html"><a href="genes-genomes-and-genome-browsers.html#test-your-understanding-1"><i class="fa fa-check"></i><b>1.4.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="genes-genomes-and-genome-browsers.html"><a href="genes-genomes-and-genome-browsers.html#addendum"><i class="fa fa-check"></i><b>1.5</b> Addendum</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="chapter2.html"><a href="chapter2.html"><i class="fa fa-check"></i><b>2</b> Understanding Gene Structure</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="chapter2.html"><a href="chapter2.html#exons-and-introns"><i class="fa fa-check"></i><b>2.1</b> Exons and Introns</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="chapter2.html"><a href="chapter2.html#test-your-understanding-2"><i class="fa fa-check"></i><b>2.1.1</b> Test your understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="chapter2.html"><a href="chapter2.html#coding-and-noncoding-exons"><i class="fa fa-check"></i><b>2.2</b> Coding and Noncoding Exons</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="chapter2.html"><a href="chapter2.html#test-your-understanding-3"><i class="fa fa-check"></i><b>2.2.1</b> Test your understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="chapter2.html"><a href="chapter2.html#coding-exons-determine-protein-sequence"><i class="fa fa-check"></i><b>2.3</b> Coding Exons Determine Protein Sequence</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="chapter2.html"><a href="chapter2.html#test-your-understanding-4"><i class="fa fa-check"></i><b>2.3.1</b> Test your understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="chapter2.html"><a href="chapter2.html#one-gene-many-splice-variants"><i class="fa fa-check"></i><b>2.4</b> One gene, many splice variants</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="chapter2.html"><a href="chapter2.html#test-your-understanding-5"><i class="fa fa-check"></i><b>2.4.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="chapter2.html"><a href="chapter2.html#top-strand-and-bottom-strand-genes"><i class="fa fa-check"></i><b>2.5</b> Top strand and bottom strand genes</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="chapter2.html"><a href="chapter2.html#test-your-understanding-6"><i class="fa fa-check"></i><b>2.5.1</b> Test your understanding</a></li>
+<li class="chapter" data-level="2.5.2" data-path="chapter2.html"><a href="chapter2.html#test-your-understanding-7"><i class="fa fa-check"></i><b>2.5.2</b> Test your understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="chapter2.html"><a href="chapter2.html#reading-frames"><i class="fa fa-check"></i><b>2.6</b> Reading Frames</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="chapter2.html"><a href="chapter2.html#test-your-understanding-8"><i class="fa fa-check"></i><b>2.6.1</b> Test your understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="chapter2.html"><a href="chapter2.html#to-learn-more-about-your-gene-of-interest."><i class="fa fa-check"></i><b>2.7</b> To learn more about your gene of interest.</a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="chapter2.html"><a href="chapter2.html#test-your-understanding-9"><i class="fa fa-check"></i><b>2.7.1</b> Test Your Understanding</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="chapter3.html"><a href="chapter3.html"><i class="fa fa-check"></i><b>3</b> Finding Genes with <em>RNA-seq</em></a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="chapter3.html"><a href="chapter3.html#gene-expression-reviewed"><i class="fa fa-check"></i><b>3.1</b> Gene expression Reviewed</a></li>
+<li class="chapter" data-level="3.2" data-path="chapter3.html"><a href="chapter3.html#rna-seq"><i class="fa fa-check"></i><b>3.2</b> RNA-seq</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="chapter3.html"><a href="chapter3.html#test-your-understanding-10"><i class="fa fa-check"></i><b>3.2.1</b> Test your understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="chapter3.html"><a href="chapter3.html#understanding-the-encode-rna-seq-evidence-track"><i class="fa fa-check"></i><b>3.3</b> Understanding the Encode RNA-seq Evidence Track</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="chapter3.html"><a href="chapter3.html#test-your-understanding-11"><i class="fa fa-check"></i><b>3.3.1</b> Test your understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="chapter3.html"><a href="chapter3.html#switching-data-sets"><i class="fa fa-check"></i><b>3.4</b> Switching Data Sets</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="chapter3.html"><a href="chapter3.html#test-your-understanding-12"><i class="fa fa-check"></i><b>3.4.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="chapter3.html"><a href="chapter3.html#take-home-messages"><i class="fa fa-check"></i><b>3.5</b> Take Home Messages</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="chapter4.html"><a href="chapter4.html"><i class="fa fa-check"></i><b>4</b> <em>Finding Genes with TSS-seq</em></a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="chapter4.html"><a href="chapter4.html#what-is-tss-seq"><i class="fa fa-check"></i><b>4.1</b> What is TSS-seq?</a></li>
+<li class="chapter" data-level="4.2" data-path="chapter4.html"><a href="chapter4.html#why-is-tss-seq-useful"><i class="fa fa-check"></i><b>4.2</b> Why is TSS-seq useful?</a></li>
+<li class="chapter" data-level="4.3" data-path="chapter4.html"><a href="chapter4.html#how-is-tss-seq-data-visualized"><i class="fa fa-check"></i><b>4.3</b> How is TSS-seq Data Visualized?</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="chapter4.html"><a href="chapter4.html#test-your-understanding-13"><i class="fa fa-check"></i><b>4.3.1</b> Test Your Understanding</a></li>
+<li class="chapter" data-level="4.3.2" data-path="chapter4.html"><a href="chapter4.html#for-discussion"><i class="fa fa-check"></i><b>4.3.2</b> For Discussion</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="chapter4.html"><a href="chapter4.html#take-home-messages-1"><i class="fa fa-check"></i><b>4.4</b> Take Home Messages</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="chapter5.html"><a href="chapter5.html"><i class="fa fa-check"></i><b>5</b> <em>DNA motifs for transcription initiation</em></a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="chapter5.html"><a href="chapter5.html#the-core-promoter"><i class="fa fa-check"></i><b>5.1</b> The Core Promoter</a></li>
+<li class="chapter" data-level="5.2" data-path="chapter5.html"><a href="chapter5.html#consensus-sequences"><i class="fa fa-check"></i><b>5.2</b> Consensus Sequences</a></li>
+<li class="chapter" data-level="5.3" data-path="chapter5.html"><a href="chapter5.html#searching-for-a-consensus-sequence"><i class="fa fa-check"></i><b>5.3</b> Searching for a consensus sequence</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="chapter5.html"><a href="chapter5.html#test-your-understanding-14"><i class="fa fa-check"></i><b>5.3.1</b> Test your understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="chapter5.html"><a href="chapter5.html#sequence-logos"><i class="fa fa-check"></i><b>5.4</b> Sequence Logos</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="chapter5.html"><a href="chapter5.html#test-your-understanding-15"><i class="fa fa-check"></i><b>5.4.1</b> Test Your Understanding</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="chapter6.html"><a href="chapter6.html"><i class="fa fa-check"></i><b>6</b> <em>RNA motifs for processing and translation</em></a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="chapter6.html"><a href="chapter6.html#the-addition-of-a-5-guanosine-cap"><i class="fa fa-check"></i><b>6.1</b> The Addition of a 5’ guanosine cap</a></li>
+<li class="chapter" data-level="6.2" data-path="chapter6.html"><a href="chapter6.html#splicing"><i class="fa fa-check"></i><b>6.2</b> Splicing</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="chapter6.html"><a href="chapter6.html#test-your-understanding-16"><i class="fa fa-check"></i><b>6.2.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="chapter6.html"><a href="chapter6.html#cleavage-and-polyadenylation"><i class="fa fa-check"></i><b>6.3</b> Cleavage and Polyadenylation</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="chapter6.html"><a href="chapter6.html#test-your-understanding-17"><i class="fa fa-check"></i><b>6.3.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="chapter6.html"><a href="chapter6.html#translation-initiation"><i class="fa fa-check"></i><b>6.4</b> Translation Initiation</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="chapter6.html"><a href="chapter6.html#test-your-understanding-18"><i class="fa fa-check"></i><b>6.4.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="chapter6.html"><a href="chapter6.html#uorfs"><i class="fa fa-check"></i><b>6.5</b> uORFs</a></li>
+<li class="chapter" data-level="6.6" data-path="chapter6.html"><a href="chapter6.html#recognizing-uorfs"><i class="fa fa-check"></i><b>6.6</b> Recognizing uORFs</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="chapter6.html"><a href="chapter6.html#test-your-understanding-19"><i class="fa fa-check"></i><b>6.6.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="6.7" data-path="chapter6.html"><a href="chapter6.html#homework"><i class="fa fa-check"></i><b>6.7</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="chapter7.html"><a href="chapter7.html"><i class="fa fa-check"></i><b>7</b> Important Genes Identified by DNA Variant</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="chapter7.html"><a href="chapter7.html#understanding-how-dna-variants-are-displayed"><i class="fa fa-check"></i><b>7.1</b> Understanding how DNA variants are displayed</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="chapter7.html"><a href="chapter7.html#test-your-understanding-20"><i class="fa fa-check"></i><b>7.1.1</b> Test Your Understanding</a></li>
+<li class="chapter" data-level="7.1.2" data-path="chapter7.html"><a href="chapter7.html#for-discussion-1"><i class="fa fa-check"></i><b>7.1.2</b> For Discussion</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="chapter7.html"><a href="chapter7.html#homework---optional---for-extra-credit"><i class="fa fa-check"></i><b>7.2</b> Homework - Optional - For Extra Credit</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="chapter8.html"><a href="chapter8.html"><i class="fa fa-check"></i><b>8</b> <em>Finding Genes with Orthology</em></a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="chapter8.html"><a href="chapter8.html#modelling-human-disease"><i class="fa fa-check"></i><b>8.1</b> Modelling Human Disease</a></li>
+<li class="chapter" data-level="8.2" data-path="chapter8.html"><a href="chapter8.html#reciprocal-best-hit-analysis"><i class="fa fa-check"></i><b>8.2</b> Reciprocal Best Hit Analysis</a></li>
+<li class="chapter" data-level="8.3" data-path="chapter8.html"><a href="chapter8.html#first-blastp"><i class="fa fa-check"></i><b>8.3</b> First BLASTP</a></li>
+<li class="chapter" data-level="8.4" data-path="chapter8.html"><a href="chapter8.html#understanding-a-pairwise-alignment"><i class="fa fa-check"></i><b>8.4</b> Understanding a Pairwise Alignment</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="chapter8.html"><a href="chapter8.html#test-your-understanding-21"><i class="fa fa-check"></i><b>8.4.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="chapter8.html"><a href="chapter8.html#reciprocal-blastp"><i class="fa fa-check"></i><b>8.5</b> Reciprocal BLASTP</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="chapter8.html"><a href="chapter8.html#test-your-understanding-22"><i class="fa fa-check"></i><b>8.5.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="chapter8.html"><a href="chapter8.html#understanding-your-rbh-analysis"><i class="fa fa-check"></i><b>8.6</b> Understanding your RBH analysis</a>
+<ul>
+<li class="chapter" data-level="8.6.1" data-path="chapter8.html"><a href="chapter8.html#test-your-understanding-23"><i class="fa fa-check"></i><b>8.6.1</b> Test Your Understanding</a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="chapter8.html"><a href="chapter8.html#mapping-patient-alleles-to-a-pairwise-alignment"><i class="fa fa-check"></i><b>8.7</b> Mapping patient alleles to a pairwise alignment</a>
+<ul>
+<li class="chapter" data-level="8.7.1" data-path="chapter8.html"><a href="chapter8.html#homework-1"><i class="fa fa-check"></i><b>8.7.1</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.8" data-path="chapter8.html"><a href="chapter8.html#independent-project"><i class="fa fa-check"></i><b>8.8</b> Independent Project</a></li>
+<li class="chapter" data-level="8.9" data-path="chapter8.html"><a href="chapter8.html#lab-practical-practice"><i class="fa fa-check"></i><b>8.9</b> Lab Practical Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="chapter9.html"><a href="chapter9.html"><i class="fa fa-check"></i><b>9</b> Advanced Methods</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="chapter9.html"><a href="chapter9.html#create-an-account-at-the-ucsc-genome-browser"><i class="fa fa-check"></i><b>9.1</b> Create an Account at the UCSC Genome Browser</a></li>
+<li class="chapter" data-level="9.2" data-path="chapter9.html"><a href="chapter9.html#how-to-configure-the-genome-browser-from-scratch"><i class="fa fa-check"></i><b>9.2</b> How to Configure the Genome Browser from Scratch</a></li>
+<li class="chapter" data-level="9.3" data-path="chapter9.html"><a href="chapter9.html#creating-a-named-session"><i class="fa fa-check"></i><b>9.3</b> Creating a Named Session</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fantastic Genes and Where to Find Them</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="chapter2" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Understanding Gene Structure<a href="chapter2.html#chapter2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In this chapter, you will learn how genes are structured and how to recognize the different parts of a gene as illustrated in the UCSC genome browser. To follow along with the text and to answer the “Test Your Understanding” questions, start with the <a href="https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201" target="_blank">BBS1</a> session link. You can also use this link as a starting point to view gene structure for any gene of interest by typing the name of your gene of interest in the search window.</p>
+<div id="exons-and-introns" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Exons and Introns<a href="chapter2.html#exons-and-introns" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>During gene expression, one continuous strand of genomic DNA is used as a template to produce a single-stranded RNA transcript. This process is called <strong>transcription</strong>. The sequence of this RNA transcript is identical to the nontemplate strand of genomic DNA (although uracil replaces thymine in RNA). Before the transcript is exported out into the cytoplasm, it is processed including the removal of internal segments called <strong>introns</strong> (or <strong>int</strong>ervening <strong>r</strong>egi<strong>ons</strong>). <em>All</em> the RNA segments that remain are called <strong>exons</strong> (or <strong>ex</strong>pressed regi<strong>ons</strong>). They are then <em>linked</em> back together in order. To view the exon/intron organization of BBS1, click on the <a href="https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201" target="_blank">BBS1</a> session link, and review the schematic within the NCBI RefSeq Gene Prediction Evidence Track. Notice, the BBS1 gene consists of “boxes” connected by lines (Figure <a href="chapter2.html#fig:BBS1transcript">2.1</a>). The boxes represent exons (two examples are highlighted with a red bracket/asterix). The lines represent introns (one example is highlighted with a purple bracket/asterix). Now, hover your mouse over various parts of the gene schematic within the Browser window. If you pause long enough a popup window should appear indicating <em>which</em> intron or exon you are pointing to among the total number! Thus, this popup window also reveals the location of the beginning of a gene (i.e. exon 1 is always at the beginning of the gene!). This is the part of the gene that is transcribed first. For BBS1, exon 1 is located on the left side of the gene schematic.</p>
+<br>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:BBS1transcript"></span>
+<img src="static/images/exonintron.png" alt="Understanding the gene prediction evidence track schematic. Boxes represent exons (two examples are bracketed and highlighted with a red asterix). The lines represent introns (one example is bracketed and highlighted with a purple asterix)" width="100%" />
+<p class="caption">
+Figure 2.1: Understanding the gene prediction evidence track schematic. Boxes represent exons (two examples are bracketed and highlighted with a red asterix). The lines represent introns (one example is bracketed and highlighted with a purple asterix)
+</p>
+</div>
+<p><br></p>
+<p>A close up view of an intron-exon junction is displayed in Figure <a href="chapter2.html#fig:zoomtosequence">2.2</a>, See the asterix, the intron is to the left, exon to the right). Now you try it. Zoom into any exon-intron junction.</p>
+<br>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:zoomtosequence"></span>
+<img src="static/images/BBS1zoomtosequence.png" alt="The drag-select tool was used to zoom in close to a small portion of an exon intron junction of BBS1. As you can see the first 4 nucleotides of the exon shown are G-A-C-C." width="50%" />
+<p class="caption">
+Figure 2.2: The drag-select tool was used to zoom in close to a small portion of an exon intron junction of BBS1. As you can see the first 4 nucleotides of the exon shown are G-A-C-C.
+</p>
+</div>
+<p><br></p>
+<div id="test-your-understanding-2" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> <a href="https://forms.gle/V4fYwV2ZoiCVXfEv8" target="_blank">Test your understanding</a><a href="chapter2.html#test-your-understanding-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<style>
+div.blue {background-color:#e6f0ff}
+</style>
+<div class="blue">
+<p><br>
+<em>Click the link above to see the TYU questions.</em>
+<br></p>
+</div>
+</div>
+</div>
+<div id="coding-and-noncoding-exons" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Coding and Noncoding Exons<a href="chapter2.html#coding-and-noncoding-exons" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The spliced transcript or messenger RNA (mRNA) is used as a template to create a polypeptide<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a>. This process is called translation and is mediated in part by the ribosome<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a>. Ribosomes “read” the mRNA from 5’ to 3’, three nucleotides at a time, translating the triple nucleotide code into a sequence of amino acids. Each set of three nucleotides is called a codon. Codons either specify the incorporation of an amino acid in a growing polypeptide chain or signal the end of polypeptide synthesis. Codons with the latter function are called <strong>“termination codons”</strong> or simply <strong>“stop codons”</strong> (Figure <a href="chapter2.html#fig:ProteinSyn">2.3</a>).</p>
+<br>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ProteinSyn"></span>
+<img src="static/images/Protein_synthesis.png" alt="A schematic representation of translation. Image by Kelvinsong" width="100%" />
+<p class="caption">
+Figure 2.3: A schematic representation of translation. Image by Kelvinsong
+</p>
+</div>
+<p><br></p>
+<p>That said, ribosomes don’t start translation at the 5’ <em>end</em> of the mRNA but from a <strong>“start codon”</strong> located <em>internally</em>. Nor do ribosomes read to the end of the mRNA but only until they encounter a stop codon. Thus, an mRNA is <em>more</em> than just codons and those codons <em>only occupy the central region of an mRNA</em>. The 5’ and 3’ ends of the mRNA not “read” by the ribosome are called <strong>“noncoding regions”</strong> or <strong>“untranslated regions” (UTRs)</strong>. The noncoding region at the 5’ end is called the <strong>5’ untranslated region (5’ UTR)</strong> while the noncoding region at the 3’ end is called the <strong>3’ untranslated region (3’ UTR)</strong>.</p>
+<p>Figure <a href="chapter2.html#fig:topstrand">2.4</a> shows how noncoding (blue box) and coding regions (green box) of an exon (red box) are illustrated in the UCSC Genome Browser. The noncoding portion is not as thick as the coding portion. At this zoom level, the coding portion also displays the amino acid sequence that this exon codes for: M-A-A-A-S-S-S-D-S-D-A-C-G-A-E-S (notice each amino acid is placed below 3 nucleotides, the codon). Again, notice how the amino acid sequence does not start at the <em>beginning</em> of exon 1 (red box). This thinner portion of exon 1 is the 5’ untranslated region (5’ UTR). Importantly, <strong>exon 1 includes both the noncoding and coding portions</strong>. To confirm that you are looking in the right places, the BBS1 5’ UTR (the beginning of exon 1) begins with the sequence G-G-T-T. The coding portion of exon 1 begins with the sequence A-T-G-G. Exon 1 ends with the sequence, AGAG. The intron begins with the sequence G-T-G-A.</p>
+<br>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:topstrand"></span>
+<img src="static/images/topstrandexon1.png" alt="Exon 1 (red box) of BBS1 is part noncoding exon (blue box) and part coding exon (green box)" width="100%" />
+<p class="caption">
+Figure 2.4: Exon 1 (red box) of BBS1 is part noncoding exon (blue box) and part coding exon (green box)
+</p>
+</div>
+<p><br></p>
+<p>Now use the <a href="https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201" target="_blank">BBS1 session link</a> to go to BBS1 in the UCSC genome browser. Notice how the transition from noncoding to coding (at the 5’ end of the transcript) and back to noncoding (at the 3’ end of the transcript) does <em>not</em> coincide with exon/intron boundaries. Thus, an exon can be categorized as a <strong>coding exon</strong>, a <strong>noncoding exon</strong> or an exon of mixed character. In fact, exon 1 of BBS1 is part noncoding (5’ UTR) and part coding. The same is true for exon 17 of BBS1 (the last exon). The remaining exons are all coding exons.</p>
+<p>Now zoom into the last <strong>coding exon</strong> of BBS1 (the <strong>coding portion</strong> of the last exon) by using the “drag and select” tool. If your view does not resemble Figure <a href="chapter2.html#fig:lastexon">2.5</a>, you may have selected the <strong>entire</strong> last exon when you should have just selected the <strong>coding</strong> portion of the last exon OR your evidence is configured incorrectly<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a>.</p>
+<p>In Figure <a href="chapter2.html#fig:lastexon">2.5</a>, you can clearly see that the amino acid sequence stops before the end of the last exon and the exon schematic transitions from thick to thin. You can also see that the stop codon is represented by an asterix and colored red. In many genes, the first and last exons include both noncoding and coding sequence. As you explore more genes in the genome, you will see there are many exceptions. Sometimes the <em>first one or more</em> exons and/or the <em>last one or more</em> exons are completely noncoding! Finally, notice that while red codons ALWAYS represent stop codons, green codons do not ALWAYS represent start codons! In fact there is a green codon in the last coding exon. The UCSC genome browser simply highlights <em>all</em> A-T-G codons in green. Only those green codons at the <em>beginning</em> of a coding sequence are called start codons.</p>
+<br>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:lastexon"></span>
+<img src="static/images/lastcodingexon.png" alt="The coding portion of the last exon of BBS1 ends with the stop codon, a red codon containing an asterix. The 3' UTR begins directly after the stop codon." width="100%" />
+<p class="caption">
+Figure 2.5: The coding portion of the last exon of BBS1 ends with the stop codon, a red codon containing an asterix. The 3’ UTR begins directly after the stop codon.
+</p>
+</div>
+<p><br></p>
+<div id="test-your-understanding-3" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> <a href="https://forms.gle/DaZ8kh1EH7Bqi6Fr7" target="_blank">Test your understanding</a><a href="chapter2.html#test-your-understanding-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<style>
+div.blue {background-color:#e6f0ff}
+</style>
+<div class="blue">
+<p><br>
+<em>Click the link above to see the TYU questions.</em>
+<br></p>
+</div>
+</div>
+</div>
+<div id="coding-exons-determine-protein-sequence" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Coding Exons Determine Protein Sequence<a href="chapter2.html#coding-exons-determine-protein-sequence" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A polypeptide is a sequence of amino acids linked together by peptide bonds. The amino acid sequence is determined by the order of codons present in the central portion of an mRNA (the coding exons). Each codon consists of a nonoverlapping set of three nucleotides. Since there are four nucleotides in total (G, A, T and C), there are a total of 64 possible codons (4 x 4 x 4). Most of the 64 codons code for an amino acid. Three do not and therefore act as STOP signals also known as “termination codons” or “stop codons”. Figure <a href="chapter2.html#fig:geneticcode">2.6</a> is one way to display the genetic code. In this graphic, RNA codons are read from the <strong>center</strong> out to the periphery (from 5’ to 3’). For example, G-C-A codes for Alanine. Ala and A are the standard three letter and single letter codes, respectively. U-U-G codes for Leucine. Confirm this for yourself to make sure you know how to use this genetic code.</p>
+<p><br></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:geneticcode"></span>
+<img src="static/images/circulargeneticcode.png" alt="Image from Wikipedia: [Aminoacids_table.svg](https://commons.wikimedia.org/wiki/File:Aminoacids_table.svg)" width="75%" />
+<p class="caption">
+Figure 2.6: Image from Wikipedia: <a href="https://commons.wikimedia.org/wiki/File:Aminoacids_table.svg">Aminoacids_table.svg</a>
+</p>
+</div>
+<p><br></p>
+<p>Click on the <a href="https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201" target="_blank">BBS1</a> session link, then use the “Drag-and-Select” method to get a close-up view of exon 1. Look directly above the beginning of the coding portion of BBS1 and you will see that the first codon of BBS1 is A-T-G. Using the genetic code from Figure <a href="chapter2.html#fig:geneticcode">2.6</a> you can confirm that this codes for Methionine, Met or M and is labelled as a start codon<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a>. Also confirm that you read the second codon as G-C-C and the third codon as G-C-T. Both code for Alanine (Ala, A). This exercise also shows that the mRNA sequence for BBS1 is identical in sequence and orientation to the top strand of the genome (but of course without the introns). Recall, by default the top strand (+ strand) is displayed in the browser window. It is oriented from 5’ on the left to 3’ end on the right. You can confirm this by checking the arrow positioned in the top left corner (See the asterix in Figure <a href="chapter2.html#fig:topstrand">2.4</a>). Your arrow should be pointing to the right. The orientation of the mRNA is also consistent with the fact that codons are read from 5’ to 3’ (in this case from left to right).</p>
+<div id="test-your-understanding-4" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> <a href="https://forms.gle/LUjW3ngaerH1ipeV6" target="_blank">Test your understanding</a><a href="chapter2.html#test-your-understanding-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<style>
+div.blue {background-color:#e6f0ff}
+</style>
+<div class="blue">
+<p><br>
+<em>Click the link above to see the TYU questions.</em>
+<br></p>
+</div>
+</div>
+</div>
+<div id="one-gene-many-splice-variants" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> One gene, many splice variants<a href="chapter2.html#one-gene-many-splice-variants" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A single RNA transcipt is sometimes spliced in a variety of different ways to produce more than one unique mRNA. This is called <strong>alternative splicing</strong> and each mRNA produced is called a <strong>splice variant</strong>. Since each splice variant has the potential to produce a unique protein or <strong>isoform</strong>, the 24,000 protein-coding genes in the human genome can actually produce <em>many more than</em> 24,000 unique proteins!</p>
+<p>To see how the UCSC genome browser illustrates splice variants, click on the <a href="https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201" target="_blank">BBS1</a> session link then <em>zoom out</em> exactly <strong>10X</strong> to explore a larger section of chromosome eleven<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a>. Now more than one gene is present in the browser window. Again, the name of each gene is given on the left side of each gene/transcript schematic. Regions of the genome that are transcribed to produce multiple mRNAs are indicated by a <em>series</em> of box/line schematics that are <em>stacked</em> vertically. How do I know these stacks represent a single gene? Each graphical representation in the stack has the <em>same</em> gene name (Figure <a href="chapter2.html#fig:zoom">2.7</a>). That said, each graphical representation in the stack has a unique mRNA ID (i.e. NM_005700.5). This is your indication that each mRNA sequence is unique in some way. One obvious difference observed for DPP3 is highlighted with a red arrow in Figure <a href="chapter2.html#fig:zoom">2.7</a>. Notice that the 2nd and 3rd splice forms have an exon not included in the topmost splice form listed.</p>
+<br>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:zoom"></span>
+<img src="static/images/10zoom.png" alt="Notice how DPP3, highlighted with a red box, begins and ends transcription at the same location but the RNA transcript that is produced is spliced in three distinct ways to produce three alternative splice forms. One obvious difference is highlighted with a red arrow. The 2nd and 3rd splice forms have an exon not included in the topmost splice form listed." width="100%" />
+<p class="caption">
+Figure 2.7: Notice how DPP3, highlighted with a red box, begins and ends transcription at the same location but the RNA transcript that is produced is spliced in three distinct ways to produce three alternative splice forms. One obvious difference is highlighted with a red arrow. The 2nd and 3rd splice forms have an exon not included in the topmost splice form listed.
+</p>
+</div>
+<p><br></p>
+<p>Alternative splicing is only one way multiple unique mRNAs are produced from a single region of DNA (a single gene)? There are three main methods:</p>
+<ol style="list-style-type: decimal">
+<li>Use of an alternative transcriptional start site (Figure <a href="chapter2.html#fig:altinit">2.8</a>),</li>
+<li>Use of an alternative transcriptional termination site (Figure <a href="chapter2.html#fig:altter">2.9</a>) and</li>
+<li>Alternative splicing (Figure <a href="chapter2.html#fig:zoom">2.7</a>).</li>
+</ol>
+<br>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:altinit"></span>
+<img src="static/images/altInitiation.png" alt="Transcription initiation for the LGALS12 gene can be found at two distinct places according to the NCBI RefSeq gene database. The red arrow points to the two transcription start sites" width="100%" />
+<p class="caption">
+Figure 2.8: Transcription initiation for the LGALS12 gene can be found at two distinct places according to the NCBI RefSeq gene database. The red arrow points to the two transcription start sites
+</p>
+</div>
+<p><br></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:altter"></span>
+<img src="static/images/alttermination.png" alt="Transcription termination for the TTC17 gene occurs at two different sites according to the NCBI RefSeq gene database. Each is highlighted with a red arrow" width="100%" />
+<p class="caption">
+Figure 2.9: Transcription termination for the TTC17 gene occurs at two different sites according to the NCBI RefSeq gene database. Each is highlighted with a red arrow
+</p>
+</div>
+<p><br></p>
+<p>Again, multiple mRNA variants produced by the same gene can (but don’t always) produce multiple, unique protein isoforms. In some cases, these unique proteins differ enough to function distinctly. For a hilarious illustration of this concept see Figure <a href="chapter2.html#fig:eat">2.10</a>.</p>
+<br>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:eat"></span>
+<img src="static/images/eatgrandma.jpg" alt="Concept/Art by Allan James from the University of Glasgow" width="50%" />
+<p class="caption">
+Figure 2.10: Concept/Art by Allan James from the University of Glasgow
+</p>
+</div>
+<p><br></p>
+<div id="test-your-understanding-5" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> <a href="https://forms.gle/s1Ca2HyWLNyakJN38" target="_blank">Test Your Understanding</a><a href="chapter2.html#test-your-understanding-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<style>
+div.blue { background-color:#e6f0ff}
+</style>
+<div class="blue">
+<p><br>
+<em>Click the link above to see the TYU questions.</em>
+<br></p>
+</div>
+</div>
+</div>
+<div id="top-strand-and-bottom-strand-genes" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Top strand and bottom strand genes<a href="chapter2.html#top-strand-and-bottom-strand-genes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We learned in a previous section that BBS1 codons can be viewed in the top strand of the genome (also known as the + strand). This is because BBS1 uses the bottom strand (- strand) as template during transcription to produce a transcript identical in sequence to the top strand of DNA<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a>. I like to call BBS1 a top strand gene (or + strand gene). For top strand genes, the top strand can be described as the <em>sense strand</em>, <em>coding strand</em>, <em>informational strand</em> or <em>nontemplate strand</em>. My favorites are “nontemplate strand” and “informational strand”<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a>. For top strand genes, the bottom strand (- strand) is known as the template strand. This is because the bottom strand of DNA is used as the template to create the RNA transcript.</p>
+<p><strong>Not all genes are top strand genes (+)</strong>. To determine if a gene is a top strand gene (+) or a bottom strand gene (-), click on the gene schematic to open a pop up window of information about the gene. Scroll down to find the word, “Strand:” (See Figure <a href="chapter2.html#fig:geneinfo">2.17</a>). Alternatively, look at the gene schematic itself. Figure <a href="chapter2.html#fig:orientationwedges">2.11</a> displays the first half of BBS1 and a neighboring gene, ZDHHC24. Notice there are “orientation wedges” spaced regularly along the introns. They are either oriented to the right (red box, Figure <a href="chapter2.html#fig:orientationwedges">2.11</a>) or to the left (green box, Figure <a href="chapter2.html#fig:orientationwedges">2.11</a>). These “orientation wedges” indicate <strong>the direction RNA polymerase travels during transcription</strong> and thus the orientation of the gene on the chromosome. These “orientation wedges” indicate that BBS1 is a top strand gene (+) and ZDHHC24 is a bottom strand gene (-).</p>
+<br>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:orientationwedges"></span>
+<img src="static/images/orientationwedges.png" alt="The orientation wedges are visible within introns. When they point to the right (red box), the gene is a top strand gene (plus strand). When they point to the left (green box), the gene is a bottom strand gene (minus strand)." width="60%" />
+<p class="caption">
+Figure 2.11: The orientation wedges are visible within introns. When they point to the right (red box), the gene is a top strand gene (plus strand). When they point to the left (green box), the gene is a bottom strand gene (minus strand).
+</p>
+</div>
+<p><br></p>
+<p>When the orientation wedges point to the right, “) ) ) )” (i.e. see BBS1),
+<br></p>
+<ol style="list-style-type: decimal">
+<li>This is a top strand gene (+).</li>
+<li>The beginning of the gene is on the left.</li>
+<li>The top strand of DNA is the informational strand (nontemplate strand)</li>
+<li>The bottom strand of DNA is the template strand.</li>
+<li><strong>You would read this gene from left to right.</strong>
+<br></li>
+</ol>
+<p>When the orientation wedges point to the left, “( ( ( (”, the reverse is true (i.e. see ZDHHC24),
+<br></p>
+<ol style="list-style-type: decimal">
+<li>This is a bottom strand gene (-).</li>
+<li>The beginning of the gene is on the right.</li>
+<li>The top strand of DNA is the template strand.</li>
+<li>The bottom strand of DNA is the informational strand (nontemplate strand)</li>
+<li><strong>You would read this gene from right to left!</strong>
+<br></li>
+</ol>
+<div id="test-your-understanding-6" class="section level3 hasAnchor" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> <a href="https://docs.google.com/forms/d/e/1FAIpQLScgFkZWsytBOOLiaJeJi8fTler4YYHuWkDosv5gGORJIneT0w/viewform?usp=sf_link" target="_blank">Test your understanding</a><a href="chapter2.html#test-your-understanding-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<style>
+div.blue {background-color:#e6f0ff}
+</style>
+<div class="blue">
+<p><br>
+<em>Click the link above to see the TYU questions.</em>
+<br></p>
+</div>
+<p><br>
+Now let’s look at a bottom strand gene (ZDHHC24) more closely. Click on my saved session for <a href="https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201" target="_blank">BBS1</a> then zoom out 3X to search for the <strong>beginning</strong> of ZDHHC24 (it should be on the right). “Drag-and-Select” as many times necessary to zoom into the <strong>first</strong> half of the <strong>coding portion</strong> of exon one for ZDHHC24. Your “NCBI Refseq Gene Track should look something like Figure <a href="chapter2.html#fig:firstcodingexonZDHHC24">2.12</a>. If not, you may have zoomed into the first half of exon one which is noncoding. Or maybe you are at the wrong end of the gene!</p>
+<br>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:firstcodingexonZDHHC24"></span>
+<img src="static/images/firstcodingexonZDHHC24.png" alt="This is the first half of the first **coding** exon of ZDHHC24. The noncoding portion of exon 1 extends to the right this time because *ZDHHC24* is a bottom strand (or minus strand) gene. The red oval highlights the strand you are currently viewing. Since the arrow points to the right, the top strand (5' on the left) is displayed. You can toggle this arrow with your mouse." width="100%" />
+<p class="caption">
+Figure 2.12: This is the first half of the first <strong>coding</strong> exon of ZDHHC24. The noncoding portion of exon 1 extends to the right this time because <em>ZDHHC24</em> is a bottom strand (or minus strand) gene. The red oval highlights the strand you are currently viewing. Since the arrow points to the right, the top strand (5’ on the left) is displayed. You can toggle this arrow with your mouse.
+</p>
+</div>
+<br>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:firstcodingexonZDHHC24bottom"></span>
+<img src="static/images/firstcodingexonZDHHC24Bottom.png" alt="Again, this is the first half of the first **coding** exon of ZDHHC24. The red oval highlights the strand you are currently viewing. Since the arrow points to the left, the bottom strand (5' on the right) is displayed. Notice that the DNA sequence is gray. Compare to the top image. This is a visual reminder of which strand you are viewing." width="100%" />
+<p class="caption">
+Figure 2.13: Again, this is the first half of the first <strong>coding</strong> exon of ZDHHC24. The red oval highlights the strand you are currently viewing. Since the arrow points to the left, the bottom strand (5’ on the right) is displayed. Notice that the DNA sequence is gray. Compare to the top image. This is a visual reminder of which strand you are viewing.
+</p>
+</div>
+<p><br></p>
+<p>Look at the three nucleotides centered above the Methionine (colored in green on the right side of Figure <a href="chapter2.html#fig:firstcodingexonZDHHC24">2.12</a>). Notice that the nucleotides listed from left to right is NOT an A-T-G as you might expect but instead C-A-T! This is because you are “reading” the top strand of the genomic DNA and ZDHHC24 is a <strong>bottom</strong> strand gene. <strong>To view the bottom strand of the genomic DNA</strong>, click on the far left arrow within the Base Position Track (See the red oval, Figure <a href="chapter2.html#fig:firstcodingexonZDHHC24">2.12</a>). Notice the orientation of the arrow will flip and the genome sequence in your “Base Position” Track will become light gray (red oval, <a href="chapter2.html#fig:firstcodingexonZDHHC24bottom">2.13</a>). <em>Now</em> there is an A-T-G directly above the Methionine (M) but only if you read it from <em>right to left</em>! This is because the bottom strand of DNA is oriented with 5’ end on the right.</p>
+</div>
+<div id="test-your-understanding-7" class="section level3 hasAnchor" number="2.5.2">
+<h3><span class="header-section-number">2.5.2</span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSeaojvlNdLiH-VjdFQA-tjv3U3-f8dCK1mZA2n4KQXwoCI5NQ/viewform?usp=sf_link" target="_blank">Test your understanding</a><a href="chapter2.html#test-your-understanding-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<style>
+div.blue {background-color:#e6f0ff}
+</style>
+<div class="blue">
+<p><br>
+<em>Click the link above to see the TYU questions.</em>
+<br></p>
+</div>
+<p><br>
+To summarize . . . while DNA is double-stranded, RNA transcripts are single-stranded and thus use only one DNA strand as template (either the top or bottom strand). Some genes, like BBS1, use the bottom strand as template to create an RNA transcript with a sequence that matches the top strand. Other genes, like ZDHHC24, use the top strand as template to create an RNA transcript with a sequence that matches the bottom strand.</p>
+</div>
+</div>
+<div id="reading-frames" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> Reading Frames<a href="chapter2.html#reading-frames" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Translation begins at the start codon. This is the first codon “read” by the ribosome. All subsequent codons are read in <strong>nonoverlapping groups</strong> of three. Thus, the start codon “sets” the reading frame. A reading frame ends only when a stop codon is encountered that is in the same reading frame as the start codon. This is the last codon “read” by the ribosome.</p>
+<p>Imagine you isolate and sequence a short random stretch of DNA pulled from the ocean. It is likely genomic DNA and you want to see if it corresponds to a coding portion of a gene. Specifically, you want to see if this short stretch of DNA codes for a previously studied protein. Of course, you have no clue which strand might be used as a template for transcription nor where the start codon is. Here is a thought question: <strong><em>What is the maximum number of polypeptide sequences that can hypothetically be created by a single segment of double-stranded DNA?</em></strong> Your answer will be revealed below.</p>
+<p>To view all possible reading frames associated with a given segment of DNA zoom into to the first exon of BBS1. Next, right click on the grey rectangle corresponding to the Base Position track (See arrow, Figure <a href="chapter2.html#fig:basepositiondense">2.14</a>). A pop-up menu will appear. Choose “full”.</p>
+<br>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:basepositiondense"></span>
+<img src="static/images/basepositiondense.png" alt="How to view all three reading frames for a single strand of DNA. Right click on the gray rectangle on the left of the Base Position Track (red arrow). A pulldown menu will open. Choose Full." width="100%" />
+<p class="caption">
+Figure 2.14: How to view all three reading frames for a single strand of DNA. Right click on the gray rectangle on the left of the Base Position Track (red arrow). A pulldown menu will open. Choose Full.
+</p>
+</div>
+<p><br></p>
+<p>You should now see three reading frames displayed below the nucleotide sequence. Why three? This is the maximum number of unique polypeptides that can be theoretically produced from a given segment of the top strand of DNA. See what happens when you toggle to the bottom strand of DNA (click the arrow —&gt; on the far left of the DNA sequence). Now you can view the three reading frames that correspond to the bottom strand of DNA. Both views are shown one on top of the other in Figure <a href="chapter2.html#fig:basepositionfullreverse">2.15</a>. Notice they are different.</p>
+<br>
+<img src="static/images/basepositionfull.png" width="100%" style="display: block; margin: auto;" />
+<br>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:basepositionfullreverse"></span>
+<img src="static/images/basepositionfullreverse.png" alt="Once you change the base position track to **Full**, the three possible reading frames for a *single* DNA strand will be displayed. When the arrow points to the right, the three reading frames will be of the top strand (top image). Notice the start codon in green matches the start codon in the third reading frame (**NOTE: This image comes from the 2013 genome assembly and will look different for you.**) In fact, nearly all of the amino acids in exon one match the amino acids in the third reading frame. We expect one of the three top strand reading frames to match *BBS1* since BBS1 is a top strand gene. Now , however, when the arrow points to the left (circled in red), the three reading frames displayed are for the bottom strand (bottom image). Now *none* of the amino acids in the three reading frames match the amino acids found in *BBS1*." width="100%" />
+<p class="caption">
+Figure 2.15: Once you change the base position track to <strong>Full</strong>, the three possible reading frames for a <em>single</em> DNA strand will be displayed. When the arrow points to the right, the three reading frames will be of the top strand (top image). Notice the start codon in green matches the start codon in the third reading frame (<strong>NOTE: This image comes from the 2013 genome assembly and will look different for you.</strong>) In fact, nearly all of the amino acids in exon one match the amino acids in the third reading frame. We expect one of the three top strand reading frames to match <em>BBS1</em> since BBS1 is a top strand gene. Now , however, when the arrow points to the left (circled in red), the three reading frames displayed are for the bottom strand (bottom image). Now <em>none</em> of the amino acids in the three reading frames match the amino acids found in <em>BBS1</em>.
+</p>
+</div>
+<p><br></p>
+<p>The three reading frames corresponding to the top strand are numbered +1 (top), +2 (middle) and +3 (bottom). The three reading frames corresponding to the bottom strand are numbered -1 (top), -2 (middle) and -3 (bottom). For convenience, the position of all possible start codons are highlighted in green and all possible stop codons (*) are highlighted in red.</p>
+Now, zoom out until you can see the first three exons of BBS1 (Figure <a href="chapter2.html#fig:threeexons">2.16</a>). At this level of zoom, you should still be able to read the amino acid sequence within the gene schematic <em>and</em> within the base position track. Notice there are many “start” and “stop” codons scattered throughout this segment of the genome (red and green boxes). This should not be surprising given that start and stop codons are only three nucleotides in length and thus they occur by chance. That said, <strong>the ability of an ATG or TGA, TAA, TAG to function as a start or stop codon, respectively, depends on context</strong>. For example, the real start codon for a given gene is typically the first start codon encountered in an mRNA as the Ribosome scans the mRNA from 5’ to 3’ (more about this later).<br />
+<br>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:threeexons"></span>
+<img src="static/images/firstthreeexons.png" alt="All ATG codons are colored green regardless if they function as a start codon or not. Similarly, all TGA, TAA and TAG codons are colored red regardless if they function as a stop codon. How these triplets function depends on context." width="100%" />
+<p class="caption">
+Figure 2.16: All ATG codons are colored green regardless if they function as a start codon or not. Similarly, all TGA, TAA and TAG codons are colored red regardless if they function as a stop codon. How these triplets function depends on context.
+</p>
+</div>
+<p><br></p>
+<p>Now, notice that the amino acid sequence within the coding exons of BBS1 always match <strong>one</strong> of the three reading frames. For our example, the coding portion of exon 1 begins with a methionine (highlighted in green). The +3 reading frame also has a methionine in this same position. Compare a few more amino acids in BBS1 and the +3 reading frame. You should see that all match (except one - do you see which one?). Thus, coding exon 1 utilizes the +3 reading frame!</p>
+<p>Which reading frame do the other coding exons utilize? Is it always the same reading frame? Or does it change from exon to exon. New trick: To easily view exons farther <em>downstream</em> (or 3’ of), click on the open arrow head on the far right (See hot pink arrow at the far right of the image, Figure <a href="chapter2.html#fig:threeexons">2.16</a>). Also, if you hover over the open triangle and don’t click, a small pop up will appear with information about which exon you are jumping to! This may come in handy while answering the following questions.</p>
+<div id="test-your-understanding-8" class="section level3 hasAnchor" number="2.6.1">
+<h3><span class="header-section-number">2.6.1</span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSckMbKa16Rv7ZEFuQNP8Q1joHgU04UJx-oHZznrnbpaBOAqcQ/viewform?usp=sf_link" target="_blank">Test your understanding</a><a href="chapter2.html#test-your-understanding-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<style>
+div.blue {background-color:#e6f0ff}
+</style>
+<div class="blue">
+<p><br>
+<em>Click the link above to see the TYU questions.</em>
+<br></p>
+</div>
+</div>
+</div>
+<div id="to-learn-more-about-your-gene-of-interest." class="section level2 hasAnchor" number="2.7">
+<h2><span class="header-section-number">2.7</span> To learn more about your gene of interest.<a href="chapter2.html#to-learn-more-about-your-gene-of-interest." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Click on the gene schematic in the “Gene and Gene Predictions track”. This action will open a page that provides many useful links including links to view and analyze the mRNA and protein sequences (Figure <a href="chapter2.html#fig:geneinfo">2.17</a>). Do this for BBS1.</p>
+<br>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:geneinfo"></span>
+<img src="static/images/GeneInformationPage.png" alt="When you click on a gene/transcript schematic in the gene prediction track you are taken to its gene information page. BBS1 only has one isoform and so there is only one gene information page. In other words, this information is transcript specific and depends on which isoform you click on. Useful links are highlighted. Some links will help you answer Test Your Understanding questions. Explore!" width="100%" />
+<p class="caption">
+Figure 2.17: When you click on a gene/transcript schematic in the gene prediction track you are taken to its gene information page. BBS1 only has one isoform and so there is only one gene information page. In other words, this information is transcript specific and depends on which isoform you click on. Useful links are highlighted. Some links will help you answer Test Your Understanding questions. Explore!
+</p>
+</div>
+<p><br></p>
+<p>For example, to view information about the BBS1 mRNA, click on the <strong>NM_024649.5</strong> link. To view information specifically about the protein sequence, click on the NP_078925.3 link. NM_024649.5 and NP_078925.3 are so-called as accession codes. Accession codes that begin with NM_ correspond to mRNA sequences. While those that begin with NP_ correspond to protein sequences. By default, both sequence pages are in so-called “Genbank format”. This format includes useful annotations that can be “read” by sequence analysis software programs. The actual mRNA or protein sequence is at the very bottom of the page. Scroll down. Alternatively, click the “FASTA” link to see the sequence in a simpler format. One thing you might notice: There are no uracil bases (U) in the mRNA sequence! Sequence databases do not expend any computational energy to convert thymines (T) to uracils (U) for display purposes only. Explore the remaining links and bits of information as this information will help you answer the Test Your Understanding questions below.</p>
+<div id="test-your-understanding-9" class="section level3 hasAnchor" number="2.7.1">
+<h3><span class="header-section-number">2.7.1</span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHCmDq82g5JPHIwzBtboqVw0SHCKUhkeLTWn-ZFTriPWsrhA/viewform?usp=sf_link" target="_blank">Test Your Understanding</a><a href="chapter2.html#test-your-understanding-9" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
+</style>
+<div class="blue">
+<p><br>
+<em>Click the link above to see the TYU questions.</em>
+<br></p>
+</div>
+<p>© 2026, Maria Gallegos. All rights reserved.</p>
+<style>
+p.caption {
+  font-size: 0.8em;
+  margin-right: 2%;
+  margin-left: 2%;
+  line-height: 1.2em;
+  text-align: left;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+.zoomDiv {
+  opacity: 0;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 50;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 50px #888888;
+  max-height:100%; 
+  overflow: scroll;
+}
+
+.zoomImg {
+  width: 100%;
+}
+</style>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').prepend("<div class=\"zoomDiv\"><img src=\"\" class=\"zoomImg\"></div>");
+    // onClick function for all plots (img's)
+    $('img:not(.zoomImg)').click(function() {
+      $('.zoomImg').attr('src', $(this).attr('src'));
+      $('.zoomDiv').css({opacity: '1', width: '100%'});
+    });
+    // onClick function for zoomImg
+    $('img.zoomImg').click(function() {
+      $('.zoomDiv').css({opacity: '0', width: '0%'});
+    });
+  });
+</script>
+
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="11">
+<li id="fn11"><p>A polypeptide is a chain of amino acids linked together by peptide bonds. While the words “protein” and “polypeptide” are often used interchangeably, the term protein is more vague. It could refer to a single polypeptide or it might mean multiple polypeptides bound together in a complex. On the other hand, polypeptide always refers to a single sequence of amino acids<a href="chapter2.html#fnref11" class="footnote-back">↩︎</a></p></li>
+<li id="fn12"><p>A cytoplasmic machine (comprised of RNA and protein) which uses the mRNA as a template to synthesize a polypeptide.<a href="chapter2.html#fnref12" class="footnote-back">↩︎</a></p></li>
+<li id="fn13"><p>IMPORTANT: If you do not see the amino acid sequence displayed over the coding exon schematic, you may need to zoom in farther. That said, if you are zoomed in enough to see the genome sequence, and you still don’t see the amino acid sequence then something else is wrong. Right click on the gray rectangle corresponding to the NCBI RefSeq Gene Prediction track and choose, “Configure RefSeq Curated”. Then change “Color track by codons:” from “OFF” to “genomic codons”<a href="chapter2.html#fnref13" class="footnote-back">↩︎</a></p></li>
+<li id="fn14"><p>NOTE: Genome browsers only display DNA sequence. So you will always need to mentally change all “T” nucleotides to “U” nucleotides in order to use a genetic code<a href="chapter2.html#fnref14" class="footnote-back">↩︎</a></p></li>
+<li id="fn15"><p>Notice that at this zoom level some exons simply look like vertical lines. This is because, exons are typically shorter than introns (at least in mammals) and so at this zoom level exons look like lines instead of boxes<a href="chapter2.html#fnref15" class="footnote-back">↩︎</a></p></li>
+<li id="fn16"><p>Except that Uracil replaces Thymine<a href="chapter2.html#fnref16" class="footnote-back">↩︎</a></p></li>
+<li id="fn17"><p>“Coding strand” is misleading because it implies that the entire transcript is coding - not true. “Sense strand” is just not very informative. I like “informational strand” because this is the DNA strand where you will find important sequence information in the RNA - for example, the codons or RNA binding sites that might impact translation or RNA stability. You can’t argue with the term “nontemplate strand”. It’s clearly accurate<a href="chapter2.html#fnref17" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="genes-genomes-and-genome-browsers.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chapter3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/rstudio/bookdown-demo/edit/master/02-Chapter.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["Where-are-genes.pdf", "Where-are-genes.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
