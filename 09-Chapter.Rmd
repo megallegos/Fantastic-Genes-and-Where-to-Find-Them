@@ -52,7 +52,7 @@ Again, the "NCBI Refseq genes" evidence track includes a graphical representatio
 
 Compare what you configured to my named session, [BBS1 gene structure](https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201){target="_blank"}. If they are identical, congratulations. If not, try again but don't stress too much. You can always use my link to get to a correctly formatted page. You are now ready to create your own named session based on the browser window you created (or mine). First, make sure your browser window looks the way you want it to. Next, make sure you are logged into your account. Hover your mouse over “My Data” then click on “My Sessions”. Scroll down to the section entitled, “Save Settings”. Within the window under “Save current settings as named session”, input a reasonable name for this session (i.e. “Gene and Base Prediction Tracks only”). Then hit submit. Now anytime you want to sit down at a computer (anywhere, any computer) to view BBS1 with only the base position and gene prediction tracks open, you simply need to log into your UCSC Genome Browser account, go into “My Sessions” and click on your named session. You won't need to rely on this manual for links. **You can also use this named session as a springboard to view any other gene by using the search window.**
 
-© 2019, Maria Gallegos. All rights reserved.
+© `r as.numeric(format(Sys.Date(), "%Y"))`, Maria Gallegos. All rights reserved.
 
 <style>
 p.caption {

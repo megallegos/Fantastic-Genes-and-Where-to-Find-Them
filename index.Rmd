@@ -1,9 +1,9 @@
 ---
 title: "Fantastic Genes and Where to Find Them"
-author: "Maria Gallegos, Cal State University East Bay"
+author: "Maria Gallegos, Cal State University, East Bay"
 date: "Most recent update: `r Sys.Date()`"
 site: bookdown::bookdown_site
-output: bookdown::gitbook
+#output: bookdown::gitbook
 documentclass: book
 ---
 ```{r eval=FALSE}
@@ -18,39 +18,39 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
   
 # Preface {-}
-```{r legoDNA, out.width='100%', fig.align='center'}
-knitr::opts_chunk$set(echo = FALSE)
+```{r legoDNA, fig.align='center', out.width='\\linewidth'}
 knitr::include_graphics('static/images/DNA.png')
 ```
 
 First, I would like to acknowledge the Genome Education Partnership ([GEP](http://gep.wustl.edu/curriculum/introducing_genes){target="_blank"}) for inspiration. They created a resource for learning about Eukaryotic gene structure using the UCSC Genome Browser (Laakso et al. 2017). Their focus is on the *Drosophila* genome. My focus is on *humans*. This manual has been written for a undergraduate course entitled Principle of Genetic analysis (BIOL 310) at Cal State University, East Bay but can be used by anyone wanting to learn more about gene structure and function. My hope is that skills learned within these pages and the saved sessions I created (and will continue to curate) can be used as a springboard for continued exploration of the human genome.
 
-© 2019, Maria Gallegos. All rights reserved.
+© 2023, Maria Gallegos. All rights reserved.
 
 # Overview {-}
 
-Throughout the semester, you will use a web-based visualization tool called a Genome Browser to explore gene structure and function in humans. We will focus on the human gene, BBS1. Mutations in BBS1 have been implicated in Bardet Biedl Syndrome, a pleiotropic^[pleiotropy is a condition in which a single gene influences more than one trait (Snustad).] disease with a variety of symptoms including blindness, obesity, polydactyly, cognitive impairment, renal abnormalities, infertility and anosmia. In addition to learning how to navigate through the genome browser, you will also learn how to 
+Throughout the semester, you will use a web-based visualization tool called a Genome Browser to explore gene structure and function. We will focus on the human gene, BBS1. Mutations in BBS1 have been implicated in Bardet Biedl Syndrome, a pleiotropic^[pleiotropy is a condition in which a single gene influences more than one trait (Snustad).] disease with a variety of symptoms including blindness, obesity, polydactyly, cognitive impairment, renal abnormalities, infertility and anosmia. In addition to learning how to navigate through the genome browser, you will also learn how to 
 
 1.	Evaluate gene structure within a genome (chapter [2](#chapter2)).
 2.	Use RNA evidence to pinpoint the position of genes (chapters [3](#chapter3) and [4](#chapter4)). 
 3.	Identify DNA and RNA sequence motifs critical for gene expression (chapters [5](#chapter5) and [6](#chapter6)). 
 4.	Identify and assess pathogenic and benign mutations (chapter [7](#chapter7)). 
-5.	Analyze gene sequence conservation between humans simpler model organisms (chapter [8](#chapter8)). 
+5.	Examine gene conservation between humans and simpler model organisms (chapter [8](#chapter8)). 
+
+This manual is used in conjunction with an undergraduate genetics course taught at Cal State University, East Bay. It's called BIOL 310, Genetic Analysis I. The course begins with a superficial overview of genetics followed by two lectures about single gene inheritance. After that we start covering the chapters that discuss DNA structure, DNA replication, transcription, translation, DNA damage etc. 
 
 # How to use this manual {-}
 
-This manual can be viewed on a computer, tablet or phone using the UCSC genome browser *requires* a laptop or desktop computer. The instructions I provide assume you are using one of the two. When on a computer, the table of contents (side bar) can be toggled in and out by typing "s". The arrow keys can be used to move to later or earlier chapters. 
+This manual can be read on a computer, tablet or phone but *using* the UCSC genome browser requires a laptop or desktop computer. The instructions I provide assume you are using one of the two. When on a computer, the table of contents (side bar) can be toggled in and out by typing "s". The arrow keys can be used to move to later or earlier chapters. 
 
 Figures can be enlarged by clicking on an image of interest. Use your track pad to zoom in further. Then to reduce the image back to its original size and continue reading, click on the image again. 
 
-Throughout this tutorial, you will come across footnotes. When you click on the link to a footnote, you will be taken to the end of the chapter. To continue reading where you left off, click the return arrow at the end of the footnote. It is a good idea to read the footnotes and figure legends! These are provided to clear up confusion and provide definitions. They might also provide clues for answering "Test Your Understanding" questions (see below). 
+Throughout this tutorial, you will come across footnotes. When you click on the link to a footnote, you will be taken to the end of the chapter. To continue reading where you left off, click the return arrow at the end of the footnote. 
 
-"Test your understanding" (TYU) and "For Discussion" headings are clickable and take  you to the corresponding "Google quiz" in a new tab. That said, **you need to be logged into your horizon email account in order to access them**. 
-
-After you submit you can check your accuracy. It is best to get the answers correct before moving on. TYU questions are designed to assess if you understand how to navigate through the genome AND understand what you are seeing. With this in mind, **you can answer each quiz multiple times**. I will be available during the activity section to answer any questions you might have. Keep in mind, you will NOT receive an email confirmation with your answers to the questions. If you want a record of your answers, you should write them down. In fact, it is best to read this manual with a pen and notebook in hand for taking notes AND for recording your answers to TYU and "For Discussion" questions. If on the off chance your Google Quiz submission fails, you have your answers written down for an easy re-submission.
+For students at Cal State University, East Bay, "Test your understanding" (TYU) and "For Discussion" headings are clickable and take  you to the corresponding "Google quiz" in a new tab. That said, **you need to be logged into your horizon email account in order to access them**. After you submit you can check your accuracy. It is best to get the answers correct before moving on. TYU questions are designed to assess if you understand how to navigate through the genome AND understand what you are seeing. With this in mind, **you can answer each quiz multiple times**. I will be available during the activity section to answer any questions you might have.
 
 If you spot errors or typos, please let me know. Thanks!
 
+<!--
 <style>
 p.caption {
   font-size: 0.8em;
@@ -59,6 +59,7 @@ p.caption {
   line-height: 1.2em;
   text-align: center;
 }
+
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -96,3 +97,49 @@ p.caption {
     });
   });
 </script>
+-->
+
+```{r, results='asis', echo=FALSE}
+if (knitr::is_html_output()) {
+  cat('
+<style>
+p.caption {
+  font-size: 0.8em;
+  margin-right: 2%;
+  margin-left: 2%;
+  line-height: 1.2em;
+  text-align: center;
+}
+.zoomDiv {
+  opacity: 0;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 50;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 50px #888888;
+  max-height:100%; 
+  overflow: scroll;
+}
+.zoomImg { width: 100%; }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+$(function() {
+  $("body").prepend("<div class=\\"zoomDiv\\"><img src=\\"\\" class=\\"zoomImg\\"></div>");
+  $("img:not(.zoomImg)").click(function() {
+    $(".zoomImg").attr("src", $(this).attr("src"));
+    $(".zoomDiv").css({opacity: "1", width: "95%"});
+  });
+  $("img.zoomImg").click(function() {
+    $(".zoomDiv").css({opacity: "0", width: "0%"});
+  });
+});
+</script>
+  ')
+}
+```
+
+
