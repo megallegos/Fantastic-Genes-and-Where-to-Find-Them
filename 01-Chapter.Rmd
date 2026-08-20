@@ -37,7 +37,7 @@ knitr::include_graphics('static/images/interphasechromatin.png')
 ```
 <br>
 
-### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSe8eECUs8Zwm1bFPFWeCK5DKgM4zM0zaRyZNIYWvjbwk1XFAA/viewform?usp=sf_link){target="_blank"}
+### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSfd86NI97aVIvsFrTzoQrcmzRH900wVMmqQjDgdNUQDHlypgQ/viewform?usp=dialog){target="_blank"}
 <style>
 div.blue { background-color:#e6f0ff}
 </style>
