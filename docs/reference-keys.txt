@@ -133,7 +133,6 @@ chapter7
 understanding-how-dna-variants-are-displayed
 test-your-understanding-20
 for-discussion-1
-homework---optional---for-extra-credit
 chapter8
 modelling-human-disease
 reciprocal-best-hit-analysis

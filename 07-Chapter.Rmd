@@ -36,9 +36,9 @@ By contrast, pathogenic mutations that map outside the coding sequence typically
 
 Finally, notice how the position of a splice site mutation is described relative to the mRNA (cDNA). The location of the splice acceptor variant in Figure \@ref(fig:TtoC) is described as NM_024649.5(BBS1):c.433-2A>G. In this example, position 433 is the first nucleotide of exon 5 of BBS1 (as described by NM_024649.5). Thus the DNA variant is located at position 433-2 (the 2nd nucleotide *upstream* of exon 5 in the genome). In other words, the highly conserved A in the **A**-G of the 3’ SS of intron 4 is mutated to a G. The location of the splice donor variant in Figure \@ref(fig:TtoC) is described as NM_024649.5(BBS1):c.479+2T>G. In this example, position 479 is the last nucleotide of exon 5. Thus, the DNA variant is located at position 479+2 (the 2nd nucleotide *downstream* of exon 5). In other words, the highly conserved T in the G-**T** of the 5’ SS of intron 5 is mutated to a G. 
 
-Here is a useful trick. Given a **Clinvar variant ID** (i.e. NM_024649.5(BBS1):c.433-2A>G) or **Nucleotide HGVS ID** (i.e. NM_024649.4:c.433-2A>G) you can quickly and easily locate the DNA variant within the UCSC genome browser. Simply copy and paste either ID type into the search window and click "Go". This knowledge will come in handy when you complete your "Test Your Understanding" questions and homework!
+Here is a useful trick. Given a **Clinvar variant ID** (i.e. NM_024649.5(BBS1):c.433-2A>G) or **Nucleotide HGVS ID** (i.e. NM_024649.4:c.433-2A>G) you can quickly and easily locate the DNA variant within the UCSC genome browser. Simply copy and paste either ID type into the search window and click "Go". This knowledge will come in handy when you complete your "Test Your Understanding" questions!
 
-### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSe4661QFvixviLrC9nB5QxVFjC19_k_mI_aMwXnhcu0bFhP4Q/viewform?usp=sf_link){target="_blank"}
+### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSdKtYHLKdZsBbmByZLmkdtmFCV3IZcB6IKagA6VLNxPSsHZTA/viewform?usp=publish-editor){target="_blank"}
 <style>
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
 </style>
@@ -48,7 +48,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
 <br>
 </div>
 
-### [For Discussion](https://docs.google.com/forms/d/e/1FAIpQLSda-6Xh3SbF8zzKhoQVZ6biWLkzigculLabj8y3Jg1I4Yc5KA/viewform?usp=sf_link){target="_blank"}
+### [For Discussion](https://docs.google.com/forms/d/e/1FAIpQLSedwHxbnKNs66ggdbGtuy7JkGWHo4XDoU2EdxO4QY8HwI7bAw/viewform?usp=dialog){target="_blank"}
 <style>
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
 </style>
@@ -57,11 +57,6 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
 *Click the link above to see the TYU questions.* 
 <br>
 </div>
-
-
-## [Homework - Optional - For Extra Credit](https://drive.google.com/file/d/11T71xL2ylto_hP32Uo560bUnb0kbLp61/view?usp=sharing){target="_blank"}
-
-
 
 
 © `r as.numeric(format(Sys.Date(), "%Y"))`, Maria Gallegos. All rights reserved.
