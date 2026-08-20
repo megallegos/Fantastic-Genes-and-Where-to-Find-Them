@@ -83,7 +83,7 @@ knitr::include_graphics('static/images/dragnselect.png')
 
 Again, if you zoom in close enough you will see the actual genome sequence (top strand only) within the Base Position evidence track (Figure \@ref(fig:zoomtosequence), A). How do I know the genome sequence displayed is the top strand^[The top strand of DNA is also referred to as the “+ strand”]? Because the arrow to the left of the genome sequence (see red Asterix, Figure \@ref(fig:topstrand))  is pointing to the right (--->). In molecular biology, the blunt end of an arrow represents the 5’ end of a DNA strand while the pointed end of an arrow represents the 3’ end. *Always*.
 
-### [Test Your Understanding](https://forms.gle/LFvwBLFpZh5mQwiX7){target="_blank"}
+### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLScQhv6zudWSXt-87drejRZh53EYYQTgGSJerfS65oNsF6UMqA/viewform?usp=dialog){target="_blank"}
 <style>
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
 </style>

@@ -76,13 +76,13 @@ knitr::include_graphics('static/images/TSSdataonly.png')
 Now click [here](https://genome.ucsc.edu/s/megallegos/TSSproblem2){target="_blank"} to see how many genes there really are in the genomic region shown in Figure \@ref(fig:TSSdataalone). How does this differ from what you thought? Do you see why you were misled? Notice that the link has been configured to include the gene prediction track along with the RNA-seq and TSS-seq data tracks. Do you see how the RNA-seq data combined with the TSS-seq data provides a more complete picture of the true number of genes present? After all, there are genes that utilize alternative transcription *initiation* sites (Review ([Chapter 2](#chapter2)), "One gene, many splice variants")!
 
 
-### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSdoZhdWlHjqL4CDLwYROE0EiyIVDlYp0qbOYrwDt0HGiG7Dcg/viewform?usp=sf_link){target="_blank"}
+### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSeqnQfdqFYzX32YzqgbZoToWZ-mPgjzn84ptA5UldGHJmYHPA/viewform?usp=publish-editor){target="_blank"}
 <style>
 div.blue {background-color:#e6f0ff}
 </style>
 <div class = "blue">
 
-**Some of the TYU questions will require the TSS-seq data displayed in the figure below (the gene prediction track is hidden).** To enlarge click on the image. 
+**Some of the TYU questions will require the TSS-seq data displayed in the figure below (NOTE that the gene prediction track is hidden).** To enlarge click on the image. 
 <br>
 ```{r TSSdataalone2, out.width='100%', fig.align='center'}
 knitr::opts_chunk$set(echo = FALSE)
@@ -94,7 +94,7 @@ Click on the link above to see the questions.
 </div>
 
 
-### [For Discussion](https://docs.google.com/forms/d/e/1FAIpQLSeR06s09E1L8aZKmYzKyJwuSNjVxeYzn7mpXPM555K0qOM9Xw/viewform?usp=sf_link){target="_blank"} 
+### [For Discussion](https://docs.google.com/forms/d/e/1FAIpQLSdW3g9FoPAqvmPJwflskUWyCNuUKPcA7FUQ3AiRJbtPYUd04g/viewform?usp=dialog){target="_blank"} 
 
 Click link to see the discussion questions.
 <br>

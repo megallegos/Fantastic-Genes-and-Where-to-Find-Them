@@ -43,7 +43,7 @@ In summary, RNAseq provides *unbiased*, experimental evidence about which segmen
 RNAseq can also reveal *how* transcriptionally active genes are by keeping track of the *number of reads*. Genes that are highly transcribed are expected to produce more sequence reads than genes that are transcribed to lower levels. Finally, RNAseq can reveal exon-intron boundaries since introns are absent in mRNA and thus not sequenced^[That said, it is difficult to remove *all* pre-mRNA and all DNA from the extraction and so introns are occasionally sequenced as you will see when you examine the RNA seq data].
 
 
-### [Test your understanding](https://docs.google.com/forms/d/e/1FAIpQLSewKpJdsq0wm_uRGAblrKawwG5mvWVZieFe2sh1cH8FHjEpOg/viewform?usp=sf_link){target="_blank"}
+### [Test your understanding](https://docs.google.com/forms/d/e/1FAIpQLScuUuXiMMYcvuTlpRtc05eraxygSWT_QiME269isDUAnfzJRQ/viewform?usp=publish-editor){target="_blank"}
 <style>
 div.blue {background-color:#e6f0ff}
 </style>
@@ -84,7 +84,7 @@ knitr::include_graphics('static/images/histogram.png')
 ```
 <br>
 
-### [Test your understanding](https://docs.google.com/forms/d/e/1FAIpQLScSof7sO3S_09-Ulow0qixD-qie0n7pTp2NdDonfaV8waKO-A/viewform?usp=sf_link){target="_blank"}
+### [Test your understanding](https://docs.google.com/forms/d/e/1FAIpQLSeJEhchHA54M_GTbj2cZASp5qOPKRpobz8PbWyR2_KVduM17Q/viewform?usp=publish-editor){target="_blank"}
 <style>
 div.blue {background-color:#e6f0ff}
 </style>

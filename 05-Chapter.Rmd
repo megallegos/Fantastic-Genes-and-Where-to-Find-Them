@@ -73,7 +73,7 @@ knitr::include_graphics('static/images/Inr_Example.png')
 ```
 <br>
 
-### [Test your understanding](https://docs.google.com/forms/d/e/1FAIpQLSfMGNjfgSnl-GVNBXiKnLIA0yDvAZKE9kAO11CqdXAPRDa3Gw/viewform?usp=sf_link){target="_blank"}
+### [Test your understanding](https://docs.google.com/forms/d/e/1FAIpQLSehhRv5LIMoG46n6oDV-KeJYzJ2Krx48XH4efRh2eIcITsZjg/viewform?usp=publish-editor){target="_blank"}
 <style>
 div.blue {background-color:#e6f0ff}
 </style>

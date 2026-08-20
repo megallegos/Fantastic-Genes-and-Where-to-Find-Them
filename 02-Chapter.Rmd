@@ -21,7 +21,7 @@ knitr::include_graphics('static/images/BBS1zoomtosequence.png')
 ```
 <br>
 
-### [Test your understanding](https://forms.gle/V4fYwV2ZoiCVXfEv8){target="_blank"}
+### [Test your understanding](https://docs.google.com/forms/d/e/1FAIpQLScmbCmwXv1K4GU-hl1xiEqE7IvPnTBn-ogVk8YLqFAP74OdmA/viewform?usp=dialog){target="_blank"}
 <style>
 div.blue {background-color:#e6f0ff}
 </style>
@@ -65,7 +65,7 @@ knitr::include_graphics('static/images/lastcodingexon.png')
 ```
 <br>
 
-### [Test your understanding](https://forms.gle/DaZ8kh1EH7Bqi6Fr7){target="_blank"}
+### [Test your understanding](https://docs.google.com/forms/d/e/1FAIpQLSdi9K636IJ9zKXMmcsTmcwTScy5eP2SYAjZXbUNZxMmlepd3g/viewform?usp=dialog){target="_blank"}
 <style>
 div.blue {background-color:#e6f0ff}
 </style>
@@ -95,7 +95,7 @@ knitr::include_graphics('static/images/circulargeneticcode.png')
 
 Click on the [BBS1](https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201){target="_blank"} session link, then use the "Drag-and-Select" method to get a close-up view of exon 1.  Look directly above the beginning of the coding portion of BBS1 and you will see that the first codon of BBS1 is A-T-G. Using the genetic code from Figure \@ref(fig:geneticcode) you can confirm that this codes for Methionine, Met or M and is labelled as a start codon^[NOTE: Genome browsers only display DNA sequence. So you will always need to mentally change all "T" nucleotides to "U" nucleotides in order to use a genetic code]. Also confirm that you read the second codon as G-C-C and the third codon as G-C-T. Both code for Alanine (Ala, A). This exercise also shows that the mRNA sequence for BBS1 is identical in sequence and orientation to the top strand of the genome (but of course without the introns). Recall, by default the top strand (+ strand) is displayed in the browser window. It is oriented from 5' on the left to 3' end on the right. You can confirm this by checking the arrow positioned in the top left corner (See the asterix in Figure \@ref(fig:topstrand)). Your arrow should be pointing to the right. The orientation of the mRNA is also consistent with the fact that codons are read from 5' to 3' (in this case from left to right). 
 
-### [Test your understanding](https://forms.gle/LUjW3ngaerH1ipeV6){target="_blank"}
+### [Test your understanding](https://docs.google.com/forms/d/e/1FAIpQLSff_zvAFmglpmjZHpipDvIt_X2MmYF7FlisD-141DM2QRa0_A/viewform?usp=dialog){target="_blank"}
 <style>
 div.blue {background-color:#e6f0ff}
 </style>
@@ -146,7 +146,7 @@ knitr::include_graphics('static/images/eatgrandma.jpg')
 ```
 <br>
 
-### [Test Your Understanding](https://forms.gle/s1Ca2HyWLNyakJN38){target="_blank"}
+### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSch6QU0XzZASORXHmhEVnU4DMU_vBDCmfnc2CMlOelxPlrtdw/viewform?usp=publish-editor){target="_blank"}
 <style>
 div.blue { background-color:#e6f0ff}
 </style>
@@ -190,7 +190,7 @@ When the orientation wedges point to the left, "( ( ( (", the reverse is true (i
 4. **You would read this gene from right to left!** 
 <br>
 
-### [Test your understanding](https://docs.google.com/forms/d/e/1FAIpQLScgFkZWsytBOOLiaJeJi8fTler4YYHuWkDosv5gGORJIneT0w/viewform?usp=sf_link){target="_blank"}
+### [Test your understanding](https://docs.google.com/forms/d/e/1FAIpQLSfdSGZgUjW0VctKvMw77qpXOCncpvEEYpTdrGJKfHnYpZfxag/viewform?usp=publish-editor){target="_blank"}
 <style>
 div.blue {background-color:#e6f0ff}
 </style>
@@ -218,7 +218,7 @@ knitr::include_graphics('static/images/firstcodingexonZDHHC24Bottom.png')
 
 Look at the three nucleotides centered above the Methionine (colored in green on the right side of Figure \@ref(fig:firstcodingexonZDHHC24)). Notice that the nucleotides listed from left to right is NOT an A-T-G as you might expect but instead C-A-T! This is because you are “reading” the top strand of the genomic DNA and ZDHHC24 is a **bottom** strand gene. **To view the bottom strand of the genomic DNA**, click on the far left arrow within the Base Position Track (See the red oval, Figure \@ref(fig:firstcodingexonZDHHC24)). Notice the orientation of the arrow will flip and the genome sequence in your “Base Position” Track will become light gray (red oval, \@ref(fig:firstcodingexonZDHHC24bottom)). *Now* there is an A-T-G directly above the Methionine (M) but only if you read it from *right to left*! This is because the bottom strand of DNA is oriented with 5’ end on the right.  
 
-### [Test your understanding](https://docs.google.com/forms/d/e/1FAIpQLSeaojvlNdLiH-VjdFQA-tjv3U3-f8dCK1mZA2n4KQXwoCI5NQ/viewform?usp=sf_link){target="_blank"}
+### [Test your understanding](https://docs.google.com/forms/d/e/1FAIpQLSeRZqrcfWOf5aIb0tVj0NDMMDfh8I-y7M5-3ZNj2CCLgOTP9w/viewform?usp=publish-editor){target="_blank"}
 <style>
 div.blue {background-color:#e6f0ff}
 </style>
@@ -274,7 +274,7 @@ Now, notice that the amino acid sequence within the coding exons of BBS1 always 
 
 Which reading frame do the other coding exons utilize? Is it always the same reading frame? Or does it change from exon to exon.  New trick:  To easily view exons farther *downstream*  (or 3’ of), click on the open arrow head on the far right (See hot pink arrow at the far right of the image, Figure \@ref(fig:threeexons)). Also, if you hover over the open triangle and don’t click, a small pop up will appear with information about which exon you are jumping to! This may come in handy while answering the following questions. 
 
-### [Test your understanding](https://docs.google.com/forms/d/e/1FAIpQLSckMbKa16Rv7ZEFuQNP8Q1joHgU04UJx-oHZznrnbpaBOAqcQ/viewform?usp=sf_link){target="_blank"}
+### [Test your understanding](https://docs.google.com/forms/d/e/1FAIpQLScM61c3FU25CziMHvm-TkiNy2aES4o1a34iOEiLdEThc7bjzw/viewform?usp=publish-editor){target="_blank"}
 <style>
 div.blue {background-color:#e6f0ff}
 </style>
@@ -297,7 +297,7 @@ knitr::include_graphics('static/images/GeneInformationPage.png')
 
 For example, to view information about the BBS1 mRNA, click on the **NM_024649.5** link. To view information specifically about the protein sequence, click on the NP_078925.3 link. NM_024649.5 and NP_078925.3 are so-called as accession codes. Accession codes that begin with NM_ correspond to mRNA sequences. While those that begin with NP_ correspond to protein sequences. By default, both sequence pages are in so-called "Genbank format". This format includes useful annotations that can be “read” by sequence analysis software programs. The actual mRNA or protein sequence is at the very bottom of the page. Scroll down. Alternatively, click the "FASTA" link to see the sequence in a simpler format. One thing you might notice: There are no uracil bases (U) in the mRNA sequence! Sequence databases do not expend any computational energy to convert thymines (T) to uracils (U) for display purposes only. Explore the remaining links and bits of information as this information will help you answer the Test Your Understanding questions below.
 
-### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSdHCmDq82g5JPHIwzBtboqVw0SHCKUhkeLTWn-ZFTriPWsrhA/viewform?usp=sf_link){target="_blank"}
+### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSedVz8mM6CdYu29N_rWYKGV1G4JGmtu4qBV67HXNvyNXaJSsQ/viewform?usp=publish-editor){target="_blank"}
 <style>
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
 </style>

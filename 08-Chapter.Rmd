@@ -79,7 +79,7 @@ knitr::include_graphics('static/images/TwoPairwiseAlignments.png')
 ```
 <br>
 
-### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSeACOPQeUC_YCjHqISD95DYyEpiSjJPHThNVxIYZ0v1Okmd2g/viewform?usp=sf_link){target="_blank"}
+### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSdwowGrryhKSzoqOCjXO2QxHEBQPqk7A6qe8f_NR_oTpPp5sg/viewform?usp=publish-editor){target="_blank"}
 <style>
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
 </style>
@@ -100,7 +100,7 @@ knitr::include_graphics('static/images/secondBLASTP.png')
 ```
 <br>
 
-### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSctC_EHT6uey1_zYviwwxNJRCgWAM-bKxlkiJawl5HfZk6siw/viewform?usp=sf_link){target="_blank"}
+### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLScdVWPJbKZrwQq7hQfEh27ga9gva7PvxOmE7WfD6X2hkJx61Q/viewform?usp=dialog){target="_blank"}
 <style>
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
 </style>
@@ -134,7 +134,7 @@ knitr::include_graphics('static/images/GeneName.png')
 
 When one does an RBH analysis, protein sequences are used to perform each BLASTP (first and reciprocal). *But* a reciprocal best hit successfully identifies a pair of orthologs only when it identifies a pair of ***genes*** that are *eachother's* best hit. The BLASTP is used as a tool to identify those genes. 
 
-### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSdpIxVjTG0lSzcHmQr_21sdnyP5tj6GgEZI0MjvFeflmLqkiQ/viewform?usp=sf_link){target="_blank"}
+### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSdbjaxaFCB6iRYKFXImgzXW22hRrcswY78iilyuwSCn25SrLg/viewform?usp=dialog){target="_blank"}
 <style>
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
 </style>
