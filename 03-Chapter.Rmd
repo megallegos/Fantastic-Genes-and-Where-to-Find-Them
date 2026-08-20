@@ -96,7 +96,7 @@ div.blue {background-color:#e6f0ff}
 ## Switching Data Sets
 You have been evaluating RNAseq data collected from K562 cells. To answer the following questions you need to switch data sets. To do this, click on the gray rectangle (at left) corresponding to the “Encode RNA-seq” evidence track to view the track settings page. Within track settings, unclick the K562 data set and click on the **H1-hESC** data set. To learn more about these cells, click on the “H1-hESC” link. Copy (control C) the information in the description column (this is the answer to the first problem!).  Now hit “Submit” to go back to the browser display window. 
 
-### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSf4fcc57bfhUFKRBDyqeUTgSEvr4B9TKqiK8-EKO1P3AWJAgA/viewform?usp=sf_link){target="_blank"}
+### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSd0JLkn_KF35tgv-dxXgeUqlnrAteOaBGfYjG9T_TDSMfawig/viewform?usp=dialog){target="_blank"}
 <style>
 div.blue {background-color:#e6f0ff}
 </style>
