@@ -162,7 +162,7 @@ knitr::include_graphics('static/images/IsoformChoice.png')
 
 ## [Independent Project](https://docs.google.com/document/d/1f6JfkyjoCzrnMQNOYK4zwh8v6UWDpyhe/edit?usp=sharing&ouid=105099724878084618453&rtpof=true&sd=true){target="_blank"}
 
-## [Lab Practical Practice](https://docs.google.com/forms/d/e/1FAIpQLScfBuVHhWGDfSWYeuAXYh3gV2odaTh9D-OPFHhJlHeFUM_06w/viewform?usp=sf_link){target="_blank"}
+## [Lab Practical Practice](https://docs.google.com/forms/d/e/1FAIpQLSe90-3YEijIRg3lo5JzYM6R9L_O6ozrhNQzPUcAGcbDPtVGdQ/viewform?usp=dialog){target="_blank"}
 
 Due: See Syllabus
 
