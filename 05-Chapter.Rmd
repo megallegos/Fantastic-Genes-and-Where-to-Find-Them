@@ -102,7 +102,7 @@ knitr::include_graphics('static/images/SequenceLogo_SP_BR.png')
 ```
 <br>
 
-### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLScT6tA9iWRqeRGbT3ELUc-RedNhDYg2LuCceRZeTSsNX0A6_g/viewform?usp=sf_link){target="_blank"}
+### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSfLGc-5Ia8ANgVMtwTcDisybcfW3eG9rhLFqfFqeKoZVjVTbQ/viewform?usp=publish-editor){target="_blank"}
 <style>
 div.blue {background-color:#e6f0ff}
 </style>
