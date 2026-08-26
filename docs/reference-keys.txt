@@ -134,7 +134,7 @@ for-discussion-1
 chapter8
 modelling-human-disease
 reciprocal-best-hit-analysis
-retrieving-gene-product-sequences.
+retrieving-gene-product-sequences
 test-your-understanding-20
 first-blastp
 understanding-a-pairwise-alignment

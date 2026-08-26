@@ -50,9 +50,9 @@ knitr::include_graphics('static/images/RBHanalysis.png')
 ```
 <br>
 
-## Retrieving gene product sequences. 
+## Retrieving gene product sequences 
 
-To perform a reciprocal best hit analysis, you need to find a link to the protein sequence. Click on the gene schematic in the “Gene and Gene Predictions track”. This action will open a page that provides many useful links including links to view and analyze the mRNA and protein sequences (Figure \@ref(fig:geneinfo)). Do this for BBS1.  
+To perform a reciprocal best hit analysis, you need the protein sequence. Click on the gene schematic in the “Gene and Gene Predictions track”. This action will open a page that provides many useful links including links to view and analyze the mRNA and protein sequences (Figure \@ref(fig:geneinfo)). Do this for BBS1.  
 
 <br>
 ```{r geneinfo, out.width='100%', fig.align='center', fig.cap="When you click on a gene/transcript schematic in the gene prediction track you are taken to its gene information page. BBS1 only has one isoform and so there is only one gene information page. In other words, this information is transcript specific and depends on which isoform you click on. Useful links are highlighted. Some links will help you answer Test Your Understanding questions. Explore!"}
