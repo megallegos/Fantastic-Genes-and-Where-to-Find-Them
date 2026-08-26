@@ -1,9 +1,9 @@
 # Understanding Gene Structure {#chapter2}
 
-In this chapter, you will learn how genes are structured and how to recognize the different parts of a gene as illustrated in the UCSC genome browser. To follow along with the text and to answer the “Test Your Understanding” questions, start with the [BBS1](https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201){target="_blank"} session link. You can also use this link as a starting point to view gene structure for any gene of interest by typing the name of your gene of interest in the search window.
+In this chapter, you will learn how to "read" a graphical representation of a gene as illustrated in the UCSC genome browser. A graphical representation of a gene, or gene schematic, allows you to visualize gene structure. The various named structures (exon, intron, 5' UTR etc) are determined by gene expression (transcription, RNA processing and translation). First, one continuous strand of genomic DNA is used as a template to produce a single-stranded RNA transcript. This process is called **transcription**. The sequence of the RNA transcript is identical^[almost identical. DNA includes thymine while RNA include uracil instead] to the nontemplate strand of genomic DNA. Before the transcript is exported out into the cytoplasm, it is processed including the removal of internal segments called **introns** (or **int**ervening **r**egi**ons**). *All* the RNA segments that remain are called **exons** (or **ex**pressed regi**ons**). They are *linked* together, in order, through a process called splicing. Then the mRNA is translated in the cytoplasm. Translation begins at the start codon and ends at the stop codon. To follow along with the text and to answer the “Test Your Understanding” questions, start with the [BBS1](https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201){target="_blank"} session link. You can also use this link as a starting point to view the gene structure for any gene of interest by typing the name of your gene of interest in the search window.
 
 ## Exons and Introns
-During gene expression, one continuous strand of genomic DNA is used as a template to produce a single-stranded RNA transcript. This process is called **transcription**. The sequence of this RNA transcript is identical to the nontemplate strand of genomic DNA (although uracil replaces thymine in RNA). Before the transcript is exported out into the cytoplasm, it is processed including the removal of internal segments called **introns** (or **int**ervening **r**egi**ons**). *All* the RNA segments that remain are called **exons** (or **ex**pressed regi**ons**). They are then *linked* back together in order. To view the exon/intron organization of BBS1, click on the [BBS1](https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201){target="_blank"} session link, and review the schematic within the NCBI RefSeq Gene Prediction Evidence Track. Notice, the BBS1 gene consists of "boxes" connected by lines (Figure \@ref(fig:BBS1transcript)). The boxes represent exons (two examples are highlighted with a red bracket/asterix). The lines represent introns (one example is highlighted with a purple bracket/asterix). Now, hover your mouse over various parts of the gene schematic within the Browser window. If you pause long enough a popup window should appear indicating *which* intron or exon you are pointing to among the total number! Thus, this popup window also reveals the location of the beginning of a gene (i.e. exon 1 is always at the beginning of the gene!). This is the part of the gene that is transcribed first. For BBS1, exon 1 is located on the left side of the gene schematic. 
+The first named structure to notice in the gene schematic is the **intron**. The size and position of each intron is illustrated in the UCSC genome browser as a thin horizontal line covered with so-called orientation wedges, "))))" or "((((" (one example is highlighted with a purple bracket/asterix in Figure\@ref(fig:BBS1transcript)). Exons are simply not introns. **In other words, any part of the gene schematic that is not intronic is exonic.** To view the exon/intron organization of BBS1, click on the [BBS1](https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201){target="_blank"} session link, and review the schematic within the NCBI RefSeq Gene Prediction Evidence Track (Figure \@ref(fig:BBS1transcript)).Examples of two exons are highlighted with a red bracket/asterix). Now, hover your mouse over various parts of the gene schematic within the Browser window. If you pause long enough, a popup window should appear indicating *which* intron or exon you are pointing to among the total! Thus, this popup window also reveals the location of the beginning of a gene (i.e. exon 1 is always at the beginning of the gene!). This is the part of the gene that is transcribed first. For BBS1, exon 1 is located on the left side of the gene schematic. 
 
 <br>
 ```{r BBS1transcript, out.width='100%', fig.align='center', fig.cap = "Understanding the gene prediction evidence track schematic. Boxes represent exons (two examples are bracketed and highlighted with a red asterix). The lines represent introns (one example is bracketed and highlighted with a purple asterix)"}
@@ -12,7 +12,7 @@ knitr::include_graphics('static/images/exonintron.png')
 ```
 <br>
 
-A close up view of an intron-exon junction is displayed in Figure \@ref(fig:zoomtosequence), See the asterix, the intron is to the left, exon to the right). Now you try it. Zoom into any exon-intron junction. 
+A close up view of an intron-exon junction is displayed in Figure \@ref(fig:zoomtosequence). See the asterix. In this example, the intron is to the left, the exon to the right). Now you try it. Zoom into any exon-intron junction. 
 
 <br>
 ```{r zoomtosequence, out.width='50%', fig.align='center', fig.cap = "The drag-select tool was used to zoom in close to a small portion of an exon intron junction of BBS1. As you can see the first 4 nucleotides of the exon shown are G-A-C-C."}
@@ -32,7 +32,7 @@ div.blue {background-color:#e6f0ff}
 </div>
 
 ## Coding and Noncoding Exons
-The spliced transcript or messenger RNA (mRNA) is used as a template to create a polypeptide^[A polypeptide is a chain of amino acids linked together by peptide bonds. While the words “protein” and “polypeptide” are often used interchangeably, the term protein is more vague. It could refer to a single polypeptide or it might mean multiple polypeptides bound together in a complex. On the other hand, polypeptide always refers to a single sequence of amino acids]. This process is called translation and is mediated in part by the ribosome^[A cytoplasmic machine (comprised of RNA and protein) which uses the mRNA as a template to synthesize a polypeptide.]. Ribosomes "read" the mRNA from 5' to 3', three nucleotides at a time, translating the triple nucleotide code into a sequence of amino acids. Each set of three nucleotides is called a codon. Codons either specify the incorporation of an amino acid in a growing polypeptide chain or signal the end of polypeptide synthesis. Codons with the latter function are called **"termination codons"** or simply **"stop codons"** (Figure \@ref(fig:ProteinSyn)). 
+The spliced transcript or messenger RNA (mRNA) is used as a template to create a polypeptide^[A polypeptide is a chain of amino acids linked together by peptide bonds. While the words “protein” and “polypeptide” are often used interchangeably, the term protein is more vague. It could refer to a single polypeptide or it might mean multiple polypeptides bound together in a complex. On the other hand, polypeptide always refers to a single sequence of amino acids]. This process is called translation and is mediated in part by the ribosome^[A component of the translation machinery (comprised of RNA and protein) which uses the mRNA as a template to synthesize a polypeptide.]. Ribosomes "read" the mRNA from 5' to 3', three nucleotides at a time, translating the triple nucleotide code into a sequence of amino acids. Each set of three nucleotides is called a codon. Codons either specify the incorporation of an amino acid in a growing polypeptide chain or signal the end of polypeptide synthesis. Codons with the latter function are called **"termination codons"** or simply **"stop codons"** (Figure \@ref(fig:ProteinSyn)). 
 
 <br>
 ```{r ProteinSyn, out.width='100%', fig.align='center', fig.cap = "A schematic representation of translation. Image by Kelvinsong"}
@@ -41,9 +41,9 @@ knitr::include_graphics('static/images/Protein_synthesis.png')
 ```
 <br>
 
-That said, ribosomes don't start translation at the 5' *end* of the mRNA but from a **"start codon"** located *internally*. Nor do ribosomes read to the end of the mRNA but only until they encounter a stop codon. Thus, an mRNA is *more* than just codons and those codons *only occupy the central region of an mRNA*. The 5' and 3' ends of the mRNA not "read" by the ribosome are called **"noncoding regions"** or **"untranslated regions" (UTRs)**. The noncoding region at the 5' end is called the **5’ untranslated region (5’ UTR)** while the noncoding region at the 3' end is called the **3’ untranslated region (3' UTR)**. 
+That said, ribosomes don't start translation at the very 5' *end* of the mRNA but from a **"start codon"** located *internally*. Nor do ribosomes read to the very 3' end of the mRNA but only until they encounter a stop codon. Thus, an mRNA is *more* than just codons and those codons *only occupy the central region of mRNA*. The 5' and 3' ends of the mRNA not "read" by the ribosome are called **"noncoding regions"** or **"untranslated regions" (UTRs)**. The noncoding region at the 5' end is called the **5’ untranslated region (5’ UTR)** while the noncoding region at the 3' end is called the **3’ untranslated region (3' UTR)**. 
 
-Figure \@ref(fig:topstrand) shows how noncoding (blue box) and coding regions (green box) of an exon (red box) are illustrated in the UCSC Genome Browser. The noncoding portion is not as thick as the coding portion. At this zoom level, the coding portion also displays the amino acid sequence that this exon codes for: M-A-A-A-S-S-S-D-S-D-A-C-G-A-E-S (notice each amino acid is placed below 3 nucleotides, the codon). Again, notice how the amino acid sequence does not start at the *beginning* of exon 1 (red box). This thinner portion of exon 1 is the 5’ untranslated region (5’ UTR). Importantly, **exon 1 includes both the noncoding and coding portions**. To confirm that you are looking in the right places, the BBS1 5' UTR (the beginning of exon 1) begins with the sequence G-G-T-T. The coding portion of exon 1 begins with the sequence A-T-G-G. Exon 1 ends with the sequence, AGAG. The intron begins with the sequence G-T-G-A.
+Figure \@ref(fig:topstrand) shows how noncoding (blue box) and coding (green box) regions of an exon (red box) are illustrated in the UCSC Genome Browser. Notice how the noncoding portion is not as thick as the coding portion. At this zoom level, the coding portion also displays the amino acid sequence that this exon codes for: M-A-A-A-S-S-S-D-S-D-A-C-G-A-E-S (notice each amino acid is placed below 3 nucleotides, the codon). Again, notice how the amino acid sequence does not start at the *beginning* of exon 1 (red box). The thinner portion of exon 1 is the 5’ untranslated region (5’ UTR). Importantly, **exon 1 includes both the noncoding and coding portions**. To confirm that you are looking in the right place, the BBS1 5' UTR (the beginning of exon 1) begins with the sequence G-G-T-T. The coding portion of exon 1 begins with the sequence A-T-G-G. Exon 1 ends with the sequence, AGAG. The intron begins with the sequence G-T-G-A.
 
 <br>
 ```{r topstrand, out.width='100%', fig.align='center', fig.cap = "Exon 1 (red box) of BBS1 is part noncoding exon (blue box) and part coding exon (green box)"}
@@ -76,7 +76,7 @@ div.blue {background-color:#e6f0ff}
 
 </div>
 
-## Coding Exons Determine Protein Sequence
+## Only Coding Exons Determine Protein Sequence
 A polypeptide is a sequence of amino acids linked together by peptide bonds. The amino acid sequence is determined by the order of codons present in the central portion of an mRNA (the coding exons).  Each codon consists of a nonoverlapping set of three nucleotides. Since there are four nucleotides in total (G, A, T and C), there are a total of 64 possible codons (4 x 4 x 4). Most of the 64 codons code for an amino acid. Three do not and therefore act as STOP signals also known as "termination codons" or "stop codons". Figure \@ref(fig:geneticcode) is one way to display the genetic code. In this graphic, RNA codons are read from the **center** out to the periphery (from 5’ to 3’). For example, G-C-A codes for Alanine. Ala and A are the standard three letter and single letter codes, respectively. U-U-G codes for Leucine. Confirm this for yourself to make sure you know how to use this genetic code. 
 
 <br>
@@ -284,28 +284,6 @@ div.blue {background-color:#e6f0ff}
 <br>
 </div>
 
-## To learn more about your gene of interest. 
-
-Click on the gene schematic in the “Gene and Gene Predictions track”. This action will open a page that provides many useful links including links to view and analyze the mRNA and protein sequences (Figure \@ref(fig:geneinfo)). Do this for BBS1.  
-
-<br>
-```{r geneinfo, out.width='100%', fig.align='center', fig.cap="When you click on a gene/transcript schematic in the gene prediction track you are taken to its gene information page. BBS1 only has one isoform and so there is only one gene information page. In other words, this information is transcript specific and depends on which isoform you click on. Useful links are highlighted. Some links will help you answer Test Your Understanding questions. Explore!"}
-knitr::opts_chunk$set(echo = FALSE)
-knitr::include_graphics('static/images/GeneInformationPage.png')
-```
-<br>
-
-For example, to view information about the BBS1 mRNA, click on the **NM_024649.5** link. To view information specifically about the protein sequence, click on the NP_078925.3 link. NM_024649.5 and NP_078925.3 are so-called as accession codes. Accession codes that begin with NM_ correspond to mRNA sequences. While those that begin with NP_ correspond to protein sequences. By default, both sequence pages are in so-called "Genbank format". This format includes useful annotations that can be “read” by sequence analysis software programs. The actual mRNA or protein sequence is at the very bottom of the page. Scroll down. Alternatively, click the "FASTA" link to see the sequence in a simpler format. One thing you might notice: There are no uracil bases (U) in the mRNA sequence! Sequence databases do not expend any computational energy to convert thymines (T) to uracils (U) for display purposes only. Explore the remaining links and bits of information as this information will help you answer the Test Your Understanding questions below.
-
-### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSedVz8mM6CdYu29N_rWYKGV1G4JGmtu4qBV67HXNvyNXaJSsQ/viewform?usp=publish-editor){target="_blank"}
-<style>
-div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
-</style>
-<div class = "blue">
-<br>
-*Click the link above to see the TYU questions.* 
-<br>
-</div>
 
 
 © `r as.numeric(format(Sys.Date(), "%Y"))`, Maria Gallegos. All rights reserved.
