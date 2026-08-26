@@ -59,6 +59,7 @@ fig:modelsystems
 fig:BCL2rescue
 fig:PMM2Perlquest
 fig:RBH
+fig:geneinfo
 fig:FIRSTBLAST
 fig:pairwise
 fig:SECONDBLAST
@@ -133,13 +134,15 @@ for-discussion-1
 chapter8
 modelling-human-disease
 reciprocal-best-hit-analysis
+retrieving-gene-product-sequences.
+test-your-understanding-20
 first-blastp
 understanding-a-pairwise-alignment
-test-your-understanding-20
-reciprocal-blastp
 test-your-understanding-21
-understanding-your-rbh-analysis
+reciprocal-blastp
 test-your-understanding-22
+understanding-your-rbh-analysis
+test-your-understanding-23
 mapping-patient-alleles-to-a-pairwise-alignment
 homework-1
 independent-project

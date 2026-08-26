@@ -50,6 +50,30 @@ knitr::include_graphics('static/images/RBHanalysis.png')
 ```
 <br>
 
+## Retrieving gene product sequences. 
+
+To perform a reciprocal best hit analysis, you need to find a link to the protein sequence. Click on the gene schematic in the “Gene and Gene Predictions track”. This action will open a page that provides many useful links including links to view and analyze the mRNA and protein sequences (Figure \@ref(fig:geneinfo)). Do this for BBS1.  
+
+<br>
+```{r geneinfo, out.width='100%', fig.align='center', fig.cap="When you click on a gene/transcript schematic in the gene prediction track you are taken to its gene information page. BBS1 only has one isoform and so there is only one gene information page. In other words, this information is transcript specific and depends on which isoform you click on. Useful links are highlighted. Some links will help you answer Test Your Understanding questions. Explore!"}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::include_graphics('static/images/GeneInformationPage.png')
+```
+<br>
+
+For example, to view information about the BBS1 mRNA, click on the **NM_024649.5** link. To view information specifically about the protein sequence, click on the **NP_078925.3** link. NM_024649.5 and NP_078925.3 are so-called as accession codes. Accession codes that begin with NM_ correspond to mRNA sequences. While those that begin with NP_ correspond to protein sequences. By default, both sequence pages are in so-called "Genbank format". This format includes useful annotations that can be “read” by sequence analysis software programs. The actual mRNA or protein sequence is at the very bottom of the page. Scroll down. Alternatively, click the "FASTA" link to see the sequence in a simpler format. One thing you might notice: There are no uracil bases (U) in the mRNA sequence! Sequence databases do not expend any computational energy to convert thymines (T) to uracils (U) for display purposes only. Explore the remaining links and bits of information as this information will help you answer the Test Your Understanding questions below.
+
+### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSedVz8mM6CdYu29N_rWYKGV1G4JGmtu4qBV67HXNvyNXaJSsQ/viewform?usp=publish-editor){target="_blank"}
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
+</style>
+<div class = "blue">
+<br>
+*Click the link above to see the TYU questions.* 
+<br>
+</div>
+
+
 ## First BLASTP
 
 To start, use the ["DNA Variant"](https://genome.ucsc.edu/s/megallegos/Fantastic%20Genes%20and%20Where%20to%20Find%20them%20Chapter%206){target="_blank"} session link. This session link takes you to BBS1. To obtain gene product information for BBS1, click on the only gene schematic within the NCBI Refseq Gene Predictions Track. Once open, click on the **Protein** Accession ID link (See asterix, top panel in Figure \@ref(fig:FIRSTBLAST)). This opens the protein information page. At the top right corner of the protein information page, under the section entitled, “Analyze this sequence”, click on “Run BLAST” (See asterix, middle panel in Figure \@ref(fig:FIRSTBLAST)). A BLASTP page will open. On the BLASTP page, notice that the protein accession code for BBS1 has been entered into the query sequence window. This is the “Query ID” for your first BLASTP search. Keep most default settings. For "Organism", however, type any part of a species name into the query window (i.e. *“elegans”*). As you type, a drop down menu will appear. Choose the correct species from the list. For database, it is critical that you choose **Reference Proteins (`refseq_proteins`)**. This is the third choice on the popup menu. Finally, scroll to the bottom of the BLASTP page and click “BLAST”. (See bottom panel in Figure \@ref(fig:FIRSTBLAST)). 
