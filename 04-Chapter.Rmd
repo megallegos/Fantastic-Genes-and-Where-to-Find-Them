@@ -93,8 +93,8 @@ Click on the link above to see the questions.
 <br>
 </div>
 
-## How does a cell know where to initiate transcription? 
-One might assume that a transcriptional start site (TSS) identified by TSSseq, also reveals the site of a core promoter where general transcription factors (GTFs) bind and recruit RNA polymerase II ((Figure \@ref(fig:80nt)). 
+## Transcription Start Sites and the Core Promoter 
+One might assume that a transcriptional start site (TSS) identified by TSSseq, would also reveal the site of a core promoter where general transcription factors (GTFs) bind and recruit RNA polymerase II. One of the first core promoter motifs identified was the ***TATA-box**, an A/T rich motif bound by TBP or "TATA Binding Protein". TBP is a single polypeptide that is part of a larger protein complex, or GTF called TFIID (for Transcription Factor of RNA polymerase II, factor D). TBP/TFIID binding initiates a cascade of events that ultimately leads to formation of a preinitiation complex (PIC) at the TSS ((Figure \@ref(fig:80nt)).
 
 <br>
 ```{r 80nt, out.width='75%', fig.align='center', fig.cap = "A schematic of a focused core promoter and the GTFs/RNA polymerase II that bind to it. The horizontal line is the genomic DNA. **TATA**, **Inr**, **MTE** and **DPE** are DNA sequence motifs positioned along the core promoter as shown. The **Inr** spans the TSS (+1) while the **TATA-box** is upstream and the **MTE** and **DPE** motifs are downstream.  Image from Danino et al. 2015."}
@@ -103,7 +103,9 @@ knitr::include_graphics('static/images/FCorePromoter.png')
 ```
 <br>
 
-Our understanding of core-promoter sequence motifs is based largely on a limited set of experimentally tractable promoters—especially viral promoters and highly expressed cellular genes such as HBB. Many of these promoters exhibit focused transcription initiation, in which transcription begins predominantly at one or a few closely spaced TSSs. Consequently, the canonical motifs identified from these studies may not represent all RNA polymerase II promoters. A substantial fraction of mammalian promoters exhibit dispersed initiation, with transcription beginning across a broader region and often lacking a clearly defined combination of core-promoter motifs (Figure \@ref(fig:promotertypes)).
+Initially, the TATA-box was thought to be an essential motif. We now know it is only present in a minority of core promoters. For example, only 24% of human genes have a TATA-box. The core promoter motif found *most often* is the **Initiator** (Inr). This DNA motif spans the TSS and also helps recruit TFIID. That said, nearly half of human promoters lack both a TATA-box *and* an Inr!
+
+One reason our understanding of core-promoter sequence motifs remains incomplete is that it has been based largely on a limited set of experimentally tractable promoters, especially viral promoters and highly expressed cellular genes such as HBB. Many of these promoters exhibit focused transcription initiation, in which transcription begins predominantly at one or a few closely spaced TSSs. Consequently, the canonical motifs identified from these studies may not represent all RNA polymerase II promoters. In fact, a substantial fraction of mammalian promoters exhibit dispersed initiation, with transcription beginning across a broader region and often lacking a clearly defined combination of canonical core-promoter motifs. (Figure \@ref(fig:promotertypes)).
 
 <br>
 ```{r promotertypes, out.width='100%', fig.align='center', fig.cap = "The left schematic from Vo ngoc et al. 2017 illustrates the three main types of promoters that are found in animals: Focused, Dispersed and Mixed. The right image from Carninci et al. 2006 displays TSS seq data for a number of genes that illustrate each type of promoter."}
@@ -112,11 +114,8 @@ knitr::include_graphics('static/images/TypesofPromoters.png')
 ```
 <br>
 
-One of the first core promoter motif identified was the so-called **TATA-box**, an A/T rich motif bound by TBP or "TATA binding protein". TBP is a single polypeptide that is part of a larger protein complex, or GTF called TFIID (for Transcription Factor of RNA polymerase II, factor D). TBP/TFIID binding initiates a cascade of events that ultimately leads to formation of a preinitiation complex (PIC) at the TSS. Initially, the TATA-box was thought to be an essential motif that *most* core promoters possess. We now know it is only present in a minority of core promoters. For example, only 24% of human genes have a TATA-box. The core promoter motif found *most often* is the **Initiator** (Inr). This DNA motif spans the TSS and also helps recruit TFIID. That said, nearly half of human promoters lack both a TATA-box *and* an Inr! The take home message? ***There may not be even one universal sequence motif required for transcription initiation in Eukaryotes.*** This despite the fact that TBP does appear to be universally required for all transcription (RNA pol I, pol II and pol III)!
-
 ## Consensus Sequences
-Sequence conservation can highlight which nucleotides are critical for trans-acting factor binding^[I am deliberately vague here as the trans-acting factor, a freely diffusible molecule might be a protein, nucleic acid sequence or small molecule] as "conservation indicates that a sequence has been maintained by natural selection"^[Quote from Wikipedia article about conserved sequences]. That said, sequence conservation is rarely absolute. For example, the actual sequence of a core promoter motif is variable to some degree. By creating a multiple sequence alignment of a conserved motif (ie. the TATA-box), one can evaluate the degree of conservation and create a **consensus sequence**. A consensus sequence (also known as a **canonical sequence**) can be defined as the “the most frequent residues, either nucleotide or amino acid, that are found at each position in a multiple sequence alignment” (Wikipedia). For a simple example, see Figure \@ref(fig:consensusonly). Notice that the multiple sequence alignment contains only G, A, T and C while this consensus sequence contains additional letters (Y, N and R). Y,N and R belong to an agreed upon list of [**IUPAC nucleotide codes**](https://www.bioinformatics.org/sms/iupac.html){target="_blank"} also known as IUPAC ambiguity codes. Here, Y = C or T, N = any nucleotide and R = G or A. 
-
+Sequence conservation can highlight which nucleotides are critical for factor binding^[I am deliberately vague here as the molecule might be a protein, nucleic acid sequence or small molecule] as "conservation indicates that a sequence has been maintained by natural selection"^[Quote from Wikipedia article about conserved sequences]. That said, sequence conservation is rarely absolute. By creating a multiple sequence alignment of a specific motif, one can evaluate the degree of conservation and create a **consensus sequence**. A consensus sequence (also known as a **canonical sequence**) can be defined as the “the most frequent residues, either nucleotide or amino acid, that are found at each position in a multiple sequence alignment” (Wikipedia). For a simple example, see Figure \@ref(fig:consensusonly). Notice that the multiple sequence alignment contains only G, A, T and C while this consensus sequence contains additional letters (Y, N and R). Y,N and R belong to an agreed upon list of [**IUPAC nucleotide codes**](https://www.bioinformatics.org/sms/iupac.html){target="_blank"} also known as IUPAC ambiguity codes. Here, Y = C or T, N = any nucleotide and R = G or A. 
 
 ```{r consensusonly, out.width='50%', fig.align='center', fig.cap = "This is a simple multiple sequence alignment (MSA) that includes only 4 sequences. The consensus sequence corresponding to this alignment is written directly below. It was created by examining the observed frequency of each nucleotide present in each column of sequence in the MSA."}
 knitr::opts_chunk$set(echo = FALSE)
@@ -124,10 +123,10 @@ knitr::include_graphics('static/images/MSA_Consensus.png')
 ```
 <br>
 
-Figure \@ref(fig:CoreConsensus) lists the consensus sequences for each core promoter motif bound by TFIID in mammals. In this figure the **Inr** consensus sequence is listed as **BBCA(+1)BW** (where B = C, G or T; W= A or T and the A is at the +1 position of the TSS). That said, there have been so many exceptions to this consensus sequence that some argue it should be reduced to YR(+1) where R is at the +1 position of the TSS (Haberle and Stark 2018)! My feeling is that this consensus sequence is so short and degenerate that it ceases to be useful. Probability suggests that this motif should present in the genome (on average) every 4 bp *just by chance* (1/2 x 1/2 = 1/4). 
+Figure \@ref(fig:CoreConsensus) lists the consensus sequences for the TATA-box and the Inr.
 
 <br>
-```{r CoreConsensus, out.width='75%', fig.align='center', fig.cap = "A list of the consensus sequences for each core promoter motif bound by TFIID in mammals."}
+```{r CoreConsensus, out.width='75%', fig.align='center', fig.cap = "A list of the consensus sequences for the TATA-box and the Inr in mammals. Nucleotide positions listed in column 2 are all relative to the +1 position of the TSS. IUPAC codes in use include B=C/G/T and W=A/T."}
 knitr::opts_chunk$set(echo = FALSE)
 knitr::include_graphics('static/images/CoreConsensusHuman.png')
 ```

@@ -106,7 +106,7 @@ what-is-tss-seq
 why-is-tss-seq-useful
 how-is-tss-seq-data-visualized
 test-your-understanding-12
-how-does-a-cell-know-where-to-initiate-transcription
+transcription-start-sites-and-the-core-promoter
 consensus-sequences
 searching-for-a-consensus-sequence
 test-your-understanding-13
