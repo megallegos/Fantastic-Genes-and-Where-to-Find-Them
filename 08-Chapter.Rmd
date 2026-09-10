@@ -1,194 +1,56 @@
-# *Finding Genes with Orthology* {#chapter8}
+# Advanced Methods {#chapter9}
 
-Genetic model organisms like yeast, worms, flies, fish and mice play a critical role in the advancement of biomedical research. Research in model organisms can be cheaper, faster and is undoubtedly more ethical than conducting research on humans! They are particularly useful for studying gene function *in vivo*. A list of  advantages and disadvantages for each of the most common species studied today are shown in Figure \@ref(fig:modelsystems). 
+## Create an Account at the UCSC Genome Browser
 
-<br>
-```{r modelsystems, out.width='100%', fig.align='center', fig.cap = "Popular model orgsanisms used in genetic and biomedical research. Advantages and disadvantages are listed from cheapest (yeast) to most expensive (mice). This image was modified from Kim et al. 2020, Nature Reviews Molecular Cell Biology"}
-knitr::opts_chunk$set(echo = FALSE)
-knitr::include_graphics('static/images/modelorganisms.png')
-```
-<br> 
+Creating an account at the UCSC Genome Browser site is useful for a variety of reasons. For example, having an account will enable you to save your favorite settings into a named session, and then return to the named session later regardless of which computer you use. You can also share named sessions with other users (something I will do for you throughout the semester). 
 
-While at the surface humans appear to have little in common with mice, fish, flies, worms or fungi, this approach works. Why? [Cell Theory](https://en.wikipedia.org/wiki/Cell_theory#:~:text=All%20known%20living%20things%20are,total%20activity%20of%20independent%20cells.){target="_blank"} states that "all cells come from pre-existing cells". And in fact, a significant percentage of genes from these ancestral cells persist in some form in Eukaryotes today. Despite nearly 1 billion years of evolution, many gene products are recognizable at the amino acid sequence level and in some cases are functionally interchangeable! 
+To create an account, go to the [UCSC Genome Browser](https://genome.ucsc.edu/){target="_blank"}. In the toolbar at the top of the page hover over “My Data” then choose “My Sessions” from the pulldown menu. At the top of the page click “Create an Account”. Complete the form then click “Sign Up”. You are done! 
 
-For example, a human gene called BCL2 is known to inhibit **programmed cell death** (Vaux et al. 1988). Programmed cell death is a biological process that has been observed in all animals studied to date. When certain cells are no longer needed, they "commit suicide" by activating this intracellular death program. But programmed cell death is tightly regulated. Too much death is also problematic. In 1992, Vaux et al. discovered that if you inject human *BCL2* fused downstream of a worm heat-shock promoter^[A promoter that is activated by heat. With heat shock, the promoter will initiate high levels of transcription!] its progeny^[offspring or descendants of an animal, or plant - online dictionary] had ***less*** programmed cell death following heat shock! See Figure \@ref(fig:BCL2rescue) A and B.
+## How to Configure the Genome Browser from Scratch
 
 <br>
-```{r BCL2rescue, out.width='100%', fig.align='center', fig.cap = "A) Normal worm development includes a certain amount of programmed cell death. B) When human *BCL2* is expressed in worm embryos, less cell death is observed (Vaux et al. 1992). *+* indicates, wildtype allele. C) Data demonstrating that human *BCL2* is able to partially rescue the *ced-9* loss-of-function mutant phenotype (Hengartner and Horvitz, 1994). "}
+```{r gateway, out.width='50%', fig.align='center', fig.cap = "A) This is the UCSC Genome Browser Homepage. Click on *Genome Browser* (red arrow) to get to the Browser Gateway Page. B) This is the Browser Gateway Page. Choose the *Feb. 2009* Human assembly (red arrow) then click *Go*."}
 knitr::opts_chunk$set(echo = FALSE)
-knitr::include_graphics('static/images/BCL2.png')
+knitr::include_graphics('static/images/browsergateway.png')
 ```
 <br>
 
-A worm gene called *ced-9* functions similarly. In loss of function *ced-9* mutants, more cells die suggesting that wildtype *ced-9* (like wildtype *BCL2*) inhibits programmed cell death. In subsequent experiments, Hengartner and Horvitz partially **rescued** *ced-9* loss of function mutants with the human *BCL2* gene! In other words, *ced-9* mutant worms expressing human *BCL2* looked more like wild type (Figure \@ref(fig:BCL2rescue) C). Dr. Vaux, the first author explained in an [interview](https://www.nature.com/articles/4401439){target="_blank"}: "This meant that the human BCL2 protein must be interacting with the worm's cell death mechanism. The fact that human *BCL2* could work in a worm suggested that human *BCL2* can interact with whatever proteins the worm CED-9 protein interacts with. That, in turn, suggests that not only the gene but also the pathway of cell death is likely to be universal." That is one billion years of evolution separating worms and humans! This is strong evidence that human *BCL2* and worm *ced-9* are **orthologs**. Again, this is a term that describes two genes in distinct species that evolved from an ancestral gene present in the last common ancestor. 
+To begin from scratch, go to the [UCSC Genome Browser](https://genome.ucsc.edu/){target="_blank"}. At the home page, click on “Genome Browser” under “Our Tools” (Figure \@ref(fig:gateway) A). Within the Genome Browser Gateway page, hover your mouse over "Genome Browser" in the tool bar (Figure \@ref(fig:gateway) B, purple arrow) and click on "Reset All User Settings". Then click on the pull down menu under Human Assembly^[A Genome Assembly is a whole genome sequence produced after chromosomes have been fragmented, sequenced, and the resulting sequences have been put back together (assembled). Each time the genome is sequenced, errors are corrected then uploaded as a new genome assembly. The Feb. 2009 is still the most popular assembly to date with the most useful evidence tracks.] and choose "Feb. 2009 (GRCh37/hg19)" (Figure \@ref(fig:gateway) B, red arrow). Now click "Go" to be taken to the Human Genome Browser window. 
 
-## Modelling Human Disease
-
-In 2014, Dr. Ethan Perlstein created Perlara, a biotech Public Benefit Corporation which aimed to accelerate the discovery of treatments for rare genetic diseases through the use of simple model organisms. They begin by first creating "patient avatars" using simple organisms that share genetic similarity with humans. This allows them to screen disease models with drug candidates quickly and at low cost. 
-
-For example, Perlara created yeast, worm and fly models of a rare congenital disorder of glycosylation called PMM2-CDG^[According to Wikipedia, **glycosylation** is a process whereby a carbohydrate is attached to a hydroxyl or other functional group of another molecule (often a lipid or protein)] caused by mutations in the PMM2 gene^[According to Genetics Home Reference, the PMM2 gene produces an enzyme called phosphomannomutase 2. This enzyme is involved in glycosylation (see earlier footnote), which acts by attaching groups of sugar molecules to proteins]. From their initial studies they knew they needed a drug that would boost the enzymatic activity of PMM2. To identify such a drug, Perlara performed a drug repurposing screen^[searching through a library of drugs already available and approved for a different disorders] using the worm model Perlara created for PMM2-CDG. Epalrestat, a drug normally used to treat diabetic neuropathy looked promising and was later shown to boost PMM2 enzyme function in PMM2-CDG patient fibroblasts^[PMM2-CDG patient fibroblasts are skin cells taken from patients with the PMM2 disorder.]! Finally in early 2020 Dr. Ethan Persltein began treatment of the first human patient, Maggie Carmichael. After 6 months, the change was dramatic (Figure \@ref(fig:PMM2Perlquest)). To read more, you can subscribe to [Ethan's substack](https://perlara.substack.com/){target="_blank"}  
+Since you did not search for a specific gene, you have been taken to a default position within the genome, specifically, a small region on the **short arm** of the X chromosome where a gene called ACE2 resides (Figure \@ref(fig:ACE2) A and B). Why here? This paragraph was written in 2020 when ACE2 became *infamous*. Google "ACE2" and "coronavirus" to see why! 
 
 <br>
-```{r PMM2Perlquest, out.width='50%', fig.align='center', fig.cap = "Image courtesy of Holly and Dan Carmichael"}
+```{r ACE2, out.width='100%', fig.align='center', fig.cap = "The UCSC Genome Browser window focused on a small region of the X chromosome (A) on a gene called ACE2 (B). To hop to BBS1, use the search window (C) then click *Go* (D). See text for important details."}
 knitr::opts_chunk$set(echo = FALSE)
-knitr::include_graphics('static/images/MaggiesPerlquest.png')
+knitr::include_graphics('static/images/ACE2gene.png')
 ```
 <br>
 
-**The bottom line: The accurate identification of an orthologous pair between a model organism and humans is a prerequisite for creating a human disease model**.  
+To hop to where BBS1 resides, type BBS1 into the search window (Figure \@ref(fig:ACE2) C). **As you type, a popup menu will appear with a short list of related genes**. Choose BBS1 then click “GO” (Figure \@ref(fig:ACE2) D). If you *do not* choose a gene from this list, you will be transported to a new page with a long list of related genes grouped according to sequence database (there are many). It might be easiest to go back and try again. Alternatively, scroll down until you find the “NCBI RefSeq” database^[The “NCBI RefSeq” database is the one we will be using.] then click on the link for BBS1. 
 
-## Reciprocal Best Hit Analysis
-
-A simple and widely used approach to identify putative orthologs is known as the reciprocal best hit (RBH) method^[Sometimes called the bidirectional best hit (BBH) method]. In fact, one study concludes that a high proportion of RBH pairs are likely to be true orthologs (Dalquen and Dessimoz, 2013).
-
-In brief, a reciprocal best hit analysis starts with the protein sequence coded by the human gene of interest. This protein sequence is used as a **query**^[defined by the online dictionary simply as "a question". In our context, your human protein sequence *implies* the question: Are there proteins in my model system of choice that are similar to this human protein sequence?] to search a protein database from a model organism of your choice (i.e. *C. elegans*). This is called your first **BLASTP**^[The BLAST algorithm finds and aligns regions of similarity between biological sequences. The BLASTP website searches protein databases using a protein sequence as a query]. Your goal is to identify a protein in your model organism of choice that is **most** similar to the human protein you used as a query. This is your **top hit** also known as your **best hit**. You then use this protein sequence, the “top hit”, as a query to search the human protein database for the best match. This is called your **reciprocal BLASTP**. If your “top hit” in the reciprocal BLASTP pulls up a protein that is coded by your starting human gene then you have found a **“Reciprocal Best Hit”** (Figure \@ref(fig:RBH)). In other words, a reciprocal best hit succeeds at identifying a pair of orthologs when it identifies a pair of *genes* that are *eachother's* best hits. 
+Your browser window should now jump to chromosome 11 (Figure \@ref(fig:BBS1) A). The default genome browser window will now display a variety of so-called "evidence tracks". These are graphical representations of genome features or experimental data related to the region displayed. Nearly all evidence tracks include a centrally located title heading (Figure \@ref(fig:BBS1) B) and all include a gray rectangle positioned on the left (Figure \@ref(fig:BBS1) C). Three evidence tracks are highlighted in total. The one at the top is the **Base Position** track (Figure \@ref(fig:BBS1) D). This is the only evidence track that *does not have a track title*. This track displays the genome sequence itself. That said, you will only be able to see individual nucleotides when you zoom in close enough. Two **Gene Prediction** tracks are also highlighted. One is the "UCSC Genes" track (Figure \@ref(fig:BBS1) E). Another is the "NCBI Refseq genes" track (Figure \@ref(fig:BBS1) C). Notice the gene name is displayed on the left side of each schematic. 
 
 <br>
-```{r RBH, out.width='100%', fig.align='center', fig.cap = "A schematic diagram to explain a reciptrocal best hit analysis. See text for details."}
+```{r BBS1, out.width='100%', fig.align='center', fig.cap = "The browser window now focused on a small region of chromosome 11 (A) where BBS1 resides (C and E). Each evidence track includes a track title (B) and is demarcated by a gray rectangle (D, E and C). To hide all tracks click *hide all* (F) and click *refresh* (H). To open the NCBI Refseq track change the pulldown menu from *hide* to *pack* (G)."}
 knitr::opts_chunk$set(echo = FALSE)
-knitr::include_graphics('static/images/RBHanalysis.png')
+knitr::include_graphics('static/images/BBS1gene.png')
 ```
 <br>
 
-## Retrieving gene product sequences 
-
-To perform a reciprocal best hit analysis, you need the protein sequence. Click on the gene schematic in the “Gene and Gene Predictions track”. This action will open a page that provides many useful links including links to view and analyze the mRNA and protein sequences (Figure \@ref(fig:geneinfo)). Do this for BBS1.  
+Each gray rectangle corresponding to an evidence track is clickable. Clicking on a gray rectangle will take you to a track settings page for that particular evidence track. Try it. Then click the back button to get back. Right clicking on a gray rectangle on the other hand will open up a small window for *quick* formatting. For example, you can hide any evidence track that you don't need in this way. To hide all evidence tracks at once, scroll down to below the browser window and click "hide all" (Figure \@ref(fig:BBS1) F). Everything but the Base Position track will disappear. Now scroll down to view the most commonly used evidence tracks below the browser window to confirm. All but the "Base Position" track found within the "Mapping and Sequencing" section should be set to hide. **Now change the "NCBI Refseq" evidence track (found within the "Genes and Gene Predictions" section) to "pack"** (Figure \@ref(fig:BBS1) G) **and click "refresh"** (Figure \@ref(fig:BBS1) H). You should now see only two gray rectangles on the left. The base position track on top and the "NCBI refseq genes" Gene Prediction track is below (Figure \@ref(fig:BBS1simple)).
 
 <br>
-```{r geneinfo, out.width='100%', fig.align='center', fig.cap="When you click on a gene/transcript schematic in the gene prediction track you are taken to its gene information page. BBS1 only has one isoform and so there is only one gene information page. In other words, this information is transcript specific and depends on which isoform you click on. Useful links are highlighted. Some links will help you answer Test Your Understanding questions. Explore!"}
+```{r BBS1simple, out.width='100%', fig.align='center', fig.cap = "This is what the *BBS1 Gene Structure* named session should look like. One example of an exon and intron are highlighted. The asterix points on the right highlights the open triangles extending from ZDHHC24 indicating that this gene extends further to the right. (A) highlights the navigational toolbar and (B) highights the schematic of the chromosome where BBS1 resides. One exon (green bracket) and one intron (red bracket) are also shown."}
 knitr::opts_chunk$set(echo = FALSE)
-knitr::include_graphics('static/images/GeneInformationPage.png')
+knitr::include_graphics('static/images/BBS1genesimple.png')
 ```
 <br>
 
-For example, to view information about the BBS1 mRNA, click on the **NM_024649.5** link. To view information specifically about the protein sequence, click on the **NP_078925.3** link. NM_024649.5 and NP_078925.3 are so-called as accession codes. Accession codes that begin with NM_ correspond to mRNA sequences. While those that begin with NP_ correspond to protein sequences. By default, both sequence pages are in so-called "Genbank format". This format includes useful annotations that can be “read” by sequence analysis software programs. The actual mRNA or protein sequence is at the very bottom of the page. Scroll down. Alternatively, click the "FASTA" link to see the sequence in a simpler format. One thing you might notice: There are no uracil bases (U) in the mRNA sequence! Sequence databases do not expend any computational energy to convert thymines (T) to uracils (U) for display purposes only. Explore the remaining links and bits of information as this information will help you answer the Test Your Understanding questions below.
+Again, the "NCBI Refseq genes" evidence track includes a graphical representation of the BBS1 gene^[Gene: Genome browsers provide a precise position for each gene, in reality, we don't really know where a gene truly begins or ends (there is sequence both upstream and downstream of the RNA transcript that is important for regulating gene expression). That said, we can experimentally determine the transcribed region of a gene. Thus, it makes most sense to equate the transcribed region of a gene to the gene itself even though we know more sequence is required for the gene to be transcribed properly.]. This gene schematic displays the position of BBS1 exons and introns (see red and green brackets in Figure \@ref(fig:BBS1simple)). You may also notice that a second gene (ZDHHC24) partly overlaps BBS1. The open arrowheads at the far right of the graphical representation for ZDHHC24 (red asterisk, Figure \@ref(fig:BBS1simple)) indicates that this gene extends farther to the right. 
 
-### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSedVz8mM6CdYu29N_rWYKGV1G4JGmtu4qBV67HXNvyNXaJSsQ/viewform?usp=publish-editor){target="_blank"}
-<style>
-div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
-</style>
-<div class = "blue">
-<br>
-*Click the link above to see the TYU questions.* 
-<br>
-</div>
+## Creating a Named Session
 
-
-## First BLASTP
-
-To start, use the ["DNA Variant"](https://genome.ucsc.edu/s/megallegos/Fantastic%20Genes%20and%20Where%20to%20Find%20them%20Chapter%206){target="_blank"} session link. This session link takes you to BBS1. To obtain gene product information for BBS1, click on the only gene schematic within the NCBI Refseq Gene Predictions Track. Once open, click on the **Protein** Accession ID link (See asterix, top panel in Figure \@ref(fig:FIRSTBLAST)). This opens the protein information page. At the top right corner of the protein information page, under the section entitled, “Analyze this sequence”, click on “Run BLAST” (See asterix, middle panel in Figure \@ref(fig:FIRSTBLAST)). A BLASTP page will open. On the BLASTP page, notice that the protein accession code for BBS1 has been entered into the query sequence window. This is the “Query ID” for your first BLASTP search. Keep most default settings. For "Organism", however, type any part of a species name into the query window (i.e. *“elegans”*). As you type, a drop down menu will appear. Choose the correct species from the list. For database, it is critical that you choose **Reference Proteins (`refseq_proteins`)**. This is the third choice on the popup menu. Finally, scroll to the bottom of the BLASTP page and click “BLAST”. (See bottom panel in Figure \@ref(fig:FIRSTBLAST)). 
-
-<br>
-```{r FIRSTBLAST, out.width='75%', fig.align='center', fig.cap = "When you click anywhere on the BBS1 gene schematic, a gene information page will open. Click on the protein accession ID link (asterix, top image). A protein information page for BBS1 will open. Click on the **Run BLAST** link on the right side of the page (asterix, middle image). A BLASTP submission page will open with the BBS1 Protein Accession ID present in the Query window. Now scroll down to the section where you choose your Organism. In the **Organism** window, start typing in the species name then click on your species from the dropdown menu (asterix, bottom image). Finally, scroll all the way to the end of the page and click **BLAST**."}
-knitr::opts_chunk$set(echo = FALSE)
-knitr::include_graphics('static/images/firstBLASTP.png')
-```
-<br>
-
-A results page will appear after some time. It will contain multiple tabs near the top of the page including "Descriptions", "Graphic Summary", "Alignments" and "Taxonomy". We will focus mainly on the "Descriptions" and "Alignments" tabs. The "Descriptions" tab includes a table that lists all the "hits" that have some similarity to your query sequence (BBS1 is fairly unique in that it only retrieves one hit!). When there is more than one hit, they are listed in order of increasing E value. "E value", in simple terms, estimates the statistical significance of the match. It depends on the length of the query sequence, the size of the database searched, the scoring system used and the alignment quality (matches, gaps and mismatches). The lower the E value, the more significant the match is (less likely due to random chance). Anything less than 1e-10 is considered a very strong match. Other important columns in the table include "Query Cover" and "Percent Identity". Query Cover" describes the percentage of the "query" sequence that aligns with the subject sequence (the "hit"). "Percent Identity" describes the percentage of amino acids that are exactly the same between the query sequence and the subject sequence in the alignment. To see the pairwise alignment of your top hit and query, click the "Alignment" tab then scroll down. The "top hit" is simply the hit in the top row (row 1) of the "Descriptions" tab and first alignment in the "Alignments" tab. It should have the lowest E value. 
-
-
-## Understanding a Pairwise Alignment
-
-Figure \@ref(fig:pairwise) includes a portion of the pairwise alignment between human BBS1 and its top hit from *C. elegans*. The alignment begins with a description of the subject sequence (the "hit") from the target database (in our case, *C. elegans*) including the protein name and species in brackets. The next line includes the "Protein Sequence ID" of the hit (In this case, the Refseq Accession ID) and the "Length" of the protein (in amino acids). Above the alignment you will find "Score", "Expect", "Identities", "Positives" and "Gaps" which all describe the quality of the alignment in some way. "Expect" is the E value as defined previously. "Score" was also defined above except the value is converted into "bits", which is a normalized score. This allows for comparisons across different BLAST runs and databases. The higher the bit score, the more meaningful the alignment. A bit score of 682 is extremely high.
-
-The "Query" sequence is displayed in the first line of the alignment (in our case, the human BBS1 protein). The "Sbjct" ( subject) sequence is placed below the "Query" (in our case, this is the top and only hit found in *C. elegans*). A description of the type of match observed between the two sequences at each position is displayed between the "Query" and the "Sbjct" lines. A "+" is placed in the alignment where the amino acids in the "query" and "sbjct" are chemically similar but not identical (Figure \@ref(fig:pairwise), lavender box). This type of match contributes to the overall percent "Positives". Amino acids are placed between the "query" and "sbjct" when they are identical (Figure \@ref(fig:pairwise), green box). This type of match contributes to the overall percent "Identities". Positiions in the alignment where the "query" and "sbjct" are unrelated are left blank (Figure \@ref(fig:pairwise), red box). Finally, a **gap** in the alignment is represented by “-“ (Figure \@ref(fig:pairwise), blue box). These contribute to the percent "Gaps" in the alignment. Gaps and mismatches result from the slow process of evolution. For a gap to occur, one or more complete codons were either deleted in the query gene or added in the subject gene.
-
-To better understand how the numbering system works in a pairwise alignment, see if you can confirm the following statements. In Figure \@ref(fig:pairwise), there is an "M" at position 77 of the Query sequence. Q at position 136 of the Query aligns with an S at position 123 of the Sbjct (although they don't match). That said, the "E" at position 135 of the Query is identical to the "E" at position 122 of the Sbjct. Finally, there is a "T" at position 162 of the Query (this may take some counting to confirm). Can't confirm? It is likely that you counted the gap as an amino acid. **Gaps in an alignment are NOT counted.** Try again and see if you can confirm. 
-
-<br>
-```{r pairwise, out.width='100%', fig.align='center', fig.cap = "A portion of the pairwise alignment between human BBS1 and the top hit in worms. See text for details."}
-knitr::opts_chunk$set(echo = FALSE)
-knitr::include_graphics('static/images/TwoPairwiseAlignments.png')
-```
-<br>
-
-### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSdwowGrryhKSzoqOCjXO2QxHEBQPqk7A6qe8f_NR_oTpPp5sg/viewform?usp=publish-editor){target="_blank"}
-<style>
-div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
-</style>
-<div class = "blue">
-<br>
-*Click the link above to see the TYU questions.* 
-<br>
-</div>
-
-## Reciprocal BLASTP
-
-Now that you have performed your first BLASTP using human BBS1 as your Query, you are ready to see if the best hit in worms will identify the human BBS1 gene as the top hit in a “reciprocal BLASTP”. First step, retrieve the protein information page for your top hit from the first BLASTP. You can either go to the "Descriptions" tab and click on the link to the Refseq Accession ID (Format: NP_XXXXX.X) in the "Accession" Column for your **top hit** ((Figure \@ref(fig:SECONDBLAST)). Or you can go to the "Alignment" tab and click on the Refseq Accession ID link listed for "Sequence ID:". Either will take you to the same protein information page for your top hit in *C. elegans*. Then click on the “Run BLAST” link as before. A BLASTP submission page will open. On this BLASTP submission page, the accession code for the worm top hit will be entered into the query sequence window for you. This is your new “Query ID” for your reciprocal BLASTP. Again, use the same settings as before with one exception. This time type *“Homo sapiens”* into the query window for "Organism" ((Figure \@ref(fig:SECONDBLAST)). Again, as you type, a drop down menu will appear. Choose the correct species on the list. Then scroll to the bottom of the BLASTP page and click “BLAST”. Once your results page open ask yourself, you will need to evaluate the "top hit" that appears in the table? Specifically, you need to answer the question, is the top hit coded by the human BBS1 gene?
-
-<br>
-```{r SECONDBLAST, out.width='75%', fig.align='center', fig.cap = "From your BLAST results page for your first BLASTP, click on the Protein Accession ID (top image, red arrow). This will take you to the protein information page for the worm best hit. Click on **Run BLAST** as before. At the BLASTP submission page, change the Organism to **Homo Sapiens** (bottom image, asterix)."}
-knitr::opts_chunk$set(echo = FALSE)
-knitr::include_graphics('static/images/secondBLASTP.png')
-```
-<br>
-
-### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLScdVWPJbKZrwQq7hQfEh27ga9gva7PvxOmE7WfD6X2hkJx61Q/viewform?usp=dialog){target="_blank"}
-<style>
-div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
-</style>
-<div class = "blue">
-<br>
-*Click the link above to see the TYU questions.* 
-<br>
-</div>
-
-## Understanding your RBH analysis
-In the section above, I explained how to do an RBH analysis for the human gene, BBS1. The interpretation was straightforward. The protein Refseq ID used as a query in the first BLASTP was the same Protein refseq ID obtained as the top hit in the reciprocal BLASTP. What does it mean when they don't match? There are two possibilities: The two protein Refseq IDs are gene products of two distinct genes and thus not orthologs. Or the two protein refseq IDs are protein isoforms of the same gene. In the latter case, the gene pair *are* orthologs (Figure \@ref(fig:alternativeRBHoutcome). Compare this outcome with Figure \@ref(fig:RBH).
-
-<br>
-```{r alternativeRBHoutcome, out.width='75%', fig.align='center', fig.cap = "A schematic diagram to another possible outcome for a reciptrocal best hit analysis. See text for details."}
-knitr::opts_chunk$set(echo = FALSE)
-knitr::include_graphics('static/images/RBH2.png')
-```
-<br>
-
-To determine whether two protein sequences are gene products of the same or different genes, you go to the protein information page for each protein Refseq ID and **search (Control F) for "/gene"**. This will take you to the gene annotation buried at the bottom of the protein information page. (Figure \@ref(fig:officialgenename)). 
-
-<br>
-```{r officialgenename, out.width='75%', fig.align='center', fig.cap = "This is a screenshot of a small portion of a protein information page for [NP_009202.1](https://www.ncbi.nlm.nih.gov/protein/NP_009202.1). The CDS annotation includes information about the gene. The official gene corresponding to this protein is STK38. This is the gene name used by the UCSC genome browser. Search for it!"}
-knitr::opts_chunk$set(echo = FALSE)
-knitr::include_graphics('static/images/GeneName.png')
-```
-<br>
-
-**Take home Message:**
-<br>
-
-When one does an RBH analysis, protein sequences are used to perform each BLASTP (first and reciprocal). *But* a reciprocal best hit successfully identifies a pair of orthologs only when it identifies a pair of ***genes*** that are *eachother's* best hit. The BLASTP is used as a tool to identify those genes. 
-
-### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSdbjaxaFCB6iRYKFXImgzXW22hRrcswY78iilyuwSCn25SrLg/viewform?usp=dialog){target="_blank"}
-<style>
-div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
-</style>
-<div class = "blue">
-<br>
-*Click the link above to see the TYU questions.* 
-<br>
-</div>
-
-## Mapping patient alleles to a pairwise alignment
-Orthologs are genes in different species that evolved from a common ancestral gene through speciation and typically retain similar molecular functions. Ortholog pairs are often recognized by their high levels of sequence similarity, which is why a reciprocal best hit (RBH) analysis is a powerful way to identify them. That said, sequence similarity among distantly related orthologs is not uniformly distributed along the polypeptide but is concentrated at amino acid residues that are critical for protein function, such as a ligand-binding or active sites. Pathogenic missense variants identified in patients often map to these conserved positions, highlighting residues that are essential for protein activity and, by extension, expected to be conserved among orthologs.
-
-To determine whether these critical amino acids are conserved among ortholog pairs, you must first create a pairwise alignment using the correct protein isoform (if multiple isoforms are produced). To identify which isoform to use for a BLASTP search, hover over several DNA variants in the genome browser. You will find that all DNA variants for a given gene are mapped relative to a single specific isoform, indicated in the popup message.
-
-For example, all **FGFR3** DNA variants map relative to isoform `NM_000142.5`. Figure \@ref(fig:AccessionChoice) highlights one pathogenic mutation that results in an Asn-to-Lys missense change at position **540** in the **FGFR3** protein. Notice that this numbering applies only to isoform `NM_000142.5`. The same amino acid corresponds to position **428** in isoform `NM_022965.4`. Therefore, if you wish to examine whether this amino acid is conserved in a simpler genetic model system, you should use `NM_000142.5` as the query isoform for the BLASTP search. Doing so ensures that the amino acid will appear at the expected position in the pairwise alignment.
-
-<br>
-```{r AccessionChoice, out.width='75%', fig.align='center', fig.cap = "The C to A substitution mutation leads to a Asn to Lys missense mutation at position 540 in the FGFR3 protein. That said, this is true only for isoform `NM_000142.5`. Thus, if you wanted to see if this amino acid is conserved in a genetic model system, you would want to use this isoform to perform the BLASTP. Doing so ensures you can find this amino acid in the pairwise alignment."}
-knitr::opts_chunk$set(echo = FALSE)
-knitr::include_graphics('static/images/IsoformChoice.png')
-```
-<br>
-
-### [Homework](https://drive.google.com/file/d/1CWf927mnP3droqocuIpVahigShlSgt6R/view?usp=sharing){target="_blank"}
-
-## [Independent Project](https://docs.google.com/document/d/1f6JfkyjoCzrnMQNOYK4zwh8v6UWDpyhe/edit?usp=sharing&ouid=105099724878084618453&rtpof=true&sd=true){target="_blank"}
-
-## [Lab Practical Practice](https://docs.google.com/forms/d/e/1FAIpQLSe90-3YEijIRg3lo5JzYM6R9L_O6ozrhNQzPUcAGcbDPtVGdQ/viewform?usp=dialog){target="_blank"}
-
-Due: See Syllabus
+Compare what you configured to my named session, [BBS1 gene structure](https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201){target="_blank"}. If they are identical, congratulations. If not, try again but don't stress too much. You can always use my link to get to a correctly formatted page. You are now ready to create your own named session based on the browser window you created (or mine). First, make sure your browser window looks the way you want it to. Next, make sure you are logged into your account. Hover your mouse over “My Data” then click on “My Sessions”. Scroll down to the section entitled, “Save Settings”. Within the window under “Save current settings as named session”, input a reasonable name for this session (i.e. “Gene and Base Prediction Tracks only”). Then hit submit. Now anytime you want to sit down at a computer (anywhere, any computer) to view BBS1 with only the base position and gene prediction tracks open, you simply need to log into your UCSC Genome Browser account, go into “My Sessions” and click on your named session. You won't need to rely on this manual for links. **You can also use this named session as a springboard to view any other gene by using the search window.**
 
 © `r as.numeric(format(Sys.Date(), "%Y"))`, Maria Gallegos. All rights reserved.
 
