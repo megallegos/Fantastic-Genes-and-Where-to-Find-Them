@@ -159,36 +159,33 @@ div.blue { background-color:#e6f0ff}
 
 </div>
 
-## Top strand and bottom strand genes
-We learned in a previous section that BBS1 codons can be viewed in the top strand of the genome (also known as the + strand). This is because BBS1 uses the bottom strand (- strand) as template during transcription to produce a transcript identical in sequence to the top strand of DNA^[Except that Uracil replaces Thymine]. I like to call BBS1 a top strand gene (or + strand gene). For top strand genes, the top strand can be described as the *sense strand*, *coding strand*, *informational strand* or *nontemplate strand*. My favorites are "nontemplate strand" and "informational strand"^["Coding strand" is misleading because it implies that the entire transcript is coding - not true. "Sense strand" is just not very informative. I like "informational strand" because this is the DNA strand where you will find important sequence information in the RNA - for example, the codons or RNA binding sites that might impact translation or RNA stability. You can't argue with the term "nontemplate strand". It's clearly accurate]. For top strand genes, the bottom strand (- strand) is known as the template strand. This is because the bottom strand of DNA is used as the template to create the RNA transcript.
+## Plus (+) strand and Minus (-) strand genes
+Chromosomal DNA is double-stranded. One strand is arbitrarily designated as the plus (+) strand in the reference genome assembly. The other strand is the minus (−) strand. In a genome browser, the plus strand defines the reference chromosome’s coordinate orientation with its 5′ end designated as position 1. Coordinate numbers then increase thereafter from 5′ to 3′. By default, genome browsers display the plus strand. The minus strand is reverse-complementary to the plus strand. Coordinate numbers decrease from 5′ to 3'. Importantly, genes can be located on either strand.
 
-**Not all genes are top strand genes (+)**. To determine if a gene is a top strand gene (+) or a bottom strand gene (-), click on the gene schematic to open a yellow pop up window containing information about the gene. Scroll down to find the word, "Strand:" (Jump ahead to Figure \@ref(fig:geneinfo) to see what the page looks like). Alternatively, look at the gene schematic itself. Figure \@ref(fig:orientationwedges) displays the first half of BBS1 and a neighboring gene, ZDHHC24. Notice there are “orientation wedges” spaced regularly along the introns. They are either oriented to the right (red box, Figure \@ref(fig:orientationwedges)) or to the left (green box, Figure \@ref(fig:orientationwedges)). These “orientation wedges” indicate **the direction RNA polymerase travels during transcription** and thus the orientation of the gene on the chromosome. These “orientation wedges” indicate that BBS1 is a top strand gene (+) and ZDHHC24 is a bottom strand gene (-). ZDHHC24 is oriented in the reverse direction than BBS1. 
+We learned in a previous chapter that the BBS1 coding sequence can be read in the plus (+) strand of the genome. This is because BBS1 uses the minus (−) strand as its template during transcription, producing a pre-mRNA whose sequence matches the plus (+) strand^[Except that Uracil replaces Thymine]. BBS1 is therefore a plus (+) strand gene. For all plus (+) strand genes, the plus (+) strand has been described as the *sense strand*, *coding strand*, *informational strand* or *nontemplate strand* ^[I prefer "nontemplate" or "informational strand". "Coding strand" is misleading because it implies that the entire transcript is coding - not true. "Sense strand" is not very informative. I like "informational strand" because this is the DNA strand where you can read sequence motifs in the RNA - for example, the codons or RNA binding sites that might impact translation or RNA stability. You can't argue with the term "nontemplate strand". It's clearly accurate], whereas, the minus (-) strand is the template strand.
+
+There are a two main ways to determine if a gene is a plus (+) strand gene or a minus (-) strand gene. First, click anywhere in the gene prediction track to open the "item details" page (yellow pop up window). Scroll down to find the word, "Strand:" (Jump ahead to Figure \@ref(fig:geneinfo) to see what the page looks like). Alternatively, look at the gene schematic itself. Figure \@ref(fig:orientationwedges) displays the first half of BBS1 and a neighboring gene, ZDHHC24. You will find “orientation wedges” spaced regularly along the schematic. They either point to the right (red box, Figure \@ref(fig:orientationwedges)) or to the left (green box, Figure \@ref(fig:orientationwedges)). These “orientation wedges” point in the direction that RNA polymerase travels during transcription. Given that RNA polymerase travels from 5' to 3' relative to the nontemplate strand they indicate the orientation of the nontemplate strand. The “orientation wedges” for BBS1 point to the right indicating that BBS1 is a plus (+) strand gene while the orientation wedges for ZDHHC24 point to the left indicating that it is a minus (-) strand gene. 
 
 <br>
-```{r orientationwedges, out.width='60%', fig.align='center', fig.cap ="The orientation wedges are visible within introns. When they point to the right (red box), the gene is a top strand gene (plus strand). When they point to the left (green box), the gene is a bottom strand gene (minus strand)."}
+```{r orientationwedges, out.width='60%', fig.align='center', fig.cap ="The orientation wedges are visible within introns. When they point to the right (red box), the gene is a top strand gene (plus strand). When they point to the left (green box), the gene is a minus (-) strand gene (minus strand)."}
 knitr::opts_chunk$set(echo = FALSE)
 knitr::include_graphics('static/images/orientationwedges.png')
 ```
 <br>
-
-When the orientation wedges point to the right, ") ) ) )" (i.e. see BBS1), 
+To summarized, when orientation wedges point to the right, ">>>>",
 <br>
+1. This is a plus (+) strand gene.
+2. The beginning of the gene is on the left, 5' end of the plus (+) strand. 
+2. The plus (+) strand is the nontemplate strand (informational strand)
+3. The minus (-) strand is the template strand. 
 
-1. This is a top strand gene (+).
-2. The beginning of the gene is on the left. 
-2. The top strand of DNA is the informational strand (nontemplate strand)
-3. The bottom strand of DNA is the template strand. 
-4. **You would read this gene from left to right.** 
 <br>
-
-When the orientation wedges point to the left, "( ( ( (", the reverse is true (i.e. see ZDHHC24),
+When orientation wedges point to the left, "<<<<", the reverse is true.
 <br>
-
-1. This is a bottom strand gene (-).
-2. The beginning of the gene is on the right. 
-2. The top strand of DNA is the template strand. 
-3. The bottom strand of DNA is the informational strand (nontemplate strand)
-4. **You would read this gene from right to left!** 
+1. This is a minus (-) strand gene.
+2. The beginning of the gene is on the right, 5' end of the minus (-) strand. 
+2. The plus (+) strand is the template strand. 
+3. The minus (-) strand is the nontemplate strand (informational strand).
 <br>
 
 ### [Test your understanding](https://docs.google.com/forms/d/e/1FAIpQLSfdSGZgUjW0VctKvMw77qpXOCncpvEEYpTdrGJKfHnYpZfxag/viewform?usp=publish-editor){target="_blank"}
@@ -203,21 +200,21 @@ div.blue {background-color:#e6f0ff}
 </div>
 
 <br>
-Now let’s look at a bottom strand gene (ZDHHC24) more closely. Click on my saved session for [BBS1](https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201){target="_blank"} then zoom out 3X to search for the **beginning** of ZDHHC24 (it should be on the right). "Drag-and-Select" as many times necessary to zoom into the **first** half of the **coding portion** of exon one for ZDHHC24. Your “NCBI Refseq Gene Track should look something like Figure \@ref(fig:firstcodingexonZDHHC24). If not, you may have zoomed into the first half of exon one which is noncoding. Or maybe you are at the wrong end of the gene! 
+Now let’s look at a minus (-) strand gene (ZDHHC24) more closely. Click on my saved session for [BBS1](https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201){target="_blank"} then zoom out 3X to search for the **beginning** of ZDHHC24 (it should be on the right). "Drag-and-Select" as many times necessary to zoom into the **first** half of the **coding portion** of exon one for ZDHHC24. Your “NCBI Refseq Gene Track should look something like Figure \@ref(fig:firstcodingexonZDHHC24). If not, you may have zoomed into the first half of exon one which is noncoding. Or maybe you are at the wrong end of the gene! 
 
 <br>
-```{r firstcodingexonZDHHC24, out.width='100%', fig.align='center', fig.cap ="This is the first half of the first **coding** exon of ZDHHC24. The noncoding portion of exon 1 extends to the right this time because *ZDHHC24* is a bottom strand (or minus strand) gene. The red oval highlights the strand you are currently viewing. Since the arrow points to the right, the top strand (5' on the left) is displayed. You can toggle this arrow with your mouse."}
+```{r firstcodingexonZDHHC24, out.width='100%', fig.align='center', fig.cap ="This is the first half of the first **coding** exon of ZDHHC24. The noncoding portion of exon 1 extends to the right this time because *ZDHHC24* is a minus (-) strand gene. The red oval highlights the strand you are currently viewing. Since the arrow points to the right, the top strand (5' on the left) is displayed. You can toggle this arrow with your mouse."}
 knitr::opts_chunk$set(echo = FALSE)
 knitr::include_graphics('static/images/firstcodingexonZDHHC24.png')
 ```
 <br>
-```{r firstcodingexonZDHHC24bottom, out.width='100%', fig.align='center', fig.cap ="Again, this is the first half of the first **coding** exon of ZDHHC24. The red oval highlights the strand you are currently viewing. Since the arrow points to the left, the bottom strand (5' on the right) is displayed. Notice that the DNA sequence is gray. Compare to the top image. This is a visual reminder of which strand you are viewing."}
+```{r firstcodingexonZDHHC24bottom, out.width='100%', fig.align='center', fig.cap ="Again, this is the first half of the first **coding** exon of ZDHHC24. The red oval highlights the strand you are currently viewing. Since the arrow points to the left, the minus (-) strand (5' on the right) is displayed. Notice that the DNA sequence is gray. Compare to the top image. This is a visual reminder of which strand you are viewing."}
 knitr::opts_chunk$set(echo = FALSE)
 knitr::include_graphics('static/images/firstcodingexonZDHHC24Bottom.png')
 ```
 <br>
 
-Look at the three nucleotides centered above the Methionine (colored in green on the right side of Figure \@ref(fig:firstcodingexonZDHHC24)). Notice that the nucleotides listed from left to right is NOT an A-T-G as you might expect but instead C-A-T! This is because you are “reading” the top strand of the genomic DNA and ZDHHC24 is a **bottom** strand gene. **To view the bottom strand of the genomic DNA**, click on the far left arrow within the Base Position Track (See the red oval, Figure \@ref(fig:firstcodingexonZDHHC24)). Notice the orientation of the arrow will flip and the genome sequence in your “Base Position” Track will become light gray (red oval, \@ref(fig:firstcodingexonZDHHC24bottom)). *Now* there is an A-T-G directly above the Methionine (M) but only if you read it from *right to left*! This is because the bottom strand of DNA is oriented with 5’ end on the right.  
+Look at the three nucleotides centered above the Methionine (colored in green on the right side of Figure \@ref(fig:firstcodingexonZDHHC24)). Notice that the nucleotides listed from left to right is NOT "A-T-G" as you might expect but instead C-A-T! This is because you are “reading” the plus (+) strand of the chromosome and ZDHHC24 is a **minus (-)** strand gene. **To view the minus (-) strand of DNA**, click on the far left arrow within the Base Position Track (See the red oval, Figure \@ref(fig:firstcodingexonZDHHC24)). Notice the orientation of the arrow will flip and the genome sequence in your “Base Position” Track will become light gray (red oval, \@ref(fig:firstcodingexonZDHHC24bottom)). *Now* there is an A-T-G directly above the Methionine (M) but only if you read it from *right to left*! This is because the minus (-) strand of DNA is oriented with the 5’ end on the right.  
 
 ### [Test your understanding](https://docs.google.com/forms/d/e/1FAIpQLSeRZqrcfWOf5aIb0tVj0NDMMDfh8I-y7M5-3ZNj2CCLgOTP9w/viewform?usp=publish-editor){target="_blank"}
 <style>
@@ -230,7 +227,7 @@ div.blue {background-color:#e6f0ff}
 
 </div>
 <br>
-To summarize . . . while DNA is double-stranded, RNA transcripts are single-stranded and thus use only one DNA strand as template (either the top or bottom strand). Some genes, like BBS1, use the bottom strand as template to create an RNA transcript with a sequence that matches the top strand. Other genes, like ZDHHC24, use the top strand as template to create an RNA transcript with a sequence that matches the bottom strand.  
+To summarize . . . while DNA is double-stranded, RNA transcripts are single-stranded and thus use only one DNA strand as template (either the plus or minus strand). Some genes, like BBS1, use the plus strand as template to create an RNA transcript with a sequence that matches the top strand. Other genes, like ZDHHC24, use the plus (+) strand as template to create an RNA transcript with a sequence that matches the minus (-) strand.  
 
 ## Reading Frames
 Translation begins at the start codon. This is the first codon "read" by the ribosome. All subsequent codons are read in **nonoverlapping groups** of three. Thus, the start codon "sets" the reading frame. A reading frame ends only when a stop codon is encountered that is in the same reading frame as the start codon. This is the last codon "read" by the ribosome. 
@@ -246,7 +243,7 @@ knitr::include_graphics('static/images/basepositiondense.png')
 ```
 <br>
 
-You should now see three reading frames displayed below the nucleotide sequence. Why three? This is the maximum number of unique polypeptides that can be theoretically produced from a given segment of the top strand of DNA. See what happens when you toggle to the bottom strand of DNA (click the arrow ---> on the far left of the DNA sequence). Now you can view the three reading frames that correspond to the bottom strand of DNA. Both views are shown one on top of the other in Figure \@ref(fig:basepositionfullreverse). Notice they are different. 
+You should now see three reading frames displayed below the nucleotide sequence. Why three? This is the maximum number of unique polypeptides that can be theoretically produced from a given segment of the plus (+) strand of DNA. See what happens when you toggle to the minus (-) strand of DNA (click the arrow ---> on the far left of the DNA sequence). Now you can view the three reading frames that correspond to the minus (-) strand of DNA. Both views are shown one on top of the other in Figure \@ref(fig:basepositionfullreverse). Notice they are different. 
 
 <br>
 ```{r basepositionfull, out.width='100%', fig.align='center'}
@@ -254,13 +251,13 @@ knitr::opts_chunk$set(echo = FALSE)
 knitr::include_graphics('static/images/basepositionfull.png')
 ```
 <br>
-```{r basepositionfullreverse, out.width='100%', fig.align='center', fig.cap="Once you change the base position track to **Full**, the three possible reading frames for a *single* DNA strand will be displayed. When the arrow points to the right, the three reading frames will be of the top strand (top image). Notice the start codon in green matches the start codon in the third reading frame (**NOTE: This image comes from the 2013 genome assembly and will look different for you.**) In fact, nearly all of the amino acids in exon one match the amino acids in the third reading frame. We expect one of the three top strand reading frames to match *BBS1* since BBS1 is a top strand gene. Now , however, when the arrow points to the left (circled in red), the three reading frames displayed are for the bottom strand (bottom image). Now *none* of the amino acids in the three reading frames match the amino acids found in *BBS1*."}
+```{r basepositionfullreverse, out.width='100%', fig.align='center', fig.cap="Once you change the base position track to **Full**, the three possible reading frames for a *single* DNA strand will be displayed. When the arrow points to the right, the three reading frames will be of the plus (+) strand (top image). Notice the start codon in green matches the start codon in the third reading frame (**NOTE: This image comes from the 2013 genome assembly and will look different for you.**) In fact, nearly all of the amino acids in exon one match the amino acids in the third reading frame. We expect one of the three plus (+) strand reading frames to match *BBS1* since BBS1 is a plus (+) strand gene. Now , however, when the arrow points to the left (circled in red), the three reading frames displayed are for the minus (-) strand (bottom image). Now *none* of the amino acids in the three reading frames match the amino acids found in *BBS1*."}
 knitr::opts_chunk$set(echo = FALSE)
 knitr::include_graphics('static/images/basepositionfullreverse.png')
 ```
 <br>
 
-The three reading frames corresponding to the top strand are numbered +1 (top), +2 (middle) and +3 (bottom). The three reading frames corresponding to the bottom strand are numbered -1 (top), -2 (middle) and -3 (bottom). For convenience, the position of all possible start codons are highlighted in green and all possible stop codons (*) are highlighted in red. 
+The three reading frames corresponding to the plus (+) strand are numbered +1 (top), +2 (middle) and +3 (bottom). The three reading frames corresponding to the minus (-) strand are numbered -1 (top), -2 (middle) and -3 (bottom). For convenience, the position of all possible start codons are highlighted in green and all possible stop codons (*) are highlighted in red. 
 
 Now, zoom out until you can see the first three exons of BBS1 (Figure \@ref(fig:threeexons)). At this level of zoom, you should still be able to read the amino acid sequence within the gene schematic *and* within the base position track. Notice there are many “start” and “stop” codons scattered throughout this segment of the genome (red and green boxes). This should not be surprising given that start and stop codons are only three nucleotides in length and thus they occur by chance. That said, **the ability of an ATG or TGA, TAA, TAG to function as a start or stop codon, respectively, depends on context**. For example, the real start codon for a given gene is typically the first start codon encountered in an mRNA as the Ribosome scans the mRNA from 5’ to 3’ (more about this later).  
 <br>

@@ -87,7 +87,7 @@ only-coding-exons-determine-protein-sequence
 test-your-understanding-4
 one-gene-many-splice-variants
 test-your-understanding-5
-top-strand-and-bottom-strand-genes
+plus-strand-and-minus---strand-genes
 test-your-understanding-6
 test-your-understanding-7
 reading-frames
@@ -103,7 +103,7 @@ test-your-understanding-11
 take-home-messages
 chapter4
 what-is-tss-seq
-why-is-tss-seq-useful
+how-is-tss-seq-useful
 how-is-tss-seq-data-visualized
 test-your-understanding-12
 transcription-start-sites-and-the-core-promoter
