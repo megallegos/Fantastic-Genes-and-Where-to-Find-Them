@@ -87,7 +87,7 @@ only-coding-exons-determine-protein-sequence
 test-your-understanding-4
 one-gene-many-splice-variants
 test-your-understanding-5
-plus-strand-and-minus---strand-genes
+plus-strand-and-minus-strand-genes
 test-your-understanding-6
 test-your-understanding-7
 reading-frames
