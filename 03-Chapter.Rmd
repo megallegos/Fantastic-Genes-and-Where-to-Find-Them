@@ -52,7 +52,7 @@ div.blue {background-color:#e6f0ff}
 *Click the link above to see the TYU questions.* 
 <br>
 
-## Understanding the Encode RNA-seq Evidence Track 
+## Visualizing RNA-seq Data
 The UCSC Genome Browser contains numerous evidence tracks containing RNA-seq data from a variety of labs and institutes. Again, these tracks are useful for visualizing regions of the genome that are transcriptionally active in specific cells or tissue types. We will focus on one evidence track that displays RNA sequencing data from the [ENCODE project](https://www.genome.gov/Funded-Programs-Projects/ENCODE-Project-ENCyclopedia-Of-DNA-Elements){target="_blank"}. One goal of the ENCODE project has been to identify and characterize transcribed regions of the human genome. I like this evidence track because it lets you see the alignment of individual sequence reads to the reference genome. To view the Encode RNA-seq evidence track for BBS1, click on the [RNA-seq](https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%202%20RNA%2Dseq){target="_blank"} session link. Your evidence track display window will look like Figure \@ref(fig:seqreads). 
 
 <br>

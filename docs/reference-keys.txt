@@ -95,7 +95,7 @@ chapter3
 gene-expression-reviewed
 rna-seq
 test-your-understanding-9
-understanding-the-encode-rna-seq-evidence-track
+visualizing-rna-seq-data
 test-your-understanding-10
 switching-data-sets
 test-your-understanding-11
