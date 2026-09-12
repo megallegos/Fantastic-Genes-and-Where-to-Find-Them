@@ -1,16 +1,6 @@
-# *RNA motifs for processing and translation* {#chapter6}
-In this chapter, you will review the cis-acting sequences that are required for pre-mRNA processing *and* mRNA translation. Again, we will focus on BBS1 as our model gene to find out if BBS1 has all the cis-acting sequences necessary for these events. To follow along with the text and to answer "Test Your Understanding" questions, you can use the ["Gene Structure"](https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201
-){target="_blank"} session link. 
-
-## The Addition of a 5' guanosine cap
-Transcripts created by RNA polymerase II are transformed into messenger RNA (mRNA) *as* they are synthesized. This transformation process is called **pre-mRNA processing**. The first step involves the addition of a 7-methyl guanosine cap structure which is attached to the first *templated* ribonucleotide of RNA polymerase II transcripts as they emerge (5' end first) from the transcription bubble (Figure \@ref(fig:5cap)). *There are no conserved (cis-acting) sequences required for this event to occur*. And while all mRNA transcripts begin with a 7-methyl guanosine cap, you will not see it in the mRNA sequence provided by NCBI or other sequence databases online. Let's review the mRNA sequence of the human gene: SPTBN2 ([NM_006946.4](https://www.ncbi.nlm.nih.gov/nuccore/NM_006946.4?report=fasta){target="_blank"}). Notice that this mRNA (displayed in FASTA format) begins with an A. This is the first *templated* ribonucleotide for SPTBN2 mRNA. 
-
-<br>
-```{r 5cap, out.width='50%', fig.align='center', fig.cap = "Original image from Peter J. Russell, iGenetics: Copyright © Pearson Education, Inc., publishing as Benjamin Cummings. Additional annotation added here for clarity."}
-knitr::opts_chunk$set(echo = FALSE)
-knitr::include_graphics('static/images/capping.png')
-```
-<br>
+# *RNA motifs for pre-mRNA processing and translation* {#chapter5}
+Transcripts created by RNA polymerase II are transformed into messenger RNA (mRNA) *as* they are synthesized. This transformation process is called **pre-mRNA processing**. The first step involves the addition of a 7-methyl guanosine cap structure which is attached to the first *templated* ribonucleotide of RNA polymerase II transcripts as they emerge (5' end first) from the transcription bubble. *There are no conserved sequences motifs required for this event to occur*. In this chapter, you will review the cis-acting sequences that *are* required for pre-mRNA processing *and* mRNA translation. Again, we will focus on BBS1 as our model gene to find out if BBS1 has all the cis-acting sequences necessary for these events. To follow along with the text and to answer "Test Your Understanding" questions, you can use the ["Gene Structure"](https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201
+){target="_blank"} session link.
 
 ## Splicing
 The second step in pre-mRNA processing is the removal of or splicing out of introns and the merging or joining of the flanking exons on either side. Introns are spliced out by the **spliceosome**. In brief, specific components of the spliceosome first bind to the 5' splice site, 3' splice site and branchpoint A (in the intron). Then the spliceosome pulls the two adjacent exons together to facilitate excision of the intron and fusion of the two exons together (Figure \@ref(fig:splicingmachinery)). 

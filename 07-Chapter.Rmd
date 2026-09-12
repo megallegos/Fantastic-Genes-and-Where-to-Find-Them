@@ -1,4 +1,4 @@
-# *Finding Genes with Orthology* {#chapter8}
+# *Finding Genes with Orthology* {#chapter7}
 
 Genetic model organisms like yeast, worms, flies, fish and mice play a critical role in the advancement of biomedical research. Research in model organisms can be cheaper, faster and is undoubtedly more ethical than conducting research on humans! They are particularly useful for studying gene function *in vivo*. A list of  advantages and disadvantages for each of the most common species studied today are shown in Figure \@ref(fig:modelsystems). 
 

@@ -1,4 +1,4 @@
-# Advanced Methods {#chapter9}
+# Advanced Methods {#chapter8}
 
 ## Create an Account at the UCSC Genome Browser
 

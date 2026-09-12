@@ -41,7 +41,6 @@ fig:ShortMatchWindow
 fig:InrEx
 fig:MSAdisplays
 fig:SequenceLogo
-fig:5cap
 fig:splicingmachinery
 fig:intronsequencelogo
 fig:cleavage
@@ -114,8 +113,7 @@ sequence-logos
 test-your-understanding-14
 for-discussion
 take-home-messages-1
-chapter6
-the-addition-of-a-5-guanosine-cap
+chapter5
 splicing
 test-your-understanding-15
 cleavage-and-polyadenylation
@@ -126,11 +124,11 @@ uorfs
 recognizing-uorfs
 test-your-understanding-18
 homework
-chapter7
+chapter6
 understanding-how-dna-variants-are-displayed
 test-your-understanding-19
 for-discussion-1
-chapter8
+chapter7
 modelling-human-disease
 reciprocal-best-hit-analysis
 retrieving-gene-product-sequences
@@ -146,7 +144,7 @@ mapping-patient-alleles-to-a-pairwise-alignment
 homework-1
 independent-project
 lab-practical-practice
-chapter9
+chapter8
 create-an-account-at-the-ucsc-genome-browser
 how-to-configure-the-genome-browser-from-scratch
 creating-a-named-session
