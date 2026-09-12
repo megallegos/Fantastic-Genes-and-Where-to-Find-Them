@@ -112,7 +112,6 @@ knitr::include_graphics('static/images/uORFexamples.png')
 ```
 <br>
 
-## Recognizing uORFs
 To determine if a gene of interest (GOI) has a uORF in its 5' UTR, you need to focus your genome browser on the 5' UTR of your GOI then make sure your base prediction track is set to full. So long as you are zoomed in close enough to see the green boxes (start codons) and red boxes (stop codons) in the three reading frames, you can recognize most uORFs. For an example of what a uORF would look like, see Figure \@ref(fig:MDM2uORF). At some point you may come across a gene with an intron in the 5' UTR. If you find an upstream start codon in the 5' UTR, this likely means that the gene has a uORF. To be sure, you would need to find the positive evidence. This could be complicated by the fact that the intron might split the uORF. 
 
 <br>

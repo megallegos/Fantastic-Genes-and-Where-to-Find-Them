@@ -131,8 +131,7 @@ knitr::include_graphics('static/images/CoreConsensusHuman.png')
 ```
 <br>
 
-## Searching for a consensus sequence
-You can search for a consensus sequence containing IUPAC codes using an evidence track called, "Short Match". Before you open Short Match, open the saved ["TSS-Seq" Session](https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%202%20TSS%2Dseq){target="_blank"} then zoom in to view the sequence surrounding the TSS for BBS1. Now scroll down to find an evidence track entitled, **"Short Match"** (1) within the section entitled, **"Mapping and Sequencing"** (Figure \@ref(fig:ShortMatch)). Change this evidence track from "hide" to "pack" and click "refresh" (2). A new evidence track will open (3). Click on the gray rectangle at left to open the track settings page for this track (4). 
+In the UCSC genome browser, you can search for a consensus sequence containing IUPAC codes using an evidence track called, "Short Match". Before you open Short Match, open the saved ["TSS-Seq" Session](https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%202%20TSS%2Dseq){target="_blank"} then zoom in to view the sequence surrounding the TSS for BBS1. Now scroll down to find an evidence track entitled, **"Short Match"** (1) within the section entitled, **"Mapping and Sequencing"** (Figure \@ref(fig:ShortMatch)). Change this evidence track from "hide" to "pack" and click "refresh" (2). A new evidence track will open (3). Click on the gray rectangle at left to open the track settings page for this track (4). 
 <br>
 ```{r ShortMatch, out.width='100%', fig.align='center', fig.cap = "How to search for a consensus sequence: 1) change the **Short Match** evidence track from **hide** to **pack**. 2) Click **Refresh**. 3) A new evidence track will open. 4) Click on the gray rectangle to open the track settings page. Now see figure below."}
 knitr::opts_chunk$set(echo = FALSE)

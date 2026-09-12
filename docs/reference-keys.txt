@@ -107,7 +107,6 @@ how-is-tss-seq-data-visualized
 test-your-understanding-12
 transcription-start-sites-and-the-core-promoter
 consensus-sequences
-searching-for-a-consensus-sequence
 test-your-understanding-13
 sequence-logos
 test-your-understanding-14
@@ -121,7 +120,6 @@ test-your-understanding-16
 translation-initiation
 test-your-understanding-17
 uorfs
-recognizing-uorfs
 test-your-understanding-18
 homework
 chapter6
