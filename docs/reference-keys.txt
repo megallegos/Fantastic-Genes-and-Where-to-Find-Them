@@ -123,7 +123,7 @@ uorfs
 test-your-understanding-18
 homework
 chapter6
-understanding-how-dna-variants-are-displayed
+visualizing-dna-variants-in-a-genome-browser
 test-your-understanding-19
 for-discussion-1
 chapter7
