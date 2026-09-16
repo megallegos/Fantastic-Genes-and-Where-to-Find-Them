@@ -82,11 +82,11 @@ exons-and-introns
 test-your-understanding-2
 coding-and-noncoding-exons
 test-your-understanding-3
-only-coding-exons-determine-protein-sequence
+coding-sequence-determines-protein-sequence
 test-your-understanding-4
-one-gene-many-splice-variants
+one-gene-many-isoforms
 test-your-understanding-5
-plus-and-minus-strand-genes
+plus-strand-and-minus-strand-genes
 test-your-understanding-6
 test-your-understanding-7
 reading-frames
@@ -123,7 +123,7 @@ uorfs
 test-your-understanding-18
 homework
 chapter6
-visualizing-dna-variants-in-a-genome-browser
+visualizing-dna-variants
 test-your-understanding-19
 for-discussion-1
 chapter7

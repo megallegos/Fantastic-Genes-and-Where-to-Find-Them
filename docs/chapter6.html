@@ -166,15 +166,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="2.2.1" data-path="chapter2.html"><a href="chapter2.html#test-your-understanding-3"><i class="fa fa-check"></i><b>2.2.1</b> Test your understanding</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="chapter2.html"><a href="chapter2.html#only-coding-exons-determine-protein-sequence"><i class="fa fa-check"></i><b>2.3</b> Only Coding Exons Determine Protein Sequence</a>
+<li class="chapter" data-level="2.3" data-path="chapter2.html"><a href="chapter2.html#coding-sequence-determines-protein-sequence"><i class="fa fa-check"></i><b>2.3</b> Coding Sequence Determines Protein Sequence</a>
 <ul>
 <li class="chapter" data-level="2.3.1" data-path="chapter2.html"><a href="chapter2.html#test-your-understanding-4"><i class="fa fa-check"></i><b>2.3.1</b> Test your understanding</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="chapter2.html"><a href="chapter2.html#one-gene-many-splice-variants"><i class="fa fa-check"></i><b>2.4</b> One gene, many splice variants</a>
+<li class="chapter" data-level="2.4" data-path="chapter2.html"><a href="chapter2.html#one-gene-many-isoforms"><i class="fa fa-check"></i><b>2.4</b> One gene, many isoforms</a>
 <ul>
 <li class="chapter" data-level="2.4.1" data-path="chapter2.html"><a href="chapter2.html#test-your-understanding-5"><i class="fa fa-check"></i><b>2.4.1</b> Test Your Understanding</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="chapter2.html"><a href="chapter2.html#plus-and-minus-strand-genes"><i class="fa fa-check"></i><b>2.5</b> Plus and Minus-strand genes</a>
+<li class="chapter" data-level="2.5" data-path="chapter2.html"><a href="chapter2.html#plus-strand-and-minus-strand-genes"><i class="fa fa-check"></i><b>2.5</b> Plus-strand and Minus-strand genes</a>
 <ul>
 <li class="chapter" data-level="2.5.1" data-path="chapter2.html"><a href="chapter2.html#test-your-understanding-6"><i class="fa fa-check"></i><b>2.5.1</b> Test your understanding</a></li>
 <li class="chapter" data-level="2.5.2" data-path="chapter2.html"><a href="chapter2.html#test-your-understanding-7"><i class="fa fa-check"></i><b>2.5.2</b> Test your understanding</a></li>
@@ -243,7 +243,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6" data-path="chapter6.html"><a href="chapter6.html"><i class="fa fa-check"></i><b>6</b> Identifying Disease Genes from DNA Variants</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="chapter6.html"><a href="chapter6.html#visualizing-dna-variants-in-a-genome-browser"><i class="fa fa-check"></i><b>6.1</b> Visualizing DNA variants in a Genome Browser</a>
+<li class="chapter" data-level="6.1" data-path="chapter6.html"><a href="chapter6.html#visualizing-dna-variants"><i class="fa fa-check"></i><b>6.1</b> Visualizing DNA variants</a>
 <ul>
 <li class="chapter" data-level="6.1.1" data-path="chapter6.html"><a href="chapter6.html#test-your-understanding-19"><i class="fa fa-check"></i><b>6.1.1</b> Test Your Understanding</a></li>
 <li class="chapter" data-level="6.1.2" data-path="chapter6.html"><a href="chapter6.html#for-discussion-1"><i class="fa fa-check"></i><b>6.1.2</b> For Discussion</a></li>
@@ -306,8 +306,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="chapter6" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">6</span> Identifying Disease Genes from DNA Variants<a href="chapter6.html#chapter6" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>A gene can be defined as a short segment of the genome that is expressed. We see evidence of this with RNA-seq data, a technique which identified which segments of the genome are expressed. A gene can also be defined as “a <em>functional</em> unit of inheritance”. With this definition, evidence that a gene exists can be provided when a DNA mutation leads to a phenotypic change. In this chapter you will see how short <strong>DNA variants</strong> can lead to disease and help pinpoint the position of the causative gene. Each short DNA variant indicates how it differs from the “reference genome”<a href="#fn44" class="footnote-ref" id="fnref44"><sup>44</sup></a> and can range from benign to pathogenic. To follow along with the text and answer <strong>Test Your Understanding</strong> questions, you will be using the <a href="https://genome.ucsc.edu/s/megallegos/Fantastic%20Genes%20and%20Where%20to%20Find%20them%20Chapter%206" target="_blank">“DNA Variant”</a> session link. You can also use this link as a starting point to view DNA variant data for <em>any</em> gene of interest.</p>
-<div id="visualizing-dna-variants-in-a-genome-browser" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Visualizing DNA variants in a Genome Browser<a href="chapter6.html#visualizing-dna-variants-in-a-genome-browser" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="visualizing-dna-variants" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Visualizing DNA variants<a href="chapter6.html#visualizing-dna-variants" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Open the <a href="https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%204%3A%20Mutational%20Analysis" target="_blank">“DNA Variant”</a> session link to view the “ClinVar Variants” evidence track. This evidence track is configured to display the “<strong>ClinVar Short Variants &lt; 50bp</strong>” evidence track. This track shows the genomic positions of DNA substitutions<a href="#fn45" class="footnote-ref" id="fnref45"><sup>45</sup></a> or indels<a href="#fn46" class="footnote-ref" id="fnref46"><sup>46</sup></a> from the ClinVar database. “ClinVar is a free, public archive of reports of the relationships among human variations and phenotypes, with supporting evidence.”<a href="#fn47" class="footnote-ref" id="fnref47"><sup>47</sup></a>.</p>
 <p>The DNA variants are color coded according to clinical significance: red for pathogenic (P) or likely pathogenic (LP), green for benign (B) or likely benign (LB), dark blue for “variant of uncertain significance” (VUS), dark gray for not provided (OTH) and light blue for “conflicting interpretation of pathogenicity”. Each DNA variant is also displayed according to variant type. See Figure <a href="chapter6.html#fig:MutationCodes">6.1</a> for a list of DNA variant types you are likely to encounter.</p>
 <br>
