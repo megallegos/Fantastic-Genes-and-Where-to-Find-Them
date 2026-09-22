@@ -53,70 +53,6 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <style type="text/css">
   
@@ -305,10 +241,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="chapter3" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">3</span> Finding Genes with <em>RNA-seq</em><a href="chapter3.html#chapter3" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>RNA sequencing is a technique that allows one to identify <em>all</em> genes in the genome that are being transcribed within the cells/tissues used for RNA extraction. Thus, RNA sequencing can reveal where genes are in the genome. To follow along with the text and to answer the “Test Your Understanding” questions, start with the <a href="https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%202%20RNA%2Dseq" target="_blank">RNA-seq</a> session link. You can also use this link as a starting point to view RNA-seq data for any gene of interest by typing the name of your gene of interest in the search window.</p>
+<p>RNA sequencing is a technique that allows one to identify <em>all</em> genes in the genome that are being transcribed within the cells/tissues at a given moment in time. Thus, RNA sequencing can reveal where genes are in the genome. To follow along with the text and to answer the “Test Your Understanding” questions, start with the <a href="https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%202%20RNA%2Dseq" target="_blank">RNA-seq</a> session link. You can also use this link as a starting point to view RNA-seq data for any gene of interest by typing the name of your gene of interest in the search window.</p>
 <div id="gene-expression-reviewed" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> Gene expression Reviewed<a href="chapter3.html#gene-expression-reviewed" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>For a gene to <em>do</em> anything it must be <em>expressed</em>. When it is expressed, it is either transcribed to produce a functional RNA (i.e. tRNA) or transcribed <em>and</em> translated to produce a functional polypeptide (i.e. actin). In both cases, the first step in producing a gene product is <em>ALWAYS</em> transcription. It logically follows that if you extract RNA from a cell, sequence it then find the regions in the genome with matching sequence, you have discovered regions of the genome that have been transcribed. Regions of the genome that are transcriptionally active pinpoint the position of genes. The most important take home message for this chapter: <strong><em>RNA sequence provides important physical evidence to identify and locate genes in the genome</em></strong>. It can also tell you how transcriptionally active a gene is by counting the number of transcripts present at the time of RNA extraction.</p>
+<p>For a gene to <em>do</em> anything it must be <em>expressed</em>. When it is expressed, it is either transcribed to produce a functional RNA (i.e. tRNA) or transcribed <em>and</em> translated to produce a functional polypeptide (i.e. actin). In both cases, the first step in producing a gene product is <em>ALWAYS</em> transcription. It logically follows that if you extract RNA from a cell, sequence it then find the regions in the genome with matching sequence, you have discovered regions of the genome that have been transcribed. Regions of the genome that are transcriptionally active pinpoint the position of genes. The most important take home message for this chapter: <strong><em>RNA sequence provides important physical evidence that identifies and locates genes in the genome</em></strong>. It can also tell you how transcriptionally active a gene is by counting the number of transcripts present at the time of RNA extraction.</p>
 </div>
 <div id="rna-seq" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> RNA-seq<a href="chapter3.html#rna-seq" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -321,7 +257,7 @@ Figure 3.1: Source: <a href="https://en.wikipedia.org/wiki/RNA-Seq">Wikipedia</a
 </p>
 </div>
 <p><br></p>
-<p>To enrich for mRNA, one can exploit one of two features unique to mRNA: All mRNAs possess a 5’ cap structure and a 3’ poly-A tail (a string of adenines). Figure <a href="chapter3.html#fig:rnaextraction">3.2</a> demonstrates how the poly-A tail can be used to purify mRNA from total RNA<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a> for RNA-seq and other applications. In brief, mRNA (black) is separated from all other types of RNA (all other colors) through the use of oligo dT-magnetic beads. Oligo is short for oligonucleotide, a short strand of single stranded DNA. Oligo dT is a single-stranded oligo that consists only of thymines. As a result, only RNA molecules with poly-A tails will bind (hybridize) to the magnetic bead-linked oligo dT through base pairing.</p>
+<p>To enrich for mRNA, one can exploit one of two features unique to mRNA: All mRNAs possess a 5’ cap structure and a 3’ poly-A tail. Figure <a href="chapter3.html#fig:rnaextraction">3.2</a> demonstrates how the poly-A tail can be used to purify mRNA from total RNA<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a> for RNA-seq and other applications. In brief, mRNA (black) is separated from all other types of RNA (all other colors) through the use of oligo dT-magnetic beads. Oligo is short for oligonucleotide, a short strand of single stranded DNA. Oligo dT is a single-stranded oligo that consists only of thymines. As a result, only RNA molecules with poly-A tails will bind (hybridize) to the magnetic bead-linked oligo dT through base pairing.</p>
 <br>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:rnaextraction"></span>
 <img src="static/images/mrnaextraction.png" alt="A common mRNA extraction method involves the use of magnetic beads attached to oligo dT. The oligo dT binds the poly-A tail present on mRNA. The magnet captures the mRNA while the other types of RNA are removed during a washing step." width="100%" />
@@ -333,7 +269,7 @@ Figure 3.2: A common mRNA extraction method involves the use of magnetic beads a
 <p>The magnet holds on to the beads that are bound to mRNA (NOTE: Each bead actually has thousands of oligos attached and thus binds thousands of mRNA molecules present in the sample). All other RNAs can now be washed away. Then to separate the poly-A+ mRNA from the oligo dT magnetic beads, gentle heat is applied. Once the mRNA has been purified, it is broken into fragments in a variety of ways. In one method, a light treatment with an enzyme called RNAse III is used. RNase III breaks phosphodiester bonds in RNA chains at random.</p>
 <p>Next the RNA fragments are converted into DNA. But how? Most DNA polymerases are so-called <em>DNA-dependent, DNA polymerases</em> and by definition cannot use RNA as a template for DNA synthesis. Luckily, retroviruses encode a unique type of DNA polymerase known as reverse transcriptase, which is an <em>RNA-dependent DNA polymerase</em>! Like most DNA polymerases, however, reverse transcriptase can only add new nucleotides to the 3’ end of a pre-existing chain. Thus, a primer is needed. There are two options: 1) the use of so-called random primers <a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a> which will anneal at ‘random’ along the fragmented RNA molecules to prime DNA synthesis or 2) the use of a sequence specific primer that has been designed to anneal to an RNA oligo that had been ligated to the 3’ end of all the fragmented RNAs.</p>
 <p>Whichever method is used to prime DNA synthesis, the resulting DNA produced is called complementary DNA or cDNA (it is complementary to the RNA template). The millions of unique cDNA molecules converted from RNA fragments are then sequenced using a high throughput sequencing method (i.e. Illumina or Ion Torrent). All the millions of short “sequence reads” obtained are then computationally aligned (Figure <a href="chapter3.html#fig:rnaseq">3.1</a>, <em>in silico</em><a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a>) to a reference genome assembly. In Figure <a href="chapter3.html#fig:alignmentread">3.3</a>, you can get a sense for what it means to align sequence reads to a reference genome<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a>. So long as a sequence read is long enough you can align it to a <em>single</em> region of the genome with confidence.</p>
-<p>Now that you understand how RNA sequencing (RNAseq) is done, you can see that RNAseq is a misnomer. RNA is <strong>NOT</strong> sequenced directly. Only the DNA that is made using the RNA as template can be sequenced!</p>
+<p>Now that you understand how RNA sequencing (RNAseq) is done, you can see that RNAseq is a misnomer. RNA is <strong>NOT</strong> sequenced directly. Only the DNA that is made using the RNA as template is sequenced!</p>
 <br>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:alignmentread"></span>
 <img src="static/images/readalignment.png" alt="Reads = Sequence reads. They are typically short. These sequence reads align (match) the short segment of genome shown below. Compare the sequences that are placed directly above one another." width="100%" />
@@ -357,7 +293,7 @@ div.blue {background-color:#e6f0ff}
 </div>
 <div id="visualizing-rna-seq-data" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> Visualizing RNA-seq Data<a href="chapter3.html#visualizing-rna-seq-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The UCSC Genome Browser contains numerous evidence tracks containing RNA-seq data from a variety of labs and institutes. Again, these tracks are useful for visualizing regions of the genome that are transcriptionally active in specific cells or tissue types. We will focus on one evidence track that displays RNA sequencing data from the <a href="https://www.genome.gov/Funded-Programs-Projects/ENCODE-Project-ENCyclopedia-Of-DNA-Elements" target="_blank">ENCODE project</a>. One goal of the ENCODE project has been to identify and characterize transcribed regions of the human genome. I like this evidence track because it lets you see the alignment of individual sequence reads to the reference genome. To view the Encode RNA-seq evidence track for BBS1, click on the <a href="https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%202%20RNA%2Dseq" target="_blank">RNA-seq</a> session link. Your evidence track display window will look like Figure <a href="chapter3.html#fig:seqreads">3.4</a>.</p>
+<p>The UCSC Genome Browser contains numerous evidence tracks containing RNA-seq data from a variety of labs and institutes. Again, these tracks are useful for visualizing regions of the genome that are transcriptionally active in specific cells or tissue types. We will focus on one evidence track that displays RNA sequencing data from the <a href="https://www.genome.gov/Funded-Programs-Projects/ENCODE-Project-ENCyclopedia-Of-DNA-Elements" target="_blank">ENCODE project</a>. One goal of the ENCODE project was to identify and characterize transcribed regions of the human genome. I like this evidence track because it lets you see the alignment of individual sequence reads to the reference genome. To view the Encode RNA-seq evidence track for BBS1, click on the <a href="https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%202%20RNA%2Dseq" target="_blank">RNA-seq</a> session link. Your evidence track display window will look like Figure <a href="chapter3.html#fig:seqreads">3.4</a>.</p>
 <br>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:seqreads"></span>
 <img src="static/images/sequencereads.png" alt="The Encode evidence track here shows high throughput sequencing of RNA samples from the K562 immortal cell line. The Alignment view on top shows where the sequence reads align to the genome including alignments that map to a single exon and *split alignments* that are interrupted by an intron. Sequences determined to be transcribed on the positive strand are shown in blue. Sequences determined to be transcribed on the negative strand are shown in red. Click on the image to enlarge." width="100%" />
@@ -367,7 +303,7 @@ Figure 3.4: The Encode evidence track here shows high throughput sequencing of R
 </div>
 <p><br></p>
 <p>This RNA-seq data corresponds to an RNAseq experiment performed at the Genome Institute of Singapore in 2009. In this experiment, RNA was extracted from K562 cells, an immortal cell line that was established in 1970 from fluid that built up around the lungs of a 53-year-old woman with chronic myelogenous leukemia. The extracted RNA was purified over a column containing oligo dT magnetic beads aimed at enriching for polyA+ RNA (mRNA) and removing contaminants (e.g. rRNA, tRNA, DNA, protein etc.). The mRNA was then fragmented into small, random-sized pieces then converted into cDNA by reverse transcriptase. This cDNA library<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a> was then amplified by PCR<a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a> and sequenced. Short, 35 bp sequence reads were collected and computationally aligned to the genome assembly. How did I know all this? Right click on the gray rectangle at the far left of the Encode RNA-seq evidence track to view its “Track Settings” page. Scroll down to read the “Methods” then when you are done click on the K562 link to learn more about the cell line used in the study. The UCSC Genome Browser is rich with information worth exploring. If you ever get lost down a rabbit hole simply click the the <a href="https://genome.ucsc.edu/s/megallegos/Biol%20310%3A%20Module%202%20RNA%2Dseq" target="_blank">RNA-seq</a> session link to get back to the beginning.</p>
-<p>The RNA-seq data is displayed in the UCSC Genome Browser in two ways: as individual sequence read alignments and as a histogram. In the top half of the evidence track, the sequence read alignments are displayed in blue or red. The tiny blue horizontal lines represent reads that align and match the top strand (these sequence reads align to BBS1, a top strand gene), while the tiny, red lines represent sequence reads that align and match the bottom strand (these sequence reads align to the position of bottom strand genes). Notice that some sequence read alignments are interrupted by a thin, horizontal line. These are called “split alignments”.</p>
+<p>The RNA-seq data is displayed in the UCSC Genome Browser in two ways: as individual sequence read alignments and as a histogram. In the top half of the evidence track, the sequence read alignments are displayed in blue or red. The tiny blue horizontal lines represent reads that align and match the plus strand (these sequence reads align to BBS1, a plus strand gene), while the tiny, red lines represent sequence reads that align and match the minus strand (these sequence reads align to the position of minus strand genes). Notice that some sequence read alignments are interrupted by a thin, horizontal line. These are called “split alignments”.</p>
 <p>Split alignment sequence reads are less intuitive. Recall that this RNA-seq experiement involved the sequencing of fragmented mRNA (not tRNA, rRNA, pre-mRNA etc.). Since mRNAs lack introns and the RNA fragmentation process is random, a single sequence reads can align to <strong>two</strong> adjacent exons in the genome. To indicate that a <em>single</em> sequence read aligns to two adjacent exons, they are connected by a thin line. These types of sequence reads are particularly useful because they provide information about the position of exon-intron junctions. Review Figure <a href="chapter3.html#fig:splitalign">3.5</a> to view an example of a split alignment spanning a particularly short intron found in a gene called PLXNA3. In this figure I provide the actual sequence of a sequence read and a pairwise alignment to the genome. You can see this type of information for yourself by clicking on any individual sequence read. This action takes you to the sequence read information page.</p>
 <br>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:splitalign"></span>
@@ -377,7 +313,7 @@ Figure 3.5: The top panel contains the sequence data for a single sequence read 
 </p>
 </div>
 <p><br></p>
-<p>The bottom section of the Encode RNA-seq window shows the sequence read data as a <strong>histogram</strong> (Figure <a href="chapter3.html#fig:seqreads">3.4</a>). As in all histograms, the Y-axis represents frequency (in this case, it represents the number of “reads” counted or “read counts”) and the X-axis represents chromosomal position (in bp). In general, the histogram graphically describes how many sequence reads are found to align to a given nucleotide position in the genome. The taller the peak, the more “reads” that are counted for that particular nucleotide. By the way, the evidence track is configured such that the histogram data for the bottom strand is hidden <em>and</em> the value of the Y axis is dynamic and depends on the maximum number of reads present in the browser window. In figure <a href="chapter3.html#fig:seqreads">3.4</a>, it is 58. Zoom into exon 4 of BBS1 (See Figure <a href="chapter3.html#fig:histogramannotated">3.6</a>). At this zoom level, the value of the Y-axis has changed to 11. Also, notice that the number of reads for any given nucleotide position along exon four varies depending on the number of read counts for that nucleotide (compare to the top half of the evidence track).</p>
+<p>The bottom section of the Encode RNA-seq window shows the sequence read data as a <strong>histogram</strong> (Figure <a href="chapter3.html#fig:seqreads">3.4</a>). As in all histograms, the Y-axis represents frequency (in this case, it represents the number of “reads” counted or “read counts”) and the X-axis represents chromosomal position (in bp). In general, the histogram graphically describes how many sequence reads are found to align to a given nucleotide position in the genome. The taller the peak, the more “reads” that are counted for that particular nucleotide. By the way, the evidence track is configured such that the histogram data for the minus strand is hidden <em>and</em> the value of the Y axis is dynamic and depends on the maximum number of reads present in the browser window. In figure <a href="chapter3.html#fig:seqreads">3.4</a>, it is 58. Zoom into exon 4 of BBS1 (See Figure <a href="chapter3.html#fig:histogramannotated">3.6</a>). At this zoom level, the value of the Y-axis has changed to 11. Also, notice that the number of reads for any given nucleotide position along exon four varies depending on the number of read counts for that nucleotide (compare to the top half of the evidence track).</p>
 <br>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:histogramannotated"></span>
 <img src="static/images/histogram.png" alt="A close up view of exon 4 of BBS1. Notice the Y axis for the histogram indicates that the maximum number of sequence reads that map to this region is 11. The height for any given region of the histogram is determined by the number of reads counted. On the left, I highlight a region of exon 4 that has 5 total reads. On the right I highlight a region of exon 4 that has 2 total reads. Click image to enlarge." width="100%" />

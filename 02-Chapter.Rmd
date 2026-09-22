@@ -114,7 +114,7 @@ A single RNA transcipt is sometimes spliced in a variety of different ways to pr
 To see how the UCSC genome browser illustrates splice variants, click on the [BBS1](https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201){target="_blank"} session link then *zoom out* exactly **10X** to explore a larger section of chromosome eleven^[Notice that at this zoom level some exons simply look like vertical lines. This is because, exons are typically shorter than introns (at least in mammals) and so at this zoom level exons look like lines instead of boxes]. Now more than one gene is present in the browser window. Again, the name of each gene is given on the left side of each gene/transcript schematic. Regions of the genome that are transcribed to produce multiple mRNAs are indicated by a *series* of box/line schematics that are *stacked* vertically. How do I know these stacks represent a single gene? Each gene schematic in the stack has the *same* gene name (Figure \@ref(fig:zoom)). That said, each gene schematic in the stack has a **unique mRNA ID** (i.e. NM_005700.5). This is your indication that each mRNA sequence is unique in some way. One obvious difference observed for DPP3 is highlighted with a red arrow in Figure \@ref(fig:zoom). Notice that the 2nd and 3rd splice forms have an exon not included in the topmost splice form listed. 
 
 <br>
-```{r zoom, out.width='100%', fig.align='center', fig.cap = "Notice how DPP3, highlighted with a red box, begins and ends transcription at the same location but the RNA transcript that is produced is spliced in three distinct ways to produce three alternative splice forms. One obvious difference is highlighted with a red arrow. The 2nd and 3rd splice forms have an exon not included in the topmost splice form listed. Each DDP3 splice form rightly has a unique mRNA ID. From top to bottom, there is NM_001256670.2, NM_005700.5 and NM_130443.4"}
+```{r zoom, out.width='100%', fig.align='center', fig.cap = "There are three isoforms of DPP3 (DPP3-DT is not an isoform of DPP3). Notice how DPP3, highlighted with a red box, begins and ends transcription at the same location but the RNA transcript that is produced is spliced in three distinct ways to produce three alternative splice forms. One obvious difference is highlighted with a red arrow. The 2nd and 3rd splice forms have an exon not included in the topmost splice form listed. Each DDP3 splice form rightly has a unique mRNA ID. From top to bottom, there is NM_001256670.2, NM_005700.5 and NM_130443.4"}
 knitr::opts_chunk$set(echo = FALSE)
 knitr::include_graphics('static/images/10zoom.png')
 ```
@@ -164,28 +164,28 @@ Chromosomal DNA is double-stranded. One strand is arbitrarily designated as the 
 
 We learned in a previous chapter that the BBS1 coding sequence can be read in the plus-strand of the genome. This is because BBS1 uses the minus (−) strand as its template during transcription, producing a pre-mRNA whose sequence matches the plus-strand^[Except that Uracil replaces Thymine]. BBS1 is therefore a plus-strand gene. For all plus-strand genes, the plus-strand has been described as the *sense strand*, *coding strand*, *informational strand* or *nontemplate strand* ^[I prefer "nontemplate" or "informational strand". "Coding strand" is misleading because it implies that the entire transcript is coding - not true. "Sense strand" is not very informative. I like "informational strand" because this is the DNA strand where you can read sequence motifs in the RNA - for example, the codons or RNA binding sites that might impact translation or RNA stability. You can't argue with the term "nontemplate strand". It's clearly accurate], whereas, the minus-strand is the template strand.
 
-There are a two main ways to determine if a gene is a plus-strand gene or a minus-strand gene. First, click anywhere in the gene prediction track to open the "item details" page (yellow pop up window). Scroll down to find the word, "Strand:" (Jump ahead to Figure \@ref(fig:geneinfo) to see what the page looks like). Alternatively, look at the gene schematic itself. Figure \@ref(fig:orientationwedges) displays the first half of BBS1 and a neighboring gene, ZDHHC24. You will find “orientation wedges” spaced regularly along the schematic. They either point to the right (red box, Figure \@ref(fig:orientationwedges)) or to the left (green box, Figure \@ref(fig:orientationwedges)). These “orientation wedges” point in the direction that RNA polymerase travels during transcription. Given that RNA polymerase travels from 5' to 3' relative to the nontemplate strand they indicate the orientation of the nontemplate strand. The “orientation wedges” for BBS1 point to the right indicating that BBS1 is a plus-strand gene while the orientation wedges for ZDHHC24 point to the left indicating that it is a minus-strand gene. 
+There are a two main ways to determine if a gene is a plus-strand gene or a minus-strand gene. First, click anywhere in the gene prediction track to open the "item details" page (yellow pop up window). Scroll down to find the word, "Strand:" (Jump ahead to Figure \@ref(fig:geneinfo) to see what the page looks like). Alternatively, look at the gene schematic itself. Figure \@ref(fig:orientationwedges) displays the first half of BBS1 and a neighboring gene, ZDHHC24. You will find “orientation wedges” spaced regularly along the introns at any zoom level. They either point to the right (red box, Figure \@ref(fig:orientationwedges)) or to the left (green box, Figure \@ref(fig:orientationwedges)). These “orientation wedges” indicate the orientation of the nontemplate strand and the RNA that the gene produces. They also point in the direction that RNA polymerase travels during transcription. The “orientation wedges” for BBS1 point to the right indicating that BBS1 is a plus-strand gene while the orientation wedges for ZDHHC24 point to the left indicating that it is a minus-strand gene. If you zoom in enough, you will see orientation wedges everywhere (along exons and introns). 
 
 <br>
-```{r orientationwedges, out.width='60%', fig.align='center', fig.cap ="The orientation wedges are visible within introns. When they point to the right (red box), the gene is a top strand gene (plus strand). When they point to the left (green box), the gene is a minus-strand gene (minus strand)."}
+```{r orientationwedges, out.width='60%', fig.align='center', fig.cap ="The orientation wedges are visible within introns at any zoom level. When they point to the right (red box), the gene is a top strand gene (plus strand). When they point to the left (green box), the gene is a minus-strand gene (minus strand)."}
 knitr::opts_chunk$set(echo = FALSE)
 knitr::include_graphics('static/images/orientationwedges.png')
 ```
 <br>
-To summarized, when orientation wedges point to the right, ">>>>",
+To summarize, when orientation wedges point to the right, ">>>>",
 <br>
-1. This is a plus-strand gene.
-2. The beginning of the gene is on the left, 5' end of the plus-strand. 
-2. The plus-strand is the nontemplate strand (informational strand)
-3. The minus-strand is the template strand. 
+1. This is a plus-strand gene where the beginning of the gene is on the left. 
+2. The plus-strand of DNA is the nontemplate strand (the informational strand). 
+3. The minus-strand of DNA is the template strand. 
+4. The RNA sequence is identical to the plus strand (except Uracil replaces Thymine). 
 
 <br>
 When orientation wedges point to the left, "<<<<", the reverse is true.
 <br>
-1. This is a minus-strand gene.
-2. The beginning of the gene is on the right, 5' end of the minus-strand. 
-2. The plus-strand is the template strand. 
-3. The minus-strand is the nontemplate strand (informational strand).
+1. This is a minus-strand gene where the beginning of the gene is on the right. 
+2. The minus-strand of DNA is the nontemplate strand (the informational strand). 
+3. The plus-strand of DNA is the template strand. 
+4. The RNA sequence is identical to the minus strand (except Uracil replaces Thymine). 
 <br>
 
 ### [Test your understanding](https://docs.google.com/forms/d/e/1FAIpQLSfdSGZgUjW0VctKvMw77qpXOCncpvEEYpTdrGJKfHnYpZfxag/viewform?usp=publish-editor){target="_blank"}
@@ -202,21 +202,22 @@ div.blue {background-color:#e6f0ff}
 <br>
 Now let’s look at a minus-strand gene (ZDHHC24) more closely. Click on my saved session for [BBS1](https://genome.ucsc.edu/s/megallegos/Biol%20310%20Module%201){target="_blank"} then zoom out 3X to search for the **beginning** of ZDHHC24 (it should be on the right). "Drag-and-Select" as many times necessary to zoom into the **first** half of the **coding portion** of exon one for ZDHHC24. Your “NCBI Refseq Gene Track should look something like Figure \@ref(fig:firstcodingexonZDHHC24). If not, you may have zoomed into the first half of exon one which is noncoding. Or maybe you are at the wrong end of the gene! 
 
+
 <br>
-```{r firstcodingexonZDHHC24, out.width='100%', fig.align='center', fig.cap ="This is the first half of the first **coding** exon of ZDHHC24. The noncoding portion of exon 1 extends to the right this time because *ZDHHC24* is a minus-strand gene. The red oval highlights the strand you are currently viewing. Since the arrow points to the right, the top strand (5' on the left) is displayed. You can toggle this arrow with your mouse."}
+```{r firstcodingexonZDHHC24, out.width='100%', fig.align='center', fig.cap ="Here you are looking at a small portion of a minus strand gene (ZDHHC24) in the gene prediction track and the plus strand of the DNA in the base position track. The DNA sequence you see is the template strand for ZDHHC24 NOT the RNA sequence. To view the minus strand of DNA, click on the arrow."}
 knitr::opts_chunk$set(echo = FALSE)
 knitr::include_graphics('static/images/firstcodingexonZDHHC24.png')
 ```
 <br>
-```{r firstcodingexonZDHHC24bottom, out.width='100%', fig.align='center', fig.cap ="Again, this is the first half of the first **coding** exon of ZDHHC24. The red oval highlights the strand you are currently viewing. Since the arrow points to the left, the minus-strand (5' on the right) is displayed. Notice that the DNA sequence is gray. Compare to the top image. This is a visual reminder of which strand you are viewing."}
+```{r firstcodingexonZDHHC24bottom, out.width='100%', fig.align='center', fig.cap ="Here you are looking at the same small portion of ZDHHC24 in the gene prediction track and the minus strand of DNA in the base position track. Now the sequence is the same as the RNA sequence (except uracil replaces thymine). You can confirm this by looking at the start codon. It reads A-T-G in the DNA as expected."}
 knitr::opts_chunk$set(echo = FALSE)
 knitr::include_graphics('static/images/firstcodingexonZDHHC24Bottom.png')
 ```
 <br>
 
-Look at the three nucleotides centered above the Methionine (colored in green on the right side of Figure \@ref(fig:firstcodingexonZDHHC24)). Notice that the nucleotides listed from left to right is NOT "A-T-G" as you might expect but instead C-A-T! This is because you are “reading” the plus-strand of the chromosome and ZDHHC24 is a **minus (-)** strand gene. **To view the minus-strand of DNA**, click on the far left arrow within the Base Position Track (See the red oval, Figure \@ref(fig:firstcodingexonZDHHC24)). Notice the orientation of the arrow will flip and the genome sequence in your “Base Position” Track will become light gray (red oval, \@ref(fig:firstcodingexonZDHHC24bottom)). *Now* there is an A-T-G directly above the Methionine (M) but only if you read it from *right to left*! This is because the minus-strand of DNA is oriented with the 5’ end on the right.  
+Look at the three nucleotides centered above the Methionine (colored in green on the right side of Figure \@ref(fig:firstcodingexonZDHHC24)). Notice that the nucleotides listed from left to right is NOT "A-T-G" as you might expect but instead C-A-T! This is because you are “reading” the plus-strand of the chromosome and ZDHHC24 is a **minus (-)** strand gene. **To view the minus-strand of DNA**, click on the far left arrow within the Base Position Track (See the red oval, Figure \@ref(fig:firstcodingexonZDHHC24)). Notice the orientation of the arrow flips (red oval, \@ref(fig:firstcodingexonZDHHC24bottom)) and the genome sequence in your “Base Position” Track becomes light gray. *Now* there *is* an A-T-G directly above the Methionine (M) but only if read from the *right to left*! This is because the minus-strand of DNA is oriented with the 5’ end on the right.  
 
-To summarize, genes use only one DNA strand as template (either the plus or minus strand). Plus-strand genes, like BBS1, use the minus-strand as template to create an RNA transcript with a sequence that matches the plus-strand. Other genes, like ZDHHC24 (a minus-strand gene), use the plus-strand as template to create an RNA transcript with a sequence that matches the minus-strand.  
+To summarize, genes use only one DNA strand as template (either the plus or minus strand). Plus-strand genes, like BBS1, create an RNA transcript with a sequence that matches the plus-strand. Minus strand genes, like ZDHHC24, create an RNA transcript with a sequence that matches the minus-strand.
 
 ### [Test your understanding](https://docs.google.com/forms/d/e/1FAIpQLSeRZqrcfWOf5aIb0tVj0NDMMDfh8I-y7M5-3ZNj2CCLgOTP9w/viewform?usp=publish-editor){target="_blank"}
 <style>
