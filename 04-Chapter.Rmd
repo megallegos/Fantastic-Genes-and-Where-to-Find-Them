@@ -114,7 +114,7 @@ knitr::include_graphics('static/images/TypesofPromoters.png')
 <br>
 
 ## Consensus Sequences
-Sequence conservation can highlight sequence motifs critical for factor binding^[I am deliberately vague here as the molecule might be a protein, nucleic acid sequence or small molecule] as "conservation indicates that a sequence has been maintained by natural selection"^[Quote from Wikipedia article about conserved sequences]. That said, sequence conservation is rarely absolute. By creating a multiple sequence alignment of a specific motif, one can evaluate the degree of conservation and create a **consensus sequence**. A consensus sequence (also known as a **canonical sequence**) can be defined as the “the most frequent residues, either nucleotide or amino acid, that are found at each position in a multiple sequence alignment” (Wikipedia). For a simple example, see Figure \@ref(fig:consensusonly). Notice that the multiple sequence alignment contains only G, A, T and C while this consensus sequence contains additional letters (Y, N and R). Y,N and R belong to an agreed upon list of [**IUPAC nucleotide codes**](https://www.bioinformatics.org/sms/iupac.html){target="_blank"} also known as IUPAC ambiguity codes. Here, Y = C or T, N = any nucleotide and R = G or A. 
+The TATA-box and Inr were initially recognized as recurring sequence patterns in alignments of experimentally characterized core promoters, a strategy based on the principle that sequence conservation can reveal motifs important for factor binding. That said, sequence conservation is rarely absolute. By creating a multiple sequence alignment of a specific motif, one can evaluate the degree of conservation and create a **consensus sequence**. A consensus sequence (also known as a **canonical sequence**) can be defined as the “the most frequent residues, either nucleotide or amino acid, that are found at each position in a multiple sequence alignment” (Wikipedia). For a simple example, see Figure \@ref(fig:consensusonly). Notice that the multiple sequence alignment contains only G, A, T and C while this consensus sequence contains additional letters (Y, N and R). Y,N and R belong to an agreed upon list of [**IUPAC nucleotide codes**](https://www.bioinformatics.org/sms/iupac.html){target="_blank"} also known as IUPAC ambiguity codes. Here, Y = C or T, N = any nucleotide and R = G or A. 
 
 ```{r consensusonly, out.width='50%', fig.align='center', fig.cap = "This is a simple multiple sequence alignment (MSA) that includes only 4 sequences. The consensus sequence corresponding to this alignment is written directly below. It was created by examining the observed frequency of each nucleotide present in each column of sequence in the MSA."}
 knitr::opts_chunk$set(echo = FALSE)
@@ -194,11 +194,6 @@ div.blue {background-color:#e6f0ff}
 <div class = "blue">
 <br>
 *Click the link above to see the TYU questions.* 
-<br>
-
-### [For Discussion](https://docs.google.com/forms/d/e/1FAIpQLSdW3g9FoPAqvmPJwflskUWyCNuUKPcA7FUQ3AiRJbtPYUd04g/viewform?usp=dialog){target="_blank"} 
-
-Click link to see the discussion questions.
 <br>
 
 ## Take Home Messages

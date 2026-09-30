@@ -217,7 +217,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.6" data-path="chapter4.html"><a href="chapter4.html#sequence-logos"><i class="fa fa-check"></i><b>4.6</b> Sequence Logos</a>
 <ul>
 <li class="chapter" data-level="4.6.1" data-path="chapter4.html"><a href="chapter4.html#test-your-understanding-14"><i class="fa fa-check"></i><b>4.6.1</b> Test Your Understanding</a></li>
-<li class="chapter" data-level="4.6.2" data-path="chapter4.html"><a href="chapter4.html#for-discussion"><i class="fa fa-check"></i><b>4.6.2</b> For Discussion</a></li>
 </ul></li>
 <li class="chapter" data-level="4.7" data-path="chapter4.html"><a href="chapter4.html#take-home-messages-1"><i class="fa fa-check"></i><b>4.7</b> Take Home Messages</a></li>
 </ul></li>
@@ -246,7 +245,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.1" data-path="chapter6.html"><a href="chapter6.html#visualizing-dna-variants"><i class="fa fa-check"></i><b>6.1</b> Visualizing DNA variants</a>
 <ul>
 <li class="chapter" data-level="6.1.1" data-path="chapter6.html"><a href="chapter6.html#test-your-understanding-19"><i class="fa fa-check"></i><b>6.1.1</b> Test Your Understanding</a></li>
-<li class="chapter" data-level="6.1.2" data-path="chapter6.html"><a href="chapter6.html#for-discussion-1"><i class="fa fa-check"></i><b>6.1.2</b> For Discussion</a></li>
+<li class="chapter" data-level="6.1.2" data-path="chapter6.html"><a href="chapter6.html#for-discussion"><i class="fa fa-check"></i><b>6.1.2</b> For Discussion</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="chapter7.html"><a href="chapter7.html"><i class="fa fa-check"></i><b>7</b> <em>Finding Genes with Orthology</em></a>
@@ -414,7 +413,7 @@ Figure 4.8: The left schematic from Vo ngoc et al. 2017 illustrates the three m
 </div>
 <div id="consensus-sequences" class="section level2 hasAnchor" number="4.5">
 <h2><span class="header-section-number">4.5</span> Consensus Sequences<a href="chapter4.html#consensus-sequences" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Sequence conservation can highlight sequence motifs critical for factor binding<a href="#fn32" class="footnote-ref" id="fnref32"><sup>32</sup></a> as “conservation indicates that a sequence has been maintained by natural selection”<a href="#fn33" class="footnote-ref" id="fnref33"><sup>33</sup></a>. That said, sequence conservation is rarely absolute. By creating a multiple sequence alignment of a specific motif, one can evaluate the degree of conservation and create a <strong>consensus sequence</strong>. A consensus sequence (also known as a <strong>canonical sequence</strong>) can be defined as the “the most frequent residues, either nucleotide or amino acid, that are found at each position in a multiple sequence alignment” (Wikipedia). For a simple example, see Figure <a href="chapter4.html#fig:consensusonly">4.9</a>. Notice that the multiple sequence alignment contains only G, A, T and C while this consensus sequence contains additional letters (Y, N and R). Y,N and R belong to an agreed upon list of <a href="https://www.bioinformatics.org/sms/iupac.html" target="_blank"><strong>IUPAC nucleotide codes</strong></a> also known as IUPAC ambiguity codes. Here, Y = C or T, N = any nucleotide and R = G or A.</p>
+<p>The TATA-box and Inr were initially recognized as recurring sequence patterns in alignments of experimentally characterized core promoters, a strategy based on the principle that sequence conservation can reveal motifs important for factor binding. That said, sequence conservation is rarely absolute. By creating a multiple sequence alignment of a specific motif, one can evaluate the degree of conservation and create a <strong>consensus sequence</strong>. A consensus sequence (also known as a <strong>canonical sequence</strong>) can be defined as the “the most frequent residues, either nucleotide or amino acid, that are found at each position in a multiple sequence alignment” (Wikipedia). For a simple example, see Figure <a href="chapter4.html#fig:consensusonly">4.9</a>. Notice that the multiple sequence alignment contains only G, A, T and C while this consensus sequence contains additional letters (Y, N and R). Y,N and R belong to an agreed upon list of <a href="https://www.bioinformatics.org/sms/iupac.html" target="_blank"><strong>IUPAC nucleotide codes</strong></a> also known as IUPAC ambiguity codes. Here, Y = C or T, N = any nucleotide and R = G or A.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:consensusonly"></span>
 <img src="static/images/MSA_Consensus.png" alt="This is a simple multiple sequence alignment (MSA) that includes only 4 sequences. The consensus sequence corresponding to this alignment is written directly below. It was created by examining the observed frequency of each nucleotide present in each column of sequence in the MSA." width="50%" />
 <p class="caption">
@@ -450,7 +449,7 @@ Figure 4.12: 1) Enter a consensus sequence in the window provided. 2) Click Subm
 </p>
 </div>
 <p><br></p>
-In Figure <a href="chapter4.html#fig:InrEx">4.13</a>, I searched for the <strong>Inr</strong> consensus sequence, BBCA(+1)BW, in the genomic region surrounding the human gene (CCT2) TSS. Each match is displayed in the Short Match evidence track as a thick black line. The position (i.e. 69,979,214) and orientation (- or +) of each match is written on the left of each line. In this example, the putative<a href="#fn34" class="footnote-ref" id="fnref34"><sup>34</sup></a> Inr is the one highlighted with a red asterisk. What is my evidence? This is the only Inr consensus sequence that spans the predicted and experimentally-defined TSS at position 69,979,236. It is also found on the plus strand of the genomic DNA and CCT2 is a plus strand gene. Finally, the “A” of the consensus sequence is positioned at the predicted <em>and</em> experimentally defined TSS (See red circle in Figure <a href="chapter4.html#fig:InrEx">4.13</a>).
+In Figure <a href="chapter4.html#fig:InrEx">4.13</a>, I searched for the <strong>Inr</strong> consensus sequence, BBCA(+1)BW, in the genomic region surrounding the human gene (CCT2) TSS. Each match is displayed in the Short Match evidence track as a thick black line. The position (i.e. 69,979,214) and orientation (- or +) of each match is written on the left of each line. In this example, the putative<a href="#fn32" class="footnote-ref" id="fnref32"><sup>32</sup></a> Inr is the one highlighted with a red asterisk. What is my evidence? This is the only Inr consensus sequence that spans the predicted and experimentally-defined TSS at position 69,979,236. It is also found on the plus strand of the genomic DNA and CCT2 is a plus strand gene. Finally, the “A” of the consensus sequence is positioned at the predicted <em>and</em> experimentally defined TSS (See red circle in Figure <a href="chapter4.html#fig:InrEx">4.13</a>).
 <br>
 <br>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:InrEx"></span>
@@ -499,11 +498,6 @@ div.blue {background-color:#e6f0ff}
 <div class = "blue">
 <p><br>
 <em>Click the link above to see the TYU questions.</em>
-<br></p>
-</div>
-<div id="for-discussion" class="section level3 hasAnchor" number="4.6.2">
-<h3><span class="header-section-number">4.6.2</span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdW3g9FoPAqvmPJwflskUWyCNuUKPcA7FUQ3AiRJbtPYUd04g/viewform?usp=dialog" target="_blank">For Discussion</a><a href="chapter4.html#for-discussion" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Click link to see the discussion questions.
 <br></p>
 </div>
 </div>
@@ -569,9 +563,7 @@ p.caption {
 <li id="fn29"><p><strong>RNA ligase</strong> is similar to DNA ligase in that both require a 5’ phosphate and a 3’ hydroxyl to form a phosphodiester bond between two nucleic acid chains. The main difference: RNA ligase links two RNA chains together while DNA ligase links two DNA chains together<a href="chapter4.html#fnref29" class="footnote-back">↩︎</a></p></li>
 <li id="fn30"><p>CAGE is short for ”<strong>C</strong>ap <strong>A</strong>nalysis <strong>G</strong>ene <strong>E</strong>xpression”<a href="chapter4.html#fnref30" class="footnote-back">↩︎</a></p></li>
 <li id="fn31"><p>Molecular biology is messy. Each enzymatic step listed in Figure <a href="chapter4.html#fig:TSSseqsteps">4.1</a> is not likely to achieve 100% success. For example, partial mRNAs that fail to have their 5’ phosphates removed can be sequenced along side all the true full-length mRNAs.<a href="chapter4.html#fnref31" class="footnote-back">↩︎</a></p></li>
-<li id="fn32"><p>I am deliberately vague here as the molecule might be a protein, nucleic acid sequence or small molecule<a href="chapter4.html#fnref32" class="footnote-back">↩︎</a></p></li>
-<li id="fn33"><p>Quote from Wikipedia article about conserved sequences<a href="chapter4.html#fnref33" class="footnote-back">↩︎</a></p></li>
-<li id="fn34"><p>potential, possible, not experimentally proven without a doubt but some evidence in support of the possibility<a href="chapter4.html#fnref34" class="footnote-back">↩︎</a></p></li>
+<li id="fn32"><p>potential, possible, not experimentally proven without a doubt but some evidence in support of the possibility<a href="chapter4.html#fnref32" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

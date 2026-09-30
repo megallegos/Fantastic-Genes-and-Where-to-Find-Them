@@ -110,7 +110,6 @@ consensus-sequences
 test-your-understanding-13
 sequence-logos
 test-your-understanding-14
-for-discussion
 take-home-messages-1
 chapter5
 splicing
@@ -125,7 +124,7 @@ homework
 chapter6
 visualizing-dna-variants
 test-your-understanding-19
-for-discussion-1
+for-discussion
 chapter7
 modelling-human-disease
 reciprocal-best-hit-analysis
