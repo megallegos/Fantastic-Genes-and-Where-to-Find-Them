@@ -204,7 +204,7 @@ Now let’s look at a minus-strand gene (ZDHHC24) more closely. Click on my save
 
 
 <br>
-```{r firstcodingexonZDHHC24, out.width='100%', fig.align='center', fig.cap ="Here you are looking at a small portion of a minus strand gene (ZDHHC24) in the gene prediction track and the plus strand of the DNA in the base position track. The DNA sequence you see is the template strand for ZDHHC24 NOT the RNA sequence. To view the minus strand of DNA, click on the arrow."}
+```{r firstcodingexonZDHHC24, out.width='100%', fig.align='center', fig.cap ="Here you are looking at a small portion of a minus strand gene (ZDHHC24) in the gene prediction track and the plus strand of the DNA in the base position track. The DNA sequence you see is the template strand for ZDHHC24 NOT the RNA sequence. To view the minus strand of DNA, click on the arrow at the far left circled in red."}
 knitr::opts_chunk$set(echo = FALSE)
 knitr::include_graphics('static/images/firstcodingexonZDHHC24.png')
 ```
