@@ -134,9 +134,9 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
 </div>
 
 ## Homework
-If your last name begins with A-M click the link provided to download your homework assignment as a [PDF file](https://drive.google.com/open?id=1-nQzSVpERACivB423zX62idLkugSvQeZ&usp=drive_fs){target="_blank"}. The file includes additional instructions and a template for the MSA, frequency table and consensus sequence.
+If your last name begins with A-M click the link provided to download your homework assignment as a [PDF file](https://csueastbayedu-my.sharepoint.com/:b:/g/personal/maria_gallegos_csueastbay_edu/IQBB2HAaUSaVTI-B_miz-KWhAVdOa-_8OY27mGBgItsFquo?e=rHX84O){target="_blank"}. The file includes additional instructions and a template for the MSA, frequency table and consensus sequence.
 
-If your last name begins with N-Z click the link provided to download your homework assignment as a [PDF file](https://drive.google.com/open?id=10-_ublKqVv_Oqh9syVRQVaBlQuNTVz0f&usp=drive_fs){target="_blank"}. The file includes additional instructions and a template for the MSA, frequency table and consensus sequence.
+If your last name begins with N-Z click the link provided to download your homework assignment as a [PDF file](https://csueastbayedu-my.sharepoint.com/:b:/g/personal/maria_gallegos_csueastbay_edu/IQAq1MReND7PTbNIGbjitrXXAQxL_TJ7s199ols9_L2sd9A?e=YHXlKp){target="_blank"}. The file includes additional instructions and a template for the MSA, frequency table and consensus sequence.
 
 NOTE: You will not have edit access. Download and complete the assignment on your own computer. 
 
