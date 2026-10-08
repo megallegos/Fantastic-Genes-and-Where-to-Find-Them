@@ -138,8 +138,6 @@ If your last name begins with A-M click the link provided to download your homew
 
 If your last name begins with N-Z click the link provided to download your homework assignment as a [PDF file](https://csueastbayedu-my.sharepoint.com/:b:/g/personal/maria_gallegos_csueastbay_edu/IQAq1MReND7PTbNIGbjitrXXAQxL_TJ7s199ols9_L2sd9A?e=YHXlKp){target="_blank"}. The file includes additional instructions and a template for the MSA, frequency table and consensus sequence.
 
-NOTE: You will not have edit access. Download and complete the assignment on your own computer. 
-
 In brief, create a multiple sequence alignment (MSA) that includes either the 5' splice site and surrounding sequence of BBS1 or the 3' splice site and surrounding sequence of BBS1 depending on your last name. HINT: See Figure \@ref(fig:exonjumpingtips) to see how much surrounding sequence to include and how to easily jump from exon to exon. Use the template provided (see file) to create the MSA, frequency table and consensus sequence using IUPAC codes. Finally, use the ["WEB LOGO"](https://weblogo.berkeley.edu/create.cgi){target="_blank"} sequence logo generator to create a sequence logo of your multiple sequence alignment. Upload both pages of your homework as a single PDF to CANVAS by the due date.  
 
 Also, see Figure \@ref(fig:weblogopage) for additional tips on how to use ["WEB LOGO"](https://weblogo.berkeley.edu/create.cgi){target="_blank"} to create a sequence logo. 
