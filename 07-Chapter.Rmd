@@ -182,7 +182,7 @@ knitr::include_graphics('static/images/IsoformChoice.png')
 ```
 <br>
 
-### [Homework](https://drive.google.com/file/d/1CWf927mnP3droqocuIpVahigShlSgt6R/view?usp=sharing){target="_blank"}
+### [Homework](https://csueastbayedu-my.sharepoint.com/:w:/g/personal/maria_gallegos_csueastbay_edu/IQANuirsbIPcRIaQDTRmUgBsAZ_HYhvy3m-fEiELND-ZNTo?e=a2Co31){target="_blank"}
 
 ## [Independent Project](https://csueastbayedu-my.sharepoint.com/:w:/g/personal/maria_gallegos_csueastbay_edu/IQBmZHgzYAmqRKRM4F99XbMRAaqc--LyulaKSUpKRNTuwXA?e=2XocKz){target="_blank"}
 
