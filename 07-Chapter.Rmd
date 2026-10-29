@@ -1,4 +1,4 @@
-# *Finding Genes with Orthology* {#chapter7}
+# *Finding Genes by Orthology* {#chapter7}
 
 Genetic model organisms like yeast, worms, flies, fish and mice play a critical role in the advancement of biomedical research. Research in model organisms can be cheaper, faster and is undoubtedly more ethical than conducting research on humans! They are particularly useful for studying gene function *in vivo*. A list of  advantages and disadvantages for each of the most common species studied today are shown in Figure \@ref(fig:modelsystems). 
 
@@ -52,7 +52,7 @@ knitr::include_graphics('static/images/RBHanalysis.png')
 
 ## Retrieving gene product sequences 
 
-To perform a reciprocal best hit analysis, you need the protein sequence. Click on the gene schematic in the “Gene and Gene Predictions track”. This action will open a page that provides many useful links including links to view and analyze the mRNA and protein sequences (Figure \@ref(fig:geneinfo)). Do this for BBS1.  
+To perform a reciprocal best hit analysis, you need the protein sequence. To retrieve the protein sequence, click on the gene schematic in the “Gene and Gene Predictions track”. This action will open a yellow "Item Details" page that provides many useful links related to the gene including links to view and analyze its products: the mRNA and protein sequences (Figure \@ref(fig:geneinfo)). Do this for BBS1.  
 
 <br>
 ```{r geneinfo, out.width='100%', fig.align='center', fig.cap="When you click on a gene/transcript schematic in the gene prediction track you are taken to its gene information page. BBS1 only has one isoform and so there is only one gene information page. In other words, this information is transcript specific and depends on which isoform you click on. Useful links are highlighted. Some links will help you answer Test Your Understanding questions. Explore!"}
@@ -61,7 +61,7 @@ knitr::include_graphics('static/images/GeneInformationPage.png')
 ```
 <br>
 
-For example, to view information about the BBS1 mRNA, click on the **NM_024649.5** link. To view information specifically about the protein sequence, click on the **NP_078925.3** link. NM_024649.5 and NP_078925.3 are so-called as accession codes. Accession codes that begin with NM_ correspond to mRNA sequences. While those that begin with NP_ correspond to protein sequences. By default, both sequence pages are in so-called "Genbank format". This format includes useful annotations that can be “read” by sequence analysis software programs. The actual mRNA or protein sequence is at the very bottom of the page. Scroll down. Alternatively, click the "FASTA" link to see the sequence in a simpler format. One thing you might notice: There are no uracil bases (U) in the mRNA sequence! Sequence databases do not expend any computational energy to convert thymines (T) to uracils (U) for display purposes only. Explore the remaining links and bits of information as this information will help you answer the Test Your Understanding questions below.
+For example, to view information about the BBS1 mRNA, click on the **NM_024649.5** link. To view information specifically about the protein sequence, click on the **NP_078925.3** link. NM_024649.5 and NP_078925.3 are so-called as accession IDs. Accession IDs that begin with NM_ correspond to mRNA sequences. While those that begin with NP_ (or XP_) correspond to protein sequences. The pages that open provide not only the mRNA or protein sequence (scroll to the bottom of the page), but also links to additional resources and other useful information. For a reciprocal best hit analysis, we care about the "Run Blast" link available in the top right.   
 
 ### [Test Your Understanding](https://docs.google.com/forms/d/e/1FAIpQLSedVz8mM6CdYu29N_rWYKGV1G4JGmtu4qBV67HXNvyNXaJSsQ/viewform?usp=publish-editor){target="_blank"}
 <style>
